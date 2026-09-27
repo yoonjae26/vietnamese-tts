@@ -12,8 +12,9 @@ from TTS.tts.configs.xtts_config import XttsConfig
 from TTS.tts.layers.xtts import tokenizer as xtts_tokenizer
 from TTS.tts.models.xtts import Xtts
 
+from engines.common import reference
+
 REPO = "capleaf/viXTTS"
-REFERENCE = "samples/nu-luu-loat.wav"  # giọng nữ mẫu đi kèm model
 
 # coqui-tts chưa biết "vi": văn bản đầu vào đã được chuẩn hóa sẵn nên chỉ cần hạ chữ thường.
 _orig_preprocess = xtts_tokenizer.VoiceBpeTokenizer.preprocess_text
@@ -41,7 +42,7 @@ class Engine:
         self.model.load_checkpoint(config, checkpoint_dir=path, vocab_path=f"{path}/vocab.json", use_deepspeed=False)
         self.model.to(device).eval()
         self.sample_rate = config.audio.output_sample_rate
-        self.gpt_latent, self.speaker_emb = self.model.get_conditioning_latents(audio_path=[f"{path}/{REFERENCE}"])
+        self.gpt_latent, self.speaker_emb = self.model.get_conditioning_latents(audio_path=[reference()[0]])
 
     @torch.inference_mode()
     def synth(self, text: str, seed: int) -> np.ndarray:

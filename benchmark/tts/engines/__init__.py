@@ -15,4 +15,5 @@ ENGINES = {
     # tên: (module, môi trường conda)
     "mms": ("engines.mms", "vitts-coqui"),
     "vixtts": ("engines.vixtts", "vitts-coqui"),
+    "f5": ("engines.f5", "vitts-f5"),
 }

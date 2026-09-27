@@ -12,7 +12,7 @@ ViTTS-Bench so sánh chúng **trên cùng một bộ test, cùng một cách ch�
 | Hạng mục | Trạng thái |
 | --- | --- |
 | 🔤 Chuẩn hóa văn bản (Vinorm, soe-vinorm, VietNormalizer, vitts) | ✅ Có kết quả |
-| 🔊 Model TTS: độ rõ (WER qua ASR), tốc độ (RTF), VRAM, giấy phép | 🚧 2/7 model (MMS, viXTTS) |
+| 🔊 Model TTS: độ rõ (WER qua ASR), tốc độ (RTF), VRAM, giấy phép | 🚧 3/7 model (F5-TTS, MMS, viXTTS) |
 | 🌐 API chung tương thích OpenAI cho mọi model | 🚧 Có khung (`vitts-server`) |
 
 ## Kết quả: chuẩn hóa văn bản
@@ -72,11 +72,14 @@ python benchmark/normalization/run.py --split dev
 
 | Model | WER ↓ | CER ↓ | WER câu ngắn | WER câu dài | WER thanh điệu khó | RTF ↓ (H200) | VRAM | Giấy phép |
 |---|---:|---:|---:|---:|---:|---:|---:|---|
-| [MMS-TTS (Meta)](https://huggingface.co/facebook/mms-tts-vie) | **6.9%** | 3.4% | 11.1% | 3.5% | 28.4% | 0.013 | 0.4 GB | CC-BY-NC-4.0 |
-| [viXTTS](https://huggingface.co/capleaf/viXTTS) | 9.8% | 5.9% | 55.6% | **2.2%** | 43.2% | 0.203 | 2.2 GB | CPML |
+| [F5-TTS-Vietnamese-1000h](https://huggingface.co/hynt/F5-TTS-Vietnamese-ViVoice) | **2.3%** | **0.8%** | **0.0%** | **1.9%** | **9.5%** | 0.277 | 0.8 GB | CC-BY-NC-SA-4.0 |
+| [MMS-TTS (Meta)](https://huggingface.co/facebook/mms-tts-vie) | 6.9% | 3.4% | 11.1% | 3.5% | 28.4% | **0.013** | **0.4 GB** | CC-BY-NC-4.0 |
+| [viXTTS](https://huggingface.co/capleaf/viXTTS) | 9.4% | 5.5% | 46.7% | 3.5% | 35.1% | 0.193 | 2.2 GB | CPML |
 
+- **F5-TTS-Vietnamese rõ nhất ở mọi nhóm câu**, kể cả câu ngắn và câu líu lưỡi, nhưng chậm hơn MMS khoảng 20 lần (32 bước khử nhiễu, mỗi bước chạy mạng 2 lần).
 - **viXTTS rất rõ ở câu dài nhưng "bịa" từ ở câu ngắn**: "chúc mừng năm mới" bị đọc thành "chúc mừng năm nợ yết hôn thây". Kết quả này khớp với hạn chế tác giả tự ghi (câu dưới 10 từ).
-- **MMS nhỏ và nhanh** (RTF 0.013, tức nhanh hơn thời gian thực khoảng 75 lần) nhưng chỉ có một giọng, âm thanh 16 kHz.
+- **MMS nhỏ và nhanh nhất** (RTF 0.013, tức nhanh hơn thời gian thực khoảng 75 lần) nhưng chỉ có một giọng, âm thanh 16 kHz.
+- Các model clone giọng (viXTTS, F5, …) dùng **chung một giọng mẫu** dài 8.66 giây ([`engines/common.py`](benchmark/tts/engines/common.py)).
 - Bảng đầy đủ: [`results/tts.md`](results/tts.md). Transcript từng câu: [`results/tts.json`](results/tts.json).
 - **Hạn chế:** WER qua ASR đo *độ rõ*, không đo *độ tự nhiên*. Nhóm "thanh điệu khó" gồm các câu líu lưỡi, nên ASR cũng dễ nghe nhầm. Cần thêm bản ghi người đọc thật để biết mức lỗi nền của chính ASR.
 
