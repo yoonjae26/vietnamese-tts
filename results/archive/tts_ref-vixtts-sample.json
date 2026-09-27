@@ -1,6 +1,6 @@
 {
  "reference": {
-  "utmos": 1.8201637268066406
+  "utmos": 2.413245677947998
  },
  "engines": [
   {
@@ -9,12 +9,12 @@
    "repo": "hynt/F5-TTS-Vietnamese-ViVoice",
    "license": "CC-BY-NC-SA-4.0",
    "device": "NVIDIA H200 NVL",
-   "rtf": 0.21923457316593084,
-   "peak_vram_gb": 0.82280448,
+   "rtf": 0.27680823020808915,
+   "peak_vram_gb": 0.822307328,
    "sample_rate": 24000,
    "overall": {
-    "wer": 0.030229746070133012,
-    "cer": 0.01510912143256855,
+    "wer": 0.022974607013301087,
+    "cer": 0.008114157806379406,
     "n": 50
    },
    "by_category": {
@@ -24,515 +24,17 @@
      "n": 10
     },
     "medium": {
-     "wer": 0.026785714285714284,
-     "cer": 0.015400410677618069,
+     "wer": 0.013392857142857142,
+     "cer": 0.00513347022587269,
      "n": 15
     },
     "long": {
-     "wer": 0.010899182561307902,
-     "cer": 0.0068792995622263915,
+     "wer": 0.01907356948228883,
+     "cer": 0.008130081300813009,
      "n": 8
     },
     "tones": {
-     "wer": 0.14864864864864866,
-     "cer": 0.06306306306306306,
-     "n": 8
-    },
-    "names": {
-     "wer": 0.03418803418803419,
-     "cer": 0.014256619144602852,
-     "n": 9
-    }
-   },
-   "runaway": [],
-   "utmos": 2.2113364124298096,
-   "sim": 0.7310880815982819,
-   "clones_voice": true,
-   "rows": [
-    {
-     "id": "short-01",
-     "category": "short",
-     "ref": "xin chào các bạn",
-     "hyp": "xin chào các bạn",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 4
-    },
-    {
-     "id": "short-02",
-     "category": "short",
-     "ref": "hôm nay trời nắng đẹp",
-     "hyp": "hôm nay trời nắng đẹp",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 5
-    },
-    {
-     "id": "short-03",
-     "category": "short",
-     "ref": "cảm ơn bạn rất nhiều",
-     "hyp": "cảm ơn bạn rất nhiều",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 5
-    },
-    {
-     "id": "short-04",
-     "category": "short",
-     "ref": "tôi đang đi làm",
-     "hyp": "tôi đang đi làm",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 4
-    },
-    {
-     "id": "short-05",
-     "category": "short",
-     "ref": "bạn đã ăn cơm chưa",
-     "hyp": "bạn đã ăn cơm chưa",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 5
-    },
-    {
-     "id": "short-06",
-     "category": "short",
-     "ref": "chúc mừng năm mới",
-     "hyp": "chúc mừng năm mới",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 4
-    },
-    {
-     "id": "short-07",
-     "category": "short",
-     "ref": "mời bạn vào nhà",
-     "hyp": "mời bạn vào nhà",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 4
-    },
-    {
-     "id": "short-08",
-     "category": "short",
-     "ref": "đèn đỏ rồi dừng lại",
-     "hyp": "đèn đỏ rồi dừng lại",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 5
-    },
-    {
-     "id": "short-09",
-     "category": "short",
-     "ref": "con mèo đang ngủ",
-     "hyp": "con mèo đang ngủ",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 4
-    },
-    {
-     "id": "short-10",
-     "category": "short",
-     "ref": "hẹn gặp lại ngày mai",
-     "hyp": "hẹn gặp lại ngày mai",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 5
-    },
-    {
-     "id": "medium-01",
-     "category": "medium",
-     "ref": "hà nội là thủ đô của việt nam nổi tiếng với phố cổ và hồ hoàn kiếm",
-     "hyp": "hà nội là thủ đô của việt nam nổi tiếng với phố cổ và hồ hoàn kiếm",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 17
-    },
-    {
-     "id": "medium-02",
-     "category": "medium",
-     "ref": "mỗi sáng tôi thường uống một ly cà phê sữa đá trước khi bắt đầu công việc",
-     "hyp": "mỗi sáng tôi thường uống một ly cà phê sữa đá trước khi bắt đầu công việc",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 17
-    },
-    {
-     "id": "medium-03",
-     "category": "medium",
-     "ref": "cơn mưa bất chợt khiến dòng người trên phố vội vã tìm chỗ trú",
-     "hyp": "cơn mưa bất chợt khiến dòng người trên phố vội vã tìm chỗ trú",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 14
-    },
-    {
-     "id": "medium-04",
-     "category": "medium",
-     "ref": "học sinh cả nước đang chuẩn bị cho kỳ thi tốt nghiệp trung học phổ thông",
-     "hyp": "học sinh cả nước đang chuẩn bị cho kỳ thi tốt nghiệp trung học phổ thông",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 16
-    },
-    {
-     "id": "medium-05",
-     "category": "medium",
-     "ref": "bà ngoại kể cho tôi nghe những câu chuyện cổ tích mỗi tối trước khi đi ngủ",
-     "hyp": "bà ngoại kể cho tôi nghe những câu chuyện cổ tích mỗi tối trước khi đi ngủ",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 17
-    },
-    {
-     "id": "medium-06",
-     "category": "medium",
-     "ref": "giá xăng hôm nay giảm nhẹ khoảng hai mươi ba nghìn đồng một lít",
-     "hyp": "giá xăng hôm nay giảm nhẹ khoảng hai mươi ba nghìn đồng một lít",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 14
-    },
-    {
-     "id": "medium-07",
-     "category": "medium",
-     "ref": "đội tuyển việt nam đã giành chiến thắng với tỷ số hai không trong trận đấu tối qua",
-     "hyp": "đội tuyển việt nam đã giành chiến thắng với tỷ số hai không trong trận đấu tối qua",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 18
-    },
-    {
-     "id": "medium-08",
-     "category": "medium",
-     "ref": "những cánh đồng lúa chín vàng trải dài đến tận chân trời",
-     "hyp": "những cánh đồng lúa chín vàng trải dài đến tận chân trời",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 12
-    },
-    {
-     "id": "medium-09",
-     "category": "medium",
-     "ref": "ứng dụng này giúp người dùng đặt vé máy bay chỉ trong vài phút",
-     "hyp": "ứng dụng này giúp người dùng đặt vé máy bay chỉ trong vài phút",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 14
-    },
-    {
-     "id": "medium-10",
-     "category": "medium",
-     "ref": "thành phố hồ chí minh là trung tâm kinh tế lớn nhất cả nước",
-     "hyp": "thành phố hồ chí là trung tâm tâm kinh tế lớn nhất cả nước",
-     "wer": 0.14285714285714285,
-     "cer": 0.15254237288135594,
-     "ref_words": 14
-    },
-    {
-     "id": "medium-11",
-     "category": "medium",
-     "ref": "các nhà khoa học đang nghiên cứu một loại vắc xin mới phòng bệnh cúm",
-     "hyp": "các nhà khoa học đang nghiên cứu một loại vắc xin mới phòng bệnh cúm",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 15
-    },
-    {
-     "id": "medium-12",
-     "category": "medium",
-     "ref": "cuối tuần này gia đình tôi sẽ về quê thăm ông bà",
-     "hyp": "cuối tuần này gia đình tôi sẽ về quê thăm ông bà",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 12
-    },
-    {
-     "id": "medium-13",
-     "category": "medium",
-     "ref": "vịnh hạ long được công nhận là di sản thiên nhiên thế giới",
-     "hyp": "vĩnh hạ long được công nhận là di sản thiên nhiên thế giới",
-     "wer": 0.07692307692307693,
-     "cer": 0.017241379310344827,
-     "ref_words": 13
-    },
-    {
-     "id": "medium-14",
-     "category": "medium",
-     "ref": "anh ấy luyện tập chăm chỉ mỗi ngày để chuẩn bị cho giải chạy ma ra tông",
-     "hyp": "anh ấy luyện tập chăm chỉ mỗi ngày để chuẩn bị cho giải chạy marathon",
-     "wer": 0.17647058823529413,
-     "cer": 0.07042253521126761,
-     "ref_words": 17
-    },
-    {
-     "id": "medium-15",
-     "category": "medium",
-     "ref": "người dân miền trung đang khắc phục hậu quả của cơn bão số ba",
-     "hyp": "người dân miền trung đang khắc phục hậu quả của cơn bão số ba",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 14
-    },
-    {
-     "id": "long-01",
-     "category": "long",
-     "ref": "theo dự báo của trung tâm khí tượng thủy văn quốc gia trong những ngày tới khu vực bắc bộ sẽ có mưa rào và dông rải rác nhiệt độ thấp nhất từ hai mươi hai đến hai mươi tư độ người dân cần chú ý đề phòng lốc sét và gió giật mạnh",
-     "hyp": "theo dự báo của trung tâm khí tượng thủy văn quốc gia trong những ngày tới khu vực bắc bộ sẽ có mưa rào và dông rải rác nhiệt độ thấp nhất từ hai mươi hai đến hai mươi tư độ người dân cần chú ý đề phòng lốc sét và gió giật mạnh",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 54
-    },
-    {
-     "id": "long-02",
-     "category": "long",
-     "ref": "trí tuệ nhân tạo đang thay đổi cách chúng ta làm việc và học tập từ những trợ lý ảo có thể trả lời câu hỏi cho đến các hệ thống tự động dịch thuật tuy nhiên chúng ta cũng cần thận trọng với những rủi ro mà công nghệ này có thể mang lại",
-     "hyp": "trí tuệ nhân tạo đang thay đổi cách chúng ta làm việc và học tập từ những trợ lý ảo có thể trả lời câu hỏi cho đến các hệ thống tự động dịch thuật tuy nhiên chúng ta cũng cần thận trọng với những rủi ro mà công nghệ này có thể mang lại",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 55
-    },
-    {
-     "id": "long-03",
-     "category": "long",
-     "ref": "ngày xửa ngày xưa ở một ngôi làng nhỏ ven sông có hai anh em mồ côi sống nương tựa vào nhau người anh tham lam còn người em hiền lành chăm chỉ và câu chuyện của họ đã trở thành bài học cho biết bao thế hệ",
-     "hyp": "ngày xửa ngày xưa ở một ngôi làng nhỏ ven sông có hai anh em mồ côi sống nương tựa vào nhau người anh tham lam còn người em hiền lành chăm chỉ và câu chuyện của họ đã trở thành bài học cho biết bao thế hệ",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 48
-    },
-    {
-     "id": "long-04",
-     "category": "long",
-     "ref": "để bảo vệ sức khỏe các chuyên gia khuyên mỗi người nên ngủ đủ bảy đến tám tiếng mỗi đêm ăn nhiều rau xanh hạn chế đồ ngọt và dành ít nhất ba mươi phút mỗi ngày để vận động hoặc tập thể dục",
-     "hyp": "để bảo vệ sức khỏe các chuyên gia khuyên mỗi người nên ngủ đủ bẫy đến tám tiếng mỗi đêm ăn nhiều rau xanh hạn chế đồ ngọt và dành ít nhất ba mươi phút mỗi ngày để vận động hoặc tập thể dục",
-     "wer": 0.022727272727272728,
-     "cer": 0.005319148936170213,
-     "ref_words": 44
-    },
-    {
-     "id": "long-05",
-     "category": "long",
-     "ref": "sau hơn hai năm thi công cây cầu mới bắc qua sông hồng đã chính thức thông xe giúp rút ngắn thời gian di chuyển giữa hai bờ và giảm đáng kể tình trạng ùn tắc giao thông vào giờ cao điểm",
-     "hyp": "sau hơn hai năm thi công cây cầu mới bắc qua sông hồng đã chính thức thông xe giúp rút ngắn thời gian di chuyển giữa hai bờ và giảm đáng kể tình trạng ngừng tắc giao trong giờ cao điểm",
-     "wer": 0.07142857142857142,
-     "cer": 0.05405405405405406,
-     "ref_words": 42
-    },
-    {
-     "id": "long-06",
-     "category": "long",
-     "ref": "khi mùa thu đến hà nội khoác lên mình một vẻ đẹp dịu dàng những con phố rợp bóng cây mùi hoa sữa thoang thoảng trong gió và những gánh hàng rong bán cốm xanh khiến ai đi xa cũng nhớ",
-     "hyp": "khi mùa thu đến hà nội khoác lên mình một vẻ đẹp dịu dàng những con phố rợp bóng cây mùi hoa sữa thoang thoảng trong gió và những gánh hàng rong bán cốm xanh khiến ai đi xa cũng nhớ",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 41
-    },
-    {
-     "id": "long-07",
-     "category": "long",
-     "ref": "hội nghị lần này tập trung thảo luận các giải pháp thúc đẩy chuyển đổi số trong giáo dục y tế và hành chính công nhằm nâng cao chất lượng dịch vụ và tạo thuận lợi cho người dân và doanh nghiệp",
-     "hyp": "hội nghị lần này tập trung thảo luận các giải pháp thúc đẩy chuyển đổi số trong giáo dục y tế và hành chính công nhằm nâng cao chất lượng dịch vụ và tạo thuận lợi cho người dân và doanh nghiệp",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 42
-    },
-    {
-     "id": "long-08",
-     "category": "long",
-     "ref": "nếu bạn đang tìm kiếm một điểm đến yên bình cho kỳ nghỉ hãy thử ghé thăm những bản làng vùng cao tây bắc nơi có ruộng bậc thang tuyệt đẹp không khí trong lành và những con người mến khách",
-     "hyp": "nếu bạn đang tìm kiếm một điểm đến yên bình cho kỳ nghỉ hãy thử ghé thăm những bản làng vùng cao tây bắc nơi có ruộng bậc thang tuyệt đẹp không khí trong lành và những con người mến khách",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 41
-    },
-    {
-     "id": "tones-01",
-     "category": "tones",
-     "ref": "bà ba bán bánh bò bé bi bốn bịch bánh",
-     "hyp": "bà ba bán bánh bò bé bi bốn bịch bánh",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 10
-    },
-    {
-     "id": "tones-02",
-     "category": "tones",
-     "ref": "mẹ mở mũ mới mẹ mỉm miệng mừng",
-     "hyp": "mẹ mở mũ mới mẹ mỉm miệng mừng",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 8
-    },
-    {
-     "id": "tones-03",
-     "category": "tones",
-     "ref": "những ngã rẽ nhỏ khiến kẻ lạ dễ lỡ đường",
-     "hyp": "những ngã rẽ nhỏ khiến kẻ lạ dễ lở đường",
-     "wer": 0.1,
-     "cer": 0.025,
-     "ref_words": 10
-    },
-    {
-     "id": "tones-04",
-     "category": "tones",
-     "ref": "nồi lẩu nấm nóng nực nêm nếm nước mắm ngon",
-     "hyp": "nồi lẩu nóng nóng nực nem nếm nước mắm ngon",
-     "wer": 0.2,
-     "cer": 0.09523809523809523,
-     "ref_words": 10
-    },
-    {
-     "id": "tones-05",
-     "category": "tones",
-     "ref": "khuya khoắt khuỷu tay khuơ khoắng chiếc khuy nhỏ",
-     "hyp": "khuya khoác khuỷu tay khô khoắn chiếc khuya nhỏ",
-     "wer": 0.4444444444444444,
-     "cer": 0.125,
-     "ref_words": 9
-    },
-    {
-     "id": "tones-06",
-     "category": "tones",
-     "ref": "chuyện chưa chắc chắn chớ vội chuyển đi",
-     "hyp": "chuyện chưa chắc chắn chớ vội chuyển đi",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 8
-    },
-    {
-     "id": "tones-07",
-     "category": "tones",
-     "ref": "ngoằn ngoèo nghoe nguẩy nghiêng ngả nghênh ngang",
-     "hyp": "nguồn ngoèo quan ngủy nghiêng ngả nghênh ngang",
-     "wer": 0.375,
-     "cer": 0.1875,
-     "ref_words": 8
-    },
-    {
-     "id": "tones-08",
-     "category": "tones",
-     "ref": "quả xoài xanh quả ổi chín quả nhãn lồng thơm lừng",
-     "hyp": "quả xoài xanh quả ôi chín quả nhãn lồng thơm lừng",
-     "wer": 0.09090909090909091,
-     "cer": 0.02040816326530612,
-     "ref_words": 11
-    },
-    {
-     "id": "names-01",
-     "category": "names",
-     "ref": "chủ tịch hồ chí minh đọc bản tuyên ngôn độc lập tại quảng trường ba đình",
-     "hyp": "chủ tịch hồ chí minh đọc bản tuyên ngôn độc lập tại quảng trường ba đình",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 16
-    },
-    {
-     "id": "names-02",
-     "category": "names",
-     "ref": "tôi đã từng đến buôn ma thuột pleiku và kon tum",
-     "hyp": "tôi đã từng đến buôn ma thuột li cô và con tôm",
-     "wer": 0.36363636363636365,
-     "cer": 0.14893617021276595,
-     "ref_words": 11
-    },
-    {
-     "id": "names-03",
-     "category": "names",
-     "ref": "nguyễn du là tác giả của truyện kiều",
-     "hyp": "nguyễn du là tác giả của truyện kiều",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 8
-    },
-    {
-     "id": "names-04",
-     "category": "names",
-     "ref": "chuyến bay từ nội bài đến tân sơn nhất mất khoảng hai tiếng",
-     "hyp": "chuyến bay từ nội bài đến tân sơn nhất mất khoảng hai tiếng",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 13
-    },
-    {
-     "id": "names-05",
-     "category": "names",
-     "ref": "anh tuấn và chị hương vừa mở một quán cà phê ở đà lạt",
-     "hyp": "anh tuấn và chị hương vừa mở một quán cà phê ở đà lạt",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 14
-    },
-    {
-     "id": "names-06",
-     "category": "names",
-     "ref": "cô ấy làm việc tại một công ty phần mềm ở cầu giấy",
-     "hyp": "cô ấy làm việc tại một công ty phần mềm ở cầu giấy",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 13
-    },
-    {
-     "id": "names-07",
-     "category": "names",
-     "ref": "đội bóng hoàng anh gia lai có nhiều cầu thủ trẻ tài năng",
-     "hyp": "đội bóng hoàng anh gia lai có nhiều cầu thủ trẻ tài năng",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 13
-    },
-    {
-     "id": "names-08",
-     "category": "names",
-     "ref": "phở bánh mì và bún chả là những món ăn nổi tiếng của việt nam",
-     "hyp": "phở bánh mì và bún chả là những món ăn nổi tiếng của việt nam",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 15
-    },
-    {
-     "id": "names-09",
-     "category": "names",
-     "ref": "mùa hè năm ngoái chúng tôi đi du lịch phú quốc và côn đảo",
-     "hyp": "mùa hè năm ngoái chúng tôi đi du lịch phú quốc và côn đảo",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 14
-    }
-   ]
-  },
-  {
-   "engine": "indextts2",
-   "name": "IndexTTS-2 Vietnamese",
-   "repo": "dinhthuan/index-tts-2-vietnamese",
-   "license": "Apache-2.0 (dùng thương mại cần phép của IndexTTS)",
-   "device": "NVIDIA H200 NVL",
-   "rtf": 1.0626428492748954,
-   "peak_vram_gb": 8.943232512,
-   "sample_rate": 22050,
-   "overall": {
-    "wer": 0.018137847642079808,
-    "cer": 0.004756575265808618,
-    "n": 50
-   },
-   "by_category": {
-    "short": {
-     "wer": 0.0,
-     "cer": 0.0,
-     "n": 10
-    },
-    "medium": {
-     "wer": 0.008928571428571428,
-     "cer": 0.003080082135523614,
-     "n": 15
-    },
-    "long": {
-     "wer": 0.005449591280653951,
-     "cer": 0.001876172607879925,
-     "n": 8
-    },
-    "tones": {
-     "wer": 0.12162162162162163,
+     "wer": 0.0945945945945946,
      "cer": 0.02702702702702703,
      "n": 8
     },
@@ -543,8 +45,8 @@
     }
    },
    "runaway": [],
-   "utmos": 1.9878578758239747,
-   "sim": 0.7408178436756134,
+   "utmos": 3.1679218721389772,
+   "sim": 0.7584820139408112,
    "clones_voice": true,
    "rows": [
     {
@@ -749,9 +251,513 @@
      "id": "medium-13",
      "category": "medium",
      "ref": "vịnh hạ long được công nhận là di sản thiên nhiên thế giới",
-     "hyp": "vình hạ long được công nhận là di sản thiên nhiên thế giới",
-     "wer": 0.07692307692307693,
-     "cer": 0.017241379310344827,
+     "hyp": "vịnh hạ long được công nhận là di sản thiên nhiên thế giới",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 13
+    },
+    {
+     "id": "medium-14",
+     "category": "medium",
+     "ref": "anh ấy luyện tập chăm chỉ mỗi ngày để chuẩn bị cho giải chạy ma ra tông",
+     "hyp": "anh ấy luyện tập chăm chỉ mỗi ngày để chuẩn bị cho giải chạy marathon",
+     "wer": 0.17647058823529413,
+     "cer": 0.07042253521126761,
+     "ref_words": 17
+    },
+    {
+     "id": "medium-15",
+     "category": "medium",
+     "ref": "người dân miền trung đang khắc phục hậu quả của cơn bão số ba",
+     "hyp": "người dân miền trung đang khắc phục hậu quả của cơn bão số ba",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 14
+    },
+    {
+     "id": "long-01",
+     "category": "long",
+     "ref": "theo dự báo của trung tâm khí tượng thủy văn quốc gia trong những ngày tới khu vực bắc bộ sẽ có mưa rào và dông rải rác nhiệt độ thấp nhất từ hai mươi hai đến hai mươi tư độ người dân cần chú ý đề phòng lốc sét và gió giật mạnh",
+     "hyp": "theo dự báo của trung tâm khí tượng thụy văn quốc gia trong những ngày tới khu vực bắc bộ sẽ có mưa rào và dông rải rác nhiệt độ thấp nhất từ hai mươi hai đến hai mươi tư độ người dân cần chú ý đề phòng lốc sét và gió giật mạnh",
+     "wer": 0.018518518518518517,
+     "cer": 0.004405286343612335,
+     "ref_words": 54
+    },
+    {
+     "id": "long-02",
+     "category": "long",
+     "ref": "trí tuệ nhân tạo đang thay đổi cách chúng ta làm việc và học tập từ những trợ lý ảo có thể trả lời câu hỏi cho đến các hệ thống tự động dịch thuật tuy nhiên chúng ta cũng cần thận trọng với những rủi ro mà công nghệ này có thể mang lại",
+     "hyp": "trí tuệ nhân tạo đang thay đổi cách chúng ta làm việc và học tập từ những trợ lý ảo có thể trả lời câu hỏi cho đến các hệ thống tự động dịch thuật tuy nhiên chúng ta cũng cần thận thận trọng với những rủi ro mà công nghệ này có thể mang lại",
+     "wer": 0.01818181818181818,
+     "cer": 0.02127659574468085,
+     "ref_words": 55
+    },
+    {
+     "id": "long-03",
+     "category": "long",
+     "ref": "ngày xửa ngày xưa ở một ngôi làng nhỏ ven sông có hai anh em mồ côi sống nương tựa vào nhau người anh tham lam còn người em hiền lành chăm chỉ và câu chuyện của họ đã trở thành bài học cho biết bao thế hệ",
+     "hyp": "ngày xử ngày xưa ở một ngôi làng nhỏ ven sông có hai anh em mộ cuộc sống nương tựa vào nhau người anh tham lam còn người em hiền lành chăm chỉ và câu chuyện của họ đã trở thành bài học cho biết bao thế hệ",
+     "wer": 0.0625,
+     "cer": 0.024509803921568627,
+     "ref_words": 48
+    },
+    {
+     "id": "long-04",
+     "category": "long",
+     "ref": "để bảo vệ sức khỏe các chuyên gia khuyên mỗi người nên ngủ đủ bảy đến tám tiếng mỗi đêm ăn nhiều rau xanh hạn chế đồ ngọt và dành ít nhất ba mươi phút mỗi ngày để vận động hoặc tập thể dục",
+     "hyp": "để bảo vệ sức khỏe các chuyên gia khuyên mỗi người nên ngủ đủ bẩy đến tám tiếng mỗi đêm ăn nhiều rau xanh hạn chế đồ ngọt và dành ít nhất ba mươi phút mỗi ngày để vận động hoặc tập thể dục",
+     "wer": 0.022727272727272728,
+     "cer": 0.005319148936170213,
+     "ref_words": 44
+    },
+    {
+     "id": "long-05",
+     "category": "long",
+     "ref": "sau hơn hai năm thi công cây cầu mới bắc qua sông hồng đã chính thức thông xe giúp rút ngắn thời gian di chuyển giữa hai bờ và giảm đáng kể tình trạng ùn tắc giao thông vào giờ cao điểm",
+     "hyp": "sau hơn hai năm thi công cây cầu mới bắc qua sông hồng đã chính thức thông xe giúp rút ngắn thời gian di chuyển giữa hai bờ và giảm đáng kể tình trạng ùn tắc giao thông vào giờ cao điểm",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 42
+    },
+    {
+     "id": "long-06",
+     "category": "long",
+     "ref": "khi mùa thu đến hà nội khoác lên mình một vẻ đẹp dịu dàng những con phố rợp bóng cây mùi hoa sữa thoang thoảng trong gió và những gánh hàng rong bán cốm xanh khiến ai đi xa cũng nhớ",
+     "hyp": "khi mùa thu đến hà nội khoác lên mình một vẻ đẹp dịu dàng những con phố rợp bóng cây mùi hoa sữa thoàng thoảng trong gió và những gánh hàng rong bán cốm xanh khiến ai đi xa cũng nhớ",
+     "wer": 0.024390243902439025,
+     "cer": 0.0055248618784530384,
+     "ref_words": 41
+    },
+    {
+     "id": "long-07",
+     "category": "long",
+     "ref": "hội nghị lần này tập trung thảo luận các giải pháp thúc đẩy chuyển đổi số trong giáo dục y tế và hành chính công nhằm nâng cao chất lượng dịch vụ và tạo thuận lợi cho người dân và doanh nghiệp",
+     "hyp": "hội nghị lần này tập trung thảo luận các giải pháp thúc đẩy chuyển đổi số trong giáo dục y tế và hành chính công nhằm nâng cao chất lượng dịch vụ và tạo thuận lợi cho người dân và doanh nghiệp",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 42
+    },
+    {
+     "id": "long-08",
+     "category": "long",
+     "ref": "nếu bạn đang tìm kiếm một điểm đến yên bình cho kỳ nghỉ hãy thử ghé thăm những bản làng vùng cao tây bắc nơi có ruộng bậc thang tuyệt đẹp không khí trong lành và những con người mến khách",
+     "hyp": "nếu bạn đang tìm kiếm một điểm đến yên bình cho kỳ nghỉ hãy thử ghé thăm những bản làng vùng cao tây bắc nơi có ruộng bậc thang tuyệt đẹp không khí trong lành và những con người mến khách",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 41
+    },
+    {
+     "id": "tones-01",
+     "category": "tones",
+     "ref": "bà ba bán bánh bò bé bi bốn bịch bánh",
+     "hyp": "bà ba bán bánh bò với bị bốn bịch bánh",
+     "wer": 0.2,
+     "cer": 0.10810810810810811,
+     "ref_words": 10
+    },
+    {
+     "id": "tones-02",
+     "category": "tones",
+     "ref": "mẹ mở mũ mới mẹ mỉm miệng mừng",
+     "hyp": "mẹ mở mũ mới mẹ mỉm miệng mừng",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 8
+    },
+    {
+     "id": "tones-03",
+     "category": "tones",
+     "ref": "những ngã rẽ nhỏ khiến kẻ lạ dễ lỡ đường",
+     "hyp": "những ngã rẽ nhỏ khiến kẻ lạ dễ lở đường",
+     "wer": 0.1,
+     "cer": 0.025,
+     "ref_words": 10
+    },
+    {
+     "id": "tones-04",
+     "category": "tones",
+     "ref": "nồi lẩu nấm nóng nực nêm nếm nước mắm ngon",
+     "hyp": "nồi lẩu nấm nóng nực nêm nếm nước mắm ngon",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 10
+    },
+    {
+     "id": "tones-05",
+     "category": "tones",
+     "ref": "khuya khoắt khuỷu tay khuơ khoắng chiếc khuy nhỏ",
+     "hyp": "khuya khoắt khuỷu tay khua khoắng chiếc khuya nhỏ",
+     "wer": 0.2222222222222222,
+     "cer": 0.041666666666666664,
+     "ref_words": 9
+    },
+    {
+     "id": "tones-06",
+     "category": "tones",
+     "ref": "chuyện chưa chắc chắn chớ vội chuyển đi",
+     "hyp": "chuyện chưa chắc chắn chớ vội chuyển đi",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 8
+    },
+    {
+     "id": "tones-07",
+     "category": "tones",
+     "ref": "ngoằn ngoèo nghoe nguẩy nghiêng ngả nghênh ngang",
+     "hyp": "ngoằn ngoèo nghe nguẩy nghiêng ngả nghênh ngang",
+     "wer": 0.125,
+     "cer": 0.020833333333333332,
+     "ref_words": 8
+    },
+    {
+     "id": "tones-08",
+     "category": "tones",
+     "ref": "quả xoài xanh quả ổi chín quả nhãn lồng thơm lừng",
+     "hyp": "quả xoài xanh quả ối chín quả nhãn lồng thơm lừng",
+     "wer": 0.09090909090909091,
+     "cer": 0.02040816326530612,
+     "ref_words": 11
+    },
+    {
+     "id": "names-01",
+     "category": "names",
+     "ref": "chủ tịch hồ chí minh đọc bản tuyên ngôn độc lập tại quảng trường ba đình",
+     "hyp": "chủ tịch hồ chí minh đọc bản tuyên ngôn độc lập tại quảng trường ba đình",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 16
+    },
+    {
+     "id": "names-02",
+     "category": "names",
+     "ref": "tôi đã từng đến buôn ma thuột pleiku và kon tum",
+     "hyp": "tôi đã từng đến buôn ma thuột pleiku và con tôm",
+     "wer": 0.18181818181818182,
+     "cer": 0.0425531914893617,
+     "ref_words": 11
+    },
+    {
+     "id": "names-03",
+     "category": "names",
+     "ref": "nguyễn du là tác giả của truyện kiều",
+     "hyp": "nguyễn du là tác giả của truyện kiều",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 8
+    },
+    {
+     "id": "names-04",
+     "category": "names",
+     "ref": "chuyến bay từ nội bài đến tân sơn nhất mất khoảng hai tiếng",
+     "hyp": "chuyến bay từ nội bài đến tân sơn nhất mất khoảng hai tiếng",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 13
+    },
+    {
+     "id": "names-05",
+     "category": "names",
+     "ref": "anh tuấn và chị hương vừa mở một quán cà phê ở đà lạt",
+     "hyp": "anh tuấn và chị hương vừa mở một quán cà phê ở đà lạt",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 14
+    },
+    {
+     "id": "names-06",
+     "category": "names",
+     "ref": "cô ấy làm việc tại một công ty phần mềm ở cầu giấy",
+     "hyp": "cô ấy làm việc tại một công ty phần mềm ở cầu giấy",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 13
+    },
+    {
+     "id": "names-07",
+     "category": "names",
+     "ref": "đội bóng hoàng anh gia lai có nhiều cầu thủ trẻ tài năng",
+     "hyp": "đội bóng hoàng anh gia lai có nhiều cầu thủ trẻ tài năng",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 13
+    },
+    {
+     "id": "names-08",
+     "category": "names",
+     "ref": "phở bánh mì và bún chả là những món ăn nổi tiếng của việt nam",
+     "hyp": "phở bánh mì và bún chả là những món ăn nổi tiếng của việt nam",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 15
+    },
+    {
+     "id": "names-09",
+     "category": "names",
+     "ref": "mùa hè năm ngoái chúng tôi đi du lịch phú quốc và côn đảo",
+     "hyp": "mùa hè năm ngoái chúng tôi đi du lịch phú quốc và côn đảo",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 14
+    }
+   ]
+  },
+  {
+   "engine": "indextts2",
+   "name": "IndexTTS-2 Vietnamese",
+   "repo": "dinhthuan/index-tts-2-vietnamese",
+   "license": "Apache-2.0 (dùng thương mại cần phép của IndexTTS)",
+   "device": "NVIDIA H200 NVL",
+   "rtf": 0.7803331729185,
+   "peak_vram_gb": 8.917745152,
+   "sample_rate": 22050,
+   "overall": {
+    "wer": 0.019347037484885126,
+    "cer": 0.008673754896474537,
+    "n": 50
+   },
+   "by_category": {
+    "short": {
+     "wer": 0.0,
+     "cer": 0.0,
+     "n": 10
+    },
+    "medium": {
+     "wer": 0.004464285714285714,
+     "cer": 0.002053388090349076,
+     "n": 15
+    },
+    "long": {
+     "wer": 0.0027247956403269754,
+     "cer": 0.0006253908692933083,
+     "n": 8
+    },
+    "tones": {
+     "wer": 0.14864864864864866,
+     "cer": 0.06906906906906907,
+     "n": 8
+    },
+    "names": {
+     "wer": 0.02564102564102564,
+     "cer": 0.010183299389002037,
+     "n": 9
+    }
+   },
+   "runaway": [
+    "short-03",
+    "short-07",
+    "short-08",
+    "short-09",
+    "tones-07"
+   ],
+   "utmos": 2.7943202543258665,
+   "sim": 0.721650043129921,
+   "clones_voice": true,
+   "rows": [
+    {
+     "id": "short-01",
+     "category": "short",
+     "ref": "xin chào các bạn",
+     "hyp": "xin chào các bạn",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 4
+    },
+    {
+     "id": "short-02",
+     "category": "short",
+     "ref": "hôm nay trời nắng đẹp",
+     "hyp": "hôm nay trời nắng đẹp",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 5
+    },
+    {
+     "id": "short-03",
+     "category": "short",
+     "ref": "cảm ơn bạn rất nhiều",
+     "hyp": "cảm ơn bạn rất nhiều",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 5
+    },
+    {
+     "id": "short-04",
+     "category": "short",
+     "ref": "tôi đang đi làm",
+     "hyp": "tôi đang đi làm",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 4
+    },
+    {
+     "id": "short-05",
+     "category": "short",
+     "ref": "bạn đã ăn cơm chưa",
+     "hyp": "bạn đã ăn cơm chưa",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 5
+    },
+    {
+     "id": "short-06",
+     "category": "short",
+     "ref": "chúc mừng năm mới",
+     "hyp": "chúc mừng năm mới",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 4
+    },
+    {
+     "id": "short-07",
+     "category": "short",
+     "ref": "mời bạn vào nhà",
+     "hyp": "mời bạn vào nhà",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 4
+    },
+    {
+     "id": "short-08",
+     "category": "short",
+     "ref": "đèn đỏ rồi dừng lại",
+     "hyp": "đèn đỏ rồi dừng lại",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 5
+    },
+    {
+     "id": "short-09",
+     "category": "short",
+     "ref": "con mèo đang ngủ",
+     "hyp": "con mèo đang ngủ",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 4
+    },
+    {
+     "id": "short-10",
+     "category": "short",
+     "ref": "hẹn gặp lại ngày mai",
+     "hyp": "hẹn gặp lại ngày mai",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 5
+    },
+    {
+     "id": "medium-01",
+     "category": "medium",
+     "ref": "hà nội là thủ đô của việt nam nổi tiếng với phố cổ và hồ hoàn kiếm",
+     "hyp": "hà nội là thủ đô của việt nam nổi tiếng với phố cổ và hồ hoàn kiếm",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 17
+    },
+    {
+     "id": "medium-02",
+     "category": "medium",
+     "ref": "mỗi sáng tôi thường uống một ly cà phê sữa đá trước khi bắt đầu công việc",
+     "hyp": "mỗi sáng tôi thường uống một ly cà phê sữa đá trước khi bắt đầu công việc",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 17
+    },
+    {
+     "id": "medium-03",
+     "category": "medium",
+     "ref": "cơn mưa bất chợt khiến dòng người trên phố vội vã tìm chỗ trú",
+     "hyp": "cơn mưa bất chợt khiến dòng người trên phố vội vã tìm chỗ trú",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 14
+    },
+    {
+     "id": "medium-04",
+     "category": "medium",
+     "ref": "học sinh cả nước đang chuẩn bị cho kỳ thi tốt nghiệp trung học phổ thông",
+     "hyp": "học sinh cả nước đang chuẩn bị cho kỳ thi tốt nghiệp trung học phổ thông",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 16
+    },
+    {
+     "id": "medium-05",
+     "category": "medium",
+     "ref": "bà ngoại kể cho tôi nghe những câu chuyện cổ tích mỗi tối trước khi đi ngủ",
+     "hyp": "bà ngoại kể cho tôi nghe những câu chuyện cổ tích mỗi tối trước khi đi ngủ",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 17
+    },
+    {
+     "id": "medium-06",
+     "category": "medium",
+     "ref": "giá xăng hôm nay giảm nhẹ khoảng hai mươi ba nghìn đồng một lít",
+     "hyp": "giá xăng hôm nay giảm nhẹ khoảng hai mươi ba nghìn đồng một lít",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 14
+    },
+    {
+     "id": "medium-07",
+     "category": "medium",
+     "ref": "đội tuyển việt nam đã giành chiến thắng với tỷ số hai không trong trận đấu tối qua",
+     "hyp": "đội tuyển việt nam đã giành chiến thắng với tỷ số hai không trong trận đấu tối qua",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 18
+    },
+    {
+     "id": "medium-08",
+     "category": "medium",
+     "ref": "những cánh đồng lúa chín vàng trải dài đến tận chân trời",
+     "hyp": "những cánh đồng lúa chín vàng trải dài đến tận chân trời",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 12
+    },
+    {
+     "id": "medium-09",
+     "category": "medium",
+     "ref": "ứng dụng này giúp người dùng đặt vé máy bay chỉ trong vài phút",
+     "hyp": "ứng dụng này giúp người dùng đặt vé máy bay chỉ trong vài phút",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 14
+    },
+    {
+     "id": "medium-10",
+     "category": "medium",
+     "ref": "thành phố hồ chí minh là trung tâm kinh tế lớn nhất cả nước",
+     "hyp": "thành phố hồ chí minh là trung tâm kinh tế lớn nhất cả nước",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 14
+    },
+    {
+     "id": "medium-11",
+     "category": "medium",
+     "ref": "các nhà khoa học đang nghiên cứu một loại vắc xin mới phòng bệnh cúm",
+     "hyp": "các nhà khoa học đang nghiên cứu một loại vắc xin mới phòng bệnh cúm",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 15
+    },
+    {
+     "id": "medium-12",
+     "category": "medium",
+     "ref": "cuối tuần này gia đình tôi sẽ về quê thăm ông bà",
+     "hyp": "cuối tuần này gia đình tôi sẽ về quê thăm ông bà",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 12
+    },
+    {
+     "id": "medium-13",
+     "category": "medium",
+     "ref": "vịnh hạ long được công nhận là di sản thiên nhiên thế giới",
+     "hyp": "vịnh hạ long được công nhận là di sản thiên nhiên thế giới",
+     "wer": 0.0,
+     "cer": 0.0,
      "ref_words": 13
     },
     {
@@ -794,9 +800,9 @@
      "id": "long-03",
      "category": "long",
      "ref": "ngày xửa ngày xưa ở một ngôi làng nhỏ ven sông có hai anh em mồ côi sống nương tựa vào nhau người anh tham lam còn người em hiền lành chăm chỉ và câu chuyện của họ đã trở thành bài học cho biết bao thế hệ",
-     "hyp": "ngày xửa ngày xưa ở một ngôi làng nhỏ ven sông có hai anh em mồ côi sống nương tựa vào nhau người ăn tham lam còn người em hiền lành chăm chỉ và câu chuyện của họ đã trở thành bài học cho biết bao thế hệ",
-     "wer": 0.020833333333333332,
-     "cer": 0.00980392156862745,
+     "hyp": "ngày xửa ngày xưa ở một ngôi làng nhỏ ven sông có hai anh em mồ côi sống nương tựa vào nhau người anh tham lam còn người em hiền lành chăm chỉ và câu chuyện của họ đã trở thành bài học cho biết bao thế hệ",
+     "wer": 0.0,
+     "cer": 0.0,
      "ref_words": 48
     },
     {
@@ -848,9 +854,9 @@
      "id": "tones-01",
      "category": "tones",
      "ref": "bà ba bán bánh bò bé bi bốn bịch bánh",
-     "hyp": "bà ba bán bánh bỏ bé bị bốn bịch bánh",
-     "wer": 0.2,
-     "cer": 0.05405405405405406,
+     "hyp": "bà ba bán bánh bò bé bị bốn bịch bánh",
+     "wer": 0.1,
+     "cer": 0.02702702702702703,
      "ref_words": 10
     },
     {
@@ -875,45 +881,45 @@
      "id": "tones-04",
      "category": "tones",
      "ref": "nồi lẩu nấm nóng nực nêm nếm nước mắm ngon",
-     "hyp": "nồi lẩu nấm nóng nực nêm nếm nước mắm ngon",
-     "wer": 0.0,
-     "cer": 0.0,
+     "hyp": "nồi lẩu nấm nóng nực đem nếm nước mắm ngon",
+     "wer": 0.1,
+     "cer": 0.047619047619047616,
      "ref_words": 10
     },
     {
      "id": "tones-05",
      "category": "tones",
      "ref": "khuya khoắt khuỷu tay khuơ khoắng chiếc khuy nhỏ",
-     "hyp": "khuya khoắt khuều tay khơ khoắn chiếc khuya nhỏ",
-     "wer": 0.4444444444444444,
-     "cer": 0.08333333333333333,
+     "hyp": "khuya khoắt khuỷu tay khơ khoắng chiếc huy nhỏ",
+     "wer": 0.2222222222222222,
+     "cer": 0.041666666666666664,
      "ref_words": 9
     },
     {
      "id": "tones-06",
      "category": "tones",
      "ref": "chuyện chưa chắc chắn chớ vội chuyển đi",
-     "hyp": "chuyện chưa chắc chắn chớ vội chuyện đi",
+     "hyp": "chuyện chưa chắc chắn chưa vội chuyển đi",
      "wer": 0.125,
-     "cer": 0.02564102564102564,
+     "cer": 0.05128205128205128,
      "ref_words": 8
     },
     {
      "id": "tones-07",
      "category": "tones",
      "ref": "ngoằn ngoèo nghoe nguẩy nghiêng ngả nghênh ngang",
-     "hyp": "ngoằn ngoèo ngoe nguẩy nghiêng ngả nghênh ngang",
-     "wer": 0.125,
-     "cer": 0.020833333333333332,
+     "hyp": "ngoằn ngoèo ngoai ngoại dây ngã nghênh ngang",
+     "wer": 0.5,
+     "cer": 0.2916666666666667,
      "ref_words": 8
     },
     {
      "id": "tones-08",
      "category": "tones",
      "ref": "quả xoài xanh quả ổi chín quả nhãn lồng thơm lừng",
-     "hyp": "quả xoài xanh quả ổi chín quả nhãn lồng thơm lừng",
-     "wer": 0.0,
-     "cer": 0.0,
+     "hyp": "quả xoài xanh quả ổi chín quả nhã lồng thơm lừng",
+     "wer": 0.09090909090909091,
+     "cer": 0.02040816326530612,
      "ref_words": 11
     },
     {
@@ -929,9 +935,9 @@
      "id": "names-02",
      "category": "names",
      "ref": "tôi đã từng đến buôn ma thuột pleiku và kon tum",
-     "hyp": "tôi đã từng đến buôn ma thuột pleiku và con tôm",
-     "wer": 0.18181818181818182,
-     "cer": 0.0425531914893617,
+     "hyp": "tôi đã từng đến buôn ma thuột lai cu và con tum",
+     "wer": 0.2727272727272727,
+     "cer": 0.10638297872340426,
      "ref_words": 11
     },
     {
@@ -1042,7 +1048,7 @@
    },
    "runaway": [],
    "utmos": 2.7383735513687135,
-   "sim": 0.3182960841059685,
+   "sim": 0.1138310531899333,
    "clones_voice": false,
    "rows": [
     {
@@ -1540,7 +1546,7 @@
    },
    "runaway": [],
    "utmos": 2.366454734802246,
-   "sim": 0.19840428814291955,
+   "sim": 0.1688626402616501,
    "clones_voice": false,
    "rows": [
     {
@@ -2001,44 +2007,44 @@
    "repo": "pnnbao-ump/VieNeu-TTS-v3-Turbo",
    "license": "Apache-2.0",
    "device": "NVIDIA H200 NVL",
-   "rtf": 0.10081383240235559,
-   "peak_vram_gb": 0.9358208,
+   "rtf": 0.10098484350090153,
+   "peak_vram_gb": 0.91206144,
    "sample_rate": 48000,
    "overall": {
-    "wer": 0.032648125755743655,
-    "cer": 0.013710128707330722,
+    "wer": 0.02781136638452237,
+    "cer": 0.012311135982092894,
     "n": 50
    },
    "by_category": {
     "short": {
-     "wer": 0.06666666666666667,
+     "wer": 0.044444444444444446,
      "cer": 0.02824858757062147,
      "n": 10
     },
     "medium": {
      "wer": 0.017857142857142856,
-     "cer": 0.006160164271047228,
+     "cer": 0.00513347022587269,
      "n": 15
     },
     "long": {
-     "wer": 0.013623978201634877,
-     "cer": 0.005628517823639775,
+     "wer": 0.005449591280653951,
+     "cer": 0.001876172607879925,
      "n": 8
     },
     "tones": {
-     "wer": 0.1891891891891892,
-     "cer": 0.08108108108108109,
+     "wer": 0.13513513513513514,
+     "cer": 0.06606606606606606,
      "n": 8
     },
     "names": {
-     "wer": 0.008547008547008548,
-     "cer": 0.004073319755600814,
+     "wer": 0.042735042735042736,
+     "cer": 0.018329938900203666,
      "n": 9
     }
    },
    "runaway": [],
-   "utmos": 2.160719952583313,
-   "sim": 0.6560919404029846,
+   "utmos": 2.9829295969009397,
+   "sim": 0.7336151301860809,
    "clones_voice": true,
    "rows": [
     {
@@ -2090,18 +2096,18 @@
      "id": "short-06",
      "category": "short",
      "ref": "chúc mừng năm mới",
-     "hyp": "chúc mừng năm mới",
-     "wer": 0.0,
-     "cer": 0.0,
+     "hyp": "chúc ngày năm mới",
+     "wer": 0.25,
+     "cer": 0.23529411764705882,
      "ref_words": 4
     },
     {
      "id": "short-07",
      "category": "short",
      "ref": "mời bạn vào nhà",
-     "hyp": "ngồi bạo vào nhà",
-     "wer": 0.5,
-     "cer": 0.26666666666666666,
+     "hyp": "mời bạn vào nhà",
+     "wer": 0.0,
+     "cer": 0.0,
      "ref_words": 4
     },
     {
@@ -2207,9 +2213,9 @@
      "id": "medium-09",
      "category": "medium",
      "ref": "ứng dụng này giúp người dùng đặt vé máy bay chỉ trong vài phút",
-     "hyp": "ứng dụng này giúp người dùng đặt vé máy bay chỉ trong vài phút",
-     "wer": 0.0,
-     "cer": 0.0,
+     "hyp": "ứng dụng này giúp người dùng đạt vé máy bay chỉ trong vài phút",
+     "wer": 0.07142857142857142,
+     "cer": 0.016129032258064516,
      "ref_words": 14
     },
     {
@@ -2243,18 +2249,18 @@
      "id": "medium-13",
      "category": "medium",
      "ref": "vịnh hạ long được công nhận là di sản thiên nhiên thế giới",
-     "hyp": "vinh hạ long được công nhận là di sản thiên nhiên thế giới",
-     "wer": 0.07692307692307693,
-     "cer": 0.017241379310344827,
+     "hyp": "vịnh hạ long được công nhận là di sản thiên nhiên thế giới",
+     "wer": 0.0,
+     "cer": 0.0,
      "ref_words": 13
     },
     {
      "id": "medium-14",
      "category": "medium",
      "ref": "anh ấy luyện tập chăm chỉ mỗi ngày để chuẩn bị cho giải chạy ma ra tông",
-     "hyp": "anh ấy luyện tập chăm chỉ mỗi ngày để chuẩn bị cho giải chạy marathon",
+     "hyp": "anh ấy luyện tập chăm chỉ mỗi ngày để chuẩn bị cho giải chạy maratón",
      "wer": 0.17647058823529413,
-     "cer": 0.07042253521126761,
+     "cer": 0.056338028169014086,
      "ref_words": 17
     },
     {
@@ -2288,16 +2294,16 @@
      "id": "long-03",
      "category": "long",
      "ref": "ngày xửa ngày xưa ở một ngôi làng nhỏ ven sông có hai anh em mồ côi sống nương tựa vào nhau người anh tham lam còn người em hiền lành chăm chỉ và câu chuyện của họ đã trở thành bài học cho biết bao thế hệ",
-     "hyp": "ngày xử ngày xưa ở một ngôi làng nhỏ ven sông có hai anh em một cuộc sống nương tựa vào nhau người anh tham lam còn người em hiền lành chăm chỉ và câu chuyện của họ đã trở thành bài học cho biết bao thế hệ",
-     "wer": 0.0625,
-     "cer": 0.029411764705882353,
+     "hyp": "ngày xửa ngày xưa ở một ngôi làng nhỏ ven sông có hai anh em một côi sống nương tựa vào nhau người anh tham lam còn người em hiền lành chăm chỉ và câu chuyện của họ đã trở thành bài học cho biết bao thế hệ",
+     "wer": 0.020833333333333332,
+     "cer": 0.00980392156862745,
      "ref_words": 48
     },
     {
      "id": "long-04",
      "category": "long",
      "ref": "để bảo vệ sức khỏe các chuyên gia khuyên mỗi người nên ngủ đủ bảy đến tám tiếng mỗi đêm ăn nhiều rau xanh hạn chế đồ ngọt và dành ít nhất ba mươi phút mỗi ngày để vận động hoặc tập thể dục",
-     "hyp": "để bảo vệ sức khỏe các chuyên gia khuyên mỗi người nên ngủ đủ bậy đến tám tiếng mỗi đêm ăn nhiều rau xanh hạn chế đồ ngọt và dành ít nhất ba mươi phút mỗi ngày để vận động hoặc tập thể dục",
+     "hyp": "để bảo vệ sức khỏe các chuyên gia khuyên mỗi người nên ngủ đủ bẩy đến tám tiếng mỗi đêm ăn nhiều rau xanh hạn chế đồ ngọt và dành ít nhất ba mươi phút mỗi ngày để vận động hoặc tập thể dục",
      "wer": 0.022727272727272728,
      "cer": 0.005319148936170213,
      "ref_words": 44
@@ -2315,9 +2321,9 @@
      "id": "long-06",
      "category": "long",
      "ref": "khi mùa thu đến hà nội khoác lên mình một vẻ đẹp dịu dàng những con phố rợp bóng cây mùi hoa sữa thoang thoảng trong gió và những gánh hàng rong bán cốm xanh khiến ai đi xa cũng nhớ",
-     "hyp": "khi mùa thu đến hà nội khoác lên mình một vẻ đẹp dịu dàng những con phố rợp bóng cây mùi hoa sữa thoang thoảng trong gió và những gánh hàng rong bán cuốn xanh khiến ai đi xa cũng nhớ",
-     "wer": 0.024390243902439025,
-     "cer": 0.011049723756906077,
+     "hyp": "khi mùa thu đến hà nội khoác lên mình một vẻ đẹp dịu dàng những con phố rợp bóng cây mùi hoa sữa thoang thoảng trong gió và những gánh hàng rong bán cốm xanh khiến ai đi xa cũng nhớ",
+     "wer": 0.0,
+     "cer": 0.0,
      "ref_words": 41
     },
     {
@@ -2342,9 +2348,9 @@
      "id": "tones-01",
      "category": "tones",
      "ref": "bà ba bán bánh bò bé bi bốn bịch bánh",
-     "hyp": "bà ba bán bánh bò bé bị bốn bịch bánh",
-     "wer": 0.1,
-     "cer": 0.02702702702702703,
+     "hyp": "bà ba bán bánh bò bé bi bốn bịch bánh",
+     "wer": 0.0,
+     "cer": 0.0,
      "ref_words": 10
     },
     {
@@ -2360,26 +2366,26 @@
      "id": "tones-03",
      "category": "tones",
      "ref": "những ngã rẽ nhỏ khiến kẻ lạ dễ lỡ đường",
-     "hyp": "những gã rể nhỏ khiến kẻ lạ dễ lở đường",
-     "wer": 0.3,
-     "cer": 0.075,
+     "hyp": "những ngã rẽ nhỏ khiến kẻ lạ dễ lỡ đường",
+     "wer": 0.0,
+     "cer": 0.0,
      "ref_words": 10
     },
     {
      "id": "tones-04",
      "category": "tones",
      "ref": "nồi lẩu nấm nóng nực nêm nếm nước mắm ngon",
-     "hyp": "nồi đậu nấm nóng nịch nêm nếm nước mắm ngon",
-     "wer": 0.2,
-     "cer": 0.09523809523809523,
+     "hyp": "nồi lẩu nấm nóng nực nêm nếm nước mắm ngon",
+     "wer": 0.0,
+     "cer": 0.0,
      "ref_words": 10
     },
     {
      "id": "tones-05",
      "category": "tones",
      "ref": "khuya khoắt khuỷu tay khuơ khoắng chiếc khuy nhỏ",
-     "hyp": "huyền khoác khuỷu tay khô khoáng chiếc khuy nhỏ",
-     "wer": 0.4444444444444444,
+     "hyp": "huy khoác khuỷu tay khô khoắn chiếc huy nhỏ",
+     "wer": 0.5555555555555556,
      "cer": 0.16666666666666666,
      "ref_words": 9
     },
@@ -2387,27 +2393,27 @@
      "id": "tones-06",
      "category": "tones",
      "ref": "chuyện chưa chắc chắn chớ vội chuyển đi",
-     "hyp": "chuyện chưa chắc chắn chưa vội chuyển đi",
-     "wer": 0.125,
-     "cer": 0.05128205128205128,
+     "hyp": "chuyện chưa chắc chắn chớ vội chuyển đi",
+     "wer": 0.0,
+     "cer": 0.0,
      "ref_words": 8
     },
     {
      "id": "tones-07",
      "category": "tones",
      "ref": "ngoằn ngoèo nghoe nguẩy nghiêng ngả nghênh ngang",
-     "hyp": "ngoằn ngoèo angel nguyễn nghiêng ngả nghiêng ngang",
-     "wer": 0.375,
-     "cer": 0.1875,
+     "hyp": "hoàng mèo angel hồ nguẩy nghiêng ngả nghênh ngang",
+     "wer": 0.5,
+     "cer": 0.2708333333333333,
      "ref_words": 8
     },
     {
      "id": "tones-08",
      "category": "tones",
      "ref": "quả xoài xanh quả ổi chín quả nhãn lồng thơm lừng",
-     "hyp": "quả xoài xanh quả ổi chín quả nhãn lồng thơm lừng",
-     "wer": 0.0,
-     "cer": 0.0,
+     "hyp": "quả xoài xanh quả ối chín quả nhãn lồng thơm lừng",
+     "wer": 0.09090909090909091,
+     "cer": 0.02040816326530612,
      "ref_words": 11
     },
     {
@@ -2423,18 +2429,18 @@
      "id": "names-02",
      "category": "names",
      "ref": "tôi đã từng đến buôn ma thuột pleiku và kon tum",
-     "hyp": "tôi đã từng đến buôn ma thuột pleiku và kon tum",
-     "wer": 0.0,
-     "cer": 0.0,
+     "hyp": "tôi đã từng đến puma thuộc pleiku và quantum",
+     "wer": 0.45454545454545453,
+     "cer": 0.19148936170212766,
      "ref_words": 11
     },
     {
      "id": "names-03",
      "category": "names",
      "ref": "nguyễn du là tác giả của truyện kiều",
-     "hyp": "nguyễn yêu là tác giả của truyện kiều",
-     "wer": 0.125,
-     "cer": 0.05555555555555555,
+     "hyp": "nguyễn du là tác giả của truyện kiều",
+     "wer": 0.0,
+     "cer": 0.0,
      "ref_words": 8
     },
     {
@@ -2499,44 +2505,44 @@
    "repo": "dangvansam/viet-tts",
    "license": "CC (model card)",
    "device": "NVIDIA H200 NVL",
-   "rtf": 0.3948068726330642,
-   "peak_vram_gb": 1.745420288,
+   "rtf": 0.4855298375949031,
+   "peak_vram_gb": 1.670685184,
    "sample_rate": 22050,
    "overall": {
     "wer": 0.11970979443772672,
-    "cer": 0.06911024062674874,
+    "cer": 0.06463346390598769,
     "n": 50
    },
    "by_category": {
     "short": {
      "wer": 0.13333333333333333,
-     "cer": 0.07909604519774012,
+     "cer": 0.07344632768361582,
      "n": 10
     },
     "medium": {
-     "wer": 0.07142857142857142,
-     "cer": 0.03285420944558522,
+     "wer": 0.09375,
+     "cer": 0.049281314168377825,
      "n": 15
     },
     "long": {
-     "wer": 0.08174386920980926,
-     "cer": 0.05065666041275797,
+     "wer": 0.07629427792915532,
+     "cer": 0.043151969981238276,
      "n": 8
     },
     "tones": {
-     "wer": 0.4189189189189189,
-     "cer": 0.23123123123123124,
+     "wer": 0.4864864864864865,
+     "cer": 0.24324324324324326,
      "n": 8
     },
     "names": {
-     "wer": 0.13675213675213677,
-     "cer": 0.08757637474541752,
+     "wer": 0.06837606837606838,
+     "cer": 0.04073319755600815,
      "n": 9
     }
    },
    "runaway": [],
-   "utmos": 2.3928317475318908,
-   "sim": 0.7276192528009414,
+   "utmos": 3.161082191467285,
+   "sim": 0.7662364184856415,
    "clones_voice": true,
    "rows": [
     {
@@ -2561,54 +2567,54 @@
      "id": "short-03",
      "category": "short",
      "ref": "cảm ơn bạn rất nhiều",
-     "hyp": "cám ơn bạn rất nhiều",
-     "wer": 0.2,
-     "cer": 0.05,
+     "hyp": "cảm ơn bạn rất nhiều",
+     "wer": 0.0,
+     "cer": 0.0,
      "ref_words": 5
     },
     {
      "id": "short-04",
      "category": "short",
      "ref": "tôi đang đi làm",
-     "hyp": "tôi đang đi làm",
-     "wer": 0.0,
-     "cer": 0.0,
+     "hyp": "tôi đang đi lại",
+     "wer": 0.25,
+     "cer": 0.13333333333333333,
      "ref_words": 4
     },
     {
      "id": "short-05",
      "category": "short",
      "ref": "bạn đã ăn cơm chưa",
-     "hyp": "bạn đã ngừng chưa",
-     "wer": 0.4,
-     "cer": 0.2777777777777778,
+     "hyp": "bạn đã ăn cơm chưa",
+     "wer": 0.0,
+     "cer": 0.0,
      "ref_words": 5
     },
     {
      "id": "short-06",
      "category": "short",
      "ref": "chúc mừng năm mới",
-     "hyp": "mừng năm mới",
-     "wer": 0.25,
-     "cer": 0.29411764705882354,
+     "hyp": "chúc mừng năm mới",
+     "wer": 0.0,
+     "cer": 0.0,
      "ref_words": 4
     },
     {
      "id": "short-07",
      "category": "short",
      "ref": "mời bạn vào nhà",
-     "hyp": "mời bạn vào nhà",
-     "wer": 0.0,
-     "cer": 0.0,
+     "hyp": "mùi bạn vào nhà",
+     "wer": 0.25,
+     "cer": 0.06666666666666667,
      "ref_words": 4
     },
     {
      "id": "short-08",
      "category": "short",
      "ref": "đèn đỏ rồi dừng lại",
-     "hyp": "đằng đó rồi dừng lại",
-     "wer": 0.4,
-     "cer": 0.15789473684210525,
+     "hyp": "nên rõ sự chững lại",
+     "wer": 0.8,
+     "cer": 0.5263157894736842,
      "ref_words": 5
     },
     {
@@ -2633,7 +2639,7 @@
      "id": "medium-01",
      "category": "medium",
      "ref": "hà nội là thủ đô của việt nam nổi tiếng với phố cổ và hồ hoàn kiếm",
-     "hyp": "hà nội là thủ đô của việt nam nổi tiếng với phố cầu và hồ hoàn kiếm",
+     "hyp": "hà nội là thủ đô của việt nam nổi tiếng bởi phố cổ và hồ hoàn kiếm",
      "wer": 0.058823529411764705,
      "cer": 0.030303030303030304,
      "ref_words": 17
@@ -2651,8 +2657,8 @@
      "id": "medium-03",
      "category": "medium",
      "ref": "cơn mưa bất chợt khiến dòng người trên phố vội vã tìm chỗ trú",
-     "hyp": "cơn mơ mất chợt khiến dòng người trên phố vội vã tìm chỗ tú",
-     "wer": 0.21428571428571427,
+     "hyp": "cơn mưa bất trực khiến dòng người trên phố vội vã tìm chỗ trú",
+     "wer": 0.07142857142857142,
      "cer": 0.06557377049180328,
      "ref_words": 14
     },
@@ -2669,507 +2675,9 @@
      "id": "medium-05",
      "category": "medium",
      "ref": "bà ngoại kể cho tôi nghe những câu chuyện cổ tích mỗi tối trước khi đi ngủ",
-     "hyp": "bà ngoại kể cho tôi nghe những câu chuyện cổ tích mộ tôi trước khi đi ngủ",
-     "wer": 0.11764705882352941,
-     "cer": 0.04054054054054054,
-     "ref_words": 17
-    },
-    {
-     "id": "medium-06",
-     "category": "medium",
-     "ref": "giá xăng hôm nay giảm nhẹ khoảng hai mươi ba nghìn đồng một lít",
-     "hyp": "giá sân hôm nay giảm nhẹ khoảng hai mươi ba nghìn đồng một lít",
-     "wer": 0.07142857142857142,
-     "cer": 0.047619047619047616,
-     "ref_words": 14
-    },
-    {
-     "id": "medium-07",
-     "category": "medium",
-     "ref": "đội tuyển việt nam đã giành chiến thắng với tỷ số hai không trong trận đấu tối qua",
-     "hyp": "đội tuyển việt nam đã giành chiến thắng với tỷ số hai không thân trình đấu tối qua",
-     "wer": 0.1111111111111111,
-     "cer": 0.06097560975609756,
-     "ref_words": 18
-    },
-    {
-     "id": "medium-08",
-     "category": "medium",
-     "ref": "những cánh đồng lúa chín vàng trải dài đến tận chân trời",
-     "hyp": "những cánh đồng lúa chiếm vàng trải dài đến tận chân trời",
-     "wer": 0.08333333333333333,
-     "cer": 0.05357142857142857,
-     "ref_words": 12
-    },
-    {
-     "id": "medium-09",
-     "category": "medium",
-     "ref": "ứng dụng này giúp người dùng đặt vé máy bay chỉ trong vài phút",
-     "hyp": "ứng dụng này giúp người dùng đặt vé máy bay chỉ trốn vài phút",
-     "wer": 0.07142857142857142,
-     "cer": 0.03225806451612903,
-     "ref_words": 14
-    },
-    {
-     "id": "medium-10",
-     "category": "medium",
-     "ref": "thành phố hồ chí minh là trung tâm kinh tế lớn nhất cả nước",
-     "hyp": "thành phố hồ chí minh là trung tâm kinh tế lớn nhất cả nước",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 14
-    },
-    {
-     "id": "medium-11",
-     "category": "medium",
-     "ref": "các nhà khoa học đang nghiên cứu một loại vắc xin mới phòng bệnh cúm",
-     "hyp": "các nhà khoa học đang nghiên cứu một loại vắc xin mới phòng bệnh cuốn",
-     "wer": 0.06666666666666667,
-     "cer": 0.04411764705882353,
-     "ref_words": 15
-    },
-    {
-     "id": "medium-12",
-     "category": "medium",
-     "ref": "cuối tuần này gia đình tôi sẽ về quê thăm ông bà",
-     "hyp": "cuối tuần này gia đình tôi sẽ về vui thăm ông bà",
-     "wer": 0.08333333333333333,
-     "cer": 0.041666666666666664,
-     "ref_words": 12
-    },
-    {
-     "id": "medium-13",
-     "category": "medium",
-     "ref": "vịnh hạ long được công nhận là di sản thiên nhiên thế giới",
-     "hyp": "vịnh hạ long được công nhận là di sản thiên nhiên thế giới",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 13
-    },
-    {
-     "id": "medium-14",
-     "category": "medium",
-     "ref": "anh ấy luyện tập chăm chỉ mỗi ngày để chuẩn bị cho giải chạy ma ra tông",
-     "hyp": "anh ấy luyện tập chăm chỉ mỗi ngày để chuẩn bị cho giải chạy marathon",
+     "hyp": "bà ngoại kể cho tôi nghe như câu chuyện của tít mỗi tối trước khi đi ngủ",
      "wer": 0.17647058823529413,
-     "cer": 0.07042253521126761,
-     "ref_words": 17
-    },
-    {
-     "id": "medium-15",
-     "category": "medium",
-     "ref": "người dân miền trung đang khắc phục hậu quả của cơn bão số ba",
-     "hyp": "người dân miền trung đang khắc phục hậu quả của cơn bão số ba",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 14
-    },
-    {
-     "id": "long-01",
-     "category": "long",
-     "ref": "theo dự báo của trung tâm khí tượng thủy văn quốc gia trong những ngày tới khu vực bắc bộ sẽ có mưa rào và dông rải rác nhiệt độ thấp nhất từ hai mươi hai đến hai mươi tư độ người dân cần chú ý đề phòng lốc sét và gió giật mạnh",
-     "hyp": "theo dự báo của trung tâm khí tượng thị văn quốc gia trong những ngày tới khu vực bắc bộ sẽ có mưa rào và dông rải rác nhiệt độ thấp nhất từ hai mươi hai đến hai mươi tư độ người dân cần chú ý đề phòng lốc sét và gió giật mạnh",
-     "wer": 0.018518518518518517,
-     "cer": 0.00881057268722467,
-     "ref_words": 54
-    },
-    {
-     "id": "long-02",
-     "category": "long",
-     "ref": "trí tuệ nhân tạo đang thay đổi cách chúng ta làm việc và học tập từ những trợ lý ảo có thể trả lời câu hỏi cho đến các hệ thống tự động dịch thuật tuy nhiên chúng ta cũng cần thận trọng với những rủi ro mà công nghệ này có thể mang lại",
-     "hyp": "trí tuệ nhân tạo đang thay đổi cách chúng ta làm việc và học tập từ những trận lý ảo có thể trả lời câu hỏi cho đến các hệ thống tự động nghệ thuật tuy nhiên chúng ta cũng cần thận trọng với những rủi ro mà công nghệ này có thể mang lại",
-     "wer": 0.03636363636363636,
-     "cer": 0.02553191489361702,
-     "ref_words": 55
-    },
-    {
-     "id": "long-03",
-     "category": "long",
-     "ref": "ngày xửa ngày xưa ở một ngôi làng nhỏ ven sông có hai anh em mồ côi sống nương tựa vào nhau người anh tham lam còn người em hiền lành chăm chỉ và câu chuyện của họ đã trở thành bài học cho biết bao thế hệ",
-     "hyp": "ngày xử ngày xưa ở một ngôi làng nhỏ ven sông có hai ngai mồ côi sống nương tựa vào nhau người anh tham lam còn người em hiền lành chăm chỉ và câu chuyện của họ đã trở thành bài học cho biết bao thế hệ",
-     "wer": 0.0625,
-     "cer": 0.029411764705882353,
-     "ref_words": 48
-    },
-    {
-     "id": "long-04",
-     "category": "long",
-     "ref": "để bảo vệ sức khỏe các chuyên gia khuyên mỗi người nên ngủ đủ bảy đến tám tiếng mỗi đêm ăn nhiều rau xanh hạn chế đồ ngọt và dành ít nhất ba mươi phút mỗi ngày để vận động hoặc tập thể dục",
-     "hyp": "để bảo vệ sức khỏe các chuyên gia khuyên mỗi người nên ngủ đủ bỉ bên tám tiếng mỗi đêm ăn nhiều lót xanh hạn chế đồ ngọt và dành ít nhất ba mươi phút mỗi ngày để vận động hoặc tập thể dục",
-     "wer": 0.06818181818181818,
-     "cer": 0.03723404255319149,
-     "ref_words": 44
-    },
-    {
-     "id": "long-05",
-     "category": "long",
-     "ref": "sau hơn hai năm thi công cây cầu mới bắc qua sông hồng đã chính thức thông xe giúp rút ngắn thời gian di chuyển giữa hai bờ và giảm đáng kể tình trạng ùn tắc giao thông vào giờ cao điểm",
-     "hyp": "sau hơn hai năm thi công cây cầu mười bát hoa sông hồng đã chính thức thông xe giúp rút ngắn thời gian di chuyển giữa hai bờ và giảm đáng kể tình trạng ùn tắc giao thông vào giờ cao điểm",
-     "wer": 0.07142857142857142,
-     "cer": 0.032432432432432434,
-     "ref_words": 42
-    },
-    {
-     "id": "long-06",
-     "category": "long",
-     "ref": "khi mùa thu đến hà nội khoác lên mình một vẻ đẹp dịu dàng những con phố rợp bóng cây mùi hoa sữa thoang thoảng trong gió và những gánh hàng rong bán cốm xanh khiến ai đi xa cũng nhớ",
-     "hyp": "khi mùa thu đến hà nội khoét lên mình một vẻ đẹp điêu giang những con vốn được bóng cây mùi hoa sữa thoang thoảng trong gió và những gánh hàng rong bán cũng xanh khiến ai đi xa cũng nhớ",
-     "wer": 0.14634146341463414,
-     "cer": 0.09392265193370165,
-     "ref_words": 41
-    },
-    {
-     "id": "long-07",
-     "category": "long",
-     "ref": "hội nghị lần này tập trung thảo luận các giải pháp thúc đẩy chuyển đổi số trong giáo dục y tế và hành chính công nhằm nâng cao chất lượng dịch vụ và tạo thuận lợi cho người dân và doanh nghiệp",
-     "hyp": "nghề lần này tập trung khảo luận các giải pháp thúc đẩy trưởng lượng số trong giáo dục y tế và hành chính công nhằm nâng cao chất lượng nghiệp vụ và tạo thuận lợi cho người dân và doanh nghiệp",
-     "wer": 0.14285714285714285,
-     "cer": 0.11979166666666667,
-     "ref_words": 42
-    },
-    {
-     "id": "long-08",
-     "category": "long",
-     "ref": "nếu bạn đang tìm kiếm một điểm đến yên bình cho kỳ nghỉ hãy thử ghé thăm những bản làng vùng cao tây bắc nơi có ruộng bậc thang tuyệt đẹp không khí trong lành và những con người mến khách",
-     "hyp": "nếu bạn đang tìm kiếm một điểm đến yên bình cho kỳ nghỉ hãy thử ghé thăm những bản làng vùng cao tới nơi có rượu bột than tuyệt mẹp không khí trong lành và những con người mến khách",
-     "wer": 0.14634146341463414,
-     "cer": 0.0748663101604278,
-     "ref_words": 41
-    },
-    {
-     "id": "tones-01",
-     "category": "tones",
-     "ref": "bà ba bán bánh bò bé bi bốn bịch bánh",
-     "hyp": "và ba bánh bánh bò baby bốn bịch bánh",
-     "wer": 0.4,
-     "cer": 0.13513513513513514,
-     "ref_words": 10
-    },
-    {
-     "id": "tones-02",
-     "category": "tones",
-     "ref": "mẹ mở mũ mới mẹ mỉm miệng mừng",
-     "hyp": "mẹ mở mũ mới mẹ mém miệng nguồn",
-     "wer": 0.25,
-     "cer": 0.2,
-     "ref_words": 8
-    },
-    {
-     "id": "tones-03",
-     "category": "tones",
-     "ref": "những ngã rẽ nhỏ khiến kẻ lạ dễ lỡ đường",
-     "hyp": "diễn án rẽ giỏ phiên kệ là dễ lở đường",
-     "wer": 0.7,
-     "cer": 0.35,
-     "ref_words": 10
-    },
-    {
-     "id": "tones-04",
-     "category": "tones",
-     "ref": "nồi lẩu nấm nóng nực nêm nếm nước mắm ngon",
-     "hyp": "nồi lẩu nấm nóng nực nêm nếm nước mắm ngon",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 10
-    },
-    {
-     "id": "tones-05",
-     "category": "tones",
-     "ref": "khuya khoắt khuỷu tay khuơ khoắng chiếc khuy nhỏ",
-     "hyp": "vì khoác khuỷu tay vừa khoáng chứ quy nhỏ",
-     "wer": 0.6666666666666666,
-     "cer": 0.3541666666666667,
-     "ref_words": 9
-    },
-    {
-     "id": "tones-06",
-     "category": "tones",
-     "ref": "chuyện chưa chắc chắn chớ vội chuyển đi",
-     "hyp": "chuyện chưa chắc chắn trở vội chuyện nghi",
-     "wer": 0.375,
-     "cer": 0.1794871794871795,
-     "ref_words": 8
-    },
-    {
-     "id": "tones-07",
-     "category": "tones",
-     "ref": "ngoằn ngoèo nghoe nguẩy nghiêng ngả nghênh ngang",
-     "hyp": "ngoan wel nguyễn vũ minh nhã nguyên nhân",
-     "wer": 1.0,
-     "cer": 0.5625,
-     "ref_words": 8
-    },
-    {
-     "id": "tones-08",
-     "category": "tones",
-     "ref": "quả xoài xanh quả ổi chín quả nhãn lồng thơm lừng",
-     "hyp": "quả xoài xanh quả ủi chín quả nhãn lồng thơm lừng",
-     "wer": 0.09090909090909091,
-     "cer": 0.02040816326530612,
-     "ref_words": 11
-    },
-    {
-     "id": "names-01",
-     "category": "names",
-     "ref": "chủ tịch hồ chí minh đọc bản tuyên ngôn độc lập tại quảng trường ba đình",
-     "hyp": "chủ tịch hồ chí minh đọc bản tuyên ngôn độc lập về quảng trường mai đình",
-     "wer": 0.125,
-     "cer": 0.06944444444444445,
-     "ref_words": 16
-    },
-    {
-     "id": "names-02",
-     "category": "names",
-     "ref": "tôi đã từng đến buôn ma thuột pleiku và kon tum",
-     "hyp": "chúng tôi đã từng đến buôn ma thuột pleiku và cùng tung",
-     "wer": 0.2727272727272727,
-     "cer": 0.23404255319148937,
-     "ref_words": 11
-    },
-    {
-     "id": "names-03",
-     "category": "names",
-     "ref": "nguyễn du là tác giả của truyện kiều",
-     "hyp": "nguyên du là tác gia của thiên kiêu",
-     "wer": 0.5,
-     "cer": 0.19444444444444445,
-     "ref_words": 8
-    },
-    {
-     "id": "names-04",
-     "category": "names",
-     "ref": "chuyến bay từ nội bài đến tân sơn nhất mất khoảng hai tiếng",
-     "hyp": "chuyến bay từ nội bài đến tân sơn nhất mất khoảng hai tiếng",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 13
-    },
-    {
-     "id": "names-05",
-     "category": "names",
-     "ref": "anh tuấn và chị hương vừa mở một quán cà phê ở đà lạt",
-     "hyp": "anh tuấn và chị hương vừa mở một quán cà phi ở đà lạt",
-     "wer": 0.07142857142857142,
-     "cer": 0.018867924528301886,
-     "ref_words": 14
-    },
-    {
-     "id": "names-06",
-     "category": "names",
-     "ref": "cô ấy làm việc tại một công ty phần mềm ở cầu giấy",
-     "hyp": "tại một công ty phần mềm ở cầu giấy",
-     "wer": 0.3076923076923077,
-     "cer": 0.3,
-     "ref_words": 13
-    },
-    {
-     "id": "names-07",
-     "category": "names",
-     "ref": "đội bóng hoàng anh gia lai có nhiều cầu thủ trẻ tài năng",
-     "hyp": "đội bóng hoàng anh gia lai có nhiều cầu thủ trẻ tài năng",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 13
-    },
-    {
-     "id": "names-08",
-     "category": "names",
-     "ref": "phở bánh mì và bún chả là những món ăn nổi tiếng của việt nam",
-     "hyp": "phở bánh mì và bún chả là những món ăn nổi tiếng của việt nam",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 15
-    },
-    {
-     "id": "names-09",
-     "category": "names",
-     "ref": "mùa hè năm ngoái chúng tôi đi du lịch phú quốc và côn đảo",
-     "hyp": "một hai năm ngoái chúng tôi đi du lịch phú quốc và côn đảo",
-     "wer": 0.14285714285714285,
-     "cer": 0.07017543859649122,
-     "ref_words": 14
-    }
-   ]
-  },
-  {
-   "engine": "vixtts",
-   "name": "viXTTS",
-   "repo": "capleaf/viXTTS",
-   "license": "CPML (non-commercial)",
-   "device": "NVIDIA H200 NVL",
-   "rtf": 0.20176210504024247,
-   "peak_vram_gb": 2.283957248,
-   "sample_rate": 24000,
-   "overall": {
-    "wer": 0.09189842805320435,
-    "cer": 0.052322327923894796,
-    "n": 50
-   },
-   "by_category": {
-    "short": {
-     "wer": 0.24444444444444444,
-     "cer": 0.1807909604519774,
-     "n": 10
-    },
-    "medium": {
-     "wer": 0.049107142857142856,
-     "cer": 0.026694045174537988,
-     "n": 15
-    },
-    "long": {
-     "wer": 0.03814713896457766,
-     "cer": 0.017510944340212633,
-     "n": 8
-    },
-    "tones": {
-     "wer": 0.4189189189189189,
-     "cer": 0.23723723723723725,
-     "n": 8
-    },
-    "names": {
-     "wer": 0.07692307692307693,
-     "cer": 0.04480651731160896,
-     "n": 9
-    }
-   },
-   "runaway": [],
-   "utmos": 2.195470199584961,
-   "sim": 0.6376812636852265,
-   "clones_voice": true,
-   "rows": [
-    {
-     "id": "short-01",
-     "category": "short",
-     "ref": "xin chào các bạn",
-     "hyp": "xin chào trám bài",
-     "wer": 0.5,
-     "cer": 0.3125,
-     "ref_words": 4
-    },
-    {
-     "id": "short-02",
-     "category": "short",
-     "ref": "hôm nay trời nắng đẹp",
-     "hyp": "hôm nay trời nắng đẹp với",
-     "wer": 0.2,
-     "cer": 0.19047619047619047,
-     "ref_words": 5
-    },
-    {
-     "id": "short-03",
-     "category": "short",
-     "ref": "cảm ơn bạn rất nhiều",
-     "hyp": "cám ơn bè rất nhiều",
-     "wer": 0.4,
-     "cer": 0.15,
-     "ref_words": 5
-    },
-    {
-     "id": "short-04",
-     "category": "short",
-     "ref": "tôi đang đi làm",
-     "hyp": "tôi đang đi làm",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 4
-    },
-    {
-     "id": "short-05",
-     "category": "short",
-     "ref": "bạn đã ăn cơm chưa",
-     "hyp": "bạn đang ăn cái gì",
-     "wer": 0.6,
-     "cer": 0.5,
-     "ref_words": 5
-    },
-    {
-     "id": "short-06",
-     "category": "short",
-     "ref": "chúc mừng năm mới",
-     "hyp": "chúc mừng năm mới tốt",
-     "wer": 0.25,
-     "cer": 0.23529411764705882,
-     "ref_words": 4
-    },
-    {
-     "id": "short-07",
-     "category": "short",
-     "ref": "mời bạn vào nhà",
-     "hyp": "mời bạn vào nhà",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 4
-    },
-    {
-     "id": "short-08",
-     "category": "short",
-     "ref": "đèn đỏ rồi dừng lại",
-     "hyp": "đèn đỏ rồi dừng lại",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 5
-    },
-    {
-     "id": "short-09",
-     "category": "short",
-     "ref": "con mèo đang ngủ",
-     "hyp": "con mèo đang ngủ",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 4
-    },
-    {
-     "id": "short-10",
-     "category": "short",
-     "ref": "hẹn gặp lại ngày mai",
-     "hyp": "hẹn gặp lại nhà ăn ngày mai",
-     "wer": 0.4,
-     "cer": 0.35,
-     "ref_words": 5
-    },
-    {
-     "id": "medium-01",
-     "category": "medium",
-     "ref": "hà nội là thủ đô của việt nam nổi tiếng với phố cổ và hồ hoàn kiếm",
-     "hyp": "hà nội là thủ đô của việt nam nổi tiếng vì phố cổ và hồ hoàn kiếm",
-     "wer": 0.058823529411764705,
-     "cer": 0.030303030303030304,
-     "ref_words": 17
-    },
-    {
-     "id": "medium-02",
-     "category": "medium",
-     "ref": "mỗi sáng tôi thường uống một ly cà phê sữa đá trước khi bắt đầu công việc",
-     "hyp": "mỗi sáng tôi thường uống một ly cà phê sữa đá trước khi bắt đầu công việc",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 17
-    },
-    {
-     "id": "medium-03",
-     "category": "medium",
-     "ref": "cơn mưa bất chợt khiến dòng người trên phố vội vã tìm chỗ trú",
-     "hyp": "cơn mưa bất chợt khiến dòng người trên phố vội vã tìm chỗ trú",
-     "wer": 0.0,
-     "cer": 0.0,
-     "ref_words": 14
-    },
-    {
-     "id": "medium-04",
-     "category": "medium",
-     "ref": "học sinh cả nước đang chuẩn bị cho kỳ thi tốt nghiệp trung học phổ thông",
-     "hyp": "học sinh cả nước đang chuẩn bị cho kỳ thi hai tốt nghiệp trung học phổ thông",
-     "wer": 0.0625,
-     "cer": 0.05555555555555555,
-     "ref_words": 16
-    },
-    {
-     "id": "medium-05",
-     "category": "medium",
-     "ref": "bà ngoại kể cho tôi nghe những câu chuyện cổ tích mỗi tối trước khi đi ngủ",
-     "hyp": "bà ngoại kể cho tôi nghe những câu chuyện cổ tích mùa hè tối trước khi đi ngủ",
-     "wer": 0.11764705882352941,
-     "cer": 0.06756756756756757,
+     "cer": 0.0945945945945946,
      "ref_words": 17
     },
     {
@@ -3185,18 +2693,18 @@
      "id": "medium-07",
      "category": "medium",
      "ref": "đội tuyển việt nam đã giành chiến thắng với tỷ số hai không trong trận đấu tối qua",
-     "hyp": "đội tuyển việt nam đã dàn chiến thắng với tỷ số hai không trong trận đấu tối qua",
-     "wer": 0.05555555555555555,
-     "cer": 0.036585365853658534,
+     "hyp": "đội tuyển việt nam đã giành chiến thắng với tỷ số hai không trong trận đấu tối qua",
+     "wer": 0.0,
+     "cer": 0.0,
      "ref_words": 18
     },
     {
      "id": "medium-08",
      "category": "medium",
      "ref": "những cánh đồng lúa chín vàng trải dài đến tận chân trời",
-     "hyp": "những cánh đồng lúa chín vàng trải dài đến tận chân trời",
-     "wer": 0.0,
-     "cer": 0.0,
+     "hyp": "những cánh tùng núi chín màng trải dài đến tận chân trôi",
+     "wer": 0.3333333333333333,
+     "cer": 0.10714285714285714,
      "ref_words": 12
     },
     {
@@ -3221,45 +2729,545 @@
      "id": "medium-11",
      "category": "medium",
      "ref": "các nhà khoa học đang nghiên cứu một loại vắc xin mới phòng bệnh cúm",
-     "hyp": "các nhà khoa học đang nghiên cứu một loại vách sinh mới phòng bệnh cuống",
-     "wer": 0.2,
-     "cer": 0.11764705882352941,
+     "hyp": "có anh nhà khoa học đang nghiên cứu một loại vắc xin mới phòng bệnh cúm",
+     "wer": 0.13333333333333333,
+     "cer": 0.07352941176470588,
      "ref_words": 15
     },
     {
      "id": "medium-12",
      "category": "medium",
      "ref": "cuối tuần này gia đình tôi sẽ về quê thăm ông bà",
-     "hyp": "cuối tuần này gia đình tôi sẽ về quê thăm long bà",
-     "wer": 0.08333333333333333,
-     "cer": 0.041666666666666664,
+     "hyp": "cuối tuần này gia đình tôi sẽ hay quay thăm ông bà",
+     "wer": 0.16666666666666666,
+     "cer": 0.10416666666666667,
      "ref_words": 12
     },
     {
      "id": "medium-13",
      "category": "medium",
      "ref": "vịnh hạ long được công nhận là di sản thiên nhiên thế giới",
-     "hyp": "vinh hạ long được công nhận là di sản thiên nhiên thế giới",
+     "hyp": "tỉnh hạ long được công nhận là di sản thiên nhiên thế giới",
      "wer": 0.07692307692307693,
-     "cer": 0.017241379310344827,
+     "cer": 0.034482758620689655,
      "ref_words": 13
     },
     {
      "id": "medium-14",
      "category": "medium",
      "ref": "anh ấy luyện tập chăm chỉ mỗi ngày để chuẩn bị cho giải chạy ma ra tông",
-     "hyp": "anh ấy luyện tập chăm chỉ mỗi ngày để chuẩn bị cho giải chạy ma ra tông",
-     "wer": 0.0,
-     "cer": 0.0,
+     "hyp": "anh ấy luyện tập chăm chỉ mỗi ngày để chuẩn bị cho giải chạy ma gia tông",
+     "wer": 0.058823529411764705,
+     "cer": 0.028169014084507043,
      "ref_words": 17
     },
     {
      "id": "medium-15",
      "category": "medium",
      "ref": "người dân miền trung đang khắc phục hậu quả của cơn bão số ba",
-     "hyp": "người dân miền trung đang khắc phục hậu quả của cơn bão số bè",
+     "hyp": "nghi chanh mình chung đang khắc phục hậu quả của cơn bão súa vá",
+     "wer": 0.42857142857142855,
+     "cer": 0.2459016393442623,
+     "ref_words": 14
+    },
+    {
+     "id": "long-01",
+     "category": "long",
+     "ref": "theo dự báo của trung tâm khí tượng thủy văn quốc gia trong những ngày tới khu vực bắc bộ sẽ có mưa rào và dông rải rác nhiệt độ thấp nhất từ hai mươi hai đến hai mươi tư độ người dân cần chú ý đề phòng lốc sét và gió giật mạnh",
+     "hyp": "theo triệu báo của trung tâm khí tượng thủy văn quốc gia trong những ngày tới khu vực bắc bộ sẽ có mưa rào và dông rải rác nhiệt độ thấp nhất từ hai mươi hai đến hai mươi tư độ người dân cần chú ý đề phòng lộc rét và gió giật mạnh",
+     "wer": 0.05555555555555555,
+     "cer": 0.030837004405286344,
+     "ref_words": 54
+    },
+    {
+     "id": "long-02",
+     "category": "long",
+     "ref": "trí tuệ nhân tạo đang thay đổi cách chúng ta làm việc và học tập từ những trợ lý ảo có thể trả lời câu hỏi cho đến các hệ thống tự động dịch thuật tuy nhiên chúng ta cũng cần thận trọng với những rủi ro mà công nghệ này có thể mang lại",
+     "hyp": "trí luật nhân tạo đang thay đổi cách chúng ta làm việc và học tập từ những chỗ lý ảo có thể trả lời câu hỏi cho đến các hệ thống tự động dịch thuật tuy nhiên chúng ta cũng cần thận trọng với những rủi ro mà công nghệ này có thể mang lại",
+     "wer": 0.03636363636363636,
+     "cer": 0.02553191489361702,
+     "ref_words": 55
+    },
+    {
+     "id": "long-03",
+     "category": "long",
+     "ref": "ngày xửa ngày xưa ở một ngôi làng nhỏ ven sông có hai anh em mồ côi sống nương tựa vào nhau người anh tham lam còn người em hiền lành chăm chỉ và câu chuyện của họ đã trở thành bài học cho biết bao thế hệ",
+     "hyp": "trong ý sử ngày xưa ở một ngôi làng nhỏ ven sông có hai anh em mồ côi sống lương tự có nhau mấy anh tham làng con người em hiền lành chăm chỉ và câu chuyện của họ đã trở thành bài học chờ biết bao thế hệ",
+     "wer": 0.20833333333333334,
+     "cer": 0.10784313725490197,
+     "ref_words": 48
+    },
+    {
+     "id": "long-04",
+     "category": "long",
+     "ref": "để bảo vệ sức khỏe các chuyên gia khuyên mỗi người nên ngủ đủ bảy đến tám tiếng mỗi đêm ăn nhiều rau xanh hạn chế đồ ngọt và dành ít nhất ba mươi phút mỗi ngày để vận động hoặc tập thể dục",
+     "hyp": "còn để bảo vệ sức khỏe các chuyên gia khuyên mỗi người nên ngủ đủ bảy đến tám tiếng mỗi đêm ăn nhiều rau xanh hạn chế đồ ngọt và dành ít nhất ba mươi phút mỗi ngày để vận động và tập thể dục",
+     "wer": 0.045454545454545456,
+     "cer": 0.0425531914893617,
+     "ref_words": 44
+    },
+    {
+     "id": "long-05",
+     "category": "long",
+     "ref": "sau hơn hai năm thi công cây cầu mới bắc qua sông hồng đã chính thức thông xe giúp rút ngắn thời gian di chuyển giữa hai bờ và giảm đáng kể tình trạng ùn tắc giao thông vào giờ cao điểm",
+     "hyp": "sau hơn hai năm thi công cây cầu mới bắc qua sông hồng đã chính thức thông xe giúp dứt ngắn thời gian di chuyển giữa hai bờ và giảm đáng kể tình trạng ùn tắc giao thông vào giờ cao điểm",
+     "wer": 0.023809523809523808,
+     "cer": 0.010810810810810811,
+     "ref_words": 42
+    },
+    {
+     "id": "long-06",
+     "category": "long",
+     "ref": "khi mùa thu đến hà nội khoác lên mình một vẻ đẹp dịu dàng những con phố rợp bóng cây mùi hoa sữa thoang thoảng trong gió và những gánh hàng rong bán cốm xanh khiến ai đi xa cũng nhớ",
+     "hyp": "kim mùa thu đến hà nội khoác lên mình một vẻ đẹp dịu dàng nhánh con phố dập bóng cây mùi hoa sữa thang thoảng chống gió và những gánh hàng rong bán cốm xanh khiến ai đi xa cũng nhớ",
+     "wer": 0.12195121951219512,
+     "cer": 0.055248618784530384,
+     "ref_words": 41
+    },
+    {
+     "id": "long-07",
+     "category": "long",
+     "ref": "hội nghị lần này tập trung thảo luận các giải pháp thúc đẩy chuyển đổi số trong giáo dục y tế và hành chính công nhằm nâng cao chất lượng dịch vụ và tạo thuận lợi cho người dân và doanh nghiệp",
+     "hyp": "hội nghị lần này tập trung thảo luận các giải pháp thúc đẩy chuyển đổi số trăm lá thuốc y tế và hành chính công nhằm nâng cao chất lượng dịch vụ và tạo thuận lợi cho người dân và doanh nghiệp",
      "wer": 0.07142857142857142,
-     "cer": 0.01639344262295082,
+     "cer": 0.052083333333333336,
+     "ref_words": 42
+    },
+    {
+     "id": "long-08",
+     "category": "long",
+     "ref": "nếu bạn đang tìm kiếm một điểm đến yên bình cho kỳ nghỉ hãy thử ghé thăm những bản làng vùng cao tây bắc nơi có ruộng bậc thang tuyệt đẹp không khí trong lành và những con người mến khách",
+     "hyp": "nếu bạn đang tìm kiếm một điểm đến yên bình cho kỳ nghỉ hãy thử ghé thăm những bản làng vùng cao tây bắc nơi có ruộng bậc thang tuyệt đẹp không khí trong lành và những con lười miễn khách",
+     "wer": 0.04878048780487805,
+     "cer": 0.0213903743315508,
+     "ref_words": 41
+    },
+    {
+     "id": "tones-01",
+     "category": "tones",
+     "ref": "bà ba bán bánh bò bé bi bốn bịch bánh",
+     "hyp": "bà ba vẫn tính bỏ mẹ vì vốn bịt bánh",
+     "wer": 0.7,
+     "cer": 0.32432432432432434,
+     "ref_words": 10
+    },
+    {
+     "id": "tones-02",
+     "category": "tones",
+     "ref": "mẹ mở mũ mới mẹ mỉm miệng mừng",
+     "hyp": "mẹ mợ mổ mỗi mẹ mỉm mỉa mừng",
+     "wer": 0.5,
+     "cer": 0.23333333333333334,
+     "ref_words": 8
+    },
+    {
+     "id": "tones-03",
+     "category": "tones",
+     "ref": "những ngã rẽ nhỏ khiến kẻ lạ dễ lỡ đường",
+     "hyp": "những ngã rẽ nhỏ khiến kẻ lạ dễ lêu đường",
+     "wer": 0.1,
+     "cer": 0.05,
+     "ref_words": 10
+    },
+    {
+     "id": "tones-04",
+     "category": "tones",
+     "ref": "nồi lẩu nấm nóng nực nêm nếm nước mắm ngon",
+     "hyp": "nội lượng nấm nóng được nên mỉm nước mắm ngon",
+     "wer": 0.5,
+     "cer": 0.2619047619047619,
+     "ref_words": 10
+    },
+    {
+     "id": "tones-05",
+     "category": "tones",
+     "ref": "khuya khoắt khuỷu tay khuơ khoắng chiếc khuy nhỏ",
+     "hyp": "khuyến khích kiểu tày cổ khoáng triệt khi nhỏ",
+     "wer": 0.8888888888888888,
+     "cer": 0.4166666666666667,
+     "ref_words": 9
+    },
+    {
+     "id": "tones-06",
+     "category": "tones",
+     "ref": "chuyện chưa chắc chắn chớ vội chuyển đi",
+     "hyp": "chuyện chưa chắc chắn trớ vụ chuyển đi",
+     "wer": 0.25,
+     "cer": 0.10256410256410256,
+     "ref_words": 8
+    },
+    {
+     "id": "tones-07",
+     "category": "tones",
+     "ref": "ngoằn ngoèo nghoe nguẩy nghiêng ngả nghênh ngang",
+     "hyp": "muốn quèm với người nhưng ngản inh ngang",
+     "wer": 0.875,
+     "cer": 0.4791666666666667,
+     "ref_words": 8
+    },
+    {
+     "id": "tones-08",
+     "category": "tones",
+     "ref": "quả xoài xanh quả ổi chín quả nhãn lồng thơm lừng",
+     "hyp": "quả xoài xanh quả ôi chín quả nhã lồng thơm lừng",
+     "wer": 0.18181818181818182,
+     "cer": 0.04081632653061224,
+     "ref_words": 11
+    },
+    {
+     "id": "names-01",
+     "category": "names",
+     "ref": "chủ tịch hồ chí minh đọc bản tuyên ngôn độc lập tại quảng trường ba đình",
+     "hyp": "chủ tịch hồ chí minh đọc bản tuyên ngôn độc lập tại quảng trường ba đình",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 16
+    },
+    {
+     "id": "names-02",
+     "category": "names",
+     "ref": "tôi đã từng đến buôn ma thuột pleiku và kon tum",
+     "hyp": "tôi đã từng đến buôn ma thuột pleiku và con thươm",
+     "wer": 0.18181818181818182,
+     "cer": 0.0851063829787234,
+     "ref_words": 11
+    },
+    {
+     "id": "names-03",
+     "category": "names",
+     "ref": "nguyễn du là tác giả của truyện kiều",
+     "hyp": "nguyên lưu là tác giả của truyện kiều",
+     "wer": 0.25,
+     "cer": 0.08333333333333333,
+     "ref_words": 8
+    },
+    {
+     "id": "names-04",
+     "category": "names",
+     "ref": "chuyến bay từ nội bài đến tân sơn nhất mất khoảng hai tiếng",
+     "hyp": "chuyến bay từ nội bài đến tân sơn nép mất khoảng hai tiếng",
+     "wer": 0.07692307692307693,
+     "cer": 0.05084745762711865,
+     "ref_words": 13
+    },
+    {
+     "id": "names-05",
+     "category": "names",
+     "ref": "anh tuấn và chị hương vừa mở một quán cà phê ở đà lạt",
+     "hyp": "ông anh tuấn và chị hương vừa mở một quán cà phê ở đà lạt",
+     "wer": 0.07142857142857142,
+     "cer": 0.07547169811320754,
+     "ref_words": 14
+    },
+    {
+     "id": "names-06",
+     "category": "names",
+     "ref": "cô ấy làm việc tại một công ty phần mềm ở cầu giấy",
+     "hyp": "cô ấy làm việc tại một công ty phần mềm ở cầu giấy",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 13
+    },
+    {
+     "id": "names-07",
+     "category": "names",
+     "ref": "đội bóng hoàng anh gia lai có nhiều cầu thủ trẻ tài năng",
+     "hyp": "đội bóng màng anh gia lai có nhiều cầu thủ trẻ tài năng",
+     "wer": 0.07692307692307693,
+     "cer": 0.03571428571428571,
+     "ref_words": 13
+    },
+    {
+     "id": "names-08",
+     "category": "names",
+     "ref": "phở bánh mì và bún chả là những món ăn nổi tiếng của việt nam",
+     "hyp": "phở bánh mì và bún chả là những món ăn nổi tiếng của việt nam",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 15
+    },
+    {
+     "id": "names-09",
+     "category": "names",
+     "ref": "mùa hè năm ngoái chúng tôi đi du lịch phú quốc và côn đảo",
+     "hyp": "vào mùa hè năm ngoái chúng tôi đi du lịch phú quốc và côn đảo",
+     "wer": 0.07142857142857142,
+     "cer": 0.07017543859649122,
+     "ref_words": 14
+    }
+   ]
+  },
+  {
+   "engine": "vixtts",
+   "name": "viXTTS",
+   "repo": "capleaf/viXTTS",
+   "license": "CPML (non-commercial)",
+   "device": "NVIDIA H200 NVL",
+   "rtf": 0.1931030738858446,
+   "peak_vram_gb": 2.239896064,
+   "sample_rate": 24000,
+   "overall": {
+    "wer": 0.094316807738815,
+    "cer": 0.055120313374370455,
+    "n": 50
+   },
+   "by_category": {
+    "short": {
+     "wer": 0.4666666666666667,
+     "cer": 0.3672316384180791,
+     "n": 10
+    },
+    "medium": {
+     "wer": 0.049107142857142856,
+     "cer": 0.024640657084188913,
+     "n": 15
+    },
+    "long": {
+     "wer": 0.035422343324250684,
+     "cer": 0.01938711694809256,
+     "n": 8
+    },
+    "tones": {
+     "wer": 0.35135135135135137,
+     "cer": 0.1921921921921922,
+     "n": 8
+    },
+    "names": {
+     "wer": 0.05982905982905983,
+     "cer": 0.026476578411405296,
+     "n": 9
+    }
+   },
+   "runaway": [
+    "short-09"
+   ],
+   "utmos": 2.597807936668396,
+   "sim": 0.8118814766407013,
+   "clones_voice": true,
+   "rows": [
+    {
+     "id": "short-01",
+     "category": "short",
+     "ref": "xin chào các bạn",
+     "hyp": "xin chào các bạn",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 4
+    },
+    {
+     "id": "short-02",
+     "category": "short",
+     "ref": "hôm nay trời nắng đẹp",
+     "hyp": "hôm nay trời nắng đẹp",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 5
+    },
+    {
+     "id": "short-03",
+     "category": "short",
+     "ref": "cảm ơn bạn rất nhiều",
+     "hyp": "cảm ơn bạn rất nhiều",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 5
+    },
+    {
+     "id": "short-04",
+     "category": "short",
+     "ref": "tôi đang đi làm",
+     "hyp": "tôi đang đi làm",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 4
+    },
+    {
+     "id": "short-05",
+     "category": "short",
+     "ref": "bạn đã ăn cơm chưa",
+     "hyp": "bạn đã ăn cơm chưa",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 5
+    },
+    {
+     "id": "short-06",
+     "category": "short",
+     "ref": "chúc mừng năm mới",
+     "hyp": "chúc mừng năm nợ yết hôn thây",
+     "wer": 1.0,
+     "cer": 0.8823529411764706,
+     "ref_words": 4
+    },
+    {
+     "id": "short-07",
+     "category": "short",
+     "ref": "mời bạn vào nhà",
+     "hyp": "mời bạn vào nhà",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 4
+    },
+    {
+     "id": "short-08",
+     "category": "short",
+     "ref": "đèn đỏ rồi dừng lại",
+     "hyp": "đang đỡ rồi dừng lại",
+     "wer": 0.4,
+     "cer": 0.15789473684210525,
+     "ref_words": 5
+    },
+    {
+     "id": "short-09",
+     "category": "short",
+     "ref": "con mèo đang ngủ",
+     "hyp": "cameo đặng nhĩ đặng thị ly hận",
+     "wer": 1.75,
+     "cer": 1.3125,
+     "ref_words": 4
+    },
+    {
+     "id": "short-10",
+     "category": "short",
+     "ref": "hẹn gặp lại ngày mai",
+     "hyp": "hay nhóm bịa sĩ thân thiên tử nhĩ",
+     "wer": 1.6,
+     "cer": 1.3,
+     "ref_words": 5
+    },
+    {
+     "id": "medium-01",
+     "category": "medium",
+     "ref": "hà nội là thủ đô của việt nam nổi tiếng với phố cổ và hồ hoàn kiếm",
+     "hyp": "hà nội là thủ đô của việt nam nổi tiếng với phố cổ và hồ hoàn kiếm",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 17
+    },
+    {
+     "id": "medium-02",
+     "category": "medium",
+     "ref": "mỗi sáng tôi thường uống một ly cà phê sữa đá trước khi bắt đầu công việc",
+     "hyp": "mỗi sáng tôi thường uống một ly cà phê sữa đá trước khi bắt đầu công việc tạm đo",
+     "wer": 0.11764705882352941,
+     "cer": 0.0958904109589041,
+     "ref_words": 17
+    },
+    {
+     "id": "medium-03",
+     "category": "medium",
+     "ref": "cơn mưa bất chợt khiến dòng người trên phố vội vã tìm chỗ trú",
+     "hyp": "cơn mưa bất chợt khiến dòng người trên phố vội vã tìm chỗ trú",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 14
+    },
+    {
+     "id": "medium-04",
+     "category": "medium",
+     "ref": "học sinh cả nước đang chuẩn bị cho kỳ thi tốt nghiệp trung học phổ thông",
+     "hyp": "học sinh cả nước đang chuẩn bị cho kỳ thi tốt nghiệp trung học phổ thông",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 16
+    },
+    {
+     "id": "medium-05",
+     "category": "medium",
+     "ref": "bà ngoại kể cho tôi nghe những câu chuyện cổ tích mỗi tối trước khi đi ngủ",
+     "hyp": "bà ngoại kể cho tôi nghe những câu chuyện cổ tích mỗi tối trước khi đi ngủ",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 17
+    },
+    {
+     "id": "medium-06",
+     "category": "medium",
+     "ref": "giá xăng hôm nay giảm nhẹ khoảng hai mươi ba nghìn đồng một lít",
+     "hyp": "giá xăng hôm nay giảm nhẹ khoảng hai mươi ba nghìn đồng một lít",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 14
+    },
+    {
+     "id": "medium-07",
+     "category": "medium",
+     "ref": "đội tuyển việt nam đã giành chiến thắng với tỷ số hai không trong trận đấu tối qua",
+     "hyp": "đội tuyển việt nam đã giành chiến thắng với tỷ số hai không trong trận đấu tối qua",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 18
+    },
+    {
+     "id": "medium-08",
+     "category": "medium",
+     "ref": "những cánh đồng lúa chín vàng trải dài đến tận chân trời",
+     "hyp": "những đánh đồng lưới chín vang chạy dại đến tận chân trời",
+     "wer": 0.4166666666666667,
+     "cer": 0.17857142857142858,
+     "ref_words": 12
+    },
+    {
+     "id": "medium-09",
+     "category": "medium",
+     "ref": "ứng dụng này giúp người dùng đặt vé máy bay chỉ trong vài phút",
+     "hyp": "ứng dụng này giúp người dùng đặt vé máy bay chỉ trong vài phút",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 14
+    },
+    {
+     "id": "medium-10",
+     "category": "medium",
+     "ref": "thành phố hồ chí minh là trung tâm kinh tế lớn nhất cả nước",
+     "hyp": "thành phố hồ chí minh là trung tâm kinh tế lớn nhất cả nước",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 14
+    },
+    {
+     "id": "medium-11",
+     "category": "medium",
+     "ref": "các nhà khoa học đang nghiên cứu một loại vắc xin mới phòng bệnh cúm",
+     "hyp": "các nhà khoa học đang nghiên cứu một loại vắc xin mới phòng bệnh cúm",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 15
+    },
+    {
+     "id": "medium-12",
+     "category": "medium",
+     "ref": "cuối tuần này gia đình tôi sẽ về quê thăm ông bà",
+     "hyp": "cuối tuần này gia đình tôi sẽ về quê thăm ông bà",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 12
+    },
+    {
+     "id": "medium-13",
+     "category": "medium",
+     "ref": "vịnh hạ long được công nhận là di sản thiên nhiên thế giới",
+     "hyp": "vịnh hạ long được công nhận là di sản thiên nhiên thế giới",
+     "wer": 0.0,
+     "cer": 0.0,
+     "ref_words": 13
+    },
+    {
+     "id": "medium-14",
+     "category": "medium",
+     "ref": "anh ấy luyện tập chăm chỉ mỗi ngày để chuẩn bị cho giải chạy ma ra tông",
+     "hyp": "anh ấy luyện tập chăm chỉ mỗi ngày để chuẩn bị cho giải chạy marathon",
+     "wer": 0.17647058823529413,
+     "cer": 0.07042253521126761,
+     "ref_words": 17
+    },
+    {
+     "id": "medium-15",
+     "category": "medium",
+     "ref": "người dân miền trung đang khắc phục hậu quả của cơn bão số ba",
+     "hyp": "người dân miền trung đang khắc phục hậu quả của cơn bão số bạc",
+     "wer": 0.07142857142857142,
+     "cer": 0.03278688524590164,
      "ref_words": 14
     },
     {
@@ -3275,54 +3283,54 @@
      "id": "long-02",
      "category": "long",
      "ref": "trí tuệ nhân tạo đang thay đổi cách chúng ta làm việc và học tập từ những trợ lý ảo có thể trả lời câu hỏi cho đến các hệ thống tự động dịch thuật tuy nhiên chúng ta cũng cần thận trọng với những rủi ro mà công nghệ này có thể mang lại",
-     "hyp": "trí tuệ nhân tạo đang thay đổi cách chúng ta làm việc và học tập từ những trợ lý ảo có thể trả lời câu hỏi cho đến các hệ thống tự động dịch thuật tuy nhiên chúng ta cũng cần thận trọng với những rủi ro mà công nghệ này có thể mang lại",
-     "wer": 0.0,
-     "cer": 0.0,
+     "hyp": "trí hiểu nhân tạo đang thay đổi cách chúng ta làm việc và học tập từ những trợ lý ảo có thể trả lời câu hỏi cho đến các hệ thống tự động dịch thuật tuy nhiên chúng ta cũng cần thận trọng với những rủi ro mà công nghệ này có thể mang lại",
+     "wer": 0.01818181818181818,
+     "cer": 0.01702127659574468,
      "ref_words": 55
     },
     {
      "id": "long-03",
      "category": "long",
      "ref": "ngày xửa ngày xưa ở một ngôi làng nhỏ ven sông có hai anh em mồ côi sống nương tựa vào nhau người anh tham lam còn người em hiền lành chăm chỉ và câu chuyện của họ đã trở thành bài học cho biết bao thế hệ",
-     "hyp": "ngày xưa ngày xưa ở một ngôi làng ven sông có hai anh em mẫu cô sống nương tựa vào nhau người anh tham lam còn người em hiền lành chăm chỉ và câu chuyện của họ đã trở thành bài học cho biết bao thế hệ",
-     "wer": 0.08333333333333333,
-     "cer": 0.0392156862745098,
+     "hyp": "ngày xửa ngày xưa ở một ngôi làng nhỏ ven sông có hai anh em mồ côi sống nương tựa vào nhau người anh tham lem còn người em hiền lành chăm chỉ và câu chuyện của họ đã trở thành bài học cho biết bao thế hệ",
+     "wer": 0.020833333333333332,
+     "cer": 0.004901960784313725,
      "ref_words": 48
     },
     {
      "id": "long-04",
      "category": "long",
      "ref": "để bảo vệ sức khỏe các chuyên gia khuyên mỗi người nên ngủ đủ bảy đến tám tiếng mỗi đêm ăn nhiều rau xanh hạn chế đồ ngọt và dành ít nhất ba mươi phút mỗi ngày để vận động hoặc tập thể dục",
-     "hyp": "để bảo vệ sức khỏe các chuyên gia khuyên mỗi người nên ngủ đủ bấy đến tám tiếng mỗi đêm ăn nhiều rau xanh hạn chế đồ ngọt và dành ít nhất ba mươi phút mỗi ngày để vận động hoặc tập thể dục",
-     "wer": 0.022727272727272728,
-     "cer": 0.005319148936170213,
+     "hyp": "để bảo vệ sức khỏe các chuyên gia khuyên mỗi người nên ngủ đủ bảy đến tám tiền mỗi đêm ăn nhiều rau xanh hạn chế đồ ngọt và rèn ít nhất ba mươi phút mỗi ngày để vận động học tập thể dục",
+     "wer": 0.06818181818181818,
+     "cer": 0.03723404255319149,
      "ref_words": 44
     },
     {
      "id": "long-05",
      "category": "long",
      "ref": "sau hơn hai năm thi công cây cầu mới bắc qua sông hồng đã chính thức thông xe giúp rút ngắn thời gian di chuyển giữa hai bờ và giảm đáng kể tình trạng ùn tắc giao thông vào giờ cao điểm",
-     "hyp": "sau hơn hai năm thi công cây cầu mới bắc qua sông hồng đã chính thức thông xe giúp giúp nặng thời gian di chuyển giữa hai bờ và giảm đáng kể tình trạng ùn tắc giao thông vào giờ cao điểm",
-     "wer": 0.047619047619047616,
-     "cer": 0.032432432432432434,
+     "hyp": "sau hơn hai năm thi công cây cầu mới bắc qua sông hồng đã chính thức thông xe giúp rút ngắn thời gian di chuyển giữa hai bờ và giảm đáng kể tình trạng ùn tắc giao thông vào giờ cao điểm",
+     "wer": 0.0,
+     "cer": 0.0,
      "ref_words": 42
     },
     {
      "id": "long-06",
      "category": "long",
      "ref": "khi mùa thu đến hà nội khoác lên mình một vẻ đẹp dịu dàng những con phố rợp bóng cây mùi hoa sữa thoang thoảng trong gió và những gánh hàng rong bán cốm xanh khiến ai đi xa cũng nhớ",
-     "hyp": "khi mùa thu đến hà nội khoác lên mình một vẻ đẹp dữ dày những con phố dập bóng cày mùi hoa sữa thoang thoảng trong gió và những gánh hàng rong bán cũng sành khiến ai đi xa cũng nhớ",
-     "wer": 0.14634146341463414,
-     "cer": 0.06629834254143646,
+     "hyp": "khi mùa thu đến hà nội khoác lên mình một vẻ đẹp dịu dàng những con phố rợp bóng cây mùi hoa sữa tham thảm chồng chỏ và những gánh hàng rộng bán cốm xanh khiến ai đi xa cũng nhớ",
+     "wer": 0.12195121951219512,
+     "cer": 0.0718232044198895,
      "ref_words": 41
     },
     {
      "id": "long-07",
      "category": "long",
      "ref": "hội nghị lần này tập trung thảo luận các giải pháp thúc đẩy chuyển đổi số trong giáo dục y tế và hành chính công nhằm nâng cao chất lượng dịch vụ và tạo thuận lợi cho người dân và doanh nghiệp",
-     "hyp": "hội nghị lần này tập trung thảo luận cách giải pháp thúc đẩy chuyển đổi số trong giáo dục y tế và hành chính công nhằm nâng cao chất lượng dịch vụ và tạo thuận lợi cho người dân và doanh nghiệp",
-     "wer": 0.023809523809523808,
-     "cer": 0.005208333333333333,
+     "hyp": "hội nghị lần này tập trung thảo luận cách giải pháp thúc đẩy chuyển độ xấu trong giáo dục y tế và hành chính công nhằm nâng cao chất lượng dịch vụ và tạo thuận lợi cho người dân và doanh nghiệp",
+     "wer": 0.07142857142857142,
+     "cer": 0.03125,
      "ref_words": 42
     },
     {
@@ -3338,99 +3346,99 @@
      "id": "tones-01",
      "category": "tones",
      "ref": "bà ba bán bánh bò bé bi bốn bịch bánh",
-     "hyp": "mà bà bán bánh bò bé đà bị bố mẹ bán",
-     "wer": 0.7,
-     "cer": 0.2972972972972973,
+     "hyp": "bà ba bán bánh bò bé bi bốn bị bánh",
+     "wer": 0.1,
+     "cer": 0.05405405405405406,
      "ref_words": 10
     },
     {
      "id": "tones-02",
      "category": "tones",
      "ref": "mẹ mở mũ mới mẹ mỉm miệng mừng",
-     "hyp": "mẹ mở mốt mới mẹ ngà miệng miệng mừng",
-     "wer": 0.375,
-     "cer": 0.3333333333333333,
+     "hyp": "mẹ mở mũ mới mẹ mịn miệng mừng",
+     "wer": 0.125,
+     "cer": 0.06666666666666667,
      "ref_words": 8
     },
     {
      "id": "tones-03",
      "category": "tones",
      "ref": "những ngã rẽ nhỏ khiến kẻ lạ dễ lỡ đường",
-     "hyp": "những ngã rẽ nhỏ khiến chè lạ dễ lở đường",
+     "hyp": "những nã rẽ nhỏ khiến kẻ lại dễ lỡ đường",
      "wer": 0.2,
-     "cer": 0.1,
+     "cer": 0.05,
      "ref_words": 10
     },
     {
      "id": "tones-04",
      "category": "tones",
      "ref": "nồi lẩu nấm nóng nực nêm nếm nước mắm ngon",
-     "hyp": "nồi lẩu nấm nóng nực nền nén nước mắm ngon",
-     "wer": 0.2,
-     "cer": 0.09523809523809523,
+     "hyp": "nồi lẩu nấm nóng nật nem nệm nước mắm no thịt sành đi",
+     "wer": 0.7,
+     "cer": 0.40476190476190477,
      "ref_words": 10
     },
     {
      "id": "tones-05",
      "category": "tones",
      "ref": "khuya khoắt khuỷu tay khuơ khoắng chiếc khuy nhỏ",
-     "hyp": "khia vững giã liệt mẹ chelsea quấn chiếc huy nhỏ",
-     "wer": 0.8888888888888888,
-     "cer": 0.6041666666666666,
+     "hyp": "khuya khách khuỷu tay khờ khẩn chỉ huy nhỏ tê giận",
+     "wer": 0.7777777777777778,
+     "cer": 0.4166666666666667,
      "ref_words": 9
     },
     {
      "id": "tones-06",
      "category": "tones",
      "ref": "chuyện chưa chắc chắn chớ vội chuyển đi",
-     "hyp": "chuyện chưa chắc chắn chớ vội chuyển đi",
-     "wer": 0.0,
-     "cer": 0.0,
+     "hyp": "chuyện chưa chắc chắn chở vội chuyện đi",
+     "wer": 0.25,
+     "cer": 0.05128205128205128,
      "ref_words": 8
     },
     {
      "id": "tones-07",
      "category": "tones",
      "ref": "ngoằn ngoèo nghoe nguẩy nghiêng ngả nghênh ngang",
-     "hyp": "nguăn mèo nguy nguẩy nhướng nặng nên ngành",
-     "wer": 0.875,
-     "cer": 0.3958333333333333,
+     "hyp": "mình mèo mây nguẩy nghiêng ngả lênh nan",
+     "wer": 0.625,
+     "cer": 0.375,
      "ref_words": 8
     },
     {
      "id": "tones-08",
      "category": "tones",
      "ref": "quả xoài xanh quả ổi chín quả nhãn lồng thơm lừng",
-     "hyp": "quả xoài xanh quả ổi chín quà nhãn lòng thơm lừng",
-     "wer": 0.18181818181818182,
-     "cer": 0.04081632653061224,
+     "hyp": "quả xoài xanh quả ổi chín quả nhãn lồng thơm lửng",
+     "wer": 0.09090909090909091,
+     "cer": 0.02040816326530612,
      "ref_words": 11
     },
     {
      "id": "names-01",
      "category": "names",
      "ref": "chủ tịch hồ chí minh đọc bản tuyên ngôn độc lập tại quảng trường ba đình",
-     "hyp": "chủ tịch hồ chí minh đọc bản tuyên ngôn độc lập tại quảng trường bà đình",
-     "wer": 0.0625,
-     "cer": 0.013888888888888888,
+     "hyp": "chủ tịch hồ chí minh đọc bản tuyên ngôn độc lập tại quảng trường ba đình",
+     "wer": 0.0,
+     "cer": 0.0,
      "ref_words": 16
     },
     {
      "id": "names-02",
      "category": "names",
      "ref": "tôi đã từng đến buôn ma thuột pleiku và kon tum",
-     "hyp": "tôi đã từng đến myanmar thuộc bryan hill và konton",
-     "wer": 0.5454545454545454,
-     "cer": 0.3829787234042553,
+     "hyp": "tôi đã từng đến buôn ma thuột pleiku và canton",
+     "wer": 0.18181818181818182,
+     "cer": 0.10638297872340426,
      "ref_words": 11
     },
     {
      "id": "names-03",
      "category": "names",
      "ref": "nguyễn du là tác giả của truyện kiều",
-     "hyp": "nguyễn du là tác giả của truyện kiều",
-     "wer": 0.0,
-     "cer": 0.0,
+     "hyp": "nguyễn du là tác giả của truyện kiệu",
+     "wer": 0.125,
+     "cer": 0.027777777777777776,
      "ref_words": 8
     },
     {
@@ -3446,7 +3454,7 @@
      "id": "names-05",
      "category": "names",
      "ref": "anh tuấn và chị hương vừa mở một quán cà phê ở đà lạt",
-     "hyp": "anh tuấn và chị hường vừa mở một quán cà phê ở đà lạt",
+     "hyp": "anh tấn và chị hương vừa mở một quán cà phê ở đà lạt",
      "wer": 0.07142857142857142,
      "cer": 0.018867924528301886,
      "ref_words": 14
@@ -3464,9 +3472,9 @@
      "id": "names-07",
      "category": "names",
      "ref": "đội bóng hoàng anh gia lai có nhiều cầu thủ trẻ tài năng",
-     "hyp": "đội bóng hoàng anh gia lai có nhiều cầu thủ trẻ tài năng",
-     "wer": 0.0,
-     "cer": 0.0,
+     "hyp": "đội bóng hàn anh a lây có nhiều cầu thủ trẻ tài năng",
+     "wer": 0.23076923076923078,
+     "cer": 0.10714285714285714,
      "ref_words": 13
     },
     {
@@ -3482,9 +3490,9 @@
      "id": "names-09",
      "category": "names",
      "ref": "mùa hè năm ngoái chúng tôi đi du lịch phú quốc và côn đảo",
-     "hyp": "mùa hè năm ngoái chúng tôi đi du lịch phú quốc và cốm đảo",
-     "wer": 0.07142857142857142,
-     "cer": 0.03508771929824561,
+     "hyp": "mùa hè năm ngoái chúng tôi đi du lịch phú quốc và côn đảo",
+     "wer": 0.0,
+     "cer": 0.0,
      "ref_words": 14
     }
    ]

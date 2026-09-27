@@ -158,10 +158,10 @@
     <p class="muted">Chọn một câu, rồi nghe từng model đọc lại. Dưới mỗi bản là những gì ASR (PhoWhisper-large) nghe được; từ nghe sai được tô màu. Các model clone giọng đều dùng chung giọng mẫu bên dưới.</p>
     <div class="ref">
       <div style="display:grid;gap:2px">
-        <span class="label">Giọng mẫu · <span class="num" id="ref-sec"></span> giây</span>
+        <span class="label">Giọng mẫu (giọng thật của tác giả) · <span class="num" id="ref-sec"></span> giây</span>
         <audio id="ref-audio" controls preload="none"></audio>
       </div>
-      <p class="ref-text">“xin chào, tôi là một trợ lý ây ai có khả năng trò chuyện với bạn bằng giọng nói tự nhiên, được phát triển bởi nhóm nón lá. tôi có thể hỗ trợ người khiếm thị.”</p>
+      <p class="ref-text" id="ref-text"></p>
     </div>
   </header>
 
@@ -194,7 +194,7 @@
     </div>
     <div class="notes">
       <p><b>WER</b>: tỉ lệ từ ASR nghe sai so với câu gốc. <b>Không dừng</b>: số câu mà model đọc xong vẫn sinh tiếp (khoảng lặng hoặc âm rác), WER không bắt được lỗi này. <b>RTF</b>: thời gian sinh chia độ dài audio, đo trên một GPU NVIDIA H200 (Piper đo trên CPU).</p>
-      <p><b>Giống giọng</b>: cosine giữa embedding ECAPA-TDNN của giọng mẫu và của audio sinh ra. MMS và Piper không clone giọng, nên điểm của chúng (trong ngoặc) là mốc cho hai người nói khác nhau. Giọng mẫu được cắt từ file mẫu của viXTTS, nên viXTTS có thể có lợi thế ở cột này.</p>
+      <p><b>Giống giọng</b>: cosine giữa embedding ECAPA-TDNN của giọng mẫu và của audio sinh ra. MMS và Piper không clone giọng, nên điểm của chúng (trong ngoặc) là mốc cho hai người nói khác nhau.</p>
       <p><b>UTMOS</b>: điểm tự nhiên dự đoán từ 1 đến 5, do một model huấn luyện trên tiếng Anh chấm. Chính giọng mẫu thật chỉ được <span class="num" id="ref-mos"></span>, nên chỉ dùng cột này để so sánh tương đối.</p>
     </div>
   </section>
@@ -235,6 +235,7 @@
   // Giọng mẫu
   $("ref-audio").src = B.reference.src;
   $("ref-sec").textContent = dec(B.reference.seconds, 1);
+  $("ref-text").textContent = `“${B.reference.text}”`;
   $("ref-mos").textContent = dec(B.reference.utmos);
 
   // Bộ chọn câu

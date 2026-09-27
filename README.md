@@ -69,31 +69,47 @@ python benchmark/normalization/run.py --split dev
 
 ## Kết quả: model TTS
 
-50 câu chung, đã ở dạng đọc (không số, không viết tắt), nên chỉ đo chất lượng model. ASR [`vinai/PhoWhisper-large`](https://huggingface.co/vinai/PhoWhisper-large) nghe lại audio, rồi tính WER so với câu gốc. Mỗi model dùng tham số do tác giả khuyến nghị và seed cố định. Các model clone giọng dùng **chung một giọng mẫu** dài 8.66 giây ([`engines/common.py`](benchmark/tts/engines/common.py)).
+50 câu chung, đã ở dạng đọc (không số, không viết tắt), nên chỉ đo chất lượng model. ASR [`vinai/PhoWhisper-large`](https://huggingface.co/vinai/PhoWhisper-large) nghe lại audio, rồi tính WER so với câu gốc. Mỗi model dùng tham số do tác giả khuyến nghị và seed cố định. Các model clone giọng dùng **chung một giọng mẫu**: 8 giây giọng thật của tác giả repo, ghi bằng điện thoại ([`benchmark/tts/reference/`](benchmark/tts/reference/)).
 
 | Model | WER ↓ | WER câu ngắn | WER thanh điệu khó | Không dừng ↓ | Giống giọng ↑ | UTMOS ↑ | RTF ↓ | VRAM | Giấy phép |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| [IndexTTS-2 Vietnamese](https://huggingface.co/dinhthuan/index-tts-2-vietnamese) | **1.9%** | **0.0%** | 14.9% | ⚠️ 5/50 | 0.722 | 2.79 | 0.780 | 8.9 GB | Apache-2.0* |
-| [F5-TTS-Vietnamese-1000h](https://huggingface.co/hynt/F5-TTS-Vietnamese-ViVoice) | 2.3% | **0.0%** | **9.5%** | 0/50 | 0.758 | **3.17** | 0.277 | 0.8 GB | CC-BY-NC-SA-4.0 |
-| [VieNeu-TTS v3 Turbo](https://huggingface.co/pnnbao-ump/VieNeu-TTS-v3-Turbo) | 2.8% | 4.4% | 13.5% | 0/50 | 0.734 | 2.98 | 0.101 | 0.9 GB | **Apache-2.0** |
-| [Piper vi_VN-vais1000-medium](https://huggingface.co/rhasspy/piper-voices) | 5.7% | 4.4% | 39.2% | 0/50 | (0.169) | 2.37 | 0.037 (CPU) | – | CC-BY-4.0 |
-| [MMS-TTS (Meta)](https://huggingface.co/facebook/mms-tts-vie) | 6.9% | 11.1% | 28.4% | 0/50 | (0.114) | 2.74 | **0.013** | **0.4 GB** | CC-BY-NC-4.0 |
-| [viXTTS](https://huggingface.co/capleaf/viXTTS) | 9.4% | 46.7% | 35.1% | 1/50 | **0.812**† | 2.60 | 0.193 | 2.2 GB | CPML (NC) |
-| [VietTTS](https://huggingface.co/dangvansam/viet-tts) | 12.0% | 13.3% | 48.6% | 0/50 | 0.766 | 3.16 | 0.486 | 1.7 GB | CC |
+| [IndexTTS-2 Vietnamese](https://huggingface.co/dinhthuan/index-tts-2-vietnamese) | **1.8%** | **0.0%** | **12.2%** | 0/50 | **0.741** | 1.99 | 1.063 | 8.9 GB | Apache-2.0* |
+| [F5-TTS-Vietnamese-1000h](https://huggingface.co/hynt/F5-TTS-Vietnamese-ViVoice) | 3.0% | **0.0%** | 14.9% | 0/50 | 0.731 | 2.21 | 0.219 | 0.8 GB | CC-BY-NC-SA-4.0 |
+| [VieNeu-TTS v3 Turbo](https://huggingface.co/pnnbao-ump/VieNeu-TTS-v3-Turbo) | 3.3% | 6.7% | 18.9% | 0/50 | 0.656 | 2.16 | 0.101 | 0.9 GB | **Apache-2.0** |
+| [Piper vi_VN-vais1000-medium](https://huggingface.co/rhasspy/piper-voices) | 5.7% | 4.4% | 39.2% | 0/50 | (0.198) | 2.37 | 0.037 (CPU) | – | CC-BY-4.0 |
+| [MMS-TTS (Meta)](https://huggingface.co/facebook/mms-tts-vie) | 6.9% | 11.1% | 28.4% | 0/50 | (0.318) | **2.74** | **0.013** | **0.4 GB** | CC-BY-NC-4.0 |
+| [viXTTS](https://huggingface.co/capleaf/viXTTS) | 9.2% | 24.4% | 41.9% | 0/50 | 0.638 | 2.20 | 0.202 | 2.3 GB | CPML (NC) |
+| [VietTTS](https://huggingface.co/dangvansam/viet-tts) | 12.0% | 13.3% | 41.9% | 0/50 | 0.728 | 2.39 | 0.395 | 1.7 GB | CC |
 
 RTF đo trên NVIDIA H200 (Piper đo trên CPU). \* Dùng thương mại cần xin phép tác giả IndexTTS.
 
-**Giống giọng** là cosine giữa embedding [ECAPA-TDNN](https://huggingface.co/speechbrain/spkrec-ecapa-voxceleb) của giọng mẫu và của audio sinh ra. MMS và Piper không clone giọng, nên điểm của chúng (trong ngoặc) là mốc cho hai người nói khác nhau (khoảng 0.1 đến 0.2). † Giọng mẫu được cắt từ file mẫu trong repo viXTTS, nên viXTTS có thể có lợi thế ở cột này. Model `wavlm-base-plus-sv` từng được thử trước nhưng đã bỏ: nó cho giọng nữ khác hẳn (Piper) 0.94, gần bằng các model clone, tức là gần như chỉ tách được giới tính.
+**Giống giọng** là cosine giữa embedding [ECAPA-TDNN](https://huggingface.co/speechbrain/spkrec-ecapa-voxceleb) của giọng mẫu và của audio sinh ra. MMS và Piper không clone giọng, nên điểm của chúng (trong ngoặc) là mốc cho hai người nói khác nhau. Model `wavlm-base-plus-sv` từng được thử trước nhưng đã bỏ: nó cho một giọng nữ khác hẳn (Piper) 0.94, gần bằng các model clone, tức là gần như chỉ tách được giới tính.
 
-**UTMOS** là điểm tự nhiên dự đoán (1 đến 5) của [UTMOS22](https://github.com/tarepan/SpeechMOS). Model này huấn luyện trên tiếng Anh: chính giọng mẫu thật chỉ được 2.41, thấp hơn 5 model. Vì vậy chỉ dùng cột này để so sánh tương đối, và cần đánh giá MOS bằng người nghe tiếng Việt để kết luận về độ tự nhiên.
+**UTMOS** là điểm tự nhiên dự đoán (1 đến 5) của [UTMOS22](https://github.com/tarepan/SpeechMOS), model huấn luyện trên tiếng Anh. Model clone giọng bắt chước cả điều kiện ghi âm của giọng mẫu: giọng mẫu ghi bằng điện thoại chỉ được 1.82, nên điểm của các model clone thấp hơn MMS và Piper (giọng thu trong phòng thu). Chỉ dùng cột này để so sánh tương đối giữa các model clone.
+
+### Giọng mẫu ảnh hưởng tới kết quả thế nào
+
+Benchmark đã chạy với hai giọng mẫu. Lần đầu dùng giọng nữ trong file mẫu của repo viXTTS; lần hai dùng giọng thật của tác giả. Kết quả lần đầu lưu ở [`results/archive/`](results/archive/).
+
+| | Giọng mẫu A: file mẫu của viXTTS | Giọng mẫu B: tác giả, ghi bằng điện thoại |
+|---|---:|---:|
+| IndexTTS-2: số câu không dừng | ⚠️ 5/50 | 0/50 |
+| viXTTS: WER câu ngắn | 46.7% | 24.4% |
+| viXTTS: giống giọng | 0.812 (cao nhất) | 0.638 (thấp nhất) |
+| F5 / VieNeu / IndexTTS-2: WER | 2.3% / 2.8% / 1.9% | 3.0% / 3.3% / 1.8% |
+| UTMOS của chính giọng mẫu | 2.41 | 1.82 |
+
+- **Lỗi "không dừng" của IndexTTS-2 phụ thuộc giọng mẫu.** Với giọng A, nó đọc đúng rồi sinh thêm khoảng 28 giây im lặng ở 5/50 câu. ASR bỏ qua khoảng lặng nên WER không phát hiện được; đó là lý do bảng có cột "Không dừng" (số câu có giây/từ lớn hơn 3 lần trung vị của chính model). Với giọng B, lỗi này không xuất hiện.
+- **viXTTS được lợi khi giọng mẫu lấy từ chính repo của nó.** Với một giọng lạ, độ giống giọng của nó tụt từ cao nhất xuống thấp nhất.
+- **Thứ hạng WER của nhóm dẫn đầu ổn định** (IndexTTS-2, F5, VieNeu) qua cả hai giọng mẫu.
+- Vì vậy một benchmark clone giọng đáng tin cần nhiều giọng mẫu (nam, nữ, phòng thu, điện thoại). Đây là việc tiếp theo trong lộ trình.
 
 **Nhận xét**
-- **IndexTTS-2 có WER thấp nhất nhưng không dừng ở 5/50 câu**: nó đọc đúng câu rồi sinh thêm khoảng 28 giây im lặng, cho tới giới hạn `max_mel_tokens`. ASR bỏ qua khoảng lặng nên **WER không phát hiện được lỗi này**, vì vậy bảng có thêm cột "Không dừng" (số câu có giây/từ lớn hơn 3 lần trung vị của chính model). Model này cũng chậm nhất và tốn VRAM nhất.
-- **F5-TTS-Vietnamese ổn định nhất**: WER thấp ở mọi nhóm, không lỗi độ dài, nhẹ (0.8 GB), nhưng giấy phép phi thương mại.
-- **VieNeu-TTS v3 Turbo là lựa chọn cân bằng nhất cho sản phẩm**: WER 2.8%, nhanh (RTF 0.1), âm thanh 48 kHz và **giấy phép Apache-2.0**, cho phép dùng thương mại.
+- **IndexTTS-2 rõ nhất và giống giọng nhất**, nhưng chậm nhất (RTF 1.06, chậm hơn thời gian thực), tốn 8.9 GB VRAM, và có thể không dừng tùy giọng mẫu.
+- **F5-TTS-Vietnamese ổn định**: rõ ở mọi nhóm câu, nhẹ (0.8 GB), nhưng giấy phép phi thương mại.
+- **VieNeu-TTS v3 Turbo là lựa chọn cân bằng nhất cho sản phẩm**: WER 3.3%, nhanh (RTF 0.1), âm thanh 48 kHz và **giấy phép Apache-2.0**, cho phép dùng thương mại.
 - **Piper và MMS** hợp với thiết bị yếu: rất nhanh, rõ ở câu thường, nhưng đọc kém câu nhiều thanh điệu khó.
-- **viXTTS "bịa" từ ở câu ngắn** ("chúc mừng năm mới" thành "chúc mừng năm nợ yết hôn thây"), khớp với hạn chế tác giả tự ghi.
-- **VietTTS** đọc kém nhất trên bộ này, nhất là câu líu lưỡi (48.6%).
+- **viXTTS và VietTTS** đọc kém nhất trên bộ này, nhất là câu líu lưỡi (41.9%).
 - Bảng đầy đủ: [`results/tts.md`](results/tts.md). Transcript từng câu: [`results/tts.json`](results/tts.json).
 - **Hạn chế:** WER qua ASR đo *độ rõ*. Nhóm "thanh điệu khó" gồm các câu líu lưỡi, nên ASR cũng dễ nghe nhầm. Cần thêm bản ghi người đọc thật để biết mức lỗi nền của chính ASR.
 - 🎧 **Nghe trực tiếp:** [trang nghe thử](https://yoonjae26.github.io/vietnamese-tts/listen/) ([`docs/listen`](docs/listen/)) cho 8 câu tiêu biểu, tô màu từ mà ASR nghe sai.
@@ -140,6 +156,7 @@ Không có GPU? `vitts-server --local` chạy MMS ngay trong tiến trình, khô
 - [ ] Thời gian ra audio đầu tiên khi streaming, RTF trên CPU cho mọi model
 - [x] Độ giống giọng khi clone (ECAPA-TDNN), MOS dự đoán (UTMOS)
 - [ ] MOS bằng người nghe tiếng Việt
+- [ ] Nhiều giọng mẫu (nam, nữ, phòng thu, điện thoại): kết quả clone giọng thay đổi theo giọng mẫu
 - [x] Các model: Meta MMS, viXTTS, VietTTS, F5-TTS-Vietnamese, VieNeu-TTS, IndexTTS-2, Piper
 - [x] Trang nghe thử: cùng một câu, mọi model
 

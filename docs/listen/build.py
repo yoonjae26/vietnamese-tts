@@ -9,6 +9,7 @@
 """
 
 import json
+import sys
 from pathlib import Path
 
 import librosa
@@ -20,8 +21,8 @@ OUTPUTS = ROOT / "outputs" / "tts"
 
 # Câu tiêu biểu: mỗi câu cho thấy một điểm mạnh/yếu cụ thể trong kết quả
 SAMPLES = [
-    ("short-06", "viXTTS đọc bịa thêm từ ở câu ngắn"),
-    ("short-09", "IndexTTS-2 không dừng, sinh thêm khoảng lặng dài"),
+    ("short-06", "Câu ngắn: viXTTS thêm từ thừa, VietTTS bỏ mất từ đầu"),
+    ("short-09", "Câu ngắn: MMS và Piper đọc nhầm một từ"),
     ("medium-01", "Câu thường, có địa danh"),
     ("medium-06", "Câu có số đã được đọc thành chữ"),
     ("long-01", "Câu dài: bản tin thời tiết"),
@@ -65,8 +66,11 @@ def main():
         for s in map(json.loads, (ROOT / "benchmark/tts/sentences.jsonl").read_text(encoding="utf-8").splitlines())
     }
 
-    ref_src = ROOT / "outputs" / "reference" / "ref_8s.wav"
-    ref_seconds = to_mp3(ref_src, HERE / "audio" / "reference.mp3")
+    sys.path.insert(0, str(ROOT / "benchmark" / "tts"))
+    from engines.common import reference
+
+    ref_wav, ref_text = reference()
+    ref_seconds = to_mp3(Path(ref_wav), HERE / "audio" / "reference.mp3")
 
     out_engines = []
     for r in engines:
@@ -105,7 +109,12 @@ def main():
         )
 
     data = {
-        "reference": {"src": "audio/reference.mp3", "seconds": round(ref_seconds, 2), **bench["reference"]},
+        "reference": {
+            "src": "audio/reference.mp3",
+            "seconds": round(ref_seconds, 2),
+            "text": ref_text,
+            **bench["reference"],
+        },
         "samples": [{"id": sid, "note": note, **sentences[sid]} for sid, note in SAMPLES],
         "engines": out_engines,
     }
