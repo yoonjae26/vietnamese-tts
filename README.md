@@ -12,7 +12,7 @@ ViTTS-Bench so sánh chúng **trên cùng một bộ test, cùng một cách ch�
 | Hạng mục | Trạng thái |
 | --- | --- |
 | 🔤 Chuẩn hóa văn bản (Vinorm, soe-vinorm, VietNormalizer, vitts) | ✅ Có kết quả |
-| 🔊 Model TTS: độ rõ (WER qua ASR), tốc độ (RTF), VRAM, giấy phép | 🚧 Đang làm |
+| 🔊 Model TTS: độ rõ (WER qua ASR), tốc độ (RTF), VRAM, giấy phép | 🚧 2/7 model (MMS, viXTTS) |
 | 🌐 API chung tương thích OpenAI cho mọi model | 🚧 Có khung (`vitts-server`) |
 
 ## Kết quả: chuẩn hóa văn bản
@@ -64,6 +64,26 @@ pip install -e ".[bench]"
 python benchmark/normalization/build_testset.py
 python benchmark/normalization/run.py --split heldout
 python benchmark/normalization/run.py --split dev
+```
+
+## Kết quả: model TTS (đang cập nhật)
+
+50 câu chung, đã ở dạng đọc (không số, không viết tắt), nên chỉ đo chất lượng model. ASR [`vinai/PhoWhisper-large`](https://huggingface.co/vinai/PhoWhisper-large) nghe lại audio, rồi tính WER so với câu gốc. Mỗi model dùng tham số do tác giả khuyến nghị và seed cố định.
+
+| Model | WER ↓ | CER ↓ | WER câu ngắn | WER câu dài | WER thanh điệu khó | RTF ↓ (H200) | VRAM | Giấy phép |
+|---|---:|---:|---:|---:|---:|---:|---:|---|
+| [MMS-TTS (Meta)](https://huggingface.co/facebook/mms-tts-vie) | **6.9%** | 3.4% | 11.1% | 3.5% | 28.4% | 0.013 | 0.4 GB | CC-BY-NC-4.0 |
+| [viXTTS](https://huggingface.co/capleaf/viXTTS) | 9.8% | 5.9% | 55.6% | **2.2%** | 43.2% | 0.203 | 2.2 GB | CPML |
+
+- **viXTTS rất rõ ở câu dài nhưng "bịa" từ ở câu ngắn**: "chúc mừng năm mới" bị đọc thành "chúc mừng năm nợ yết hôn thây". Kết quả này khớp với hạn chế tác giả tự ghi (câu dưới 10 từ).
+- **MMS nhỏ và nhanh** (RTF 0.013, tức nhanh hơn thời gian thực khoảng 75 lần) nhưng chỉ có một giọng, âm thanh 16 kHz.
+- Bảng đầy đủ: [`results/tts.md`](results/tts.md). Transcript từng câu: [`results/tts.json`](results/tts.json).
+- **Hạn chế:** WER qua ASR đo *độ rõ*, không đo *độ tự nhiên*. Nhóm "thanh điệu khó" gồm các câu líu lưỡi, nên ASR cũng dễ nghe nhầm. Cần thêm bản ghi người đọc thật để biết mức lỗi nền của chính ASR.
+
+```bash
+# mỗi model chạy trong môi trường riêng (xem benchmark/tts/engines/__init__.py)
+CUDA_VISIBLE_DEVICES=0 python benchmark/tts/synthesize.py --engine vixtts
+CUDA_VISIBLE_DEVICES=0 python benchmark/tts/evaluate.py
 ```
 
 ## Lộ trình
