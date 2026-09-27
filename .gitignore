@@ -1,0 +1,17 @@
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+
+# dữ liệu và checkpoint (không đẩy lên GitHub)
+data/
+runs/
+*.pth
+*.wav
+*.mp3
+!assets/**/*.wav
