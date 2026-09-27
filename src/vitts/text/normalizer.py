@@ -8,7 +8,9 @@ Biến văn bản "thô" thành chuỗi chỉ gồm chữ cái tiếng Việt th
 
 import re
 import unicodedata
+from collections.abc import Callable
 
+from vitts.text.foreign import is_pronounceable_acronym, is_vietnamese_syllable, roman_to_int
 from vitts.text.numbers import read_decimal, read_digits, read_number
 from vitts.text.symbols import ALLOWED, TONE_MARKS
 
@@ -44,6 +46,15 @@ ABBREVIATIONS = {
     "BHYT": "bảo hiểm y tế",
     "CMND": "chứng minh nhân dân",
     "CCCD": "căn cước công dân",
+    "ĐHQG": "đại học quốc gia",
+    "GD&ĐT": "giáo dục và đào tạo",
+    "GDĐT": "giáo dục đào tạo",
+    "CNTT": "công nghệ thông tin",
+    "KHCN": "khoa học công nghệ",
+    "KCN": "khu công nghiệp",
+    "ĐBSCL": "đồng bằng sông cửu long",
+    "TX.": "thị xã",
+    "TT.": "thị trấn",
     "v.v.": "vân vân",
     "v.v": "vân vân",
     "OK": "ô kê",
@@ -87,6 +98,12 @@ UNITS = {
     "MB": "mê ga bai",
     "TB": "tê ra bai",
     "GHz": "gi ga héc",
+    "Gbps": "gi ga bít trên giây",
+    "Mbps": "mê ga bít trên giây",
+    "kbps": "ki lô bít trên giây",
+    "mAh": "mi li am pe giờ",
+    "inch": "inh",
+    "W": "oát",
     "MHz": "mê ga héc",
     "%": "phần trăm",
     "tr": "triệu",
@@ -112,7 +129,16 @@ _E = r"(?![\w])"
 
 _RE_DATE_DMY = re.compile(rf"(?:[Nn]gày\s+)?{_B}(\d{{1,2}})[/-](\d{{1,2}})[/-](\d{{4}}){_E}")
 _RE_DATE_MY = re.compile(rf"(?<=tháng )(\d{{1,2}})[/-](\d{{4}}){_E}", re.IGNORECASE)
-_RE_DATE_DM = re.compile(rf"{_B}(\d{{1,2}})/(\d{{1,2}}){_E}")
+# "ngày 2/9", "tối 20/11", "đường 3/2" là ngày tháng; không có ngữ cảnh thì là phân số ("3/4" = ba phần bốn)
+_DATE_CONTEXT = r"ngày|hôm|sáng|chiều|tối|trưa|đêm|mùng|mồng|đường|phố|lễ|dịp|từ|đến|trước|sau|vào|kỷ niệm"
+_RE_DATE_DM = re.compile(rf"(?i)\b({_DATE_CONTEXT})\s+(\d{{1,2}})/(\d{{1,2}}){_E}")
+_RE_FRACTION = re.compile(rf"{_B}(\d+)/(\d+){_E}")
+_RE_HEIGHT = re.compile(rf"{_B}(\d)m(\d{{2}}){_E}")  # 1m75
+_RE_NEGATIVE = re.compile(r"(?:(?<=\s)|^)-(?=\d)")  # -5°C (sau khi đã xử lý khoảng "5-10")
+_RE_NUM_LETTER = re.compile(rf"{_B}(\d+)([A-ZĐ])(?![\w])")  # 15B, 4G
+_RE_QUARTER = re.compile(r"\b([QP])\.\s?(?=\d|[A-ZĐÀ-Ỹ])")  # Q.1, P. Bến Thành
+_RE_ROMAN = re.compile(r"(?i:\b(thế kỷ|thứ|khóa|khoá|đại hội|chương|phần))\s+([IVXLC]+)\b")
+_RE_FOREIGN = re.compile(r"(?<![\w'])([A-Za-z]+)(?![\w'])")
 _RE_TIME = re.compile(rf"{_B}(\d{{1,2}})(?::|h|g)(\d{{2}})(?::(\d{{2}}))?{_E}")
 _RE_HOUR = re.compile(rf"{_B}(\d{{1,2}})(?:h|g){_E}")
 _RE_PHONE = re.compile(rf"(?<![\w.,+])(\+84\s?|0)(\d[\d .]{{7,12}}\d){_E}")
@@ -190,10 +216,24 @@ def _date_dmy(m: re.Match) -> str:
 
 
 def _date_dm(m: re.Match) -> str:
-    d, mo = int(m.group(1)), int(m.group(2))
+    d, mo = int(m.group(2)), int(m.group(3))
     if not (1 <= d <= 31 and 1 <= mo <= 12):
         return m.group(0)
-    return f"{read_number(d)} {_month(mo)}"
+    return f"{m.group(1)} {read_number(d)} {_month(mo)}"
+
+
+def _fraction(m: re.Match) -> str:
+    return f"{read_number_token(m.group(1))} phần {read_number_token(m.group(2))}"
+
+
+def _roman(m: re.Match) -> str:
+    n = roman_to_int(m.group(2))
+    if n is None:
+        return m.group(0)
+    word = m.group(1)
+    if word.lower() == "thứ" and n in (1, 4):
+        return f"{word} {'nhất' if n == 1 else 'tư'}"
+    return f"{word} {read_number(n)}"
 
 
 def _date_my(m: re.Match) -> str:
@@ -240,6 +280,35 @@ def _spell(word: str) -> str:
     return " ".join(LETTER_NAMES.get(c, c) for c in word.lower())
 
 
+def _acronym(word: str, translit: Callable[[str], str] | None) -> str:
+    """NATO, UNESCO đọc thành từ (cần model phiên âm); ATM, FPT đánh vần."""
+    if translit is not None and is_pronounceable_acronym(word):
+        return translit(word.lower())
+    return _spell(word)
+
+
+def _foreign(m: re.Match, translit: Callable[[str], str]) -> str:
+    word = m.group(1)
+    if len(word) < 2 or word.isupper() or is_vietnamese_syllable(word):
+        return word
+    return translit(word.lower())
+
+
+_DEFAULT_TRANSLIT: list = []
+
+
+def default_transliterator() -> Callable[[str], str] | None:
+    """Model phiên âm mặc định (models/translit/translit.pt) nếu có torch và checkpoint, không thì None."""
+    if not _DEFAULT_TRANSLIT:
+        try:
+            from vitts.translit import DEFAULT_CHECKPOINT, Transliterator
+
+            _DEFAULT_TRANSLIT.append(Transliterator.from_pretrained() if DEFAULT_CHECKPOINT.exists() else None)
+        except ImportError:
+            _DEFAULT_TRANSLIT.append(None)
+    return _DEFAULT_TRANSLIT[0]
+
+
 def _is_all_caps_text(text: str) -> bool:
     letters = [c for c in text if c.isalpha()]
     return len(letters) > 12 and all(c.isupper() for c in letters)
@@ -248,13 +317,17 @@ def _is_all_caps_text(text: str) -> bool:
 # --------------------------------------------------------------------------- #
 # Pipeline chính
 # --------------------------------------------------------------------------- #
-def normalize_text(text: str, strict: bool = True) -> str:
+def normalize_text(text: str, strict: bool = True, translit: Callable[[str], str] | str | None = None) -> str:
     """Chuẩn hóa văn bản tiếng Việt.
 
     Args:
         text: văn bản đầu vào.
         strict: bỏ mọi ký tự không nằm trong bảng ký tự của model.
+        translit: hàm phiên âm từ nước ngoài ("iphone" -> "ai phôn"), hoặc "auto" để dùng model
+            mặc định của vitts (cần torch). None: giữ nguyên từ nước ngoài, đánh vần mọi chữ viết tắt.
     """
+    if translit == "auto":
+        translit = default_transliterator()
     text = unicodedata.normalize("NFC", text)
     text = text.replace(" ", " ")
     text = re.sub(r"[“”„\"«»]", "", text)
@@ -262,6 +335,8 @@ def normalize_text(text: str, strict: bool = True) -> str:
     text = text.replace("…", ".").replace("—", ", ").replace("–", "-")
 
     text = _RE_ABBR.sub(lambda m: ABBREVIATIONS[m.group(1)], text)
+    text = _RE_QUARTER.sub(lambda m: "quận " if m.group(1) == "Q" else "phường ", text)
+    text = _RE_ROMAN.sub(_roman, text)
 
     # Số có ngữ cảnh: ngày, giờ, điện thoại, tiền, đơn vị, khoảng
     text = _RE_HOTLINE.sub(lambda m: read_digits(m.group(1)), text)
@@ -271,16 +346,25 @@ def normalize_text(text: str, strict: bool = True) -> str:
     text = _RE_TIME.sub(_time, text)
     text = _RE_HOUR.sub(_hour, text)
     text = _RE_DATE_DM.sub(_date_dm, text)
+    text = _RE_FRACTION.sub(_fraction, text)
     text = _RE_CURRENCY_PREFIX.sub(lambda m: f"{read_number_token(m.group(2))} {UNITS[m.group(1)]}", text)
     text = _RE_RANGE.sub(_range, text)
+    text = _RE_NEGATIVE.sub("âm ", text)
+    text = _RE_HEIGHT.sub(lambda m: f"{read_number(int(m.group(1)))} mét {read_number(int(m.group(2)))}", text)
     text = _RE_UNIT.sub(lambda m: f"{read_number_token(m.group(1))} {UNITS[m.group(2)]}", text)
     text = _RE_PER.sub(lambda m: f" một {UNITS.get(m.group(1), m.group(1))}", text)
     text = _RE_ORDINAL.sub(lambda m: _SPECIAL_ORDINALS[(m.group(1).lower(), m.group(2))], text)
+    text = _RE_NUM_LETTER.sub(lambda m: f"{read_number_token(m.group(1))} {_spell(m.group(2))}", text)
 
-    # Chữ viết tắt in hoa còn sót lại: đánh vần (trừ khi cả đoạn văn viết hoa)
+    # Từ nước ngoài (iPhone, online): phiên âm. Từ viết hoa toàn bộ để bước chữ viết tắt xử lý,
+    # nên output của hai bước không bao giờ bị xử lý lại.
+    if translit is not None:
+        text = _RE_FOREIGN.sub(lambda m: _foreign(m, translit), text)
+
+    # Chữ viết tắt in hoa còn sót lại: đọc thành từ hoặc đánh vần (trừ khi cả đoạn văn viết hoa)
     if not _is_all_caps_text(text):
         text = _RE_ACRONYM_NUM.sub(lambda m: f"{_spell(m.group(1))} {read_number_token(m.group(2))}", text)
-        text = _RE_ACRONYM.sub(lambda m: _spell(m.group(0)), text)
+        text = _RE_ACRONYM.sub(lambda m: _acronym(m.group(0), translit), text)
 
     text = _RE_NUMBER.sub(lambda m: read_number_token(m.group(0)), text)
 

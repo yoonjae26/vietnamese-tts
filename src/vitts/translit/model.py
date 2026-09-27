@@ -11,6 +11,13 @@ from torch import nn
 
 PAD, BOS, EOS, UNK = 0, 1, 2, 3
 SPECIALS = ["<pad>", "<s>", "</s>", "<unk>"]
+SEP = "<ph>"  # ngăn cách chữ và âm vị CMUdict trong đầu vào
+
+
+def source_tokens(word: str, phones: list[str] | None = None) -> list[str]:
+    """Đầu vào của model: từng ký tự của từ, và (nếu có) âm vị ARPAbet từ CMUdict."""
+    tokens = list(word.lower())
+    return tokens + [SEP, *phones] if phones else tokens
 
 
 @dataclass
@@ -25,11 +32,12 @@ class Config:
 
 
 class Vocab:
-    def __init__(self, chars: list[str]):
-        self.itos = SPECIALS + sorted(set(chars) - set(SPECIALS))
+    def __init__(self, tokens: list[str]):
+        self.itos = SPECIALS + sorted(set(tokens) - set(SPECIALS))
         self.stoi = {c: i for i, c in enumerate(self.itos)}
 
-    def encode(self, s: str, bos_eos: bool = True) -> list[int]:
+    def encode(self, s, bos_eos: bool = True) -> list[int]:
+        """`s` là chuỗi (mỗi ký tự một token) hoặc danh sách token."""
         ids = [self.stoi.get(c, UNK) for c in s]
         return [BOS, *ids, EOS] if bos_eos else ids
 

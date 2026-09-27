@@ -1,23 +1,9 @@
-## vitts (ours): 24 câu sai
+## vitts (ours): 9 câu sai
 
 | id | input | output | đáp án |
 |---|---|---|---|
-| heldout-number-003 | Thế kỷ XXI. | thế kỷ ích ích i | thế kỷ hai mươi mốt |
-| heldout-number-004 | Chiến tranh thế giới thứ II. | chiến tranh thế giới thứ i i | chiến tranh thế giới thứ hai |
-| heldout-number-007 | Điểm số 9/10. | điểm số chín tháng mười | điểm số chín trên mười |
-| heldout-number-008 | Uống 1/2 cốc nước. | uống một tháng hai cốc nước | uống một phần hai cốc nước |
-| heldout-number-009 | Nhà số 12A. | nhà số mười haia | nhà số mười hai a |
-| heldout-unit-001 | Cao 1m75. | cao mộtmbảy mươi lăm | cao một mét bảy mươi lăm |
-| heldout-unit-003 | Pin 5000mAh. | pin năm nghìnmah | pin năm nghìn mi li am pe giờ |
-| heldout-unit-005 | Công suất 1.500W. | công suất một nghìn năm trămw | công suất một nghìn năm trăm oát |
-| heldout-unit-006 | Tốc độ mạng 100Mbps. | tốc độ mạng một trămmbps | tốc độ mạng một trăm mê ga bít trên giây |
-| heldout-unit-007 | Nhiệt độ -5°C. | nhiệt độ năm độ xê | nhiệt độ âm năm độ xê |
 | heldout-currency-005 | Tỷ giá 25.400 VND/USD. | tỷ giá hai mươi lăm nghìn bốn trăm đồng u ét dê | tỷ giá hai mươi lăm nghìn bốn trăm đồng một đô la |
 | heldout-phone-001 | Gọi 113. | gọi một trăm mười ba | gọi một một ba |
-| heldout-abbreviation-001 | Q.1, TP.HCM. | q một thành phố hồ chí minh | quận một thành phố hồ chí minh |
-| heldout-abbreviation-002 | P. Bến Nghé. | p bến nghé | phường bến nghé |
-| heldout-abbreviation-003 | Bộ GD&ĐT. | bộ gi dê và đê tê | bộ giáo dục và đào tạo |
-| heldout-abbreviation-005 | Khoa CNTT. | khoa xê en nờ tê tê | khoa công nghệ thông tin |
 | heldout-abbreviation-006 | Căn hộ 3PN. | căn hộ bapn | căn hộ ba phòng ngủ |
 | heldout-acronym-001 | Ông Nguyễn Văn B. | ông nguyễn văn b | ông nguyễn văn bê |
 | heldout-acronym-002 | Tổ chức NATO. | tổ chức en nờ a tê o | tổ chức na tô |
@@ -25,7 +11,19 @@
 | heldout-foreign-002 | Giải SEA Games 31. | giải ét e a games ba mươi mốt | giải xi gêm ba mươi mốt |
 | heldout-foreign-003 | Chuẩn IELTS 6.5. | chuẩn i e e lờ tê ét sáu chấm năm | chuẩn ai eo sáu chấm năm |
 | heldout-mixed-001 | Sáng 5/10, giá USD tại ngân hàng tăng 20 đồng, lên 24.500 đồng/USD. | sáng năm tháng mười giá u ét dê tại ngân hàng tăng hai mươi đồng lên hai mươi tư nghìn năm trăm đồng u ét dê | sáng năm tháng mười giá đô la tại ngân hàng tăng hai mươi đồng lên hai mươi tư nghìn năm trăm đồng một đô la |
-| heldout-mixed-005 | Tại Q.7, giá nhà khoảng 50-60 triệu/m2. | tại q bảy giá nhà khoảng năm mươi đến sáu mươi triệu một mét vuông | tại quận bảy giá nhà khoảng năm mươi đến sáu mươi triệu một mét vuông |
+
+## vitts + translit (ours): 8 câu sai
+
+| id | input | output | đáp án |
+|---|---|---|---|
+| heldout-currency-005 | Tỷ giá 25.400 VND/USD. | tỷ giá hai mươi lăm nghìn bốn trăm đồng u ét dê | tỷ giá hai mươi lăm nghìn bốn trăm đồng một đô la |
+| heldout-phone-001 | Gọi 113. | gọi một trăm mười ba | gọi một một ba |
+| heldout-phone-002 | Hotline: 0243.123.4567. | hốt lain không hai bốn ba một hai ba bốn năm sáu bảy | hotline không hai bốn ba một hai ba bốn năm sáu bảy |
+| heldout-abbreviation-006 | Căn hộ 3PN. | căn hộ bapn | căn hộ ba phòng ngủ |
+| heldout-acronym-001 | Ông Nguyễn Văn B. | ông nguyễn văn b | ông nguyễn văn bê |
+| heldout-foreign-002 | Giải SEA Games 31. | giải ét e a ghêm ba mươi mốt | giải xi gêm ba mươi mốt |
+| heldout-foreign-003 | Chuẩn IELTS 6.5. | chuẩn i e e lờ tê ét sáu chấm năm | chuẩn ai eo sáu chấm năm |
+| heldout-mixed-001 | Sáng 5/10, giá USD tại ngân hàng tăng 20 đồng, lên 24.500 đồng/USD. | sáng năm tháng mười giá u ét dê tại ngân hàng tăng hai mươi đồng lên hai mươi tư nghìn năm trăm đồng u ét dê | sáng năm tháng mười giá đô la tại ngân hàng tăng hai mươi đồng lên hai mươi tư nghìn năm trăm đồng một đô la |
 
 ## vinorm: 24 câu sai
 

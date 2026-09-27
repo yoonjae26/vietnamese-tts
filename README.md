@@ -11,60 +11,92 @@ ViTTS-Bench so sánh chúng **trên cùng một bộ test, cùng một cách ch�
 
 | Hạng mục | Trạng thái |
 | --- | --- |
-| 🔤 Chuẩn hóa văn bản (Vinorm, soe-vinorm, VietNormalizer, vitts) | ✅ Có kết quả |
+| 🔤 Chuẩn hóa văn bản (Vinorm, soe-vinorm, VietNormalizer, vitts) | ✅ vitts 0.2 + model phiên âm đứng đầu held-out v2 |
 | 🔊 Model TTS: độ rõ, lỗi không dừng, giống giọng, UTMOS, tốc độ, VRAM, giấy phép | ✅ 7 model |
 | 🎧 [Trang nghe thử](https://yoonjae26.github.io/vietnamese-tts/listen/): 7 model đọc cùng câu, kèm lời ASR nghe được | ✅ |
 | 🌐 API chung tương thích OpenAI, chọn model bằng tham số `model` | ✅ `vitts-server` |
 
 ## Kết quả: chuẩn hóa văn bản
 
-Model TTS chỉ đọc được chữ, nên `"100k"`, `"14h30"`, `"TP.HCM"` phải được đổi sang cách đọc trước. Nếu bước này sai, model tốt đến đâu cũng đọc sai.
+Model TTS chỉ đọc được chữ, nên `"100k"`, `"14h30"`, `"TP.HCM"`, `"iPhone"` phải được đổi sang cách đọc trước. Nếu bước này sai, model tốt đến đâu cũng đọc sai.
 
-**Bộ held-out**, 59 câu, là con số chính thức. Ô là **tỉ lệ câu đọc đúng hoàn toàn** (WER trong ngoặc):
+**Bộ held-out v2** (60 câu, [commit trước mọi thay đổi của vitts 0.2](benchmark/normalization/build_testset.py)) là con số chính thức. Ô là **tỉ lệ câu đọc đúng hoàn toàn** (WER trong ngoặc):
 
-| Nhóm | n | vitts (repo này) | [vinorm](https://github.com/v-nhandt21/Vinorm) 2.0.7 | [soe-vinorm](https://pypi.org/project/soe-vinorm/) 0.3.2 | [vietnormalizer](https://github.com/nghimestudio/vietnormalizer) 0.2.3 |
-|---|---:|---:|---:|---:|---:|
-| number | 13 | 62% (11.8%) | 69% (6.6%) | **100% (0.0%)** | 69% (6.6%) |
-| date | 5 | **100% (0.0%)** | 80% (2.5%) | **100% (0.0%)** | 60% (5.0%) |
-| time | 4 | **100% (0.0%)** | **100% (0.0%)** | **100% (0.0%)** | **100% (0.0%)** |
-| unit | 7 | 29% (33.3%) | 43% (24.0%) | **71% (4.0%)** | 14% (53.3%) |
-| currency | 5 | **80% (9.4%)** | 40% (18.8%) | 40% (25.0%) | 60% (18.8%) |
-| percent | 1 | **100% (0.0%)** | 0% (37.5%) | **100% (0.0%)** | 0% (12.5%) |
-| phone | 3 | **67% (7.4%)** | **67% (7.4%)** | **67% (7.4%)** | 0% (67.9%) |
-| abbreviation | 6 | 17% (43.8%) | **83% (6.2%)** | **83% (6.2%)** | 0% (62.5%) |
-| acronym | 3 | **33% (42.9%)** | 0% (46.2%) | 0% (46.2%) | **33% (38.5%)** |
-| foreign | 3 | 0% (57.9%) | 0% (41.2%) | 0% (35.3%) | **33% (52.6%)** |
-| plain | 4 | **100% (0.0%)** | **100% (0.0%)** | **100% (0.0%)** | **100% (0.0%)** |
-| mixed | 5 | 60% (7.4%) | 40% (12.6%) | **80% (6.3%)** | 0% (20.0%) |
-| **Tổng** | **59** | 59% (15.3%) | 59% (12.7%) | **76% (7.2%)** | 44% (25.3%) |
-| ms / câu | | 0.1 | 30.6 | 0.3 | 0.2 |
+| Nhóm | n | vitts 0.2 (quy tắc) | **vitts 0.2 + phiên âm** | vinorm 2.0.7 | soe-vinorm 0.3.2 | vietnormalizer 0.2.3 |
+|---|---:|---:|---:|---:|---:|---:|
+| foreign | 18 | 0% (38.1%) | **67% (6.7%)** | 0% (38.1%) | 0% (38.1%) | 61% (8.6%) |
+| names | 7 | 0% (61.1%) | 43% (18.9%) | 0% (61.1%) | 0% (61.1%) | **57% (13.5%)** |
+| acronym | 12 | 50% (27.1%) | **75% (9.4%)** | 0% (38.8%) | 25% (27.5%) | 50% (25.0%) |
+| number | 4 | **100% (0.0%)** | **100% (0.0%)** | 50% (8.0%) | 75% (4.0%) | 25% (20.0%) |
+| unit | 4 | **100% (0.0%)** | **100% (0.0%)** | 25% (22.6%) | 50% (6.5%) | 0% (46.4%) |
+| abbreviation | 4 | **100% (0.0%)** | **100% (0.0%)** | **100% (0.0%)** | **100% (0.0%)** | 0% (48.3%) |
+| plain | 6 | **83% (5.7%)** | **83% (2.9%)** | **83% (5.7%)** | **83% (5.7%)** | **83% (2.9%)** |
+| mixed | 5 | 0% (45.9%) | **20% (11.5%)** | 0% (45.9%) | 0% (45.9%) | **20% (11.5%)** |
+| **Tổng** | 60 | 38% (28.3%) | **70% (7.4%)** | 20% (32.8%) | 28% (29.1%) | 47% (18.6%) |
+| ms / câu | | 0.2 | 296.3 | 30.1 | 0.4 | 0.4 |
 
-**Nhận xét**
-- **soe-vinorm tốt nhất tổng thể** (76%), mạnh ở số, đơn vị và viết tắt.
-- Chưa bộ nào xử lý tốt **từ nước ngoài** (iPhone, SEA Games, IELTS) và **chữ viết tắt đánh vần** (ATM, NATO). Đây là khoảng trống lớn nhất.
-- Tiền tệ viết tắt (`50k`, `99.000đ`, `VND/USD`) là điểm yếu chung. vinorm và soe-vinorm đọc `100k` thành "một trăm ca".
-- vitts (bản của repo này) mạnh về tiền tệ, ngày giờ, điện thoại, nhưng **yếu ở số La Mã, đơn vị dính số (`1m75`, `1.500W`) và viết tắt địa danh (`Q.1`, `P.`)**.
+- **vitts 0.2 + model phiên âm đứng đầu (70%)**, nhất là ở từ nước ngoài (67%) và chữ viết tắt (75%). Không có model, vitts chỉ đạt 38%, nên phần lớn mức tăng đến từ model.
+- **vietnormalizer mạnh ở tên riêng (57% so với 43%)** nhờ từ điển 17.7k từ.
+- **Tốc độ là điểm yếu:** khoảng 300 ms mỗi câu trên CPU khi câu có nhiều từ nước ngoài, vì mỗi từ được giải mã riêng bằng beam search.
 
-Kết quả chi tiết từng câu: [`results/normalization_heldout_errors.md`](results/normalization_heldout_errors.md).
+**Đã gặp và chưa gặp.** Model được huấn luyện trên từ điển của vietnormalizer, nên 32/55 từ nước ngoài trong v2 đã có trong phần train. Tách riêng 22 câu mà mọi từ nước ngoài đều **không** có trong train: vitts + phiên âm đạt **64%** (WER 8.6%), vietnormalizer đạt 50% (WER 18.8%). vietnormalizer vẫn có lợi thế ở nhóm này, vì từ điển đầy đủ của nó chứa cả các từ thuộc phần dev/test của model.
 
-### Phương pháp, và vì sao có hai bộ test
+<details>
+<summary>Bộ held-out v1 (59 câu) và dev (99 câu)</summary>
 
-| Bộ | Số câu | Vai trò |
-| --- | ---: | --- |
-| `dev` | 99 | Dùng trong lúc phát triển vitts. **vitts đã được sửa dựa trên bộ này**, nên điểm của nó ở đây (100%) không phản ánh năng lực thật. |
-| `heldout` | 59 | Viết sau khi vitts đã xong, gồm các hiện tượng chưa được code riêng. **Không sửa vitts dựa trên bộ này.** Đây là con số công bố. |
+| Bộ | vitts 0.1 | vitts 0.2 | vitts 0.2 + phiên âm | vinorm | soe-vinorm | vietnormalizer |
+|---|---:|---:|---:|---:|---:|---:|
+| held-out v1 | 59% | 85%\* | 86%\* | 59% | 76% | 44% |
+| dev | 100%\* | 100%\* | 100%\* | 83% | 90% | 66% |
 
-- Đáp án được **viết tay** theo cách đọc tự nhiên, không sinh từ output của bộ chuẩn hóa nào. Một câu có thể có nhiều đáp án đúng, ví dụ "đồng **một** lít", "đồng **mỗi** lít", "đồng **trên** lít".
-- Trước khi so sánh, bỏ dấu câu và hoa/thường, rồi quy các biến thể vùng miền về một dạng: *ngàn/nghìn, lẻ/linh, tỉ/tỷ, mươi bốn/mươi tư, kí lô/ki lô, tháng bốn/tháng tư, Việt Nam đồng/đồng…* ([`metrics.py`](src/vitts/bench/metrics.py)).
-- **Hạn chế:** bộ test do một người viết và còn nhỏ. Hãy đóng góp thêm câu, nhất là câu từ nguồn thực tế (báo, mạng xã hội, văn bản hành chính). Khi vitts được cải thiện, phiên bản mới phải được đo trên một bộ held-out mới.
+\* Không còn là số đo khách quan: vitts 0.1 được sửa theo bộ dev, và các quy tắc của vitts 0.2 được viết sau khi xem lỗi trên v1. Con số khách quan của vitts 0.1 là 59% trên v1; của vitts 0.2 là kết quả trên v2 ở trên.
+</details>
 
-### Chạy lại
+Kết quả từng câu: [`results/normalization_heldout_v2_errors.md`](results/normalization_heldout_v2_errors.md).
+
+### Phương pháp
+
+- Mỗi phiên bản của vitts được đo trên một bộ held-out **viết trước** khi phiên bản đó được phát triển, và không sửa code theo bộ đó. Lịch sử git cho thấy thứ tự này.
+- Đáp án được **viết tay**. Một câu có thể có nhiều đáp án đúng (ví dụ "gu gồ", "gu gơ" cho Google), và các biến thể vùng miền được quy về một dạng: *ngàn/nghìn, lẻ/linh, tỉ/tỷ…* ([`metrics.py`](src/vitts/bench/metrics.py)).
+- **Hạn chế:** bộ test do một người viết và còn nhỏ; từ nước ngoài có nhiều cách đọc hơn số đáp án liệt kê. Hãy đóng góp thêm câu và cách đọc.
 
 ```bash
 pip install -e ".[bench]"
 python benchmark/normalization/build_testset.py
-python benchmark/normalization/run.py --split heldout
-python benchmark/normalization/run.py --split dev
+python benchmark/normalization/run.py --split heldout_v2
+```
+
+## Model phiên âm từ nước ngoài
+
+`vitts.translit` là một transformer seq2seq 5.6M tham số, đọc từng ký tự của từ, kèm âm vị [CMUdict](https://github.com/cmusphinx/cmudict) nếu từ có trong đó, và sinh ra cách đọc tiếng Việt: "container" → "công tê nơ". Model được huấn luyện trên 17.7k cặp từ viết tay của [vietnormalizer](https://github.com/nghimestudio/vietnormalizer) (MIT). Dữ liệu được chia train/dev/test **theo gốc từ**, và cấu hình được chọn chỉ dựa trên dev.
+
+**Bộ test: 1.676 từ chưa gặp khi huấn luyện**
+
+| Hệ thống | Đúng cả từ ↑ | Lỗi âm tiết ↓ |
+|---|---:|---:|
+| soe-vinorm | 0.5% | 110.5% |
+| vietnormalizer (quy tắc phiên âm, không tra từ điển) | 7.8% | 73.1% |
+| vitts translit v1 (chỉ chữ) | 47.1% | 37.2% |
+| **vitts translit (chữ + âm vị CMUdict)** | **55.1%** | **30.0%** |
+
+| Cấu hình (dò trên dev) | Dev |
+|---|---:|
+| d256, 3 lớp, dropout 0.1 | 47.3% |
+| d256, 3 lớp, dropout 0.2 | 51.7% |
+| d384, 4 lớp, dropout 0.2 | 52.3% |
+| **d256, 3 lớp, dropout 0.2, + âm vị** (được chọn) | **53.1%** |
+| d384, 4 lớp, dropout 0.2, + âm vị | 53.1% |
+
+```python
+from vitts import normalize_text
+
+normalize_text("Họp online qua Zoom, rút tiền ở ATM.", translit="auto")
+```
+
+```bash
+python training/translit/prepare_data.py
+bash training/translit/sweep.sh                       # dò cấu hình (chỉ GPU 0)
+CUDA_VISIBLE_DEVICES=0 python training/translit/evaluate.py
 ```
 
 ## Kết quả: model TTS
@@ -164,16 +196,20 @@ Không có GPU? `vitts-server --local` chạy MMS ngay trong tiến trình, khô
 - [x] Một server tương thích OpenAI, chọn model bằng tham số `model`
 - [ ] Streaming audio, chọn giọng mẫu qua tham số `voice`
 
-**vitts normalizer v0.2**
-- [ ] Số dính chữ (`12A`, `1m75`, `1.500W`), số La Mã, phân số, số âm
-- [ ] Viết tắt hành chính (`Q.`, `P.`, `GD&ĐT`, `CNTT`), từ điển từ nước ngoài
-- [ ] Đo trên bộ held-out mới (`HELDOUT_V2`)
+**vitts normalizer 0.2**
+- [x] Số dính chữ (`12A`, `1m75`, `1.500W`), số La Mã, phân số, số âm
+- [x] Viết tắt hành chính (`Q.`, `P.`, `GD&ĐT`, `CNTT`)
+- [x] Model phiên âm từ nước ngoài; chữ viết tắt đọc thành từ (NATO) hoặc đánh vần (ATM)
+- [x] Đo trên bộ held-out mới (`heldout_v2`)
+- [ ] Tăng tốc phiên âm: giải mã theo lô, xuất ONNX
+- [ ] Tên riêng không phải tiếng Anh (Hàn, Nga, Ả Rập…), bộ held-out v3
 
 ## Thành phần khác trong repo
 
 | Thành phần | Mô tả |
 | --- | --- |
-| [`vitts.text`](src/vitts/text/) | Bộ chuẩn hóa tiếng Việt, không phụ thuộc thư viện ngoài |
+| [`vitts.text`](src/vitts/text/) | Bộ chuẩn hóa tiếng Việt (phần quy tắc không cần thư viện ngoài) |
+| [`vitts.translit`](src/vitts/translit/) | Model phiên âm từ nước ngoài (cần torch) |
 | [`vitts.datasets`](src/vitts/datasets.py) | Formatter dataset cho coqui-tts (LJSpeech, cặp wav/txt, Common Voice) |
 | [`recipes/vits`](recipes/vits/) | Script huấn luyện VITS tiếng Việt bằng coqui-tts |
 | [`vitts.server`](src/vitts/server.py) | Gateway tương thích OpenAI `/v1/audio/speech` cho mọi model |
@@ -197,4 +233,4 @@ Khi chạy benchmark trên GPU, chỉ định GPU bằng `CUDA_VISIBLE_DEVICES` 
 
 ---
 
-*English:* ViTTS-Bench is an open, reproducible benchmark for Vietnamese TTS. Stage 1 compares Vietnamese text normalizers on a hand-written held-out set (soe-vinorm currently leads at 76% sentence accuracy). Stage 2 benchmarks 7 TTS models (ASR round-trip WER, a runaway-generation check that WER misses, ECAPA speaker similarity, UTMOS, RTF, VRAM) with a listening page, and an OpenAI-compatible gateway serves all of them behind one `/v1/audio/speech` endpoint.
+*English:* ViTTS-Bench is an open, reproducible benchmark for Vietnamese TTS. Stage 1 compares Vietnamese text normalizers on hand-written held-out sets; vitts 0.2 with a trained 5.6M-parameter loanword transliteration model (55% exact / 30% syllable error on unseen words, vs 8% / 73% for the best rule-based transliterator) leads held-out v2 at 70% sentence accuracy. Stage 2 benchmarks 7 TTS models (ASR round-trip WER, a runaway-generation check that WER misses, ECAPA speaker similarity, UTMOS, RTF, VRAM) with a listening page, and an OpenAI-compatible gateway serves all of them behind one `/v1/audio/speech` endpoint.

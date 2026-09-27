@@ -15,6 +15,11 @@ class Transliterator:
     def __init__(self, model, src_vocab, tgt_vocab, device: str = "cpu", beam: int = 5):
         self.model, self.src_vocab, self.tgt_vocab = model, src_vocab, tgt_vocab
         self.device, self.beam_width = device, beam
+        self.cmudict = None
+        if "<ph>" in src_vocab.stoi:  # model được huấn luyện kèm âm vị CMUdict
+            import cmudict
+
+            self.cmudict = cmudict.dict()
         self._cached = lru_cache(maxsize=50_000)(self._translit)
 
     @classmethod
@@ -26,7 +31,10 @@ class Transliterator:
     def _translit(self, word: str) -> str:
         import torch
 
-        src = torch.tensor([self.src_vocab.encode(word.lower())], device=self.device)
+        from vitts.translit.model import source_tokens
+
+        phones = self.cmudict[word][0] if self.cmudict and word in self.cmudict else None
+        src = torch.tensor([self.src_vocab.encode(source_tokens(word, phones))], device=self.device)
         if self.beam_width > 1:
             ids = self.model.beam(src, width=self.beam_width)
         else:

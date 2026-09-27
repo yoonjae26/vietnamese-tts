@@ -21,7 +21,7 @@ from torch import nn
 ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT / "src"))
 
-from vitts.translit.model import PAD, Config, Seq2Seq, Vocab, save  # noqa: E402
+from vitts.translit.model import PAD, Config, Seq2Seq, Vocab, save, source_tokens  # noqa: E402
 
 DATA = ROOT / "data" / "translit"
 
@@ -34,13 +34,24 @@ def read(split: str) -> list[tuple[str, list[str]]]:
     return rows
 
 
+PHONES: dict = {}  # từ -> âm vị CMUdict (chỉ khi --phonemes)
+PHONE_DROP = 0.2  # tỉ lệ bỏ âm vị khi huấn luyện, để model vẫn đọc được từ không có trong CMUdict
+
+
+def src_of(word: str, train: bool) -> list[str]:
+    phones = PHONES.get(word)
+    if phones and train and random.random() < PHONE_DROP:
+        phones = None
+    return source_tokens(word, phones)
+
+
 def batches(pairs, src_vocab, tgt_vocab, size, shuffle, device):
     idx = list(range(len(pairs)))
     if shuffle:
         random.shuffle(idx)
     for i in range(0, len(idx), size):
         chunk = [pairs[j] for j in idx[i : i + size]]
-        src = [src_vocab.encode(w) for w, _ in chunk]
+        src = [src_vocab.encode(src_of(w, shuffle)) for w, _ in chunk]
         tgt = [tgt_vocab.encode(t) for _, t in chunk]
         s = torch.full((len(chunk), max(map(len, src))), PAD, dtype=torch.long)
         t = torch.full((len(chunk), max(map(len, tgt))), PAD, dtype=torch.long)
@@ -54,7 +65,7 @@ def accuracy(model, rows, src_vocab, tgt_vocab, device) -> float:
     correct = 0
     for i in range(0, len(rows), 512):
         chunk = rows[i : i + 512]
-        src = [src_vocab.encode(w) for w, _ in chunk]
+        src = [src_vocab.encode(src_of(w, False)) for w, _ in chunk]
         s = torch.full((len(chunk), max(map(len, src))), PAD, dtype=torch.long)
         for k, a in enumerate(src):
             s[k, : len(a)] = torch.tensor(a)
@@ -75,6 +86,7 @@ def main():
     p.add_argument("--lr", type=float, default=7e-4)
     p.add_argument("--warmup", type=int, default=1000)
     p.add_argument("--seed", type=int, default=42)
+    p.add_argument("--phonemes", action="store_true", help="thêm âm vị CMUdict vào đầu vào")
     p.add_argument("--out", default=str(ROOT / "models" / "translit" / "translit.pt"))
     args = p.parse_args()
 
@@ -86,7 +98,12 @@ def main():
 
     train, dev = read("train"), read("dev")
     train_pairs = [(w, t) for w, refs in train for t in refs]
-    src_vocab = Vocab([c for w, _ in train_pairs for c in w])
+    if args.phonemes:
+        import cmudict
+
+        d = cmudict.dict()
+        PHONES.update({w: d[w][0] for w, _ in train + dev if w in d})
+    src_vocab = Vocab([tok for w, _ in train_pairs for tok in source_tokens(w, PHONES.get(w))])
     tgt_vocab = Vocab([c for _, t in train_pairs for c in t])
     cfg = Config(
         d_model=args.d_model,

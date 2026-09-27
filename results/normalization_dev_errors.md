@@ -3,6 +3,11 @@
 | id | input | output | đáp án |
 |---|---|---|---|
 
+## vitts + translit (ours): 0 câu sai
+
+| id | input | output | đáp án |
+|---|---|---|---|
+
 ## vinorm: 17 câu sai
 
 | id | input | output | đáp án |

@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "vitts-bench"
-version = "0.1.0"
+version = "0.2.0"
 description = "Open, reproducible benchmark for Vietnamese text-to-speech: text normalizers, TTS models and a unified OpenAI-compatible API."
 readme = "README.md"
 requires-python = ">=3.10, <3.13"
@@ -22,6 +22,7 @@ dependencies = []
 
 [project.optional-dependencies]
 bench = ["vinorm", "soe-vinorm", "vietnormalizer"]
+translit = ["torch", "cmudict"]
 tts = ["coqui-tts>=0.24.1", "numpy", "soundfile", "librosa"]
 server = ["vitts-bench[tts]", "fastapi>=0.110", "uvicorn[standard]>=0.29"]
 demo = ["vitts-bench[tts]", "gradio>=4"]

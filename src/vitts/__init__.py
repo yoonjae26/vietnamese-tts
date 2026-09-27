@@ -2,5 +2,5 @@
 
 from vitts.text import normalize_text, read_number, split_sentences
 
-__version__ = "0.1.0"
+__version__ = "0.2.0"
 __all__ = ["normalize_text", "read_number", "split_sentences", "__version__"]

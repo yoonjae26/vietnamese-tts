@@ -21,3 +21,4 @@ outputs/
 
 # giọng mẫu dùng chung của benchmark (tác giả đồng ý công khai)
 !benchmark/tts/reference/*.wav
+models/translit/sweep/

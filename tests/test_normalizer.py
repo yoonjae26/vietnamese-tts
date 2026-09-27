@@ -61,3 +61,43 @@ def test_split_sentences_respects_max_chars():
     assert chunks[0] == "câu thứ nhất."
     assert chunks[-1] == "câu cuối!"
     assert all(len(c) <= 80 for c in chunks)
+
+
+@pytest.mark.parametrize(
+    ("raw", "expected"),
+    [
+        ("chương XII", "chương mười hai"),
+        ("thứ I", "thứ nhất"),
+        ("phòng 8C", "phòng tám xê"),
+        ("nhảy 2m05", "nhảy hai mét năm"),
+        ("âm độ: -3°C", "âm độ, âm ba độ xê"),
+        ("uống 2/3 chai", "uống hai phần ba chai"),
+        ("sáng 1/6 đi học", "sáng một tháng sáu đi học"),
+        ("Q.3 và P.12", "quận ba và phường mười hai"),
+        ("sạc 20W, pin 4000mAh", "sạc hai mươi oát, pin bốn nghìn mi li am pe giờ"),
+        ("ngành CNTT", "ngành công nghệ thông tin"),
+    ],
+)
+def test_normalize_v02_rules(raw, expected):
+    assert normalize_text(raw) == expected
+
+
+def test_translit_hook_only_touches_foreign_words():
+    calls = []
+
+    def fake(word):
+        calls.append(word)
+        return "phiên âm"
+
+    out = normalize_text("Anh Tuấn mua iPad ở Hà Nội, tin vui.", translit=fake)
+    assert out == "anh tuấn mua phiên âm ở hà nội, tin vui."
+    assert calls == ["ipad"]
+
+
+def test_acronyms_word_vs_spelled_with_translit():
+    out = normalize_text("OPEC và CPU.", translit=lambda w: f"đọc {w}")
+    assert out == "đọc opec và xê pê u."
+
+
+def test_without_translit_foreign_words_are_kept():
+    assert normalize_text("Mua iPad.") == "mua ipad."
