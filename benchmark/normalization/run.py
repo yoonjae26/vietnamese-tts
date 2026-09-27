@@ -16,7 +16,7 @@ from vitts.bench.metrics import canonicalize, score
 from vitts.bench.normalizers import NORMALIZERS, package_version
 
 ROOT = Path(__file__).resolve().parents[2]
-SPLITS = {"dev": "testset.jsonl", "heldout": "testset_heldout.jsonl"}
+SPLITS = {"dev": "testset.jsonl", "heldout": "testset_heldout.jsonl", "heldout_v2": "testset_heldout_v2.jsonl"}
 
 
 def run_one(name: str, cases: list[dict]) -> dict:

@@ -385,7 +385,173 @@ HELDOUT = [
     ),
 ]
 
-SPLITS = {"dev": ("testset.jsonl", CASES), "heldout": ("testset_heldout.jsonl", HELDOUT)}
+# ----------------------------------------------------------------------------
+# HELD-OUT V2 (2026-09-28): viết TRƯỚC khi tích hợp model phiên âm và sửa lỗi v0.2 vào vitts.
+# Trọng tâm: từ nước ngoài, thương hiệu, tên người, chữ viết tắt đọc thành từ / đánh vần.
+# Từ nước ngoài có nhiều cách đọc phổ biến, nên mỗi câu liệt kê các cách được chấp nhận.
+# Quy tắc: không sửa vitts dựa trên bộ này.
+# ----------------------------------------------------------------------------
+
+
+def opts(template: str, **choices: tuple[str, ...]) -> list[str]:
+    """opts("x {a} y", a=("1", "2")) -> ["x 1 y", "x 2 y"] (tích Descartes khi có nhiều chỗ)."""
+    out = [template]
+    for key, values in choices.items():
+        out = [t.replace("{" + key + "}", v) for t in out for v in values]
+    return out
+
+
+HELDOUT_V2 = [
+    # thương hiệu, công nghệ
+    ("foreign", "Tôi vừa mua iPhone mới.", opts("tôi vừa mua {w} mới", w=("ai phôn", "ai phôn"))),
+    ("foreign", "Bạn có dùng Facebook không?", opts("bạn có dùng {w} không", w=("phây búc", "phây bút"))),
+    ("foreign", "Xem video trên YouTube.", opts("xem {v} trên {w}", v=("vi đê ô", "vi đi ô"), w=("diu túp", "du túp"))),
+    ("foreign", "Tìm trên Google nhé.", opts("tìm trên {w} nhé", w=("gu gồ", "gu gơ", "gu gờ"))),
+    ("foreign", "Gửi email cho sếp.", opts("gửi {w} cho sếp", w=("i meo", "i mêu", "e meo"))),
+    ("foreign", "Laptop của tôi bị hỏng.", opts("{w} của tôi bị hỏng", w=("láp tóp", "láp tốp"))),
+    ("foreign", "Cửa hàng bán online.", opts("cửa hàng bán {w}", w=("on lai", "òn lai", "on lanh"))),
+    ("foreign", "Anh ấy làm marketing.", opts("anh ấy làm {w}", w=("ma két tinh", "ma két ting"))),
+    ("foreign", "Mở TikTok xem một lúc.", opts("mở {w} xem một lúc", w=("tích tốc", "tíc tốc", "tik tok"))),
+    ("foreign", "Đặt xe qua Grab.", opts("đặt xe qua {w}", w=("gráp", "gờ ráp", "grát"))),
+    (
+        "foreign",
+        "Công ty Microsoft vừa công bố.",
+        opts("công ty {w} vừa công bố", w=("mai crô sóp", "mai cờ rô sóp", "mai crô xóp")),
+    ),
+    ("foreign", "Tối nay xem Netflix.", opts("tối nay xem {w}", w=("nét phlích", "nét phờ lích", "nét flích"))),
+    (
+        "foreign",
+        "Anh ấy đang livestream bán hàng.",
+        opts("anh ấy đang {w} bán hàng", w=("lai trim", "lai xờ trim", "lai xtrim")),
+    ),
+    (
+        "foreign",
+        "Cô ấy mở một startup.",
+        opts("cô ấy mở một {w}", w=("xtát ắp", "sờ tát ắp", "xờ tát ắp", "sờ tát áp")),
+    ),
+    ("foreign", "Nghe podcast mỗi sáng.", opts("nghe {w} mỗi sáng", w=("pót cát", "pốt cát", "pót cast"))),
+    (
+        "foreign",
+        "Điện thoại Samsung mới ra mắt.",
+        opts("điện thoại {w} mới ra mắt", w=("sam sung", "xam xung", "sam sân")),
+    ),
+    ("foreign", "Tải ứng dụng Shopee.", opts("tải ứng dụng {w}", w=("sốp pi", "sóp pi", "sô pi"))),
+    (
+        "foreign",
+        "Uống cà phê ở Starbucks.",
+        opts("uống cà phê ở {w}", w=("xta búc", "sờ ta búc", "xtar bắc", "sta bấc")),
+    ),
+    # tên người, câu lạc bộ, địa danh nước ngoài
+    ("names", "Messi ghi bàn.", opts("{w} ghi bàn", w=("mét xi", "me xi", "mét si"))),
+    ("names", "Ronaldo sút phạt.", opts("{w} sút phạt", w=("rô nan đô", "rô nan đồ"))),
+    ("names", "Chelsea thắng trận.", opts("{w} thắng trận", w=("chen xi", "chen sơ", "chen si"))),
+    (
+        "names",
+        "Taylor Swift ra album mới.",
+        opts("{t} {s} ra {a} mới", t=("tay lơ", "tây lơ"), s=("xuýp", "sờ uýp", "xuýt"), a=("an bum", "al bum")),
+    ),
+    ("names", "Du lịch Singapore.", opts("du lịch {w}", w=("xin ga po", "sinh ga po", "xinh ga po"))),
+    ("names", "Bay tới London.", opts("bay tới {w}", w=("luân đôn", "lân đơn", "lon đon"))),
+    (
+        "names",
+        "Elon Musk nói về Tesla.",
+        opts(
+            "{e} {m} nói về {t}",
+            e=("i lon", "e lon", "i lơn"),
+            m=("mắt", "mớt", "mớc"),
+            t=("tét la", "tét xla", "tê xla"),
+        ),
+    ),
+    # chữ viết tắt: đọc thành từ hoặc đánh vần
+    (
+        "acronym",
+        "Tổ chức UNESCO công nhận.",
+        opts("tổ chức {w} công nhận", w=("u nét cô", "iu nét xcô", "iu nét cô", "u nê xcô")),
+    ),
+    ("acronym", "Khối ASEAN họp thường niên.", opts("khối {w} họp thường niên", w=("a xê an", "a sê an", "a sin"))),
+    ("acronym", "Liên minh NATO.", opts("liên minh {w}", w=("na tô", "na tô"))),
+    ("acronym", "Rút tiền ở cây ATM.", opts("rút tiền ở cây {w}", w=("a tê mờ", "a tê em mờ", "a tê em", "ây ti em"))),
+    (
+        "acronym",
+        "Chứng chỉ IELTS 7.0.",
+        opts("chứng chỉ {w} bảy chấm không", w=("ai eo", "ai en", "ai eo xờ", "i en tê ét")),
+    ),
+    ("acronym", "Mạng 4G phủ sóng toàn quốc.", opts("mạng bốn {g} phủ sóng toàn quốc", g=("gờ", "giê", "gi"))),
+    ("acronym", "Tập đoàn FPT tuyển dụng.", opts("tập đoàn {w} tuyển dụng", w=("ép pê tê", "ép pi ti"))),
+    ("acronym", "Xét nghiệm PCR âm tính.", opts("xét nghiệm {w} âm tính", w=("pê xê e rờ", "pê xê rờ", "pi xi a"))),
+    ("acronym", "Cơ quan NASA phóng tàu.", opts("cơ quan {w} phóng tàu", w=("na sa", "na xa"))),
+    ("acronym", "Đài VTV đưa tin.", opts("đài {w} đưa tin", w=("vê tê vê",))),
+    ("acronym", "Chiếc xe SUV mới.", opts("chiếc xe {w} mới", w=("ét u vê", "ét iu vi", "xờ u vê"))),
+    (
+        "acronym",
+        "Tiêu chuẩn ISO 9001.",
+        opts("tiêu chuẩn {w} chín nghìn không trăm linh một", w=("i xô", "i sô", "ai xô")),
+    ),
+    # số, đơn vị, viết tắt (các lỗi đã biết từ held-out v1, nhưng câu mới)
+    ("number", "Thế kỷ XX có nhiều biến động.", ["thế kỷ hai mươi có nhiều biến động"]),
+    ("number", "Hội nghị lần thứ IV.", ["hội nghị lần thứ tư"]),
+    ("number", "Căn hộ số 15B.", ["căn hộ số mười lăm bê"]),
+    ("number", "Trượt 3/4 chặng đường.", opts("trượt ba {p} bốn chặng đường", p=("phần", "trên"))),
+    ("unit", "Anh ấy cao 1m68.", opts("anh ấy cao một mét sáu {x}", x=("mươi tám", "tám"))),
+    ("unit", "Máy lạnh công suất 2.000W.", ["máy lạnh công suất hai nghìn oát"]),
+    ("unit", "Nhiệt độ xuống -10°C.", opts("nhiệt độ xuống âm mười {d}", d=("độ xê", "độ"))),
+    ("unit", "Tốc độ 300Mbps.", opts("tốc độ ba trăm mê ga bít{s}", s=(" trên giây", ""))),
+    ("abbreviation", "Nhà ở P. Bến Thành, Q.1.", ["nhà ở phường bến thành, quận một"]),
+    ("abbreviation", "Trường ĐHQG Hà Nội.", ["trường đại học quốc gia hà nội"]),
+    ("abbreviation", "Sở GD&ĐT thông báo.", ["sở giáo dục và đào tạo thông báo"]),
+    ("abbreviation", "Ngành CNTT rất hot.", opts("ngành công nghệ thông tin rất {h}", h=("hót", "hot"))),
+    # câu thường: không được đổi gì (kiểm tra phát hiện nhầm từ nước ngoài)
+    ("plain", "Ban nhạc tổ chức show diễn.", opts("ban nhạc tổ chức {s} diễn", s=("sô", "show"))),
+    ("plain", "Con mèo đen nằm trên sofa.", opts("con mèo đen nằm trên {s}", s=("sô pha", "sô fa"))),
+    ("plain", "Mẹ nấu canh chua cá lóc.", ["mẹ nấu canh chua cá lóc"]),
+    ("plain", "Anh Tuấn và chị Lan đi học.", ["anh tuấn và chị lan đi học"]),
+    ("plain", "Tin vui đến với cả nhà.", ["tin vui đến với cả nhà"]),
+    ("plain", "Bạn tên gì?", ["bạn tên gì"]),
+    # câu thực tế
+    (
+        "mixed",
+        "Apple ra mắt iPhone 16 giá 25 triệu.",
+        opts("{a} ra mắt {i} mười sáu giá hai mươi lăm triệu", a=("áp pồ", "áp pơn", "áp bồ"), i=("ai phôn",)),
+    ),
+    (
+        "mixed",
+        "Đăng video lên TikTok và YouTube lúc 20h.",
+        opts(
+            "đăng {v} lên {t} và {y} lúc hai mươi giờ",
+            v=("vi đê ô", "vi đi ô"),
+            t=("tích tốc", "tíc tốc"),
+            y=("diu túp", "du túp"),
+        ),
+    ),
+    (
+        "mixed",
+        "Họp online qua Zoom lúc 9h sáng.",
+        opts("họp {o} qua {z} lúc chín giờ sáng", o=("on lai", "òn lai"), z=("zum", "dum", "rum")),
+    ),
+    (
+        "mixed",
+        "Ứng dụng Zalo có 75 triệu người dùng.",
+        opts("ứng dụng {z} có bảy mươi lăm triệu người dùng", z=("da lô", "za lô", "gia lô")),
+    ),
+    (
+        "mixed",
+        "Real Madrid gặp Barcelona tại Champions League.",
+        opts(
+            "{r} {m} gặp {b} tại {c} {l}",
+            r=("rê an", "ri ồ", "rê al"),
+            m=("ma đrít", "ma đơ rít", "ma drít"),
+            b=("bác xê lô na", "bác xe lô na", "ba xê lô na"),
+            c=("chem pi ân", "chem pi ơn", "chăm pi ơn"),
+            l=("lích", "li gơ", "li"),
+        ),
+    ),
+]
+
+SPLITS = {
+    "dev": ("testset.jsonl", CASES),
+    "heldout": ("testset_heldout.jsonl", HELDOUT),
+    "heldout_v2": ("testset_heldout_v2.jsonl", HELDOUT_V2),
+}
 
 
 def main():
