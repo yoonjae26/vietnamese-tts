@@ -1,9 +1,10 @@
-"""Chấm độ rõ (intelligibility) của audio: ASR nghe lại rồi so với câu gốc.
+"""Chấm audio của các model: độ rõ (ASR nghe lại, WER/CER), lỗi không dừng, độ tự nhiên (UTMOS)
+và độ giống giọng mẫu (SIM, chỉ với model clone giọng). Xem `quality.py`.
 
     CUDA_VISIBLE_DEVICES=0 python benchmark/tts/evaluate.py            # mọi model đã sinh audio
     CUDA_VISIBLE_DEVICES=0 python benchmark/tts/evaluate.py mms vixtts
 
-Ghi `outputs/tts/<engine>/asr.json` và bảng tổng hợp `results/tts.md`, `results/tts.json`.
+Ghi `outputs/tts/<engine>/{asr,quality}.json` (cache) và bảng tổng hợp `results/tts.md`, `results/tts.json`.
 """
 
 import argparse
@@ -17,7 +18,8 @@ import jiwer
 import numpy as np
 import soundfile as sf
 import torch
-from synthesize import ALLOWED_GPU, pick_device  # noqa: F401  (dùng chung chốt chặn GPU)
+from quality import CLONING, Scorers, load_16k
+from synthesize import pick_device  # dùng chung chốt chặn GPU
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[1]
@@ -52,7 +54,22 @@ def transcribe(asr, wav_path: Path) -> str:
     return asr({"raw": audio, "sampling_rate": 16000}, generate_kwargs={"language": "vi", "task": "transcribe"})["text"]
 
 
-def evaluate_engine(asr, run_dir: Path) -> dict:
+def score_quality(scorers: Scorers, run_dir: Path, meta: dict) -> dict:
+    cache_file = run_dir / "quality.json"
+    cache = json.loads(cache_file.read_text(encoding="utf-8")) if cache_file.exists() else {}
+    for s in meta["sentences"]:
+        if s["id"] not in cache:
+            wav = load_16k(run_dir / f"{s['id']}.wav")
+            cache[s["id"]] = {"utmos": scorers.mos(wav), "sim": scorers.similarity(wav)}
+    cache_file.write_text(json.dumps(cache, ensure_ascii=False, indent=1), encoding="utf-8")
+    return {
+        "utmos": float(np.mean([cache[s["id"]]["utmos"] for s in meta["sentences"]])),
+        "sim": float(np.mean([cache[s["id"]]["sim"] for s in meta["sentences"]])),
+        "clones_voice": meta["engine"] in CLONING,
+    }
+
+
+def evaluate_engine(asr, scorers: Scorers, run_dir: Path) -> dict:
     meta = json.loads((run_dir / "meta.json").read_text(encoding="utf-8"))
     cache_file = run_dir / "asr.json"
     cache = json.loads(cache_file.read_text(encoding="utf-8")) if cache_file.exists() else {}
@@ -100,11 +117,12 @@ def evaluate_engine(asr, run_dir: Path) -> dict:
         "overall": corpus(rows),
         "by_category": {c: corpus(rs) for c, rs in by_cat.items()},
         "runaway": runaway,
+        **score_quality(scorers, run_dir, meta),
         "rows": rows,
     }
 
 
-def to_markdown(results: list[dict]) -> str:
+def to_markdown(results: list[dict], reference: dict) -> str:
     cats = list(results[0]["by_category"])
     lines = [
         f"# Benchmark TTS tiếng Việt ({date.today().isoformat()})",
@@ -112,20 +130,26 @@ def to_markdown(results: list[dict]) -> str:
         f"ASR chấm điểm: `{ASR_MODEL}`. {results[0]['overall']['n']} câu. WER/CER càng thấp càng rõ. "
         "RTF = thời gian sinh / độ dài audio (càng thấp càng nhanh). "
         f"**Không dừng** = số câu có giây/từ > {RUNAWAY_FACTOR}× trung vị của model (sinh thừa khoảng lặng "
-        "hoặc âm rác; WER không phát hiện được).",
+        "hoặc âm rác; WER không phát hiện được). "
+        "**UTMOS** = điểm tự nhiên dự đoán 1–5 (model huấn luyện trên tiếng Anh, chỉ so sánh tương đối). "
+        "**SIM** = độ giống giọng mẫu (cosine ECAPA-TDNN). MMS và Piper không clone giọng (giọng cố định của "
+        "người khác), SIM của chúng là mốc cho hai người nói khác nhau. "
+        f"Chính giọng mẫu: UTMOS {reference['utmos']:.2f}.",
         "",
         "| Model | WER | CER | "
         + " | ".join(f"WER {c}" for c in cats)
-        + " | Không dừng | RTF | VRAM | Hz | Giấy phép |",
-        "|---|---:|---:|" + "---:|" * len(cats) + "---:|---:|---:|---:|---|",
+        + " | Không dừng | UTMOS | SIM | RTF | VRAM | Hz | Giấy phép |",
+        "|---|---:|---:|" + "---:|" * len(cats) + "---:|---:|---:|---:|---:|---:|---|",
     ]
     for r in sorted(results, key=lambda r: r["overall"]["wer"]):
         o = r["overall"]
         vram = f"{r['peak_vram_gb']:.1f} GB" if r["peak_vram_gb"] is not None else "– (CPU)"
+        sim = f"{r['sim']:.3f}" if r["clones_voice"] else f"({r['sim']:.3f})"
         lines.append(
             f"| [{r['name']}](https://huggingface.co/{r['repo']}) | **{o['wer']:.1%}** | {o['cer']:.1%} | "
             + " | ".join(f"{r['by_category'][c]['wer']:.1%}" for c in cats)
-            + f" | {len(r['runaway'])}/{o['n']} | {r['rtf']:.3f} | {vram} | {r['sample_rate']} | {r['license']} |"
+            + f" | {len(r['runaway'])}/{o['n']} | {r['utmos']:.2f} | {sim} | {r['rtf']:.3f} | {vram}"
+            + f" | {r['sample_rate']} | {r['license']} |"
         )
     lines += ["", f"GPU: {next(r['device'] for r in results if r['peak_vram_gb'] is not None)}.", ""]
     for r in results:
@@ -145,16 +169,26 @@ def main():
     out_root = Path(args.outputs)
     names = args.engines or sorted(p.name for p in out_root.iterdir() if (p / "meta.json").exists())
 
+    sys.path.insert(0, str(HERE))
+    from engines.common import reference
+
+    ref_wav = reference()[0]
     asr = load_asr(device)
-    results = [evaluate_engine(asr, out_root / n) for n in names]
+    scorers = Scorers(device, ref_wav)
+    ref_scores = {"utmos": scorers.mos(load_16k(ref_wav))}
+    results = [evaluate_engine(asr, scorers, out_root / n) for n in names]
     for r in results:
-        print(f"{r['engine']:12s} WER={r['overall']['wer']:.1%} CER={r['overall']['cer']:.1%} RTF={r['rtf']:.3f}")
+        print(
+            f"{r['engine']:12s} WER={r['overall']['wer']:.1%} UTMOS={r['utmos']:.2f} SIM={r['sim']} RTF={r['rtf']:.3f}"
+        )
 
     res_dir = ROOT / "results"
     res_dir.mkdir(exist_ok=True)
-    (res_dir / "tts.md").write_text(to_markdown(results), encoding="utf-8")
-    (res_dir / "tts.json").write_text(json.dumps(results, ensure_ascii=False, indent=1), encoding="utf-8")
-    print(to_markdown(results))
+    md = to_markdown(results, ref_scores)
+    (res_dir / "tts.md").write_text(md, encoding="utf-8")
+    payload = {"reference": ref_scores, "engines": results}
+    (res_dir / "tts.json").write_text(json.dumps(payload, ensure_ascii=False, indent=1), encoding="utf-8")
+    print(md)
 
 
 if __name__ == "__main__":

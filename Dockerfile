@@ -13,4 +13,4 @@ RUN pip install --no-cache-dir torch torchaudio --index-url https://download.pyt
 RUN python -c "from vitts.synthesizer import VietnameseTTS; VietnameseTTS()"
 
 EXPOSE 8000
-CMD ["vitts-server", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["vitts-server", "--local", "--host", "0.0.0.0", "--port", "8000"]

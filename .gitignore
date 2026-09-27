@@ -15,4 +15,6 @@ runs/
 *.wav
 *.mp3
 !assets/**/*.wav
+!docs/listen/audio/**/*.mp3
+!docs/listen/audio/*.mp3
 outputs/

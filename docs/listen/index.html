@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Nghe thử ViTTS-Bench</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&family=Literata:opsz,wght@7..72,400;7..72,600&display=swap">
+<style>
+  :root {
+    --bg: #F2F5F3;
+    --surface: #FFFFFF;
+    --ink: #15201D;
+    --muted: #5A6964;
+    --rule: #D5DDD9;
+    --accent: #0E7A6A;
+    --accent-ink: #FFFFFF;
+    --accent-soft: #DCEEEA;
+    --warn: #9A5F06;
+    --warn-soft: #F8EBD2;
+    --bad: #B03F2C;
+    --bad-soft: #F7E1DC;
+    --sans: "Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --serif: "Literata", Georgia, "Times New Roman", serif;
+    --mono: "IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --bg: #0D1311;
+      --surface: #151D1A;
+      --ink: #E4EBE8;
+      --muted: #97A6A0;
+      --rule: #27332F;
+      --accent: #45C2AD;
+      --accent-ink: #06231E;
+      --accent-soft: #173B35;
+      --warn: #E3AA4A;
+      --warn-soft: #3A2C12;
+      --bad: #EC7A64;
+      --bad-soft: #40211B;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #0D1311;
+    --surface: #151D1A;
+    --ink: #E4EBE8;
+    --muted: #97A6A0;
+    --rule: #27332F;
+    --accent: #45C2AD;
+    --accent-ink: #06231E;
+    --accent-soft: #173B35;
+    --warn: #E3AA4A;
+    --warn-soft: #3A2C12;
+    --bad: #EC7A64;
+    --bad-soft: #40211B;
+  }
+
+  body {
+    background: var(--bg);
+    color: var(--ink);
+    font: 15px/1.6 var(--sans);
+    padding-inline: 16px;
+    padding-block: 32px 64px;
+  }
+  .wrap { max-width: 1080px; margin-inline: auto; display: grid; gap: 40px; }
+  h1, h2 { text-wrap: balance; margin: 0; letter-spacing: -0.01em; }
+  h1 { font-size: clamp(28px, 4vw, 40px); line-height: 1.15; font-weight: 700; }
+  h2 { font-size: 20px; font-weight: 700; }
+  p { margin: 0; max-width: 68ch; }
+  a { color: var(--accent); }
+  .muted { color: var(--muted); }
+  .num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+  .label {
+    font-size: 11px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted);
+  }
+
+  /* Đầu trang */
+  header { display: grid; gap: 16px; }
+  .ref {
+    display: flex; flex-wrap: wrap; align-items: center; gap: 12px 20px;
+    padding-block: 14px; border-block: 1px solid var(--rule);
+  }
+  .ref-text { font-family: var(--serif); font-size: 15px; color: var(--muted); flex: 1 1 320px; }
+
+  /* Bộ chọn câu + vùng nghe */
+  .stage { display: grid; grid-template-columns: 280px 1fr; gap: 32px; align-items: start; }
+  @media (max-width: 820px) { .stage { grid-template-columns: 1fr; } }
+  .picker { display: grid; gap: 4px; position: sticky; top: calc(env(safe-area-inset-top, 0px) + 16px); }
+  @media (max-width: 820px) {
+    .picker { position: static; grid-auto-flow: column; grid-auto-columns: minmax(200px, 72%); overflow-x: auto; padding-bottom: 6px; }
+  }
+  .pick {
+    all: unset; box-sizing: border-box; cursor: pointer; display: grid; gap: 2px;
+    padding: 10px 12px; border-radius: 8px; border: 1px solid transparent;
+  }
+  .pick:hover { background: var(--surface); }
+  .pick:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .pick[aria-selected="true"] { background: var(--surface); border-color: var(--rule); }
+  .pick .t { font-family: var(--serif); font-size: 14px; line-height: 1.4;
+    display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+  .pick[aria-selected="true"] .label { color: var(--accent); }
+
+  .sentence { display: grid; gap: 10px; }
+  .sentence blockquote {
+    margin: 0; font-family: var(--serif); font-weight: 400;
+    font-size: clamp(22px, 2.6vw, 30px); line-height: 1.35; text-wrap: pretty;
+  }
+  .toolbar { display: flex; flex-wrap: wrap; align-items: center; gap: 12px; }
+  .btn {
+    font: 500 14px var(--sans); cursor: pointer; border: 1px solid var(--accent);
+    background: var(--accent); color: var(--accent-ink); padding: 8px 14px; border-radius: 999px;
+  }
+  .btn.ghost { background: transparent; color: var(--accent); }
+  .btn:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+
+  .models { display: grid; gap: 0; margin-top: 8px; border-top: 1px solid var(--rule); }
+  .model {
+    display: grid; grid-template-columns: minmax(170px, 220px) 1fr; gap: 8px 24px;
+    padding-block: 16px; border-bottom: 1px solid var(--rule);
+  }
+  .model.playing { background: linear-gradient(90deg, var(--accent-soft), transparent 70%); }
+  @media (max-width: 620px) { .model { grid-template-columns: 1fr; } }
+  .model .who { display: grid; gap: 4px; align-content: start; }
+  .model .name { font-weight: 700; line-height: 1.3; }
+  .model .name a { color: inherit; text-decoration: none; }
+  .model .name a:hover { text-decoration: underline; }
+  .model .body { display: grid; gap: 8px; min-width: 0; }
+  audio { width: 100%; height: 36px; }
+  .heard { font-family: var(--serif); font-size: 15px; line-height: 1.5; }
+  .heard .miss { background: var(--bad-soft); color: var(--bad); border-radius: 3px; padding-inline: 2px; }
+  .heard .drop { color: var(--bad); text-decoration: line-through; opacity: .75; }
+  .stats { display: flex; flex-wrap: wrap; gap: 4px 16px; font-size: 13px; color: var(--muted); }
+  .stats b { color: var(--ink); font-weight: 500; }
+  .chip {
+    display: inline-block; font-size: 11px; font-weight: 500; letter-spacing: .02em;
+    padding: 2px 8px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); width: fit-content;
+  }
+  .chip.warn { background: var(--warn-soft); color: var(--warn); }
+  .chip.nc { background: transparent; border: 1px solid var(--rule); color: var(--muted); }
+
+  /* Bảng tổng */
+  .table-wrap { overflow-x: auto; border: 1px solid var(--rule); border-radius: 10px; background: var(--surface); }
+  table { border-collapse: collapse; width: 100%; font-size: 14px; }
+  th, td { padding: 10px 14px; text-align: right; white-space: nowrap; border-bottom: 1px solid var(--rule); }
+  th:first-child, td:first-child { text-align: left; }
+  th { font-size: 11px; font-weight: 500; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+  tr:last-child td { border-bottom: 0; }
+  td.best { color: var(--accent); font-weight: 500; }
+  td.bad { color: var(--warn); font-weight: 500; }
+  .notes { display: grid; gap: 10px; font-size: 14px; color: var(--muted); }
+  .notes p b { color: var(--ink); font-weight: 500; }
+  footer { font-size: 13px; color: var(--muted); }
+  @media (prefers-reduced-motion: reduce) { * { transition: none !important; } }
+</style>
+<style>body{margin:0}</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <span class="label">ViTTS-Bench · benchmark TTS tiếng Việt</span>
+    <h1>Nghe 7 model đọc cùng một câu tiếng Việt</h1>
+    <p class="muted">Chọn một câu, rồi nghe từng model đọc lại. Dưới mỗi bản là những gì ASR (PhoWhisper-large) nghe được; từ nghe sai được tô màu. Các model clone giọng đều dùng chung giọng mẫu bên dưới.</p>
+    <div class="ref">
+      <div style="display:grid;gap:2px">
+        <span class="label">Giọng mẫu · <span class="num" id="ref-sec"></span> giây</span>
+        <audio id="ref-audio" controls preload="none"></audio>
+      </div>
+      <p class="ref-text">“xin chào, tôi là một trợ lý ây ai có khả năng trò chuyện với bạn bằng giọng nói tự nhiên, được phát triển bởi nhóm nón lá. tôi có thể hỗ trợ người khiếm thị.”</p>
+    </div>
+  </header>
+
+  <section class="stage" aria-label="Nghe thử theo câu">
+    <nav class="picker" id="picker" role="tablist" aria-label="Chọn câu"></nav>
+    <div class="sentence">
+      <span class="label" id="s-note"></span>
+      <blockquote id="s-text"></blockquote>
+      <div class="toolbar">
+        <button class="btn" id="play-all" type="button">Nghe lần lượt 7 model</button>
+        <button class="btn ghost" id="stop" type="button" hidden>Dừng</button>
+        <span class="muted" style="font-size:13px">Thứ tự theo WER toàn bộ benchmark, thấp nhất trước.</span>
+      </div>
+      <div class="models" id="models"></div>
+    </div>
+  </section>
+
+  <section style="display:grid;gap:16px" aria-labelledby="sum-h">
+    <h2 id="sum-h">Kết quả trên cả 50 câu</h2>
+    <div class="table-wrap">
+      <table id="summary">
+        <thead>
+          <tr>
+            <th>Model</th><th>WER ↓</th><th>Không dừng ↓</th><th>Giống giọng ↑</th><th>UTMOS ↑</th>
+            <th>RTF ↓</th><th>VRAM</th><th>Hz</th><th style="text-align:left">Giấy phép</th>
+          </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+    <div class="notes">
+      <p><b>WER</b>: tỉ lệ từ ASR nghe sai so với câu gốc. <b>Không dừng</b>: số câu mà model đọc xong vẫn sinh tiếp (khoảng lặng hoặc âm rác), WER không bắt được lỗi này. <b>RTF</b>: thời gian sinh chia độ dài audio, đo trên một GPU NVIDIA H200 (Piper đo trên CPU).</p>
+      <p><b>Giống giọng</b>: cosine giữa embedding ECAPA-TDNN của giọng mẫu và của audio sinh ra. MMS và Piper không clone giọng, nên điểm của chúng (trong ngoặc) là mốc cho hai người nói khác nhau. Giọng mẫu được cắt từ file mẫu của viXTTS, nên viXTTS có thể có lợi thế ở cột này.</p>
+      <p><b>UTMOS</b>: điểm tự nhiên dự đoán từ 1 đến 5, do một model huấn luyện trên tiếng Anh chấm. Chính giọng mẫu thật chỉ được <span class="num" id="ref-mos"></span>, nên chỉ dùng cột này để so sánh tương đối.</p>
+    </div>
+  </section>
+
+  <footer>
+    Mã nguồn, bộ câu và cách chạy lại: <a href="https://github.com/yoonjae26/vietnamese-tts">github.com/yoonjae26/vietnamese-tts</a>. Mỗi model dùng tham số do tác giả khuyến nghị, seed cố định.
+  </footer>
+</div>
+
+<script src="data.js"></script>
+<script>
+(() => {
+  const B = window.BENCH;
+  const $ = (id) => document.getElementById(id);
+  const pct = (x) => (x * 100).toFixed(1).replace(".", ",") + "%";
+  const dec = (x, n = 2) => x.toFixed(n).replace(".", ",");
+  const CAT = { short: "Câu ngắn", medium: "Câu vừa", long: "Câu dài", tones: "Thanh điệu khó", names: "Tên riêng" };
+  const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+  const words = (s) => s.toLowerCase().replace(/[^\p{L}\p{N}\s]/gu, " ").split(/\s+/).filter(Boolean);
+
+  // Tô từ ASR nghe sai: căn hai chuỗi từ bằng LCS, từ không khớp thì đánh dấu
+  function diff(ref, hyp) {
+    const a = words(ref), b = words(hyp);
+    const L = Array.from({ length: a.length + 1 }, () => new Array(b.length + 1).fill(0));
+    for (let i = a.length - 1; i >= 0; i--)
+      for (let j = b.length - 1; j >= 0; j--)
+        L[i][j] = a[i] === b[j] ? L[i + 1][j + 1] + 1 : Math.max(L[i + 1][j], L[i][j + 1]);
+    const out = [];
+    let i = 0, j = 0;
+    while (i < a.length || j < b.length) {
+      if (i < a.length && j < b.length && a[i] === b[j]) { out.push(esc(b[j])); i++; j++; }
+      else if (j < b.length && (i === a.length || L[i][j + 1] >= L[i + 1][j])) { out.push(`<span class="miss">${esc(b[j])}</span>`); j++; }
+      else { out.push(`<span class="drop" title="bị bỏ qua">${esc(a[i])}</span>`); i++; }
+    }
+    return out.join(" ") || '<span class="muted">(không nghe được gì)</span>';
+  }
+
+  // Giọng mẫu
+  $("ref-audio").src = B.reference.src;
+  $("ref-sec").textContent = dec(B.reference.seconds, 1);
+  $("ref-mos").textContent = dec(B.reference.utmos);
+
+  // Bộ chọn câu
+  const picker = $("picker");
+  B.samples.forEach((s, k) => {
+    const b = document.createElement("button");
+    b.className = "pick"; b.type = "button"; b.role = "tab"; b.id = "pick-" + s.id;
+    b.innerHTML = `<span class="label">${CAT[s.category] || s.category}</span><span class="t">${esc(s.text)}</span>`;
+    b.addEventListener("click", () => select(k));
+    picker.appendChild(b);
+  });
+
+  let current = 0, queue = null;
+
+  function stopAll() {
+    document.querySelectorAll("audio").forEach((a) => a.pause());
+    document.querySelectorAll(".model.playing").forEach((m) => m.classList.remove("playing"));
+    queue = null; $("stop").hidden = true;
+  }
+
+  function select(k) {
+    stopAll();
+    current = k;
+    const s = B.samples[k];
+    picker.querySelectorAll(".pick").forEach((p, i) => p.setAttribute("aria-selected", String(i === k)));
+    $("s-note").textContent = `${CAT[s.category] || s.category} · ${s.note}`;
+    $("s-text").textContent = s.text;
+    $("models").innerHTML = B.engines.map((e) => {
+      const c = e.clips[s.id];
+      const chips = [
+        c.runaway ? `<span class="chip warn">Không dừng · ${dec(c.seconds, 0)} giây audio</span>` : "",
+        e.clones_voice === false || e.sim < 0.4 ? `<span class="chip nc">Giọng cố định</span>` : "",
+      ].join("");
+      return `<article class="model" data-engine="${e.id}">
+        <div class="who">
+          <span class="name"><a href="https://huggingface.co/${e.repo}" target="_blank" rel="noopener">${esc(e.name)}</a></span>
+          <span class="muted" style="font-size:13px">${esc(e.license)}</span>
+          ${chips}
+        </div>
+        <div class="body">
+          <audio controls preload="none" src="${c.src}"></audio>
+          <div class="heard"><span class="label">ASR nghe được</span><br>${diff(s.text, c.asr)}</div>
+          <div class="stats">
+            <span>WER <b class="num">${pct(c.wer)}</b></span>
+            <span>Dài <b class="num">${dec(c.seconds, 1)} s</b></span>
+            <span>Giống giọng <b class="num">${dec(c.sim, 3)}</b></span>
+            <span>UTMOS <b class="num">${dec(c.utmos)}</b></span>
+          </div>
+        </div>
+      </article>`;
+    }).join("");
+    try { localStorage.setItem("vitts-listen-sentence", s.id); } catch (_) {}
+  }
+
+  // Nghe lần lượt: phát từng model theo thứ tự, tự chuyển sang model kế tiếp
+  $("play-all").addEventListener("click", () => {
+    stopAll();
+    const rows = [...document.querySelectorAll("#models .model")];
+    queue = rows;
+    $("stop").hidden = false;
+    const playAt = (n) => {
+      if (queue !== rows || n >= rows.length) { stopAll(); return; }
+      rows.forEach((r) => r.classList.remove("playing"));
+      const row = rows[n], audio = row.querySelector("audio");
+      row.classList.add("playing");
+      row.scrollIntoView({ block: "nearest", behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" });
+      audio.currentTime = 0;
+      audio.onended = () => playAt(n + 1);
+      audio.play().catch(() => playAt(n + 1));
+    };
+    playAt(0);
+  });
+  $("stop").addEventListener("click", stopAll);
+
+  // Chỉ phát một bản tại một thời điểm
+  document.addEventListener("play", (ev) => {
+    document.querySelectorAll("audio").forEach((a) => { if (a !== ev.target) a.pause(); });
+  }, true);
+
+  // Bảng tổng
+  const best = (key, lower) => {
+    const vals = B.engines.filter((e) => key !== "sim" || e.clones_voice !== false && e.sim > 0.4).map((e) => e[key]);
+    return lower ? Math.min(...vals) : Math.max(...vals);
+  };
+  const bWer = best("wer", true), bSim = best("sim", false), bMos = best("utmos", false), bRtf = best("rtf", true);
+  document.querySelector("#summary tbody").innerHTML = B.engines.map((e) => {
+    const clones = !(e.clones_voice === false || e.sim < 0.4);
+    return `<tr>
+      <td><a href="https://huggingface.co/${e.repo}" target="_blank" rel="noopener">${esc(e.name)}</a></td>
+      <td class="num ${e.wer === bWer ? "best" : ""}">${pct(e.wer)}</td>
+      <td class="num ${e.runaway ? "bad" : ""}">${e.runaway}/${e.n}</td>
+      <td class="num ${clones && e.sim === bSim ? "best" : ""}">${clones ? dec(e.sim, 3) : "(" + dec(e.sim, 3) + ")"}</td>
+      <td class="num ${e.utmos === bMos ? "best" : ""}">${dec(e.utmos)}</td>
+      <td class="num ${e.rtf === bRtf ? "best" : ""}">${dec(e.rtf, 3)}${e.vram == null ? " (CPU)" : ""}</td>
+      <td class="num">${e.vram == null ? "–" : dec(e.vram, 1) + " GB"}</td>
+      <td class="num">${e.sample_rate.toLocaleString("vi-VN")}</td>
+      <td style="text-align:left">${esc(e.license)}</td>
+    </tr>`;
+  }).join("");
+
+  let start = 0;
+  try {
+    const saved = localStorage.getItem("vitts-listen-sentence");
+    const k = B.samples.findIndex((s) => s.id === saved);
+    if (k >= 0) start = k;
+  } catch (_) {}
+  select(start);
+})();
+</script>
+</body>
+</html>
