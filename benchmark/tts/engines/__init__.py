@@ -16,4 +16,8 @@ ENGINES = {
     "mms": ("engines.mms", "vitts-coqui"),
     "vixtts": ("engines.vixtts", "vitts-coqui"),
     "f5": ("engines.f5", "vitts-f5"),
+    "vieneu": ("engines.vieneu", "vitts-vieneu"),
+    "viettts": ("engines.viettts", "vitts-viettts"),
+    "indextts2": ("engines.indextts2", "vitts-indextts"),
+    "piper": ("engines.piper", "vitts-coqui"),  # chạy với --cpu
 }

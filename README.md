@@ -12,7 +12,7 @@ ViTTS-Bench so sánh chúng **trên cùng một bộ test, cùng một cách ch�
 | Hạng mục | Trạng thái |
 | --- | --- |
 | 🔤 Chuẩn hóa văn bản (Vinorm, soe-vinorm, VietNormalizer, vitts) | ✅ Có kết quả |
-| 🔊 Model TTS: độ rõ (WER qua ASR), tốc độ (RTF), VRAM, giấy phép | 🚧 3/7 model (F5-TTS, MMS, viXTTS) |
+| 🔊 Model TTS: độ rõ (WER qua ASR), tốc độ (RTF), VRAM, giấy phép | ✅ 7 model |
 | 🌐 API chung tương thích OpenAI cho mọi model | 🚧 Có khung (`vitts-server`) |
 
 ## Kết quả: chuẩn hóa văn bản
@@ -66,37 +66,47 @@ python benchmark/normalization/run.py --split heldout
 python benchmark/normalization/run.py --split dev
 ```
 
-## Kết quả: model TTS (đang cập nhật)
+## Kết quả: model TTS
 
-50 câu chung, đã ở dạng đọc (không số, không viết tắt), nên chỉ đo chất lượng model. ASR [`vinai/PhoWhisper-large`](https://huggingface.co/vinai/PhoWhisper-large) nghe lại audio, rồi tính WER so với câu gốc. Mỗi model dùng tham số do tác giả khuyến nghị và seed cố định.
+50 câu chung, đã ở dạng đọc (không số, không viết tắt), nên chỉ đo chất lượng model. ASR [`vinai/PhoWhisper-large`](https://huggingface.co/vinai/PhoWhisper-large) nghe lại audio, rồi tính WER so với câu gốc. Mỗi model dùng tham số do tác giả khuyến nghị và seed cố định. Các model clone giọng dùng **chung một giọng mẫu** dài 8.66 giây ([`engines/common.py`](benchmark/tts/engines/common.py)).
 
-| Model | WER ↓ | CER ↓ | WER câu ngắn | WER câu dài | WER thanh điệu khó | RTF ↓ (H200) | VRAM | Giấy phép |
+| Model | WER ↓ | WER câu ngắn | WER thanh điệu khó | Không dừng ↓ | RTF ↓ | VRAM | Hz | Giấy phép |
 |---|---:|---:|---:|---:|---:|---:|---:|---|
-| [F5-TTS-Vietnamese-1000h](https://huggingface.co/hynt/F5-TTS-Vietnamese-ViVoice) | **2.3%** | **0.8%** | **0.0%** | **1.9%** | **9.5%** | 0.277 | 0.8 GB | CC-BY-NC-SA-4.0 |
-| [MMS-TTS (Meta)](https://huggingface.co/facebook/mms-tts-vie) | 6.9% | 3.4% | 11.1% | 3.5% | 28.4% | **0.013** | **0.4 GB** | CC-BY-NC-4.0 |
-| [viXTTS](https://huggingface.co/capleaf/viXTTS) | 9.4% | 5.5% | 46.7% | 3.5% | 35.1% | 0.193 | 2.2 GB | CPML |
+| [IndexTTS-2 Vietnamese](https://huggingface.co/dinhthuan/index-tts-2-vietnamese) | **1.9%** | **0.0%** | 14.9% | ⚠️ 5/50 | 0.780 | 8.9 GB | 22 050 | Apache-2.0* |
+| [F5-TTS-Vietnamese-1000h](https://huggingface.co/hynt/F5-TTS-Vietnamese-ViVoice) | 2.3% | **0.0%** | **9.5%** | 0/50 | 0.277 | 0.8 GB | 24 000 | CC-BY-NC-SA-4.0 |
+| [VieNeu-TTS v3 Turbo](https://huggingface.co/pnnbao-ump/VieNeu-TTS-v3-Turbo) | 2.8% | 4.4% | 13.5% | 0/50 | 0.101 | 0.9 GB | **48 000** | **Apache-2.0** |
+| [Piper vi_VN-vais1000-medium](https://huggingface.co/rhasspy/piper-voices) | 5.7% | 4.4% | 39.2% | 0/50 | 0.037 (CPU) | – | 22 050 | CC-BY-4.0 |
+| [MMS-TTS (Meta)](https://huggingface.co/facebook/mms-tts-vie) | 6.9% | 11.1% | 28.4% | 0/50 | **0.013** | **0.4 GB** | 16 000 | CC-BY-NC-4.0 |
+| [viXTTS](https://huggingface.co/capleaf/viXTTS) | 9.4% | 46.7% | 35.1% | 1/50 | 0.193 | 2.2 GB | 24 000 | CPML (NC) |
+| [VietTTS](https://huggingface.co/dangvansam/viet-tts) | 12.0% | 13.3% | 48.6% | 0/50 | 0.486 | 1.7 GB | 22 050 | CC |
 
-- **F5-TTS-Vietnamese rõ nhất ở mọi nhóm câu**, kể cả câu ngắn và câu líu lưỡi, nhưng chậm hơn MMS khoảng 20 lần (32 bước khử nhiễu, mỗi bước chạy mạng 2 lần).
-- **viXTTS rất rõ ở câu dài nhưng "bịa" từ ở câu ngắn**: "chúc mừng năm mới" bị đọc thành "chúc mừng năm nợ yết hôn thây". Kết quả này khớp với hạn chế tác giả tự ghi (câu dưới 10 từ).
-- **MMS nhỏ và nhanh nhất** (RTF 0.013, tức nhanh hơn thời gian thực khoảng 75 lần) nhưng chỉ có một giọng, âm thanh 16 kHz.
-- Các model clone giọng (viXTTS, F5, …) dùng **chung một giọng mẫu** dài 8.66 giây ([`engines/common.py`](benchmark/tts/engines/common.py)).
+RTF đo trên NVIDIA H200 (Piper đo trên CPU). \* Dùng thương mại cần xin phép tác giả IndexTTS.
+
+**Nhận xét**
+- **IndexTTS-2 có WER thấp nhất nhưng không dừng ở 5/50 câu**: nó đọc đúng câu rồi sinh thêm khoảng 28 giây im lặng, cho tới giới hạn `max_mel_tokens`. ASR bỏ qua khoảng lặng nên **WER không phát hiện được lỗi này**, vì vậy bảng có thêm cột "Không dừng" (số câu có giây/từ lớn hơn 3 lần trung vị của chính model). Model này cũng chậm nhất và tốn VRAM nhất.
+- **F5-TTS-Vietnamese ổn định nhất**: WER thấp ở mọi nhóm, không lỗi độ dài, nhẹ (0.8 GB), nhưng giấy phép phi thương mại.
+- **VieNeu-TTS v3 Turbo là lựa chọn cân bằng nhất cho sản phẩm**: WER 2.8%, nhanh (RTF 0.1), âm thanh 48 kHz và **giấy phép Apache-2.0**, cho phép dùng thương mại.
+- **Piper và MMS** hợp với thiết bị yếu: rất nhanh, rõ ở câu thường, nhưng đọc kém câu nhiều thanh điệu khó.
+- **viXTTS "bịa" từ ở câu ngắn** ("chúc mừng năm mới" thành "chúc mừng năm nợ yết hôn thây"), khớp với hạn chế tác giả tự ghi.
+- **VietTTS** đọc kém nhất trên bộ này, nhất là câu líu lưỡi (48.6%).
 - Bảng đầy đủ: [`results/tts.md`](results/tts.md). Transcript từng câu: [`results/tts.json`](results/tts.json).
 - **Hạn chế:** WER qua ASR đo *độ rõ*, không đo *độ tự nhiên*. Nhóm "thanh điệu khó" gồm các câu líu lưỡi, nên ASR cũng dễ nghe nhầm. Cần thêm bản ghi người đọc thật để biết mức lỗi nền của chính ASR.
 
 ```bash
-# mỗi model chạy trong môi trường riêng (xem benchmark/tts/engines/__init__.py)
-CUDA_VISIBLE_DEVICES=0 python benchmark/tts/synthesize.py --engine vixtts
-CUDA_VISIBLE_DEVICES=0 python benchmark/tts/evaluate.py
+# tạo môi trường cho từng model (mã nguồn model được clone vào ~/vitts-engines)
+bash benchmark/tts/envs/coqui.sh   # và f5.sh, vieneu.sh, viettts.sh, indextts.sh
+# sinh audio cho tất cả model rồi chấm điểm (chỉ dùng GPU 0)
+bash benchmark/tts/run_all.sh
 ```
 
 ## Lộ trình
 
 **Giai đoạn 2: benchmark model TTS**
-- [ ] Bộ câu chung cho mọi model: câu ngắn, câu dài, câu có số, từ mượn, tên riêng
-- [ ] Độ rõ: ASR tiếng Việt (PhoWhisper / Whisper) nghe lại audio → WER/CER
+- [x] Bộ câu chung cho mọi model: câu ngắn, câu vừa, câu dài, thanh điệu khó, tên riêng
+- [x] Độ rõ: ASR tiếng Việt (PhoWhisper) nghe lại audio → WER/CER, phát hiện lỗi không dừng
 - [ ] Tốc độ: RTF trên CPU và GPU, thời gian ra audio đầu tiên, VRAM
 - [ ] Độ giống giọng khi clone (speaker similarity), MOS dự đoán (UTMOS)
-- [ ] Các model: Meta MMS, viXTTS, VietTTS, F5-TTS-Vietnamese, VieNeu-TTS, Piper VITS
+- [x] Các model: Meta MMS, viXTTS, VietTTS, F5-TTS-Vietnamese, VieNeu-TTS, IndexTTS-2, Piper
 - [ ] Trang nghe thử: cùng một câu, mọi model
 
 **Giai đoạn 3: API chung**

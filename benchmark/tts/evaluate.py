@@ -26,6 +26,7 @@ sys.path.insert(0, str(ROOT / "src"))
 from vitts.bench.metrics import canonicalize  # noqa: E402
 
 ASR_MODEL = "vinai/PhoWhisper-large"
+RUNAWAY_FACTOR = 3
 
 
 def load_asr(device: str):
@@ -81,6 +82,12 @@ def evaluate_engine(asr, run_dir: Path) -> dict:
     by_cat = defaultdict(list)
     for r in rows:
         by_cat[r["category"]].append(r)
+
+    # Lỗi "không dừng": ASR bỏ qua khoảng lặng thừa nên WER không thấy, nhưng người dùng phải chờ.
+    # Một câu bị coi là bất thường khi số giây/từ > 3 lần trung vị của chính model đó.
+    sec_per_word = [s["audio_seconds"] / max(len(s["text"].split()), 1) for s in meta["sentences"]]
+    median = float(np.median(sec_per_word))
+    runaway = [s["id"] for s, x in zip(meta["sentences"], sec_per_word, strict=True) if x > RUNAWAY_FACTOR * median]
     return {
         "engine": meta["engine"],
         "name": meta["name"],
@@ -92,6 +99,7 @@ def evaluate_engine(asr, run_dir: Path) -> dict:
         "sample_rate": meta["sample_rate"],
         "overall": corpus(rows),
         "by_category": {c: corpus(rs) for c, rs in by_cat.items()},
+        "runaway": runaway,
         "rows": rows,
     }
 
@@ -102,20 +110,28 @@ def to_markdown(results: list[dict]) -> str:
         f"# Benchmark TTS tiếng Việt ({date.today().isoformat()})",
         "",
         f"ASR chấm điểm: `{ASR_MODEL}`. {results[0]['overall']['n']} câu. WER/CER càng thấp càng rõ. "
-        "RTF = thời gian sinh / độ dài audio (càng thấp càng nhanh).",
+        "RTF = thời gian sinh / độ dài audio (càng thấp càng nhanh). "
+        f"**Không dừng** = số câu có giây/từ > {RUNAWAY_FACTOR}× trung vị của model (sinh thừa khoảng lặng "
+        "hoặc âm rác; WER không phát hiện được).",
         "",
-        "| Model | WER | CER | " + " | ".join(f"WER {c}" for c in cats) + " | RTF | VRAM | Hz | Giấy phép |",
-        "|---|---:|---:|" + "---:|" * len(cats) + "---:|---:|---:|---|",
+        "| Model | WER | CER | "
+        + " | ".join(f"WER {c}" for c in cats)
+        + " | Không dừng | RTF | VRAM | Hz | Giấy phép |",
+        "|---|---:|---:|" + "---:|" * len(cats) + "---:|---:|---:|---:|---|",
     ]
     for r in sorted(results, key=lambda r: r["overall"]["wer"]):
         o = r["overall"]
-        vram = f"{r['peak_vram_gb']:.1f} GB" if r["peak_vram_gb"] is not None else "–"
+        vram = f"{r['peak_vram_gb']:.1f} GB" if r["peak_vram_gb"] is not None else "– (CPU)"
         lines.append(
             f"| [{r['name']}](https://huggingface.co/{r['repo']}) | **{o['wer']:.1%}** | {o['cer']:.1%} | "
             + " | ".join(f"{r['by_category'][c]['wer']:.1%}" for c in cats)
-            + f" | {r['rtf']:.3f} | {vram} | {r['sample_rate']} | {r['license']} |"
+            + f" | {len(r['runaway'])}/{o['n']} | {r['rtf']:.3f} | {vram} | {r['sample_rate']} | {r['license']} |"
         )
-    lines += ["", f"Thiết bị: {results[0]['device']}.", ""]
+    lines += ["", f"GPU: {next(r['device'] for r in results if r['peak_vram_gb'] is not None)}.", ""]
+    for r in results:
+        if r["runaway"]:
+            lines.append(f"- {r['name']}: câu không dừng: {', '.join(r['runaway'])}")
+    lines.append("")
     return "\n".join(lines)
 
 
