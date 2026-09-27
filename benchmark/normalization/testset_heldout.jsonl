@@ -1,0 +1,59 @@
+{"id": "heldout-number-001", "category": "number", "input": "Anh ấy về thứ 3.", "references": ["anh ấy về thứ ba"]}
+{"id": "heldout-number-002", "category": "number", "input": "Lần thứ 2 tham dự.", "references": ["lần thứ hai tham dự"]}
+{"id": "heldout-number-003", "category": "number", "input": "Thế kỷ XXI.", "references": ["thế kỷ hai mươi mốt"]}
+{"id": "heldout-number-004", "category": "number", "input": "Chiến tranh thế giới thứ II.", "references": ["chiến tranh thế giới thứ hai"]}
+{"id": "heldout-number-005", "category": "number", "input": "Có 1 triệu 200 nghìn người.", "references": ["có một triệu hai trăm nghìn người"]}
+{"id": "heldout-number-006", "category": "number", "input": "Những năm 90 của thế kỷ trước.", "references": ["những năm chín mươi của thế kỷ trước"]}
+{"id": "heldout-number-007", "category": "number", "input": "Điểm số 9/10.", "references": ["điểm số chín trên mười", "điểm số chín phần mười"]}
+{"id": "heldout-number-008", "category": "number", "input": "Uống 1/2 cốc nước.", "references": ["uống một phần hai cốc nước", "uống một trên hai cốc nước", "uống nửa cốc nước"]}
+{"id": "heldout-number-009", "category": "number", "input": "Nhà số 12A.", "references": ["nhà số mười hai a"]}
+{"id": "heldout-number-010", "category": "number", "input": "Top 10 bài hát.", "references": ["tốp mười bài hát", "top mười bài hát"]}
+{"id": "heldout-number-011", "category": "number", "input": "Cách mạng công nghiệp 4.0.", "references": ["cách mạng công nghiệp bốn chấm không"]}
+{"id": "heldout-number-012", "category": "number", "input": "Có 700.000 lượt xem.", "references": ["có bảy trăm nghìn lượt xem"]}
+{"id": "heldout-number-013", "category": "number", "input": "Khoảng 1.000 - 2.000 người.", "references": ["khoảng một nghìn đến hai nghìn người"]}
+{"id": "heldout-date-001", "category": "date", "input": "Tháng 12 năm 2023.", "references": ["tháng mười hai năm hai nghìn không trăm hai mươi ba"]}
+{"id": "heldout-date-002", "category": "date", "input": "Ngày 1/1.", "references": ["ngày một tháng một"]}
+{"id": "heldout-date-003", "category": "date", "input": "Sinh năm 2005.", "references": ["sinh năm hai nghìn không trăm linh năm", "sinh năm hai nghìn linh năm"]}
+{"id": "heldout-date-004", "category": "date", "input": "Ngày 30/4/1975.", "references": ["ngày ba mươi tháng tư năm một nghìn chín trăm bảy mươi lăm"]}
+{"id": "heldout-date-005", "category": "date", "input": "Đường 3/2.", "references": ["đường ba tháng hai"]}
+{"id": "heldout-time-001", "category": "time", "input": "Từ 8h đến 17h30.", "references": ["từ tám giờ đến mười bảy giờ ba mươi", "từ tám giờ đến mười bảy giờ ba mươi phút"]}
+{"id": "heldout-time-002", "category": "time", "input": "Chờ 15 phút.", "references": ["chờ mười lăm phút"]}
+{"id": "heldout-time-003", "category": "time", "input": "Khởi hành 5h45 sáng.", "references": ["khởi hành năm giờ bốn mươi lăm sáng", "khởi hành năm giờ bốn mươi lăm phút sáng"]}
+{"id": "heldout-time-004", "category": "time", "input": "Lúc 0h.", "references": ["lúc không giờ"]}
+{"id": "heldout-unit-001", "category": "unit", "input": "Cao 1m75.", "references": ["cao một mét bảy mươi lăm", "cao một mét bảy lăm"]}
+{"id": "heldout-unit-002", "category": "unit", "input": "Nặng 2,5kg.", "references": ["nặng hai phẩy năm ki lô gam", "nặng hai phẩy năm ki lô", "nặng hai phẩy năm cân"]}
+{"id": "heldout-unit-003", "category": "unit", "input": "Pin 5000mAh.", "references": ["pin năm nghìn mi li am pe giờ"]}
+{"id": "heldout-unit-004", "category": "unit", "input": "Màn hình 6,7 inch.", "references": ["màn hình sáu phẩy bảy inh", "màn hình sáu phẩy bảy in", "màn hình sáu phẩy bảy inch"]}
+{"id": "heldout-unit-005", "category": "unit", "input": "Công suất 1.500W.", "references": ["công suất một nghìn năm trăm oát"]}
+{"id": "heldout-unit-006", "category": "unit", "input": "Tốc độ mạng 100Mbps.", "references": ["tốc độ mạng một trăm mê ga bít trên giây", "tốc độ mạng một trăm mê ga bít"]}
+{"id": "heldout-unit-007", "category": "unit", "input": "Nhiệt độ -5°C.", "references": ["nhiệt độ âm năm độ xê", "nhiệt độ âm năm độ"]}
+{"id": "heldout-currency-001", "category": "currency", "input": "Giá 1,5 tỷ đồng.", "references": ["giá một phẩy năm tỷ đồng", "giá một tỷ rưỡi đồng"]}
+{"id": "heldout-currency-002", "category": "currency", "input": "Giảm 50k.", "references": ["giảm năm mươi nghìn", "giảm năm mươi nghìn đồng"]}
+{"id": "heldout-currency-003", "category": "currency", "input": "Giá 3$.", "references": ["giá ba đô la"]}
+{"id": "heldout-currency-004", "category": "currency", "input": "Giá 99.000đ.", "references": ["giá chín mươi chín nghìn đồng"]}
+{"id": "heldout-currency-005", "category": "currency", "input": "Tỷ giá 25.400 VND/USD.", "references": ["tỷ giá hai mươi lăm nghìn bốn trăm đồng một đô la", "tỷ giá hai mươi lăm nghìn bốn trăm đồng mỗi đô la", "tỷ giá hai mươi lăm nghìn bốn trăm đồng trên đô la"]}
+{"id": "heldout-percent-001", "category": "percent", "input": "Lãi 7,5%/năm.", "references": ["lãi bảy phẩy năm phần trăm một năm", "lãi bảy phẩy năm phần trăm mỗi năm", "lãi bảy phẩy năm phần trăm trên năm"]}
+{"id": "heldout-phone-001", "category": "phone", "input": "Gọi 113.", "references": ["gọi một một ba"]}
+{"id": "heldout-phone-002", "category": "phone", "input": "Hotline: 0243.123.4567.", "references": ["hotline không hai bốn ba một hai ba bốn năm sáu bảy", "hót lai không hai bốn ba một hai ba bốn năm sáu bảy"]}
+{"id": "heldout-phone-003", "category": "phone", "input": "Số 0901.234.567.", "references": ["số không chín không một hai ba bốn năm sáu bảy"]}
+{"id": "heldout-abbreviation-001", "category": "abbreviation", "input": "Q.1, TP.HCM.", "references": ["quận một, thành phố hồ chí minh"]}
+{"id": "heldout-abbreviation-002", "category": "abbreviation", "input": "P. Bến Nghé.", "references": ["phường bến nghé"]}
+{"id": "heldout-abbreviation-003", "category": "abbreviation", "input": "Bộ GD&ĐT.", "references": ["bộ giáo dục và đào tạo"]}
+{"id": "heldout-abbreviation-004", "category": "abbreviation", "input": "Công an TP. Đà Nẵng.", "references": ["công an thành phố đà nẵng"]}
+{"id": "heldout-abbreviation-005", "category": "abbreviation", "input": "Khoa CNTT.", "references": ["khoa công nghệ thông tin"]}
+{"id": "heldout-abbreviation-006", "category": "abbreviation", "input": "Căn hộ 3PN.", "references": ["căn hộ ba phòng ngủ"]}
+{"id": "heldout-acronym-001", "category": "acronym", "input": "Ông Nguyễn Văn B.", "references": ["ông nguyễn văn bê"]}
+{"id": "heldout-acronym-002", "category": "acronym", "input": "Tổ chức NATO.", "references": ["tổ chức na tô"]}
+{"id": "heldout-acronym-003", "category": "acronym", "input": "Hệ thống ATM.", "references": ["hệ thống a tê em mờ", "hệ thống a tê em", "hệ thống ây ti em"]}
+{"id": "heldout-foreign-001", "category": "foreign", "input": "Mua iPhone 15.", "references": ["mua ai phôn mười lăm"]}
+{"id": "heldout-foreign-002", "category": "foreign", "input": "Giải SEA Games 31.", "references": ["giải xi gêm ba mươi mốt"]}
+{"id": "heldout-foreign-003", "category": "foreign", "input": "Chuẩn IELTS 6.5.", "references": ["chuẩn ai eo sáu chấm năm", "chuẩn ai en ti ét sáu chấm năm"]}
+{"id": "heldout-plain-001", "category": "plain", "input": "Con mèo nằm ngủ trên ghế.", "references": ["con mèo nằm ngủ trên ghế"]}
+{"id": "heldout-plain-002", "category": "plain", "input": "Chúng tôi sẽ đi du lịch vào cuối tuần.", "references": ["chúng tôi sẽ đi du lịch vào cuối tuần"]}
+{"id": "heldout-plain-003", "category": "plain", "input": "Ông bà tôi sống ở quê.", "references": ["ông bà tôi sống ở quê"]}
+{"id": "heldout-plain-004", "category": "plain", "input": "Trời mưa to suốt đêm qua.", "references": ["trời mưa to suốt đêm qua"]}
+{"id": "heldout-mixed-001", "category": "mixed", "input": "Sáng 5/10, giá USD tại ngân hàng tăng 20 đồng, lên 24.500 đồng/USD.", "references": ["sáng năm tháng mười, giá đô la tại ngân hàng tăng hai mươi đồng, lên hai mươi tư nghìn năm trăm đồng một đô la", "sáng ngày năm tháng mười, giá đô la tại ngân hàng tăng hai mươi đồng, lên hai mươi tư nghìn năm trăm đồng một đô la", "sáng năm tháng mười, giá đô la tại ngân hàng tăng hai mươi đồng, lên hai mươi tư nghìn năm trăm đồng mỗi đô la", "sáng ngày năm tháng mười, giá đô la tại ngân hàng tăng hai mươi đồng, lên hai mươi tư nghìn năm trăm đồng mỗi đô la", "sáng năm tháng mười, giá đô la tại ngân hàng tăng hai mươi đồng, lên hai mươi tư nghìn năm trăm đồng trên đô la", "sáng ngày năm tháng mười, giá đô la tại ngân hàng tăng hai mươi đồng, lên hai mươi tư nghìn năm trăm đồng trên đô la"]}
+{"id": "heldout-mixed-002", "category": "mixed", "input": "Trận đấu lúc 20h ngày 12/6 kết thúc với tỷ số 1-1.", "references": ["trận đấu lúc hai mươi giờ ngày mười hai tháng sáu kết thúc với tỷ số một một", "trận đấu lúc hai mươi giờ ngày mười hai tháng sáu kết thúc với tỷ số một đều"]}
+{"id": "heldout-mixed-003", "category": "mixed", "input": "Dự án 2.000 tỷ đồng dài 15,5km dự kiến xong năm 2026.", "references": ["dự án hai nghìn tỷ đồng dài mười lăm phẩy năm ki lô mét dự kiến xong năm hai nghìn không trăm hai mươi sáu"]}
+{"id": "heldout-mixed-004", "category": "mixed", "input": "Bệnh viện tiếp nhận 30-40 ca/ngày.", "references": ["bệnh viện tiếp nhận ba mươi đến bốn mươi ca một ngày", "bệnh viện tiếp nhận ba mươi đến bốn mươi ca mỗi ngày", "bệnh viện tiếp nhận ba mươi đến bốn mươi ca trên ngày"]}
+{"id": "heldout-mixed-005", "category": "mixed", "input": "Tại Q.7, giá nhà khoảng 50-60 triệu/m2.", "references": ["tại quận bảy, giá nhà khoảng năm mươi đến sáu mươi triệu một mét vuông", "tại quận bảy, giá nhà khoảng năm mươi đến sáu mươi triệu mỗi mét vuông", "tại quận bảy, giá nhà khoảng năm mươi đến sáu mươi triệu trên mét vuông"]}

@@ -1,0 +1,5246 @@
+{
+ "summary": {
+  "vitts (ours)": {
+   "number": {
+    "accuracy": 1.0,
+    "wer": 0.0,
+    "n": 12
+   },
+   "ALL": {
+    "accuracy": 1.0,
+    "wer": 0.0,
+    "n": 99
+   },
+   "decimal": {
+    "accuracy": 1.0,
+    "wer": 0.0,
+    "n": 6
+   },
+   "currency": {
+    "accuracy": 1.0,
+    "wer": 0.0,
+    "n": 10
+   },
+   "percent": {
+    "accuracy": 1.0,
+    "wer": 0.0,
+    "n": 5
+   },
+   "unit": {
+    "accuracy": 1.0,
+    "wer": 0.0,
+    "n": 10
+   },
+   "date": {
+    "accuracy": 1.0,
+    "wer": 0.0,
+    "n": 9
+   },
+   "time": {
+    "accuracy": 1.0,
+    "wer": 0.0,
+    "n": 6
+   },
+   "phone": {
+    "accuracy": 1.0,
+    "wer": 0.0,
+    "n": 5
+   },
+   "range": {
+    "accuracy": 1.0,
+    "wer": 0.0,
+    "n": 5
+   },
+   "abbreviation": {
+    "accuracy": 1.0,
+    "wer": 0.0,
+    "n": 10
+   },
+   "acronym": {
+    "accuracy": 1.0,
+    "wer": 0.0,
+    "n": 5
+   },
+   "plain": {
+    "accuracy": 1.0,
+    "wer": 0.0,
+    "n": 8
+   },
+   "mixed": {
+    "accuracy": 1.0,
+    "wer": 0.0,
+    "n": 8
+   }
+  },
+  "vinorm": {
+   "number": {
+    "accuracy": 1.0,
+    "wer": 0.0,
+    "n": 12
+   },
+   "ALL": {
+    "accuracy": 0.8282828282828283,
+    "wer": 0.052095130237825596,
+    "n": 99
+   },
+   "decimal": {
+    "accuracy": 1.0,
+    "wer": 0.0,
+    "n": 6
+   },
+   "currency": {
+    "accuracy": 0.5,
+    "wer": 0.16666666666666666,
+    "n": 10
+   },
+   "percent": {
+    "accuracy": 1.0,
+    "wer": 0.0,
+    "n": 5
+   },
+   "unit": {
+    "accuracy": 1.0,
+    "wer": 0.0,
+    "n": 10
+   },
+   "date": {
+    "accuracy": 1.0,
+    "wer": 0.0,
+    "n": 9
+   },
+   "time": {
+    "accuracy": 1.0,
+    "wer": 0.0,
+    "n": 6
+   },
+   "phone": {
+    "accuracy": 0.8,
+    "wer": 0.1935483870967742,
+    "n": 5
+   },
+   "range": {
+    "accuracy": 0.2,
+    "wer": 0.09302325581395349,
+    "n": 5
+   },
+   "abbreviation": {
+    "accuracy": 0.8,
+    "wer": 0.10344827586206896,
+    "n": 10
+   },
+   "acronym": {
+    "accuracy": 0.4,
+    "wer": 0.25925925925925924,
+    "n": 5
+   },
+   "plain": {
+    "accuracy": 1.0,
+    "wer": 0.0,
+    "n": 8
+   },
+   "mixed": {
+    "accuracy": 0.75,
+    "wer": 0.027932960893854747,
+    "n": 8
+   }
+  },
+  "soe-vinorm": {
+   "number": {
+    "accuracy": 1.0,
+    "wer": 0.0,
+    "n": 12
+   },
+   "ALL": {
+    "accuracy": 0.898989898989899,
+    "wer": 0.01698754246885617,
+    "n": 99
+   },
+   "decimal": {
+    "accuracy": 1.0,
+    "wer": 0.0,
+    "n": 6
+   },
+   "currency": {
+    "accuracy": 0.6,
+    "wer": 0.09722222222222222,
+    "n": 10
+   },
+   "percent": {
+    "accuracy": 1.0,
+    "wer": 0.0,
+    "n": 5
+   },
+   "unit": {
+    "accuracy": 1.0,
+    "wer": 0.0,
+    "n": 10
+   },
+   "date": {
+    "accuracy": 1.0,
+    "wer": 0.0,
+    "n": 9
+   },
+   "time": {
+    "accuracy": 0.6666666666666666,
+    "wer": 0.044444444444444446,
+    "n": 6
+   },
+   "phone": {
+    "accuracy": 0.8,
+    "wer": 0.016129032258064516,
+    "n": 5
+   },
+   "range": {
+    "accuracy": 0.8,
+    "wer": 0.023255813953488372,
+    "n": 5
+   },
+   "abbreviation": {
+    "accuracy": 1.0,
+    "wer": 0.0,
+    "n": 10
+   },
+   "acronym": {
+    "accuracy": 0.6,
+    "wer": 0.14814814814814814,
+    "n": 5
+   },
+   "plain": {
+    "accuracy": 1.0,
+    "wer": 0.0,
+    "n": 8
+   },
+   "mixed": {
+    "accuracy": 1.0,
+    "wer": 0.0,
+    "n": 8
+   }
+  },
+  "vietnormalizer": {
+   "number": {
+    "accuracy": 1.0,
+    "wer": 0.0,
+    "n": 12
+   },
+   "ALL": {
+    "accuracy": 0.6565656565656566,
+    "wer": 0.1373873873873874,
+    "n": 99
+   },
+   "decimal": {
+    "accuracy": 0.8333333333333334,
+    "wer": 0.021739130434782608,
+    "n": 6
+   },
+   "currency": {
+    "accuracy": 0.6,
+    "wer": 0.125,
+    "n": 10
+   },
+   "percent": {
+    "accuracy": 1.0,
+    "wer": 0.0,
+    "n": 5
+   },
+   "unit": {
+    "accuracy": 0.8,
+    "wer": 0.10126582278481013,
+    "n": 10
+   },
+   "date": {
+    "accuracy": 0.7777777777777778,
+    "wer": 0.028037383177570093,
+    "n": 9
+   },
+   "time": {
+    "accuracy": 0.8333333333333334,
+    "wer": 0.06666666666666667,
+    "n": 6
+   },
+   "phone": {
+    "accuracy": 0.2,
+    "wer": 0.6290322580645161,
+    "n": 5
+   },
+   "range": {
+    "accuracy": 0.2,
+    "wer": 0.11627906976744186,
+    "n": 5
+   },
+   "abbreviation": {
+    "accuracy": 0.1,
+    "wer": 0.5,
+    "n": 10
+   },
+   "acronym": {
+    "accuracy": 0.8,
+    "wer": 0.17857142857142858,
+    "n": 5
+   },
+   "plain": {
+    "accuracy": 1.0,
+    "wer": 0.0,
+    "n": 8
+   },
+   "mixed": {
+    "accuracy": 0.25,
+    "wer": 0.11173184357541899,
+    "n": 8
+   }
+  }
+ },
+ "results": [
+  {
+   "name": "vitts (ours)",
+   "version": "local",
+   "seconds": 0.010086234658956528,
+   "cases": [
+    {
+     "id": "dev-number-001",
+     "category": "number",
+     "input": "Lớp có 21 học sinh.",
+     "references": [
+      "lớp có hai mươi mốt học sinh"
+     ],
+     "output": "lớp có hai mươi mốt học sinh.",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-number-002",
+     "category": "number",
+     "input": "Cô ấy 45 tuổi.",
+     "references": [
+      "cô ấy bốn mươi lăm tuổi"
+     ],
+     "output": "cô ấy bốn mươi lăm tuổi.",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-number-003",
+     "category": "number",
+     "input": "Tòa nhà cao 105 tầng.",
+     "references": [
+      "tòa nhà cao một trăm linh năm tầng"
+     ],
+     "output": "tòa nhà cao một trăm linh năm tầng.",
+     "errors": 0,
+     "ref_words": 8,
+     "exact": true
+    },
+    {
+     "id": "dev-number-004",
+     "category": "number",
+     "input": "Dân số khoảng 2.500.000 người.",
+     "references": [
+      "dân số khoảng hai triệu năm trăm nghìn người"
+     ],
+     "output": "dân số khoảng hai triệu năm trăm nghìn người.",
+     "errors": 0,
+     "ref_words": 9,
+     "exact": true
+    },
+    {
+     "id": "dev-number-005",
+     "category": "number",
+     "input": "Năm 1945 là năm lịch sử.",
+     "references": [
+      "năm một nghìn chín trăm bốn mươi lăm là năm lịch sử"
+     ],
+     "output": "năm một nghìn chín trăm bốn mươi lăm là năm lịch sử.",
+     "errors": 0,
+     "ref_words": 12,
+     "exact": true
+    },
+    {
+     "id": "dev-number-006",
+     "category": "number",
+     "input": "Có 1.005 người tham gia.",
+     "references": [
+      "có một nghìn không trăm linh năm người tham gia"
+     ],
+     "output": "có một nghìn không trăm linh năm người tham gia.",
+     "errors": 0,
+     "ref_words": 10,
+     "exact": true
+    },
+    {
+     "id": "dev-number-007",
+     "category": "number",
+     "input": "Trường có 14 phòng học.",
+     "references": [
+      "trường có mười bốn phòng học"
+     ],
+     "output": "trường có mười bốn phòng học.",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-number-008",
+     "category": "number",
+     "input": "Kho chứa 3.000.000.000 lít.",
+     "references": [
+      "kho chứa ba tỷ lít"
+     ],
+     "output": "kho chứa ba tỷ lít.",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-number-009",
+     "category": "number",
+     "input": "Anh ấy chạy 10 vòng.",
+     "references": [
+      "anh ấy chạy mười vòng"
+     ],
+     "output": "anh ấy chạy mười vòng.",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-number-010",
+     "category": "number",
+     "input": "Cần 310 chữ ký.",
+     "references": [
+      "cần ba trăm mười chữ ký"
+     ],
+     "output": "cần ba trăm mười chữ ký.",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-number-011",
+     "category": "number",
+     "input": "Một ngày có 24 giờ.",
+     "references": [
+      "một ngày có hai mươi tư giờ"
+     ],
+     "output": "một ngày có hai mươi tư giờ.",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-number-012",
+     "category": "number",
+     "input": "Đội có 11 cầu thủ.",
+     "references": [
+      "đội có mười một cầu thủ"
+     ],
+     "output": "đội có mười một cầu thủ.",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-decimal-001",
+     "category": "decimal",
+     "input": "Chiều cao 1,75 mét.",
+     "references": [
+      "chiều cao một phẩy bảy mươi lăm mét",
+      "chiều cao một phẩy bảy lăm mét",
+      "chiều cao một phẩy bảy năm mét"
+     ],
+     "output": "chiều cao một phẩy bảy mươi lăm mét.",
+     "errors": 0,
+     "ref_words": 8,
+     "exact": true
+    },
+    {
+     "id": "dev-decimal-002",
+     "category": "decimal",
+     "input": "Doanh thu tăng 3,5 lần.",
+     "references": [
+      "doanh thu tăng ba phẩy năm lần"
+     ],
+     "output": "doanh thu tăng ba phẩy năm lần.",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-decimal-003",
+     "category": "decimal",
+     "input": "Điểm trung bình là 8,25.",
+     "references": [
+      "điểm trung bình là tám phẩy hai mươi lăm",
+      "điểm trung bình là tám phẩy hai lăm",
+      "điểm trung bình là tám phẩy hai năm"
+     ],
+     "output": "điểm trung bình là tám phẩy hai mươi lăm.",
+     "errors": 0,
+     "ref_words": 9,
+     "exact": true
+    },
+    {
+     "id": "dev-decimal-004",
+     "category": "decimal",
+     "input": "Lãi suất giảm 0,5 điểm.",
+     "references": [
+      "lãi suất giảm không phẩy năm điểm"
+     ],
+     "output": "lãi suất giảm không phẩy năm điểm.",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-decimal-005",
+     "category": "decimal",
+     "input": "Tăng trưởng đạt 6,05.",
+     "references": [
+      "tăng trưởng đạt sáu phẩy không năm"
+     ],
+     "output": "tăng trưởng đạt sáu phẩy không năm.",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-decimal-006",
+     "category": "decimal",
+     "input": "Giá trị hợp đồng 2,1 tỷ.",
+     "references": [
+      "giá trị hợp đồng hai phẩy một tỷ"
+     ],
+     "output": "giá trị hợp đồng hai phẩy một tỷ.",
+     "errors": 0,
+     "ref_words": 8,
+     "exact": true
+    },
+    {
+     "id": "dev-currency-001",
+     "category": "currency",
+     "input": "Giá 100k.",
+     "references": [
+      "giá một trăm nghìn",
+      "giá một trăm nghìn đồng"
+     ],
+     "output": "giá một trăm nghìn.",
+     "errors": 0,
+     "ref_words": 4,
+     "exact": true
+    },
+    {
+     "id": "dev-currency-002",
+     "category": "currency",
+     "input": "Vé giá 50.000đ.",
+     "references": [
+      "vé giá năm mươi nghìn đồng"
+     ],
+     "output": "vé giá năm mươi nghìn đồng.",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-currency-003",
+     "category": "currency",
+     "input": "Lương 15 triệu đồng.",
+     "references": [
+      "lương mười lăm triệu đồng"
+     ],
+     "output": "lương mười lăm triệu đồng.",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-currency-004",
+     "category": "currency",
+     "input": "Giá 1.250.000 VNĐ.",
+     "references": [
+      "giá một triệu hai trăm năm mươi nghìn đồng"
+     ],
+     "output": "giá một triệu hai trăm năm mươi nghìn đồng.",
+     "errors": 0,
+     "ref_words": 9,
+     "exact": true
+    },
+    {
+     "id": "dev-currency-005",
+     "category": "currency",
+     "input": "Chiếc máy có giá $999.",
+     "references": [
+      "chiếc máy có giá chín trăm chín mươi chín đô la"
+     ],
+     "output": "chiếc máy có giá chín trăm chín mươi chín đô la.",
+     "errors": 0,
+     "ref_words": 11,
+     "exact": true
+    },
+    {
+     "id": "dev-currency-006",
+     "category": "currency",
+     "input": "Chi phí 20 USD.",
+     "references": [
+      "chi phí hai mươi đô la"
+     ],
+     "output": "chi phí hai mươi đô la.",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-currency-007",
+     "category": "currency",
+     "input": "Nợ 5 tỷ đồng.",
+     "references": [
+      "nợ năm tỷ đồng"
+     ],
+     "output": "nợ năm tỷ đồng.",
+     "errors": 0,
+     "ref_words": 4,
+     "exact": true
+    },
+    {
+     "id": "dev-currency-008",
+     "category": "currency",
+     "input": "Quà tặng trị giá 200.000₫.",
+     "references": [
+      "quà tặng trị giá hai trăm nghìn đồng"
+     ],
+     "output": "quà tặng trị giá hai trăm nghìn đồng.",
+     "errors": 0,
+     "ref_words": 8,
+     "exact": true
+    },
+    {
+     "id": "dev-currency-009",
+     "category": "currency",
+     "input": "Giá xăng 23.450đ/lít.",
+     "references": [
+      "giá xăng hai mươi ba nghìn bốn trăm năm mươi đồng một lít",
+      "giá xăng hai mươi ba nghìn bốn trăm năm mươi đồng mỗi lít",
+      "giá xăng hai mươi ba nghìn bốn trăm năm mươi đồng trên lít"
+     ],
+     "output": "giá xăng hai mươi ba nghìn bốn trăm năm mươi đồng một lít.",
+     "errors": 0,
+     "ref_words": 13,
+     "exact": true
+    },
+    {
+     "id": "dev-currency-010",
+     "category": "currency",
+     "input": "Thu nhập 5tr/tháng.",
+     "references": [
+      "thu nhập năm triệu một tháng",
+      "thu nhập năm triệu mỗi tháng",
+      "thu nhập năm triệu trên tháng"
+     ],
+     "output": "thu nhập năm triệu một tháng.",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-percent-001",
+     "category": "percent",
+     "input": "Doanh số tăng 12%.",
+     "references": [
+      "doanh số tăng mười hai phần trăm"
+     ],
+     "output": "doanh số tăng mười hai phần trăm.",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-percent-002",
+     "category": "percent",
+     "input": "Giảm 0,5%.",
+     "references": [
+      "giảm không phẩy năm phần trăm"
+     ],
+     "output": "giảm không phẩy năm phần trăm.",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-percent-003",
+     "category": "percent",
+     "input": "Chiếm 100% cổ phần.",
+     "references": [
+      "chiếm một trăm phần trăm cổ phần"
+     ],
+     "output": "chiếm một trăm phần trăm cổ phần.",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-percent-004",
+     "category": "percent",
+     "input": "Tỷ lệ đạt 45,7%.",
+     "references": [
+      "tỷ lệ đạt bốn mươi lăm phẩy bảy phần trăm"
+     ],
+     "output": "tỷ lệ đạt bốn mươi lăm phẩy bảy phần trăm.",
+     "errors": 0,
+     "ref_words": 10,
+     "exact": true
+    },
+    {
+     "id": "dev-percent-005",
+     "category": "percent",
+     "input": "Lạm phát 3,25 %.",
+     "references": [
+      "lạm phát ba phẩy hai mươi lăm phần trăm",
+      "lạm phát ba phẩy hai lăm phần trăm",
+      "lạm phát ba phẩy hai năm phần trăm"
+     ],
+     "output": "lạm phát ba phẩy hai mươi lăm phần trăm.",
+     "errors": 0,
+     "ref_words": 9,
+     "exact": true
+    },
+    {
+     "id": "dev-unit-001",
+     "category": "unit",
+     "input": "Quãng đường 15km.",
+     "references": [
+      "quãng đường mười lăm ki lô mét",
+      "quãng đường mười lăm cây số"
+     ],
+     "output": "quãng đường mười lăm ki lô mét.",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-unit-002",
+     "category": "unit",
+     "input": "Anh ấy nặng 70kg.",
+     "references": [
+      "anh ấy nặng bảy mươi ki lô gam",
+      "anh ấy nặng bảy mươi cân",
+      "anh ấy nặng bảy mươi ki lô"
+     ],
+     "output": "anh ấy nặng bảy mươi ki lô gam.",
+     "errors": 0,
+     "ref_words": 8,
+     "exact": true
+    },
+    {
+     "id": "dev-unit-003",
+     "category": "unit",
+     "input": "Tốc độ tối đa 60km/h.",
+     "references": [
+      "tốc độ tối đa sáu mươi ki lô mét trên giờ",
+      "tốc độ tối đa sáu mươi ki lô mét một giờ",
+      "tốc độ tối đa sáu mươi ki lô mét mỗi giờ",
+      "tốc độ tối đa sáu mươi cây số một giờ"
+     ],
+     "output": "tốc độ tối đa sáu mươi ki lô mét trên giờ.",
+     "errors": 0,
+     "ref_words": 11,
+     "exact": true
+    },
+    {
+     "id": "dev-unit-004",
+     "category": "unit",
+     "input": "Diện tích 120m2.",
+     "references": [
+      "diện tích một trăm hai mươi mét vuông"
+     ],
+     "output": "diện tích một trăm hai mươi mét vuông.",
+     "errors": 0,
+     "ref_words": 8,
+     "exact": true
+    },
+    {
+     "id": "dev-unit-005",
+     "category": "unit",
+     "input": "Nhiệt độ 36,5°C.",
+     "references": [
+      "nhiệt độ ba mươi sáu phẩy năm độ xê",
+      "nhiệt độ ba mươi sáu phẩy năm độ"
+     ],
+     "output": "nhiệt độ ba mươi sáu phẩy năm độ xê.",
+     "errors": 0,
+     "ref_words": 9,
+     "exact": true
+    },
+    {
+     "id": "dev-unit-006",
+     "category": "unit",
+     "input": "Chai nước 500ml.",
+     "references": [
+      "chai nước năm trăm mi li lít"
+     ],
+     "output": "chai nước năm trăm mi li lít.",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-unit-007",
+     "category": "unit",
+     "input": "Cao 180cm.",
+     "references": [
+      "cao một trăm tám mươi xen ti mét"
+     ],
+     "output": "cao một trăm tám mươi xen ti mét.",
+     "errors": 0,
+     "ref_words": 8,
+     "exact": true
+    },
+    {
+     "id": "dev-unit-008",
+     "category": "unit",
+     "input": "Ổ cứng 512GB.",
+     "references": [
+      "ổ cứng năm trăm mười hai gi ga bai"
+     ],
+     "output": "ổ cứng năm trăm mười hai gi ga bai.",
+     "errors": 0,
+     "ref_words": 9,
+     "exact": true
+    },
+    {
+     "id": "dev-unit-009",
+     "category": "unit",
+     "input": "Lượng mưa 50mm.",
+     "references": [
+      "lượng mưa năm mươi mi li mét"
+     ],
+     "output": "lượng mưa năm mươi mi li mét.",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-unit-010",
+     "category": "unit",
+     "input": "Trang trại rộng 3 ha.",
+     "references": [
+      "trang trại rộng ba héc ta"
+     ],
+     "output": "trang trại rộng ba héc ta.",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-date-001",
+     "category": "date",
+     "input": "Ngày 2/9/1945.",
+     "references": [
+      "ngày hai tháng chín năm một nghìn chín trăm bốn mươi lăm"
+     ],
+     "output": "ngày hai tháng chín năm một nghìn chín trăm bốn mươi lăm.",
+     "errors": 0,
+     "ref_words": 12,
+     "exact": true
+    },
+    {
+     "id": "dev-date-002",
+     "category": "date",
+     "input": "Sinh ngày 15/08/2000.",
+     "references": [
+      "sinh ngày mười lăm tháng tám năm hai nghìn"
+     ],
+     "output": "sinh ngày mười lăm tháng tám năm hai nghìn.",
+     "errors": 0,
+     "ref_words": 9,
+     "exact": true
+    },
+    {
+     "id": "dev-date-003",
+     "category": "date",
+     "input": "Hạn chót là 31/12/2024.",
+     "references": [
+      "hạn chót là ngày ba mươi mốt tháng mười hai năm hai nghìn không trăm hai mươi tư",
+      "hạn chót là ba mươi mốt tháng mười hai năm hai nghìn không trăm hai mươi tư"
+     ],
+     "output": "hạn chót là ngày ba mươi mốt tháng mười hai năm hai nghìn không trăm hai mươi tư.",
+     "errors": 0,
+     "ref_words": 18,
+     "exact": true
+    },
+    {
+     "id": "dev-date-004",
+     "category": "date",
+     "input": "Vào tháng 4/2023.",
+     "references": [
+      "vào tháng tư năm hai nghìn không trăm hai mươi ba"
+     ],
+     "output": "vào tháng tư năm hai nghìn không trăm hai mươi ba.",
+     "errors": 0,
+     "ref_words": 11,
+     "exact": true
+    },
+    {
+     "id": "dev-date-005",
+     "category": "date",
+     "input": "Lễ hội diễn ra ngày 10/3.",
+     "references": [
+      "lễ hội diễn ra ngày mười tháng ba"
+     ],
+     "output": "lễ hội diễn ra ngày mười tháng ba.",
+     "errors": 0,
+     "ref_words": 8,
+     "exact": true
+    },
+    {
+     "id": "dev-date-006",
+     "category": "date",
+     "input": "Khai giảng 5-9-2024.",
+     "references": [
+      "khai giảng ngày năm tháng chín năm hai nghìn không trăm hai mươi tư",
+      "khai giảng năm tháng chín năm hai nghìn không trăm hai mươi tư"
+     ],
+     "output": "khai giảng ngày năm tháng chín năm hai nghìn không trăm hai mươi tư.",
+     "errors": 0,
+     "ref_words": 14,
+     "exact": true
+    },
+    {
+     "id": "dev-date-007",
+     "category": "date",
+     "input": "Từ tháng 1/2025.",
+     "references": [
+      "từ tháng một năm hai nghìn không trăm hai mươi lăm",
+      "từ tháng giêng năm hai nghìn không trăm hai mươi lăm"
+     ],
+     "output": "từ tháng một năm hai nghìn không trăm hai mươi lăm.",
+     "errors": 0,
+     "ref_words": 11,
+     "exact": true
+    },
+    {
+     "id": "dev-date-008",
+     "category": "date",
+     "input": "Họp vào 01/06/2026.",
+     "references": [
+      "họp vào ngày một tháng sáu năm hai nghìn không trăm hai mươi sáu",
+      "họp vào một tháng sáu năm hai nghìn không trăm hai mươi sáu"
+     ],
+     "output": "họp vào ngày một tháng sáu năm hai nghìn không trăm hai mươi sáu.",
+     "errors": 0,
+     "ref_words": 14,
+     "exact": true
+    },
+    {
+     "id": "dev-date-009",
+     "category": "date",
+     "input": "Ngày 20/11 là ngày Nhà giáo.",
+     "references": [
+      "ngày hai mươi tháng mười một là ngày nhà giáo"
+     ],
+     "output": "ngày hai mươi tháng mười một là ngày nhà giáo.",
+     "errors": 0,
+     "ref_words": 10,
+     "exact": true
+    },
+    {
+     "id": "dev-time-001",
+     "category": "time",
+     "input": "Lúc 14h30.",
+     "references": [
+      "lúc mười bốn giờ ba mươi",
+      "lúc mười bốn giờ ba mươi phút"
+     ],
+     "output": "lúc mười bốn giờ ba mươi phút.",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-time-002",
+     "category": "time",
+     "input": "Họp lúc 8:05.",
+     "references": [
+      "họp lúc tám giờ năm phút",
+      "họp lúc tám giờ năm"
+     ],
+     "output": "họp lúc tám giờ năm phút.",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-time-003",
+     "category": "time",
+     "input": "Mở cửa từ 7h đến 22h.",
+     "references": [
+      "mở cửa từ bảy giờ đến hai mươi hai giờ"
+     ],
+     "output": "mở cửa từ bảy giờ đến hai mươi hai giờ.",
+     "errors": 0,
+     "ref_words": 10,
+     "exact": true
+    },
+    {
+     "id": "dev-time-004",
+     "category": "time",
+     "input": "Bắt đầu lúc 9g15.",
+     "references": [
+      "bắt đầu lúc chín giờ mười lăm",
+      "bắt đầu lúc chín giờ mười lăm phút"
+     ],
+     "output": "bắt đầu lúc chín giờ mười lăm phút.",
+     "errors": 0,
+     "ref_words": 8,
+     "exact": true
+    },
+    {
+     "id": "dev-time-005",
+     "category": "time",
+     "input": "Kết thúc lúc 23:59.",
+     "references": [
+      "kết thúc lúc hai mươi ba giờ năm mươi chín phút",
+      "kết thúc lúc hai mươi ba giờ năm mươi chín"
+     ],
+     "output": "kết thúc lúc hai mươi ba giờ năm mươi chín phút.",
+     "errors": 0,
+     "ref_words": 11,
+     "exact": true
+    },
+    {
+     "id": "dev-time-006",
+     "category": "time",
+     "input": "Hẹn 6h sáng mai.",
+     "references": [
+      "hẹn sáu giờ sáng mai"
+     ],
+     "output": "hẹn sáu giờ sáng mai.",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-phone-001",
+     "category": "phone",
+     "input": "Gọi 0912345678.",
+     "references": [
+      "gọi không chín một hai ba bốn năm sáu bảy tám"
+     ],
+     "output": "gọi không chín một hai ba bốn năm sáu bảy tám.",
+     "errors": 0,
+     "ref_words": 11,
+     "exact": true
+    },
+    {
+     "id": "dev-phone-002",
+     "category": "phone",
+     "input": "Tổng đài 1900 1234.",
+     "references": [
+      "tổng đài một chín không không một hai ba bốn"
+     ],
+     "output": "tổng đài một chín không không một hai ba bốn.",
+     "errors": 0,
+     "ref_words": 10,
+     "exact": true
+    },
+    {
+     "id": "dev-phone-003",
+     "category": "phone",
+     "input": "SĐT: 0987 654 321.",
+     "references": [
+      "số điện thoại không chín tám bảy sáu năm bốn ba hai một"
+     ],
+     "output": "số điện thoại, không chín tám bảy sáu năm bốn ba hai một.",
+     "errors": 0,
+     "ref_words": 13,
+     "exact": true
+    },
+    {
+     "id": "dev-phone-004",
+     "category": "phone",
+     "input": "Liên hệ +84 912 345 678.",
+     "references": [
+      "liên hệ cộng tám tư chín một hai ba bốn năm sáu bảy tám",
+      "liên hệ cộng tám bốn chín một hai ba bốn năm sáu bảy tám"
+     ],
+     "output": "liên hệ cộng tám tư chín một hai ba bốn năm sáu bảy tám.",
+     "errors": 0,
+     "ref_words": 14,
+     "exact": true
+    },
+    {
+     "id": "dev-phone-005",
+     "category": "phone",
+     "input": "Số máy bàn 024.3825.1234.",
+     "references": [
+      "số máy bàn không hai bốn ba tám hai năm một hai ba bốn"
+     ],
+     "output": "số máy bàn không hai bốn ba tám hai năm một hai ba bốn.",
+     "errors": 0,
+     "ref_words": 14,
+     "exact": true
+    },
+    {
+     "id": "dev-range-001",
+     "category": "range",
+     "input": "Từ 5-10 người.",
+     "references": [
+      "từ năm đến mười người"
+     ],
+     "output": "từ năm đến mười người.",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-range-002",
+     "category": "range",
+     "input": "Việt Nam thắng 3-1.",
+     "references": [
+      "việt nam thắng ba một"
+     ],
+     "output": "việt nam thắng ba một.",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-range-003",
+     "category": "range",
+     "input": "Giai đoạn 2020-2025.",
+     "references": [
+      "giai đoạn hai nghìn không trăm hai mươi đến hai nghìn không trăm hai mươi lăm"
+     ],
+     "output": "giai đoạn hai nghìn không trăm hai mươi đến hai nghìn không trăm hai mươi lăm.",
+     "errors": 0,
+     "ref_words": 16,
+     "exact": true
+    },
+    {
+     "id": "dev-range-004",
+     "category": "range",
+     "input": "Nhiệt độ 25-30°C.",
+     "references": [
+      "nhiệt độ hai mươi lăm đến ba mươi độ xê",
+      "nhiệt độ hai mươi lăm đến ba mươi độ"
+     ],
+     "output": "nhiệt độ hai mươi lăm đến ba mươi độ xê.",
+     "errors": 0,
+     "ref_words": 10,
+     "exact": true
+    },
+    {
+     "id": "dev-range-005",
+     "category": "range",
+     "input": "Trẻ em 6-12 tuổi.",
+     "references": [
+      "trẻ em sáu đến mười hai tuổi"
+     ],
+     "output": "trẻ em sáu đến mười hai tuổi.",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-abbreviation-001",
+     "category": "abbreviation",
+     "input": "UBND tỉnh họp.",
+     "references": [
+      "ủy ban nhân dân tỉnh họp"
+     ],
+     "output": "ủy ban nhân dân tỉnh họp.",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-abbreviation-002",
+     "category": "abbreviation",
+     "input": "Học sinh THPT.",
+     "references": [
+      "học sinh trung học phổ thông"
+     ],
+     "output": "học sinh trung học phổ thông.",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-abbreviation-003",
+     "category": "abbreviation",
+     "input": "Tại TP.HCM.",
+     "references": [
+      "tại thành phố hồ chí minh"
+     ],
+     "output": "tại thành phố hồ chí minh.",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-abbreviation-004",
+     "category": "abbreviation",
+     "input": "GS. Ngô Bảo Châu.",
+     "references": [
+      "giáo sư ngô bảo châu"
+     ],
+     "output": "giáo sư ngô bảo châu.",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-abbreviation-005",
+     "category": "abbreviation",
+     "input": "Liên hệ CSGT.",
+     "references": [
+      "liên hệ cảnh sát giao thông"
+     ],
+     "output": "liên hệ cảnh sát giao thông.",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-abbreviation-006",
+     "category": "abbreviation",
+     "input": "Đóng BHXH đầy đủ.",
+     "references": [
+      "đóng bảo hiểm xã hội đầy đủ"
+     ],
+     "output": "đóng bảo hiểm xã hội đầy đủ.",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-abbreviation-007",
+     "category": "abbreviation",
+     "input": "Trường ĐH Bách khoa.",
+     "references": [
+      "trường đại học bách khoa"
+     ],
+     "output": "trường đại học bách khoa.",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-abbreviation-008",
+     "category": "abbreviation",
+     "input": "TS. Nguyễn Văn An.",
+     "references": [
+      "tiến sĩ nguyễn văn an"
+     ],
+     "output": "tiến sĩ nguyễn văn an.",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-abbreviation-009",
+     "category": "abbreviation",
+     "input": "Hàng hóa, thực phẩm, v.v.",
+     "references": [
+      "hàng hóa, thực phẩm, vân vân"
+     ],
+     "output": "hàng hóa, thực phẩm, vân vân",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-abbreviation-010",
+     "category": "abbreviation",
+     "input": "Cấp CCCD mới.",
+     "references": [
+      "cấp căn cước công dân mới"
+     ],
+     "output": "cấp căn cước công dân mới.",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-acronym-001",
+     "category": "acronym",
+     "input": "Công nghệ AI phát triển.",
+     "references": [
+      "công nghệ a i phát triển",
+      "công nghệ ây ai phát triển"
+     ],
+     "output": "công nghệ a i phát triển.",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-acronym-002",
+     "category": "acronym",
+     "input": "Đội U23 Việt Nam.",
+     "references": [
+      "đội u hai mươi ba việt nam"
+     ],
+     "output": "đội u hai mươi ba việt nam.",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-acronym-003",
+     "category": "acronym",
+     "input": "Kênh VTV1.",
+     "references": [
+      "kênh vê tê vê một"
+     ],
+     "output": "kênh vê tê vê một.",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-acronym-004",
+     "category": "acronym",
+     "input": "Công ty FPT.",
+     "references": [
+      "công ty ép pê tê"
+     ],
+     "output": "công ty ép pê tê.",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-acronym-005",
+     "category": "acronym",
+     "input": "Bệnh COVID-19.",
+     "references": [
+      "bệnh cô vít mười chín",
+      "bệnh covid mười chín"
+     ],
+     "output": "bệnh cô vít mười chín.",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-plain-001",
+     "category": "plain",
+     "input": "Hôm nay trời đẹp quá.",
+     "references": [
+      "hôm nay trời đẹp quá"
+     ],
+     "output": "hôm nay trời đẹp quá.",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-plain-002",
+     "category": "plain",
+     "input": "Tôi yêu Việt Nam.",
+     "references": [
+      "tôi yêu việt nam"
+     ],
+     "output": "tôi yêu việt nam.",
+     "errors": 0,
+     "ref_words": 4,
+     "exact": true
+    },
+    {
+     "id": "dev-plain-003",
+     "category": "plain",
+     "input": "Cô giáo đang giảng bài.",
+     "references": [
+      "cô giáo đang giảng bài"
+     ],
+     "output": "cô giáo đang giảng bài.",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-plain-004",
+     "category": "plain",
+     "input": "Mẹ đi chợ mua rau.",
+     "references": [
+      "mẹ đi chợ mua rau"
+     ],
+     "output": "mẹ đi chợ mua rau.",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-plain-005",
+     "category": "plain",
+     "input": "Anh ấy làm việc rất chăm chỉ.",
+     "references": [
+      "anh ấy làm việc rất chăm chỉ"
+     ],
+     "output": "anh ấy làm việc rất chăm chỉ.",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-plain-006",
+     "category": "plain",
+     "input": "Hà Nội là thủ đô của Việt Nam.",
+     "references": [
+      "hà nội là thủ đô của việt nam"
+     ],
+     "output": "hà nội là thủ đô của việt nam.",
+     "errors": 0,
+     "ref_words": 8,
+     "exact": true
+    },
+    {
+     "id": "dev-plain-007",
+     "category": "plain",
+     "input": "Bạn có khỏe không?",
+     "references": [
+      "bạn có khỏe không"
+     ],
+     "output": "bạn có khỏe không?",
+     "errors": 0,
+     "ref_words": 4,
+     "exact": true
+    },
+    {
+     "id": "dev-plain-008",
+     "category": "plain",
+     "input": "Mùa thu lá vàng rơi.",
+     "references": [
+      "mùa thu lá vàng rơi"
+     ],
+     "output": "mùa thu lá vàng rơi.",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-mixed-001",
+     "category": "mixed",
+     "input": "Ngày 15/3/2024, giá vàng SJC tăng 1,2 triệu đồng/lượng, lên 80,5 triệu đồng.",
+     "references": [
+      "ngày mười lăm tháng ba năm hai nghìn không trăm hai mươi tư, giá vàng ét gi xê tăng một phẩy hai triệu đồng một lượng, lên tám mươi phẩy năm triệu đồng",
+      "ngày mười lăm tháng ba năm hai nghìn không trăm hai mươi tư, giá vàng ét di xê tăng một phẩy hai triệu đồng một lượng, lên tám mươi phẩy năm triệu đồng",
+      "ngày mười lăm tháng ba năm hai nghìn không trăm hai mươi tư, giá vàng ét gi xê tăng một phẩy hai triệu đồng mỗi lượng, lên tám mươi phẩy năm triệu đồng",
+      "ngày mười lăm tháng ba năm hai nghìn không trăm hai mươi tư, giá vàng ét di xê tăng một phẩy hai triệu đồng mỗi lượng, lên tám mươi phẩy năm triệu đồng",
+      "ngày mười lăm tháng ba năm hai nghìn không trăm hai mươi tư, giá vàng ét gi xê tăng một phẩy hai triệu đồng trên lượng, lên tám mươi phẩy năm triệu đồng",
+      "ngày mười lăm tháng ba năm hai nghìn không trăm hai mươi tư, giá vàng ét di xê tăng một phẩy hai triệu đồng trên lượng, lên tám mươi phẩy năm triệu đồng"
+     ],
+     "output": "ngày mười lăm tháng ba năm hai nghìn không trăm hai mươi tư, giá vàng ét gi xê tăng một phẩy hai triệu đồng một lượng, lên tám mươi phẩy năm triệu đồng.",
+     "errors": 0,
+     "ref_words": 33,
+     "exact": true
+    },
+    {
+     "id": "dev-mixed-002",
+     "category": "mixed",
+     "input": "Lúc 19h30 tối 20/11, U23 Việt Nam thắng 2-0.",
+     "references": [
+      "lúc mười chín giờ ba mươi tối hai mươi tháng mười một, u hai mươi ba việt nam thắng hai không",
+      "lúc mười chín giờ ba mươi tối ngày hai mươi tháng mười một, u hai mươi ba việt nam thắng hai không",
+      "lúc mười chín giờ ba mươi phút tối hai mươi tháng mười một, u hai mươi ba việt nam thắng hai không",
+      "lúc mười chín giờ ba mươi phút tối ngày hai mươi tháng mười một, u hai mươi ba việt nam thắng hai không"
+     ],
+     "output": "lúc mười chín giờ ba mươi phút tối hai mươi tháng mười một, u hai mươi ba việt nam thắng hai không.",
+     "errors": 0,
+     "ref_words": 22,
+     "exact": true
+    },
+    {
+     "id": "dev-mixed-003",
+     "category": "mixed",
+     "input": "TP.HCM có hơn 9 triệu dân, tăng 2,3% so với năm 2019.",
+     "references": [
+      "thành phố hồ chí minh có hơn chín triệu dân, tăng hai phẩy ba phần trăm so với năm hai nghìn không trăm mười chín"
+     ],
+     "output": "thành phố hồ chí minh có hơn chín triệu dân, tăng hai phẩy ba phần trăm so với năm hai nghìn không trăm mười chín.",
+     "errors": 0,
+     "ref_words": 25,
+     "exact": true
+    },
+    {
+     "id": "dev-mixed-004",
+     "category": "mixed",
+     "input": "Xe chạy 120km/h trên cao tốc dài 55km.",
+     "references": [
+      "xe chạy một trăm hai mươi ki lô mét trên giờ trên cao tốc dài năm mươi lăm ki lô mét",
+      "xe chạy một trăm hai mươi ki lô mét một giờ trên cao tốc dài năm mươi lăm ki lô mét",
+      "xe chạy một trăm hai mươi ki lô mét mỗi giờ trên cao tốc dài năm mươi lăm ki lô mét"
+     ],
+     "output": "xe chạy một trăm hai mươi ki lô mét trên giờ trên cao tốc dài năm mươi lăm ki lô mét.",
+     "errors": 0,
+     "ref_words": 21,
+     "exact": true
+    },
+    {
+     "id": "dev-mixed-005",
+     "category": "mixed",
+     "input": "Gọi 0909 123 456 trước 17h để được giảm 10%.",
+     "references": [
+      "gọi không chín không chín một hai ba bốn năm sáu trước mười bảy giờ để được giảm mười phần trăm"
+     ],
+     "output": "gọi không chín không chín một hai ba bốn năm sáu trước mười bảy giờ để được giảm mười phần trăm.",
+     "errors": 0,
+     "ref_words": 21,
+     "exact": true
+    },
+    {
+     "id": "dev-mixed-006",
+     "category": "mixed",
+     "input": "Học phí năm 2025 là 25.000.000đ/năm.",
+     "references": [
+      "học phí năm hai nghìn không trăm hai mươi lăm là hai mươi lăm triệu đồng một năm",
+      "học phí năm hai nghìn không trăm hai mươi lăm là hai mươi lăm triệu đồng mỗi năm",
+      "học phí năm hai nghìn không trăm hai mươi lăm là hai mươi lăm triệu đồng trên năm"
+     ],
+     "output": "học phí năm hai nghìn không trăm hai mươi lăm là hai mươi lăm triệu đồng một năm.",
+     "errors": 0,
+     "ref_words": 18,
+     "exact": true
+    },
+    {
+     "id": "dev-mixed-007",
+     "category": "mixed",
+     "input": "Nhiệt độ Hà Nội hôm nay 28-35°C, độ ẩm 80%.",
+     "references": [
+      "nhiệt độ hà nội hôm nay hai mươi tám đến ba mươi lăm độ xê, độ ẩm tám mươi phần trăm",
+      "nhiệt độ hà nội hôm nay hai mươi tám đến ba mươi lăm độ, độ ẩm tám mươi phần trăm"
+     ],
+     "output": "nhiệt độ hà nội hôm nay hai mươi tám đến ba mươi lăm độ xê, độ ẩm tám mươi phần trăm.",
+     "errors": 0,
+     "ref_words": 21,
+     "exact": true
+    },
+    {
+     "id": "dev-mixed-008",
+     "category": "mixed",
+     "input": "Theo UBND TP. Hà Nội, 1.200 hộ dân đã nhận hỗ trợ.",
+     "references": [
+      "theo ủy ban nhân dân thành phố hà nội, một nghìn hai trăm hộ dân đã nhận hỗ trợ"
+     ],
+     "output": "theo ủy ban nhân dân thành phố hà nội, một nghìn hai trăm hộ dân đã nhận hỗ trợ.",
+     "errors": 0,
+     "ref_words": 19,
+     "exact": true
+    }
+   ]
+  },
+  {
+   "name": "vinorm",
+   "version": "2.0.7",
+   "seconds": 2.9474225118756294,
+   "cases": [
+    {
+     "id": "dev-number-001",
+     "category": "number",
+     "input": "Lớp có 21 học sinh.",
+     "references": [
+      "lớp có hai mươi mốt học sinh"
+     ],
+     "output": "lớp có hai mươi mốt học sinh .. ",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-number-002",
+     "category": "number",
+     "input": "Cô ấy 45 tuổi.",
+     "references": [
+      "cô ấy bốn mươi lăm tuổi"
+     ],
+     "output": "cô ấy bốn mươi lăm tuổi .. ",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-number-003",
+     "category": "number",
+     "input": "Tòa nhà cao 105 tầng.",
+     "references": [
+      "tòa nhà cao một trăm linh năm tầng"
+     ],
+     "output": "tòa nhà cao một trăm linh năm tầng .. ",
+     "errors": 0,
+     "ref_words": 8,
+     "exact": true
+    },
+    {
+     "id": "dev-number-004",
+     "category": "number",
+     "input": "Dân số khoảng 2.500.000 người.",
+     "references": [
+      "dân số khoảng hai triệu năm trăm nghìn người"
+     ],
+     "output": "dân số khoảng hai triệu năm trăm nghìn người .. ",
+     "errors": 0,
+     "ref_words": 9,
+     "exact": true
+    },
+    {
+     "id": "dev-number-005",
+     "category": "number",
+     "input": "Năm 1945 là năm lịch sử.",
+     "references": [
+      "năm một nghìn chín trăm bốn mươi lăm là năm lịch sử"
+     ],
+     "output": "năm một nghìn chín trăm bốn mươi lăm là năm lịch sử .. ",
+     "errors": 0,
+     "ref_words": 12,
+     "exact": true
+    },
+    {
+     "id": "dev-number-006",
+     "category": "number",
+     "input": "Có 1.005 người tham gia.",
+     "references": [
+      "có một nghìn không trăm linh năm người tham gia"
+     ],
+     "output": "có một nghìn không trăm linh năm người tham gia .. ",
+     "errors": 0,
+     "ref_words": 10,
+     "exact": true
+    },
+    {
+     "id": "dev-number-007",
+     "category": "number",
+     "input": "Trường có 14 phòng học.",
+     "references": [
+      "trường có mười bốn phòng học"
+     ],
+     "output": "trường có mười bốn phòng học .. ",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-number-008",
+     "category": "number",
+     "input": "Kho chứa 3.000.000.000 lít.",
+     "references": [
+      "kho chứa ba tỷ lít"
+     ],
+     "output": "kho chứa ba tỷ lít .. ",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-number-009",
+     "category": "number",
+     "input": "Anh ấy chạy 10 vòng.",
+     "references": [
+      "anh ấy chạy mười vòng"
+     ],
+     "output": "anh ấy chạy mười vòng .. ",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-number-010",
+     "category": "number",
+     "input": "Cần 310 chữ ký.",
+     "references": [
+      "cần ba trăm mười chữ ký"
+     ],
+     "output": "cần ba trăm mười chữ ký .. ",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-number-011",
+     "category": "number",
+     "input": "Một ngày có 24 giờ.",
+     "references": [
+      "một ngày có hai mươi tư giờ"
+     ],
+     "output": "một ngày có hai mươi tư giờ .. ",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-number-012",
+     "category": "number",
+     "input": "Đội có 11 cầu thủ.",
+     "references": [
+      "đội có mười một cầu thủ"
+     ],
+     "output": "đội có mười một cầu thủ .. ",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-decimal-001",
+     "category": "decimal",
+     "input": "Chiều cao 1,75 mét.",
+     "references": [
+      "chiều cao một phẩy bảy mươi lăm mét",
+      "chiều cao một phẩy bảy lăm mét",
+      "chiều cao một phẩy bảy năm mét"
+     ],
+     "output": "chiều cao một phẩy bảy mươi lăm mét .. ",
+     "errors": 0,
+     "ref_words": 8,
+     "exact": true
+    },
+    {
+     "id": "dev-decimal-002",
+     "category": "decimal",
+     "input": "Doanh thu tăng 3,5 lần.",
+     "references": [
+      "doanh thu tăng ba phẩy năm lần"
+     ],
+     "output": "doanh thu tăng ba phẩy năm lần .. ",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-decimal-003",
+     "category": "decimal",
+     "input": "Điểm trung bình là 8,25.",
+     "references": [
+      "điểm trung bình là tám phẩy hai mươi lăm",
+      "điểm trung bình là tám phẩy hai lăm",
+      "điểm trung bình là tám phẩy hai năm"
+     ],
+     "output": "điểm trung bình là tám phẩy hai mươi lăm .. ",
+     "errors": 0,
+     "ref_words": 9,
+     "exact": true
+    },
+    {
+     "id": "dev-decimal-004",
+     "category": "decimal",
+     "input": "Lãi suất giảm 0,5 điểm.",
+     "references": [
+      "lãi suất giảm không phẩy năm điểm"
+     ],
+     "output": "lãi suất giảm không phẩy năm điểm .. ",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-decimal-005",
+     "category": "decimal",
+     "input": "Tăng trưởng đạt 6,05.",
+     "references": [
+      "tăng trưởng đạt sáu phẩy không năm"
+     ],
+     "output": "tăng trưởng đạt sáu phẩy không năm .. ",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-decimal-006",
+     "category": "decimal",
+     "input": "Giá trị hợp đồng 2,1 tỷ.",
+     "references": [
+      "giá trị hợp đồng hai phẩy một tỷ"
+     ],
+     "output": "giá trị hợp đồng hai phẩy một tỷ .. ",
+     "errors": 0,
+     "ref_words": 8,
+     "exact": true
+    },
+    {
+     "id": "dev-currency-001",
+     "category": "currency",
+     "input": "Giá 100k.",
+     "references": [
+      "giá một trăm nghìn",
+      "giá một trăm nghìn đồng"
+     ],
+     "output": "giá một trăm ca .. ",
+     "errors": 1,
+     "ref_words": 4,
+     "exact": false
+    },
+    {
+     "id": "dev-currency-002",
+     "category": "currency",
+     "input": "Vé giá 50.000đ.",
+     "references": [
+      "vé giá năm mươi nghìn đồng"
+     ],
+     "output": "vé giá năm mươi nghìn đồng .. ",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-currency-003",
+     "category": "currency",
+     "input": "Lương 15 triệu đồng.",
+     "references": [
+      "lương mười lăm triệu đồng"
+     ],
+     "output": "lương mười lăm triệu đồng .. ",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-currency-004",
+     "category": "currency",
+     "input": "Giá 1.250.000 VNĐ.",
+     "references": [
+      "giá một triệu hai trăm năm mươi nghìn đồng"
+     ],
+     "output": "giá một triệu hai trăm năm mươi nghìn việt nam đồng .. ",
+     "errors": 0,
+     "ref_words": 9,
+     "exact": true
+    },
+    {
+     "id": "dev-currency-005",
+     "category": "currency",
+     "input": "Chiếc máy có giá $999.",
+     "references": [
+      "chiếc máy có giá chín trăm chín mươi chín đô la"
+     ],
+     "output": "chiếc máy có giá chín trăm chín mươi chín .. ",
+     "errors": 2,
+     "ref_words": 11,
+     "exact": false
+    },
+    {
+     "id": "dev-currency-006",
+     "category": "currency",
+     "input": "Chi phí 20 USD.",
+     "references": [
+      "chi phí hai mươi đô la"
+     ],
+     "output": "chi phí hai mươi usd .. ",
+     "errors": 2,
+     "ref_words": 6,
+     "exact": false
+    },
+    {
+     "id": "dev-currency-007",
+     "category": "currency",
+     "input": "Nợ 5 tỷ đồng.",
+     "references": [
+      "nợ năm tỷ đồng"
+     ],
+     "output": "nợ năm tỷ đồng .. ",
+     "errors": 0,
+     "ref_words": 4,
+     "exact": true
+    },
+    {
+     "id": "dev-currency-008",
+     "category": "currency",
+     "input": "Quà tặng trị giá 200.000₫.",
+     "references": [
+      "quà tặng trị giá hai trăm nghìn đồng"
+     ],
+     "output": "quà tặng trị giá hai trăm nghìn .. ",
+     "errors": 1,
+     "ref_words": 8,
+     "exact": false
+    },
+    {
+     "id": "dev-currency-009",
+     "category": "currency",
+     "input": "Giá xăng 23.450đ/lít.",
+     "references": [
+      "giá xăng hai mươi ba nghìn bốn trăm năm mươi đồng một lít",
+      "giá xăng hai mươi ba nghìn bốn trăm năm mươi đồng mỗi lít",
+      "giá xăng hai mươi ba nghìn bốn trăm năm mươi đồng trên lít"
+     ],
+     "output": "giá xăng hai mươi ba nghìn bốn trăm năm mươi đồng trên lít .. ",
+     "errors": 0,
+     "ref_words": 13,
+     "exact": true
+    },
+    {
+     "id": "dev-currency-010",
+     "category": "currency",
+     "input": "Thu nhập 5tr/tháng.",
+     "references": [
+      "thu nhập năm triệu một tháng",
+      "thu nhập năm triệu mỗi tháng",
+      "thu nhập năm triệu trên tháng"
+     ],
+     "output": "thu nhập năm tr xuyệt tê hát nờ giê .. ",
+     "errors": 6,
+     "ref_words": 6,
+     "exact": false
+    },
+    {
+     "id": "dev-percent-001",
+     "category": "percent",
+     "input": "Doanh số tăng 12%.",
+     "references": [
+      "doanh số tăng mười hai phần trăm"
+     ],
+     "output": "doanh số tăng mười hai phần trăm .. ",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-percent-002",
+     "category": "percent",
+     "input": "Giảm 0,5%.",
+     "references": [
+      "giảm không phẩy năm phần trăm"
+     ],
+     "output": "giảm không phẩy năm phần trăm .. ",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-percent-003",
+     "category": "percent",
+     "input": "Chiếm 100% cổ phần.",
+     "references": [
+      "chiếm một trăm phần trăm cổ phần"
+     ],
+     "output": "chiếm một trăm phần trăm cổ phần .. ",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-percent-004",
+     "category": "percent",
+     "input": "Tỷ lệ đạt 45,7%.",
+     "references": [
+      "tỷ lệ đạt bốn mươi lăm phẩy bảy phần trăm"
+     ],
+     "output": "tỷ lệ đạt bốn mươi lăm phẩy bảy phần trăm .. ",
+     "errors": 0,
+     "ref_words": 10,
+     "exact": true
+    },
+    {
+     "id": "dev-percent-005",
+     "category": "percent",
+     "input": "Lạm phát 3,25 %.",
+     "references": [
+      "lạm phát ba phẩy hai mươi lăm phần trăm",
+      "lạm phát ba phẩy hai lăm phần trăm",
+      "lạm phát ba phẩy hai năm phần trăm"
+     ],
+     "output": "lạm phát ba phẩy hai mươi lăm phần trăm .. ",
+     "errors": 0,
+     "ref_words": 9,
+     "exact": true
+    },
+    {
+     "id": "dev-unit-001",
+     "category": "unit",
+     "input": "Quãng đường 15km.",
+     "references": [
+      "quãng đường mười lăm ki lô mét",
+      "quãng đường mười lăm cây số"
+     ],
+     "output": "quãng đường mười lăm kí lô mét .. ",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-unit-002",
+     "category": "unit",
+     "input": "Anh ấy nặng 70kg.",
+     "references": [
+      "anh ấy nặng bảy mươi ki lô gam",
+      "anh ấy nặng bảy mươi cân",
+      "anh ấy nặng bảy mươi ki lô"
+     ],
+     "output": "anh ấy nặng bảy mươi kí lô gam .. ",
+     "errors": 0,
+     "ref_words": 8,
+     "exact": true
+    },
+    {
+     "id": "dev-unit-003",
+     "category": "unit",
+     "input": "Tốc độ tối đa 60km/h.",
+     "references": [
+      "tốc độ tối đa sáu mươi ki lô mét trên giờ",
+      "tốc độ tối đa sáu mươi ki lô mét một giờ",
+      "tốc độ tối đa sáu mươi ki lô mét mỗi giờ",
+      "tốc độ tối đa sáu mươi cây số một giờ"
+     ],
+     "output": "tốc độ tối đa sáu mươi kí lô mét trên giờ .. ",
+     "errors": 0,
+     "ref_words": 11,
+     "exact": true
+    },
+    {
+     "id": "dev-unit-004",
+     "category": "unit",
+     "input": "Diện tích 120m2.",
+     "references": [
+      "diện tích một trăm hai mươi mét vuông"
+     ],
+     "output": "diện tích một trăm hai mươi mét vuông .. ",
+     "errors": 0,
+     "ref_words": 8,
+     "exact": true
+    },
+    {
+     "id": "dev-unit-005",
+     "category": "unit",
+     "input": "Nhiệt độ 36,5°C.",
+     "references": [
+      "nhiệt độ ba mươi sáu phẩy năm độ xê",
+      "nhiệt độ ba mươi sáu phẩy năm độ"
+     ],
+     "output": "nhiệt độ ba mươi sáu phẩy năm độ xê .. ",
+     "errors": 0,
+     "ref_words": 9,
+     "exact": true
+    },
+    {
+     "id": "dev-unit-006",
+     "category": "unit",
+     "input": "Chai nước 500ml.",
+     "references": [
+      "chai nước năm trăm mi li lít"
+     ],
+     "output": "chai nước năm trăm mi li lít .. ",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-unit-007",
+     "category": "unit",
+     "input": "Cao 180cm.",
+     "references": [
+      "cao một trăm tám mươi xen ti mét"
+     ],
+     "output": "cao một trăm tám mươi xen ti mét .. ",
+     "errors": 0,
+     "ref_words": 8,
+     "exact": true
+    },
+    {
+     "id": "dev-unit-008",
+     "category": "unit",
+     "input": "Ổ cứng 512GB.",
+     "references": [
+      "ổ cứng năm trăm mười hai gi ga bai"
+     ],
+     "output": "ổ cứng năm trăm mười hai ghi ga bay .. ",
+     "errors": 0,
+     "ref_words": 9,
+     "exact": true
+    },
+    {
+     "id": "dev-unit-009",
+     "category": "unit",
+     "input": "Lượng mưa 50mm.",
+     "references": [
+      "lượng mưa năm mươi mi li mét"
+     ],
+     "output": "lượng mưa năm mươi mi li mét .. ",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-unit-010",
+     "category": "unit",
+     "input": "Trang trại rộng 3 ha.",
+     "references": [
+      "trang trại rộng ba héc ta"
+     ],
+     "output": "trang trại rộng ba héc ta .. ",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-date-001",
+     "category": "date",
+     "input": "Ngày 2/9/1945.",
+     "references": [
+      "ngày hai tháng chín năm một nghìn chín trăm bốn mươi lăm"
+     ],
+     "output": "ngày hai tháng chín năm một nghìn chín trăm bốn mươi lăm .. ",
+     "errors": 0,
+     "ref_words": 12,
+     "exact": true
+    },
+    {
+     "id": "dev-date-002",
+     "category": "date",
+     "input": "Sinh ngày 15/08/2000.",
+     "references": [
+      "sinh ngày mười lăm tháng tám năm hai nghìn"
+     ],
+     "output": "sinh ngày mười lăm tháng tám năm hai nghìn .. ",
+     "errors": 0,
+     "ref_words": 9,
+     "exact": true
+    },
+    {
+     "id": "dev-date-003",
+     "category": "date",
+     "input": "Hạn chót là 31/12/2024.",
+     "references": [
+      "hạn chót là ngày ba mươi mốt tháng mười hai năm hai nghìn không trăm hai mươi tư",
+      "hạn chót là ba mươi mốt tháng mười hai năm hai nghìn không trăm hai mươi tư"
+     ],
+     "output": "hạn chót là ba mươi mốt tháng mười hai năm hai nghìn không trăm hai mươi tư .. ",
+     "errors": 0,
+     "ref_words": 17,
+     "exact": true
+    },
+    {
+     "id": "dev-date-004",
+     "category": "date",
+     "input": "Vào tháng 4/2023.",
+     "references": [
+      "vào tháng tư năm hai nghìn không trăm hai mươi ba"
+     ],
+     "output": "vào tháng bốn năm hai nghìn không trăm hai mươi ba .. ",
+     "errors": 0,
+     "ref_words": 11,
+     "exact": true
+    },
+    {
+     "id": "dev-date-005",
+     "category": "date",
+     "input": "Lễ hội diễn ra ngày 10/3.",
+     "references": [
+      "lễ hội diễn ra ngày mười tháng ba"
+     ],
+     "output": "lễ hội diễn ra ngày mười tháng ba .. ",
+     "errors": 0,
+     "ref_words": 8,
+     "exact": true
+    },
+    {
+     "id": "dev-date-006",
+     "category": "date",
+     "input": "Khai giảng 5-9-2024.",
+     "references": [
+      "khai giảng ngày năm tháng chín năm hai nghìn không trăm hai mươi tư",
+      "khai giảng năm tháng chín năm hai nghìn không trăm hai mươi tư"
+     ],
+     "output": "khai giảng năm tháng chín năm hai nghìn không trăm hai mươi tư .. ",
+     "errors": 0,
+     "ref_words": 13,
+     "exact": true
+    },
+    {
+     "id": "dev-date-007",
+     "category": "date",
+     "input": "Từ tháng 1/2025.",
+     "references": [
+      "từ tháng một năm hai nghìn không trăm hai mươi lăm",
+      "từ tháng giêng năm hai nghìn không trăm hai mươi lăm"
+     ],
+     "output": "từ tháng một năm hai nghìn không trăm hai mươi lăm .. ",
+     "errors": 0,
+     "ref_words": 11,
+     "exact": true
+    },
+    {
+     "id": "dev-date-008",
+     "category": "date",
+     "input": "Họp vào 01/06/2026.",
+     "references": [
+      "họp vào ngày một tháng sáu năm hai nghìn không trăm hai mươi sáu",
+      "họp vào một tháng sáu năm hai nghìn không trăm hai mươi sáu"
+     ],
+     "output": "họp vào một tháng sáu năm hai nghìn không trăm hai mươi sáu .. ",
+     "errors": 0,
+     "ref_words": 13,
+     "exact": true
+    },
+    {
+     "id": "dev-date-009",
+     "category": "date",
+     "input": "Ngày 20/11 là ngày Nhà giáo.",
+     "references": [
+      "ngày hai mươi tháng mười một là ngày nhà giáo"
+     ],
+     "output": "ngày hai mươi tháng mười một là ngày nhà giáo .. ",
+     "errors": 0,
+     "ref_words": 10,
+     "exact": true
+    },
+    {
+     "id": "dev-time-001",
+     "category": "time",
+     "input": "Lúc 14h30.",
+     "references": [
+      "lúc mười bốn giờ ba mươi",
+      "lúc mười bốn giờ ba mươi phút"
+     ],
+     "output": "lúc mười bốn giờ ba mươi .. ",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-time-002",
+     "category": "time",
+     "input": "Họp lúc 8:05.",
+     "references": [
+      "họp lúc tám giờ năm phút",
+      "họp lúc tám giờ năm"
+     ],
+     "output": "họp lúc tám giờ năm .. ",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-time-003",
+     "category": "time",
+     "input": "Mở cửa từ 7h đến 22h.",
+     "references": [
+      "mở cửa từ bảy giờ đến hai mươi hai giờ"
+     ],
+     "output": "mở cửa từ bảy giờ đến hai mươi hai giờ .. ",
+     "errors": 0,
+     "ref_words": 10,
+     "exact": true
+    },
+    {
+     "id": "dev-time-004",
+     "category": "time",
+     "input": "Bắt đầu lúc 9g15.",
+     "references": [
+      "bắt đầu lúc chín giờ mười lăm",
+      "bắt đầu lúc chín giờ mười lăm phút"
+     ],
+     "output": "bắt đầu lúc chín giờ mười lăm .. ",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-time-005",
+     "category": "time",
+     "input": "Kết thúc lúc 23:59.",
+     "references": [
+      "kết thúc lúc hai mươi ba giờ năm mươi chín phút",
+      "kết thúc lúc hai mươi ba giờ năm mươi chín"
+     ],
+     "output": "kết thúc lúc hai mươi ba giờ năm mươi chín .. ",
+     "errors": 0,
+     "ref_words": 10,
+     "exact": true
+    },
+    {
+     "id": "dev-time-006",
+     "category": "time",
+     "input": "Hẹn 6h sáng mai.",
+     "references": [
+      "hẹn sáu giờ sáng mai"
+     ],
+     "output": "hẹn sáu giờ sáng mai .. ",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-phone-001",
+     "category": "phone",
+     "input": "Gọi 0912345678.",
+     "references": [
+      "gọi không chín một hai ba bốn năm sáu bảy tám"
+     ],
+     "output": "gọi không chín một hai ba bốn năm sáu bảy tám .. ",
+     "errors": 0,
+     "ref_words": 11,
+     "exact": true
+    },
+    {
+     "id": "dev-phone-002",
+     "category": "phone",
+     "input": "Tổng đài 1900 1234.",
+     "references": [
+      "tổng đài một chín không không một hai ba bốn"
+     ],
+     "output": "tổng đài một chín không không một hai ba bốn .. ",
+     "errors": 0,
+     "ref_words": 10,
+     "exact": true
+    },
+    {
+     "id": "dev-phone-003",
+     "category": "phone",
+     "input": "SĐT: 0987 654 321.",
+     "references": [
+      "số điện thoại không chín tám bảy sáu năm bốn ba hai một"
+     ],
+     "output": "số điện thoại . không chín tám bảy sáu năm bốn ba hai một .. ",
+     "errors": 0,
+     "ref_words": 13,
+     "exact": true
+    },
+    {
+     "id": "dev-phone-004",
+     "category": "phone",
+     "input": "Liên hệ +84 912 345 678.",
+     "references": [
+      "liên hệ cộng tám tư chín một hai ba bốn năm sáu bảy tám",
+      "liên hệ cộng tám bốn chín một hai ba bốn năm sáu bảy tám"
+     ],
+     "output": "liên hệ cộng tám bốn chín một hai ba bốn năm sáu bảy tám .. ",
+     "errors": 0,
+     "ref_words": 14,
+     "exact": true
+    },
+    {
+     "id": "dev-phone-005",
+     "category": "phone",
+     "input": "Số máy bàn 024.3825.1234.",
+     "references": [
+      "số máy bàn không hai bốn ba tám hai năm một hai ba bốn"
+     ],
+     "output": "số máy bàn hai mươi tư phẩy ba nghìn tám trăm hai mươi lăm . một nghìn hai trăm ba mươi tư .. ",
+     "errors": 12,
+     "ref_words": 14,
+     "exact": false
+    },
+    {
+     "id": "dev-range-001",
+     "category": "range",
+     "input": "Từ 5-10 người.",
+     "references": [
+      "từ năm đến mười người"
+     ],
+     "output": "từ năm tháng mười người .. ",
+     "errors": 1,
+     "ref_words": 5,
+     "exact": false
+    },
+    {
+     "id": "dev-range-002",
+     "category": "range",
+     "input": "Việt Nam thắng 3-1.",
+     "references": [
+      "việt nam thắng ba một"
+     ],
+     "output": "việt nam thắng ba một .. ",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-range-003",
+     "category": "range",
+     "input": "Giai đoạn 2020-2025.",
+     "references": [
+      "giai đoạn hai nghìn không trăm hai mươi đến hai nghìn không trăm hai mươi lăm"
+     ],
+     "output": "giai đoạn hai nghìn không trăm hai mươi hai nghìn không trăm hai mươi lăm .. ",
+     "errors": 1,
+     "ref_words": 16,
+     "exact": false
+    },
+    {
+     "id": "dev-range-004",
+     "category": "range",
+     "input": "Nhiệt độ 25-30°C.",
+     "references": [
+      "nhiệt độ hai mươi lăm đến ba mươi độ xê",
+      "nhiệt độ hai mươi lăm đến ba mươi độ"
+     ],
+     "output": "nhiệt độ hai mươi lăm ba mươi độ xê .. ",
+     "errors": 1,
+     "ref_words": 10,
+     "exact": false
+    },
+    {
+     "id": "dev-range-005",
+     "category": "range",
+     "input": "Trẻ em 6-12 tuổi.",
+     "references": [
+      "trẻ em sáu đến mười hai tuổi"
+     ],
+     "output": "trẻ em sáu mười hai tuổi .. ",
+     "errors": 1,
+     "ref_words": 7,
+     "exact": false
+    },
+    {
+     "id": "dev-abbreviation-001",
+     "category": "abbreviation",
+     "input": "UBND tỉnh họp.",
+     "references": [
+      "ủy ban nhân dân tỉnh họp"
+     ],
+     "output": "ủy ban nhân dân tỉnh họp .. ",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-abbreviation-002",
+     "category": "abbreviation",
+     "input": "Học sinh THPT.",
+     "references": [
+      "học sinh trung học phổ thông"
+     ],
+     "output": "học sinh trung học phổ thông .. ",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-abbreviation-003",
+     "category": "abbreviation",
+     "input": "Tại TP.HCM.",
+     "references": [
+      "tại thành phố hồ chí minh"
+     ],
+     "output": "tại thành phố hồ chí minh .. ",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-abbreviation-004",
+     "category": "abbreviation",
+     "input": "GS. Ngô Bảo Châu.",
+     "references": [
+      "giáo sư ngô bảo châu"
+     ],
+     "output": "giáo sư . ngô bảo châu .. ",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-abbreviation-005",
+     "category": "abbreviation",
+     "input": "Liên hệ CSGT.",
+     "references": [
+      "liên hệ cảnh sát giao thông"
+     ],
+     "output": "liên hệ cảnh sát giao thông .. ",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-abbreviation-006",
+     "category": "abbreviation",
+     "input": "Đóng BHXH đầy đủ.",
+     "references": [
+      "đóng bảo hiểm xã hội đầy đủ"
+     ],
+     "output": "đóng bảo hiểm xã hội đầy đủ .. ",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-abbreviation-007",
+     "category": "abbreviation",
+     "input": "Trường ĐH Bách khoa.",
+     "references": [
+      "trường đại học bách khoa"
+     ],
+     "output": "trường đại học bách khoa .. ",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-abbreviation-008",
+     "category": "abbreviation",
+     "input": "TS. Nguyễn Văn An.",
+     "references": [
+      "tiến sĩ nguyễn văn an"
+     ],
+     "output": "tiến sĩ . nguyễn văn an .. ",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-abbreviation-009",
+     "category": "abbreviation",
+     "input": "Hàng hóa, thực phẩm, v.v.",
+     "references": [
+      "hàng hóa, thực phẩm, vân vân"
+     ],
+     "output": "hàng hóa , thực phẩm , v . v .. ",
+     "errors": 2,
+     "ref_words": 6,
+     "exact": false
+    },
+    {
+     "id": "dev-abbreviation-010",
+     "category": "abbreviation",
+     "input": "Cấp CCCD mới.",
+     "references": [
+      "cấp căn cước công dân mới"
+     ],
+     "output": "cấp cccd mới .. ",
+     "errors": 4,
+     "ref_words": 6,
+     "exact": false
+    },
+    {
+     "id": "dev-acronym-001",
+     "category": "acronym",
+     "input": "Công nghệ AI phát triển.",
+     "references": [
+      "công nghệ a i phát triển",
+      "công nghệ ây ai phát triển"
+     ],
+     "output": "công nghệ ai phát triển .. ",
+     "errors": 1,
+     "ref_words": 6,
+     "exact": false
+    },
+    {
+     "id": "dev-acronym-002",
+     "category": "acronym",
+     "input": "Đội U23 Việt Nam.",
+     "references": [
+      "đội u hai mươi ba việt nam"
+     ],
+     "output": "đội u hai mươi ba việt nam .. ",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-acronym-003",
+     "category": "acronym",
+     "input": "Kênh VTV1.",
+     "references": [
+      "kênh vê tê vê một"
+     ],
+     "output": "kênh vtv một .. ",
+     "errors": 3,
+     "ref_words": 5,
+     "exact": false
+    },
+    {
+     "id": "dev-acronym-004",
+     "category": "acronym",
+     "input": "Công ty FPT.",
+     "references": [
+      "công ty ép pê tê"
+     ],
+     "output": "công ty fpt .. ",
+     "errors": 3,
+     "ref_words": 5,
+     "exact": false
+    },
+    {
+     "id": "dev-acronym-005",
+     "category": "acronym",
+     "input": "Bệnh COVID-19.",
+     "references": [
+      "bệnh cô vít mười chín",
+      "bệnh covid mười chín"
+     ],
+     "output": "bệnh covid mười chín .. ",
+     "errors": 0,
+     "ref_words": 4,
+     "exact": true
+    },
+    {
+     "id": "dev-plain-001",
+     "category": "plain",
+     "input": "Hôm nay trời đẹp quá.",
+     "references": [
+      "hôm nay trời đẹp quá"
+     ],
+     "output": "hôm nay trời đẹp quá .. ",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-plain-002",
+     "category": "plain",
+     "input": "Tôi yêu Việt Nam.",
+     "references": [
+      "tôi yêu việt nam"
+     ],
+     "output": "tôi yêu việt nam .. ",
+     "errors": 0,
+     "ref_words": 4,
+     "exact": true
+    },
+    {
+     "id": "dev-plain-003",
+     "category": "plain",
+     "input": "Cô giáo đang giảng bài.",
+     "references": [
+      "cô giáo đang giảng bài"
+     ],
+     "output": "cô giáo đang giảng bài .. ",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-plain-004",
+     "category": "plain",
+     "input": "Mẹ đi chợ mua rau.",
+     "references": [
+      "mẹ đi chợ mua rau"
+     ],
+     "output": "mẹ đi chợ mua rau .. ",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-plain-005",
+     "category": "plain",
+     "input": "Anh ấy làm việc rất chăm chỉ.",
+     "references": [
+      "anh ấy làm việc rất chăm chỉ"
+     ],
+     "output": "anh ấy làm việc rất chăm chỉ .. ",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-plain-006",
+     "category": "plain",
+     "input": "Hà Nội là thủ đô của Việt Nam.",
+     "references": [
+      "hà nội là thủ đô của việt nam"
+     ],
+     "output": "hà nội là thủ đô của việt nam .. ",
+     "errors": 0,
+     "ref_words": 8,
+     "exact": true
+    },
+    {
+     "id": "dev-plain-007",
+     "category": "plain",
+     "input": "Bạn có khỏe không?",
+     "references": [
+      "bạn có khỏe không"
+     ],
+     "output": "bạn có khỏe không .. ",
+     "errors": 0,
+     "ref_words": 4,
+     "exact": true
+    },
+    {
+     "id": "dev-plain-008",
+     "category": "plain",
+     "input": "Mùa thu lá vàng rơi.",
+     "references": [
+      "mùa thu lá vàng rơi"
+     ],
+     "output": "mùa thu lá vàng rơi .. ",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-mixed-001",
+     "category": "mixed",
+     "input": "Ngày 15/3/2024, giá vàng SJC tăng 1,2 triệu đồng/lượng, lên 80,5 triệu đồng.",
+     "references": [
+      "ngày mười lăm tháng ba năm hai nghìn không trăm hai mươi tư, giá vàng ét gi xê tăng một phẩy hai triệu đồng một lượng, lên tám mươi phẩy năm triệu đồng",
+      "ngày mười lăm tháng ba năm hai nghìn không trăm hai mươi tư, giá vàng ét di xê tăng một phẩy hai triệu đồng một lượng, lên tám mươi phẩy năm triệu đồng",
+      "ngày mười lăm tháng ba năm hai nghìn không trăm hai mươi tư, giá vàng ét gi xê tăng một phẩy hai triệu đồng mỗi lượng, lên tám mươi phẩy năm triệu đồng",
+      "ngày mười lăm tháng ba năm hai nghìn không trăm hai mươi tư, giá vàng ét di xê tăng một phẩy hai triệu đồng mỗi lượng, lên tám mươi phẩy năm triệu đồng",
+      "ngày mười lăm tháng ba năm hai nghìn không trăm hai mươi tư, giá vàng ét gi xê tăng một phẩy hai triệu đồng trên lượng, lên tám mươi phẩy năm triệu đồng",
+      "ngày mười lăm tháng ba năm hai nghìn không trăm hai mươi tư, giá vàng ét di xê tăng một phẩy hai triệu đồng trên lượng, lên tám mươi phẩy năm triệu đồng"
+     ],
+     "output": "ngày mười lăm tháng ba năm hai nghìn không trăm hai mươi tư , giá vàng sjc tăng một phẩy hai triệu đồng , lượng , lên tám mươi phẩy năm triệu đồng .. ",
+     "errors": 4,
+     "ref_words": 33,
+     "exact": false
+    },
+    {
+     "id": "dev-mixed-002",
+     "category": "mixed",
+     "input": "Lúc 19h30 tối 20/11, U23 Việt Nam thắng 2-0.",
+     "references": [
+      "lúc mười chín giờ ba mươi tối hai mươi tháng mười một, u hai mươi ba việt nam thắng hai không",
+      "lúc mười chín giờ ba mươi tối ngày hai mươi tháng mười một, u hai mươi ba việt nam thắng hai không",
+      "lúc mười chín giờ ba mươi phút tối hai mươi tháng mười một, u hai mươi ba việt nam thắng hai không",
+      "lúc mười chín giờ ba mươi phút tối ngày hai mươi tháng mười một, u hai mươi ba việt nam thắng hai không"
+     ],
+     "output": "lúc mười chín giờ ba mươi tối hai mươi tháng mười một , u hai mươi ba việt nam thắng hai không .. ",
+     "errors": 0,
+     "ref_words": 21,
+     "exact": true
+    },
+    {
+     "id": "dev-mixed-003",
+     "category": "mixed",
+     "input": "TP.HCM có hơn 9 triệu dân, tăng 2,3% so với năm 2019.",
+     "references": [
+      "thành phố hồ chí minh có hơn chín triệu dân, tăng hai phẩy ba phần trăm so với năm hai nghìn không trăm mười chín"
+     ],
+     "output": "thành phố hồ chí minh có hơn chín triệu dân , tăng hai phẩy ba phần trăm so với năm hai nghìn không trăm mười chín .. ",
+     "errors": 0,
+     "ref_words": 25,
+     "exact": true
+    },
+    {
+     "id": "dev-mixed-004",
+     "category": "mixed",
+     "input": "Xe chạy 120km/h trên cao tốc dài 55km.",
+     "references": [
+      "xe chạy một trăm hai mươi ki lô mét trên giờ trên cao tốc dài năm mươi lăm ki lô mét",
+      "xe chạy một trăm hai mươi ki lô mét một giờ trên cao tốc dài năm mươi lăm ki lô mét",
+      "xe chạy một trăm hai mươi ki lô mét mỗi giờ trên cao tốc dài năm mươi lăm ki lô mét"
+     ],
+     "output": "xe chạy một trăm hai mươi kí lô mét trên giờ trên cao tốc dài năm mươi lăm kí lô mét .. ",
+     "errors": 0,
+     "ref_words": 21,
+     "exact": true
+    },
+    {
+     "id": "dev-mixed-005",
+     "category": "mixed",
+     "input": "Gọi 0909 123 456 trước 17h để được giảm 10%.",
+     "references": [
+      "gọi không chín không chín một hai ba bốn năm sáu trước mười bảy giờ để được giảm mười phần trăm"
+     ],
+     "output": "gọi không chín không chín một hai ba bốn năm sáu trước mười bảy giờ để được giảm mười phần trăm .. ",
+     "errors": 0,
+     "ref_words": 21,
+     "exact": true
+    },
+    {
+     "id": "dev-mixed-006",
+     "category": "mixed",
+     "input": "Học phí năm 2025 là 25.000.000đ/năm.",
+     "references": [
+      "học phí năm hai nghìn không trăm hai mươi lăm là hai mươi lăm triệu đồng một năm",
+      "học phí năm hai nghìn không trăm hai mươi lăm là hai mươi lăm triệu đồng mỗi năm",
+      "học phí năm hai nghìn không trăm hai mươi lăm là hai mươi lăm triệu đồng trên năm"
+     ],
+     "output": "học phí năm hai nghìn không trăm hai mươi lăm là hai mươi lăm triệu đồng trên năm .. ",
+     "errors": 0,
+     "ref_words": 18,
+     "exact": true
+    },
+    {
+     "id": "dev-mixed-007",
+     "category": "mixed",
+     "input": "Nhiệt độ Hà Nội hôm nay 28-35°C, độ ẩm 80%.",
+     "references": [
+      "nhiệt độ hà nội hôm nay hai mươi tám đến ba mươi lăm độ xê, độ ẩm tám mươi phần trăm",
+      "nhiệt độ hà nội hôm nay hai mươi tám đến ba mươi lăm độ, độ ẩm tám mươi phần trăm"
+     ],
+     "output": "nhiệt độ hà nội hôm nay hai mươi tám ba mươi lăm độ xê , độ ẩm tám mươi phần trăm .. ",
+     "errors": 1,
+     "ref_words": 21,
+     "exact": false
+    },
+    {
+     "id": "dev-mixed-008",
+     "category": "mixed",
+     "input": "Theo UBND TP. Hà Nội, 1.200 hộ dân đã nhận hỗ trợ.",
+     "references": [
+      "theo ủy ban nhân dân thành phố hà nội, một nghìn hai trăm hộ dân đã nhận hỗ trợ"
+     ],
+     "output": "theo ủy ban nhân dân thành phố hà nội , một nghìn hai trăm hộ dân đã nhận hỗ trợ .. ",
+     "errors": 0,
+     "ref_words": 19,
+     "exact": true
+    }
+   ]
+  },
+  {
+   "name": "soe-vinorm",
+   "version": "0.3.2",
+   "seconds": 0.033654797822237015,
+   "cases": [
+    {
+     "id": "dev-number-001",
+     "category": "number",
+     "input": "Lớp có 21 học sinh.",
+     "references": [
+      "lớp có hai mươi mốt học sinh"
+     ],
+     "output": "Lớp có hai mươi mốt học sinh .",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-number-002",
+     "category": "number",
+     "input": "Cô ấy 45 tuổi.",
+     "references": [
+      "cô ấy bốn mươi lăm tuổi"
+     ],
+     "output": "Cô ấy bốn mươi lăm tuổi .",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-number-003",
+     "category": "number",
+     "input": "Tòa nhà cao 105 tầng.",
+     "references": [
+      "tòa nhà cao một trăm linh năm tầng"
+     ],
+     "output": "Tòa nhà cao một trăm linh năm tầng .",
+     "errors": 0,
+     "ref_words": 8,
+     "exact": true
+    },
+    {
+     "id": "dev-number-004",
+     "category": "number",
+     "input": "Dân số khoảng 2.500.000 người.",
+     "references": [
+      "dân số khoảng hai triệu năm trăm nghìn người"
+     ],
+     "output": "Dân số khoảng hai triệu năm trăm nghìn người .",
+     "errors": 0,
+     "ref_words": 9,
+     "exact": true
+    },
+    {
+     "id": "dev-number-005",
+     "category": "number",
+     "input": "Năm 1945 là năm lịch sử.",
+     "references": [
+      "năm một nghìn chín trăm bốn mươi lăm là năm lịch sử"
+     ],
+     "output": "Năm một nghìn chín trăm bốn mươi lăm là năm lịch sử .",
+     "errors": 0,
+     "ref_words": 12,
+     "exact": true
+    },
+    {
+     "id": "dev-number-006",
+     "category": "number",
+     "input": "Có 1.005 người tham gia.",
+     "references": [
+      "có một nghìn không trăm linh năm người tham gia"
+     ],
+     "output": "Có một nghìn không trăm linh năm người tham gia .",
+     "errors": 0,
+     "ref_words": 10,
+     "exact": true
+    },
+    {
+     "id": "dev-number-007",
+     "category": "number",
+     "input": "Trường có 14 phòng học.",
+     "references": [
+      "trường có mười bốn phòng học"
+     ],
+     "output": "Trường có mười bốn phòng học .",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-number-008",
+     "category": "number",
+     "input": "Kho chứa 3.000.000.000 lít.",
+     "references": [
+      "kho chứa ba tỷ lít"
+     ],
+     "output": "Kho chứa ba tỷ lít .",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-number-009",
+     "category": "number",
+     "input": "Anh ấy chạy 10 vòng.",
+     "references": [
+      "anh ấy chạy mười vòng"
+     ],
+     "output": "Anh ấy chạy mười vòng .",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-number-010",
+     "category": "number",
+     "input": "Cần 310 chữ ký.",
+     "references": [
+      "cần ba trăm mười chữ ký"
+     ],
+     "output": "Cần ba trăm mười chữ ký .",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-number-011",
+     "category": "number",
+     "input": "Một ngày có 24 giờ.",
+     "references": [
+      "một ngày có hai mươi tư giờ"
+     ],
+     "output": "Một ngày có hai mươi tư giờ .",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-number-012",
+     "category": "number",
+     "input": "Đội có 11 cầu thủ.",
+     "references": [
+      "đội có mười một cầu thủ"
+     ],
+     "output": "Đội có mười một cầu thủ .",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-decimal-001",
+     "category": "decimal",
+     "input": "Chiều cao 1,75 mét.",
+     "references": [
+      "chiều cao một phẩy bảy mươi lăm mét",
+      "chiều cao một phẩy bảy lăm mét",
+      "chiều cao một phẩy bảy năm mét"
+     ],
+     "output": "Chiều cao một phẩy bảy năm mét .",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-decimal-002",
+     "category": "decimal",
+     "input": "Doanh thu tăng 3,5 lần.",
+     "references": [
+      "doanh thu tăng ba phẩy năm lần"
+     ],
+     "output": "Doanh thu tăng ba phẩy năm lần .",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-decimal-003",
+     "category": "decimal",
+     "input": "Điểm trung bình là 8,25.",
+     "references": [
+      "điểm trung bình là tám phẩy hai mươi lăm",
+      "điểm trung bình là tám phẩy hai lăm",
+      "điểm trung bình là tám phẩy hai năm"
+     ],
+     "output": "Điểm trung bình là tám phẩy hai năm .",
+     "errors": 0,
+     "ref_words": 8,
+     "exact": true
+    },
+    {
+     "id": "dev-decimal-004",
+     "category": "decimal",
+     "input": "Lãi suất giảm 0,5 điểm.",
+     "references": [
+      "lãi suất giảm không phẩy năm điểm"
+     ],
+     "output": "Lãi suất giảm không phẩy năm điểm .",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-decimal-005",
+     "category": "decimal",
+     "input": "Tăng trưởng đạt 6,05.",
+     "references": [
+      "tăng trưởng đạt sáu phẩy không năm"
+     ],
+     "output": "Tăng trưởng đạt sáu phẩy không năm .",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-decimal-006",
+     "category": "decimal",
+     "input": "Giá trị hợp đồng 2,1 tỷ.",
+     "references": [
+      "giá trị hợp đồng hai phẩy một tỷ"
+     ],
+     "output": "Giá trị hợp đồng hai phẩy một tỷ .",
+     "errors": 0,
+     "ref_words": 8,
+     "exact": true
+    },
+    {
+     "id": "dev-currency-001",
+     "category": "currency",
+     "input": "Giá 100k.",
+     "references": [
+      "giá một trăm nghìn",
+      "giá một trăm nghìn đồng"
+     ],
+     "output": "Giá một trăm ca .",
+     "errors": 1,
+     "ref_words": 4,
+     "exact": false
+    },
+    {
+     "id": "dev-currency-002",
+     "category": "currency",
+     "input": "Vé giá 50.000đ.",
+     "references": [
+      "vé giá năm mươi nghìn đồng"
+     ],
+     "output": "Vé giá năm mươi nghìn đ .",
+     "errors": 1,
+     "ref_words": 6,
+     "exact": false
+    },
+    {
+     "id": "dev-currency-003",
+     "category": "currency",
+     "input": "Lương 15 triệu đồng.",
+     "references": [
+      "lương mười lăm triệu đồng"
+     ],
+     "output": "Lương mười lăm triệu đồng .",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-currency-004",
+     "category": "currency",
+     "input": "Giá 1.250.000 VNĐ.",
+     "references": [
+      "giá một triệu hai trăm năm mươi nghìn đồng"
+     ],
+     "output": "Giá một triệu hai trăm năm mươi nghìn việt nam đồng .",
+     "errors": 0,
+     "ref_words": 9,
+     "exact": true
+    },
+    {
+     "id": "dev-currency-005",
+     "category": "currency",
+     "input": "Chiếc máy có giá $999.",
+     "references": [
+      "chiếc máy có giá chín trăm chín mươi chín đô la"
+     ],
+     "output": "Chiếc máy có giá chín trăm chín mươi chín đô la .",
+     "errors": 0,
+     "ref_words": 11,
+     "exact": true
+    },
+    {
+     "id": "dev-currency-006",
+     "category": "currency",
+     "input": "Chi phí 20 USD.",
+     "references": [
+      "chi phí hai mươi đô la"
+     ],
+     "output": "Chi phí hai mươi U Ét Đê .",
+     "errors": 3,
+     "ref_words": 6,
+     "exact": false
+    },
+    {
+     "id": "dev-currency-007",
+     "category": "currency",
+     "input": "Nợ 5 tỷ đồng.",
+     "references": [
+      "nợ năm tỷ đồng"
+     ],
+     "output": "Nợ năm tỷ đồng .",
+     "errors": 0,
+     "ref_words": 4,
+     "exact": true
+    },
+    {
+     "id": "dev-currency-008",
+     "category": "currency",
+     "input": "Quà tặng trị giá 200.000₫.",
+     "references": [
+      "quà tặng trị giá hai trăm nghìn đồng"
+     ],
+     "output": "Quà tặng trị giá hai trăm nghìn đồng .",
+     "errors": 0,
+     "ref_words": 8,
+     "exact": true
+    },
+    {
+     "id": "dev-currency-009",
+     "category": "currency",
+     "input": "Giá xăng 23.450đ/lít.",
+     "references": [
+      "giá xăng hai mươi ba nghìn bốn trăm năm mươi đồng một lít",
+      "giá xăng hai mươi ba nghìn bốn trăm năm mươi đồng mỗi lít",
+      "giá xăng hai mươi ba nghìn bốn trăm năm mươi đồng trên lít"
+     ],
+     "output": "Giá xăng hai mươi ba nghìn bốn trăm năm mươi đồng trên lít .",
+     "errors": 0,
+     "ref_words": 13,
+     "exact": true
+    },
+    {
+     "id": "dev-currency-010",
+     "category": "currency",
+     "input": "Thu nhập 5tr/tháng.",
+     "references": [
+      "thu nhập năm triệu một tháng",
+      "thu nhập năm triệu mỗi tháng",
+      "thu nhập năm triệu trên tháng"
+     ],
+     "output": "Thu nhập năm tê rờ trên tháng .",
+     "errors": 2,
+     "ref_words": 6,
+     "exact": false
+    },
+    {
+     "id": "dev-percent-001",
+     "category": "percent",
+     "input": "Doanh số tăng 12%.",
+     "references": [
+      "doanh số tăng mười hai phần trăm"
+     ],
+     "output": "Doanh số tăng mười hai phần trăm .",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-percent-002",
+     "category": "percent",
+     "input": "Giảm 0,5%.",
+     "references": [
+      "giảm không phẩy năm phần trăm"
+     ],
+     "output": "Giảm không phẩy năm phần trăm .",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-percent-003",
+     "category": "percent",
+     "input": "Chiếm 100% cổ phần.",
+     "references": [
+      "chiếm một trăm phần trăm cổ phần"
+     ],
+     "output": "Chiếm một trăm phần trăm cổ phần .",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-percent-004",
+     "category": "percent",
+     "input": "Tỷ lệ đạt 45,7%.",
+     "references": [
+      "tỷ lệ đạt bốn mươi lăm phẩy bảy phần trăm"
+     ],
+     "output": "Tỷ lệ đạt bốn mươi lăm phẩy bảy phần trăm .",
+     "errors": 0,
+     "ref_words": 10,
+     "exact": true
+    },
+    {
+     "id": "dev-percent-005",
+     "category": "percent",
+     "input": "Lạm phát 3,25 %.",
+     "references": [
+      "lạm phát ba phẩy hai mươi lăm phần trăm",
+      "lạm phát ba phẩy hai lăm phần trăm",
+      "lạm phát ba phẩy hai năm phần trăm"
+     ],
+     "output": "Lạm phát ba phẩy hai năm phần trăm .",
+     "errors": 0,
+     "ref_words": 8,
+     "exact": true
+    },
+    {
+     "id": "dev-unit-001",
+     "category": "unit",
+     "input": "Quãng đường 15km.",
+     "references": [
+      "quãng đường mười lăm ki lô mét",
+      "quãng đường mười lăm cây số"
+     ],
+     "output": "Quãng đường mười lăm ki lô mét .",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-unit-002",
+     "category": "unit",
+     "input": "Anh ấy nặng 70kg.",
+     "references": [
+      "anh ấy nặng bảy mươi ki lô gam",
+      "anh ấy nặng bảy mươi cân",
+      "anh ấy nặng bảy mươi ki lô"
+     ],
+     "output": "Anh ấy nặng bảy mươi ki lô gam .",
+     "errors": 0,
+     "ref_words": 8,
+     "exact": true
+    },
+    {
+     "id": "dev-unit-003",
+     "category": "unit",
+     "input": "Tốc độ tối đa 60km/h.",
+     "references": [
+      "tốc độ tối đa sáu mươi ki lô mét trên giờ",
+      "tốc độ tối đa sáu mươi ki lô mét một giờ",
+      "tốc độ tối đa sáu mươi ki lô mét mỗi giờ",
+      "tốc độ tối đa sáu mươi cây số một giờ"
+     ],
+     "output": "Tốc độ tối đa sáu mươi ki lô mét trên giờ .",
+     "errors": 0,
+     "ref_words": 11,
+     "exact": true
+    },
+    {
+     "id": "dev-unit-004",
+     "category": "unit",
+     "input": "Diện tích 120m2.",
+     "references": [
+      "diện tích một trăm hai mươi mét vuông"
+     ],
+     "output": "Diện tích một trăm hai mươi mét vuông .",
+     "errors": 0,
+     "ref_words": 8,
+     "exact": true
+    },
+    {
+     "id": "dev-unit-005",
+     "category": "unit",
+     "input": "Nhiệt độ 36,5°C.",
+     "references": [
+      "nhiệt độ ba mươi sáu phẩy năm độ xê",
+      "nhiệt độ ba mươi sáu phẩy năm độ"
+     ],
+     "output": "Nhiệt độ ba mươi sáu phẩy năm độ xê .",
+     "errors": 0,
+     "ref_words": 9,
+     "exact": true
+    },
+    {
+     "id": "dev-unit-006",
+     "category": "unit",
+     "input": "Chai nước 500ml.",
+     "references": [
+      "chai nước năm trăm mi li lít"
+     ],
+     "output": "Chai nước năm trăm mi li lít .",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-unit-007",
+     "category": "unit",
+     "input": "Cao 180cm.",
+     "references": [
+      "cao một trăm tám mươi xen ti mét"
+     ],
+     "output": "Cao một trăm tám mươi xen ti mét .",
+     "errors": 0,
+     "ref_words": 8,
+     "exact": true
+    },
+    {
+     "id": "dev-unit-008",
+     "category": "unit",
+     "input": "Ổ cứng 512GB.",
+     "references": [
+      "ổ cứng năm trăm mười hai gi ga bai"
+     ],
+     "output": "Ổ cứng năm trăm mười hai ghi ga bai .",
+     "errors": 0,
+     "ref_words": 9,
+     "exact": true
+    },
+    {
+     "id": "dev-unit-009",
+     "category": "unit",
+     "input": "Lượng mưa 50mm.",
+     "references": [
+      "lượng mưa năm mươi mi li mét"
+     ],
+     "output": "Lượng mưa năm mươi mi li mét .",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-unit-010",
+     "category": "unit",
+     "input": "Trang trại rộng 3 ha.",
+     "references": [
+      "trang trại rộng ba héc ta"
+     ],
+     "output": "Trang trại rộng ba héc ta .",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-date-001",
+     "category": "date",
+     "input": "Ngày 2/9/1945.",
+     "references": [
+      "ngày hai tháng chín năm một nghìn chín trăm bốn mươi lăm"
+     ],
+     "output": "Ngày hai tháng chín năm một nghìn chín trăm bốn mươi lăm .",
+     "errors": 0,
+     "ref_words": 12,
+     "exact": true
+    },
+    {
+     "id": "dev-date-002",
+     "category": "date",
+     "input": "Sinh ngày 15/08/2000.",
+     "references": [
+      "sinh ngày mười lăm tháng tám năm hai nghìn"
+     ],
+     "output": "Sinh ngày mười lăm tháng tám năm hai nghìn .",
+     "errors": 0,
+     "ref_words": 9,
+     "exact": true
+    },
+    {
+     "id": "dev-date-003",
+     "category": "date",
+     "input": "Hạn chót là 31/12/2024.",
+     "references": [
+      "hạn chót là ngày ba mươi mốt tháng mười hai năm hai nghìn không trăm hai mươi tư",
+      "hạn chót là ba mươi mốt tháng mười hai năm hai nghìn không trăm hai mươi tư"
+     ],
+     "output": "Hạn chót là ba mươi mốt tháng mười hai năm hai nghìn không trăm hai mươi tư .",
+     "errors": 0,
+     "ref_words": 17,
+     "exact": true
+    },
+    {
+     "id": "dev-date-004",
+     "category": "date",
+     "input": "Vào tháng 4/2023.",
+     "references": [
+      "vào tháng tư năm hai nghìn không trăm hai mươi ba"
+     ],
+     "output": "Vào tháng bốn năm hai nghìn không trăm hai mươi ba .",
+     "errors": 0,
+     "ref_words": 11,
+     "exact": true
+    },
+    {
+     "id": "dev-date-005",
+     "category": "date",
+     "input": "Lễ hội diễn ra ngày 10/3.",
+     "references": [
+      "lễ hội diễn ra ngày mười tháng ba"
+     ],
+     "output": "Lễ hội diễn ra ngày mười tháng ba .",
+     "errors": 0,
+     "ref_words": 8,
+     "exact": true
+    },
+    {
+     "id": "dev-date-006",
+     "category": "date",
+     "input": "Khai giảng 5-9-2024.",
+     "references": [
+      "khai giảng ngày năm tháng chín năm hai nghìn không trăm hai mươi tư",
+      "khai giảng năm tháng chín năm hai nghìn không trăm hai mươi tư"
+     ],
+     "output": "Khai giảng năm tháng chín năm hai nghìn không trăm hai mươi tư .",
+     "errors": 0,
+     "ref_words": 13,
+     "exact": true
+    },
+    {
+     "id": "dev-date-007",
+     "category": "date",
+     "input": "Từ tháng 1/2025.",
+     "references": [
+      "từ tháng một năm hai nghìn không trăm hai mươi lăm",
+      "từ tháng giêng năm hai nghìn không trăm hai mươi lăm"
+     ],
+     "output": "Từ tháng một năm hai nghìn không trăm hai mươi lăm .",
+     "errors": 0,
+     "ref_words": 11,
+     "exact": true
+    },
+    {
+     "id": "dev-date-008",
+     "category": "date",
+     "input": "Họp vào 01/06/2026.",
+     "references": [
+      "họp vào ngày một tháng sáu năm hai nghìn không trăm hai mươi sáu",
+      "họp vào một tháng sáu năm hai nghìn không trăm hai mươi sáu"
+     ],
+     "output": "Họp vào một tháng sáu năm hai nghìn không trăm hai mươi sáu .",
+     "errors": 0,
+     "ref_words": 13,
+     "exact": true
+    },
+    {
+     "id": "dev-date-009",
+     "category": "date",
+     "input": "Ngày 20/11 là ngày Nhà giáo.",
+     "references": [
+      "ngày hai mươi tháng mười một là ngày nhà giáo"
+     ],
+     "output": "Ngày hai mươi tháng mười một là ngày Nhà giáo .",
+     "errors": 0,
+     "ref_words": 10,
+     "exact": true
+    },
+    {
+     "id": "dev-time-001",
+     "category": "time",
+     "input": "Lúc 14h30.",
+     "references": [
+      "lúc mười bốn giờ ba mươi",
+      "lúc mười bốn giờ ba mươi phút"
+     ],
+     "output": "Lúc mười bốn giờ ba mươi phút .",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-time-002",
+     "category": "time",
+     "input": "Họp lúc 8:05.",
+     "references": [
+      "họp lúc tám giờ năm phút",
+      "họp lúc tám giờ năm"
+     ],
+     "output": "Họp lúc tám năm .",
+     "errors": 1,
+     "ref_words": 5,
+     "exact": false
+    },
+    {
+     "id": "dev-time-003",
+     "category": "time",
+     "input": "Mở cửa từ 7h đến 22h.",
+     "references": [
+      "mở cửa từ bảy giờ đến hai mươi hai giờ"
+     ],
+     "output": "Mở cửa từ bảy giờ đến hai mươi hai giờ .",
+     "errors": 0,
+     "ref_words": 10,
+     "exact": true
+    },
+    {
+     "id": "dev-time-004",
+     "category": "time",
+     "input": "Bắt đầu lúc 9g15.",
+     "references": [
+      "bắt đầu lúc chín giờ mười lăm",
+      "bắt đầu lúc chín giờ mười lăm phút"
+     ],
+     "output": "Bắt đầu lúc chín giờ mười lăm phút .",
+     "errors": 0,
+     "ref_words": 8,
+     "exact": true
+    },
+    {
+     "id": "dev-time-005",
+     "category": "time",
+     "input": "Kết thúc lúc 23:59.",
+     "references": [
+      "kết thúc lúc hai mươi ba giờ năm mươi chín phút",
+      "kết thúc lúc hai mươi ba giờ năm mươi chín"
+     ],
+     "output": "Kết thúc lúc hai mươi ba năm mươi chín .",
+     "errors": 1,
+     "ref_words": 10,
+     "exact": false
+    },
+    {
+     "id": "dev-time-006",
+     "category": "time",
+     "input": "Hẹn 6h sáng mai.",
+     "references": [
+      "hẹn sáu giờ sáng mai"
+     ],
+     "output": "Hẹn sáu giờ sáng mai .",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-phone-001",
+     "category": "phone",
+     "input": "Gọi 0912345678.",
+     "references": [
+      "gọi không chín một hai ba bốn năm sáu bảy tám"
+     ],
+     "output": "Gọi không chín một hai ba bốn năm sáu bảy tám .",
+     "errors": 0,
+     "ref_words": 11,
+     "exact": true
+    },
+    {
+     "id": "dev-phone-002",
+     "category": "phone",
+     "input": "Tổng đài 1900 1234.",
+     "references": [
+      "tổng đài một chín không không một hai ba bốn"
+     ],
+     "output": "Tổng đài một chín không không một hai ba bốn .",
+     "errors": 0,
+     "ref_words": 10,
+     "exact": true
+    },
+    {
+     "id": "dev-phone-003",
+     "category": "phone",
+     "input": "SĐT: 0987 654 321.",
+     "references": [
+      "số điện thoại không chín tám bảy sáu năm bốn ba hai một"
+     ],
+     "output": "số điện thoại : không chín tám bảy sáu năm bốn ba hai một .",
+     "errors": 0,
+     "ref_words": 13,
+     "exact": true
+    },
+    {
+     "id": "dev-phone-004",
+     "category": "phone",
+     "input": "Liên hệ +84 912 345 678.",
+     "references": [
+      "liên hệ cộng tám tư chín một hai ba bốn năm sáu bảy tám",
+      "liên hệ cộng tám bốn chín một hai ba bốn năm sáu bảy tám"
+     ],
+     "output": "Liên hệ + tám bốn chín một hai ba bốn năm sáu bảy tám .",
+     "errors": 1,
+     "ref_words": 14,
+     "exact": false
+    },
+    {
+     "id": "dev-phone-005",
+     "category": "phone",
+     "input": "Số máy bàn 024.3825.1234.",
+     "references": [
+      "số máy bàn không hai bốn ba tám hai năm một hai ba bốn"
+     ],
+     "output": "Số máy bàn không hai bốn . ba tám hai năm . một hai ba bốn .",
+     "errors": 0,
+     "ref_words": 14,
+     "exact": true
+    },
+    {
+     "id": "dev-range-001",
+     "category": "range",
+     "input": "Từ 5-10 người.",
+     "references": [
+      "từ năm đến mười người"
+     ],
+     "output": "Từ năm đến mười người .",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-range-002",
+     "category": "range",
+     "input": "Việt Nam thắng 3-1.",
+     "references": [
+      "việt nam thắng ba một"
+     ],
+     "output": "Việt Nam thắng ba một .",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-range-003",
+     "category": "range",
+     "input": "Giai đoạn 2020-2025.",
+     "references": [
+      "giai đoạn hai nghìn không trăm hai mươi đến hai nghìn không trăm hai mươi lăm"
+     ],
+     "output": "Giai đoạn hai nghìn không trăm hai mươi hai nghìn không trăm hai mươi lăm .",
+     "errors": 1,
+     "ref_words": 16,
+     "exact": false
+    },
+    {
+     "id": "dev-range-004",
+     "category": "range",
+     "input": "Nhiệt độ 25-30°C.",
+     "references": [
+      "nhiệt độ hai mươi lăm đến ba mươi độ xê",
+      "nhiệt độ hai mươi lăm đến ba mươi độ"
+     ],
+     "output": "Nhiệt độ hai mươi lăm đến ba mươi độ xê .",
+     "errors": 0,
+     "ref_words": 10,
+     "exact": true
+    },
+    {
+     "id": "dev-range-005",
+     "category": "range",
+     "input": "Trẻ em 6-12 tuổi.",
+     "references": [
+      "trẻ em sáu đến mười hai tuổi"
+     ],
+     "output": "Trẻ em sáu đến mười hai tuổi .",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-abbreviation-001",
+     "category": "abbreviation",
+     "input": "UBND tỉnh họp.",
+     "references": [
+      "ủy ban nhân dân tỉnh họp"
+     ],
+     "output": "Ủy ban Nhân dân tỉnh họp .",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-abbreviation-002",
+     "category": "abbreviation",
+     "input": "Học sinh THPT.",
+     "references": [
+      "học sinh trung học phổ thông"
+     ],
+     "output": "Học sinh trung học phổ thông .",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-abbreviation-003",
+     "category": "abbreviation",
+     "input": "Tại TP.HCM.",
+     "references": [
+      "tại thành phố hồ chí minh"
+     ],
+     "output": "Tại Thành phố Hồ Chí Minh .",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-abbreviation-004",
+     "category": "abbreviation",
+     "input": "GS. Ngô Bảo Châu.",
+     "references": [
+      "giáo sư ngô bảo châu"
+     ],
+     "output": "Giáo sư Ngô Bảo Châu .",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-abbreviation-005",
+     "category": "abbreviation",
+     "input": "Liên hệ CSGT.",
+     "references": [
+      "liên hệ cảnh sát giao thông"
+     ],
+     "output": "Liên hệ Cảnh sát giao thông .",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-abbreviation-006",
+     "category": "abbreviation",
+     "input": "Đóng BHXH đầy đủ.",
+     "references": [
+      "đóng bảo hiểm xã hội đầy đủ"
+     ],
+     "output": "Đóng bảo hiểm xã hội đầy đủ .",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-abbreviation-007",
+     "category": "abbreviation",
+     "input": "Trường ĐH Bách khoa.",
+     "references": [
+      "trường đại học bách khoa"
+     ],
+     "output": "Trường Đại học Bách khoa .",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-abbreviation-008",
+     "category": "abbreviation",
+     "input": "TS. Nguyễn Văn An.",
+     "references": [
+      "tiến sĩ nguyễn văn an"
+     ],
+     "output": "Tiến sĩ Nguyễn Văn An .",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-abbreviation-009",
+     "category": "abbreviation",
+     "input": "Hàng hóa, thực phẩm, v.v.",
+     "references": [
+      "hàng hóa, thực phẩm, vân vân"
+     ],
+     "output": "Hàng hóa , thực phẩm , vân vân .",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-abbreviation-010",
+     "category": "abbreviation",
+     "input": "Cấp CCCD mới.",
+     "references": [
+      "cấp căn cước công dân mới"
+     ],
+     "output": "Cấp Căn cước công dân mới .",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-acronym-001",
+     "category": "acronym",
+     "input": "Công nghệ AI phát triển.",
+     "references": [
+      "công nghệ a i phát triển",
+      "công nghệ ây ai phát triển"
+     ],
+     "output": "Công nghệ AI phát triển .",
+     "errors": 1,
+     "ref_words": 6,
+     "exact": false
+    },
+    {
+     "id": "dev-acronym-002",
+     "category": "acronym",
+     "input": "Đội U23 Việt Nam.",
+     "references": [
+      "đội u hai mươi ba việt nam"
+     ],
+     "output": "Đội u hai mươi ba Việt Nam .",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-acronym-003",
+     "category": "acronym",
+     "input": "Kênh VTV1.",
+     "references": [
+      "kênh vê tê vê một"
+     ],
+     "output": "Kênh Vê Tê Vê một .",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-acronym-004",
+     "category": "acronym",
+     "input": "Công ty FPT.",
+     "references": [
+      "công ty ép pê tê"
+     ],
+     "output": "Công ty FPT .",
+     "errors": 3,
+     "ref_words": 5,
+     "exact": false
+    },
+    {
+     "id": "dev-acronym-005",
+     "category": "acronym",
+     "input": "Bệnh COVID-19.",
+     "references": [
+      "bệnh cô vít mười chín",
+      "bệnh covid mười chín"
+     ],
+     "output": "Bệnh COVID mười chín .",
+     "errors": 0,
+     "ref_words": 4,
+     "exact": true
+    },
+    {
+     "id": "dev-plain-001",
+     "category": "plain",
+     "input": "Hôm nay trời đẹp quá.",
+     "references": [
+      "hôm nay trời đẹp quá"
+     ],
+     "output": "Hôm nay trời đẹp quá .",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-plain-002",
+     "category": "plain",
+     "input": "Tôi yêu Việt Nam.",
+     "references": [
+      "tôi yêu việt nam"
+     ],
+     "output": "Tôi yêu Việt Nam .",
+     "errors": 0,
+     "ref_words": 4,
+     "exact": true
+    },
+    {
+     "id": "dev-plain-003",
+     "category": "plain",
+     "input": "Cô giáo đang giảng bài.",
+     "references": [
+      "cô giáo đang giảng bài"
+     ],
+     "output": "Cô giáo đang giảng bài .",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-plain-004",
+     "category": "plain",
+     "input": "Mẹ đi chợ mua rau.",
+     "references": [
+      "mẹ đi chợ mua rau"
+     ],
+     "output": "Mẹ đi chợ mua rau .",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-plain-005",
+     "category": "plain",
+     "input": "Anh ấy làm việc rất chăm chỉ.",
+     "references": [
+      "anh ấy làm việc rất chăm chỉ"
+     ],
+     "output": "Anh ấy làm việc rất chăm chỉ .",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-plain-006",
+     "category": "plain",
+     "input": "Hà Nội là thủ đô của Việt Nam.",
+     "references": [
+      "hà nội là thủ đô của việt nam"
+     ],
+     "output": "Hà Nội là thủ đô của Việt Nam .",
+     "errors": 0,
+     "ref_words": 8,
+     "exact": true
+    },
+    {
+     "id": "dev-plain-007",
+     "category": "plain",
+     "input": "Bạn có khỏe không?",
+     "references": [
+      "bạn có khỏe không"
+     ],
+     "output": "Bạn có khỏe không ?",
+     "errors": 0,
+     "ref_words": 4,
+     "exact": true
+    },
+    {
+     "id": "dev-plain-008",
+     "category": "plain",
+     "input": "Mùa thu lá vàng rơi.",
+     "references": [
+      "mùa thu lá vàng rơi"
+     ],
+     "output": "Mùa thu lá vàng rơi .",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-mixed-001",
+     "category": "mixed",
+     "input": "Ngày 15/3/2024, giá vàng SJC tăng 1,2 triệu đồng/lượng, lên 80,5 triệu đồng.",
+     "references": [
+      "ngày mười lăm tháng ba năm hai nghìn không trăm hai mươi tư, giá vàng ét gi xê tăng một phẩy hai triệu đồng một lượng, lên tám mươi phẩy năm triệu đồng",
+      "ngày mười lăm tháng ba năm hai nghìn không trăm hai mươi tư, giá vàng ét di xê tăng một phẩy hai triệu đồng một lượng, lên tám mươi phẩy năm triệu đồng",
+      "ngày mười lăm tháng ba năm hai nghìn không trăm hai mươi tư, giá vàng ét gi xê tăng một phẩy hai triệu đồng mỗi lượng, lên tám mươi phẩy năm triệu đồng",
+      "ngày mười lăm tháng ba năm hai nghìn không trăm hai mươi tư, giá vàng ét di xê tăng một phẩy hai triệu đồng mỗi lượng, lên tám mươi phẩy năm triệu đồng",
+      "ngày mười lăm tháng ba năm hai nghìn không trăm hai mươi tư, giá vàng ét gi xê tăng một phẩy hai triệu đồng trên lượng, lên tám mươi phẩy năm triệu đồng",
+      "ngày mười lăm tháng ba năm hai nghìn không trăm hai mươi tư, giá vàng ét di xê tăng một phẩy hai triệu đồng trên lượng, lên tám mươi phẩy năm triệu đồng"
+     ],
+     "output": "Ngày mười lăm tháng ba năm hai nghìn không trăm hai mươi tư , giá vàng Ét Di Xê tăng một phẩy hai triệu đồng trên lượng , lên tám mươi phẩy năm triệu đồng .",
+     "errors": 0,
+     "ref_words": 33,
+     "exact": true
+    },
+    {
+     "id": "dev-mixed-002",
+     "category": "mixed",
+     "input": "Lúc 19h30 tối 20/11, U23 Việt Nam thắng 2-0.",
+     "references": [
+      "lúc mười chín giờ ba mươi tối hai mươi tháng mười một, u hai mươi ba việt nam thắng hai không",
+      "lúc mười chín giờ ba mươi tối ngày hai mươi tháng mười một, u hai mươi ba việt nam thắng hai không",
+      "lúc mười chín giờ ba mươi phút tối hai mươi tháng mười một, u hai mươi ba việt nam thắng hai không",
+      "lúc mười chín giờ ba mươi phút tối ngày hai mươi tháng mười một, u hai mươi ba việt nam thắng hai không"
+     ],
+     "output": "Lúc mười chín giờ ba mươi phút tối hai mươi tháng mười một , u hai mươi ba Việt Nam thắng hai không .",
+     "errors": 0,
+     "ref_words": 22,
+     "exact": true
+    },
+    {
+     "id": "dev-mixed-003",
+     "category": "mixed",
+     "input": "TP.HCM có hơn 9 triệu dân, tăng 2,3% so với năm 2019.",
+     "references": [
+      "thành phố hồ chí minh có hơn chín triệu dân, tăng hai phẩy ba phần trăm so với năm hai nghìn không trăm mười chín"
+     ],
+     "output": "Thành phố Hồ Chí Minh có hơn chín triệu dân , tăng hai phẩy ba phần trăm so với năm hai nghìn không trăm mười chín .",
+     "errors": 0,
+     "ref_words": 25,
+     "exact": true
+    },
+    {
+     "id": "dev-mixed-004",
+     "category": "mixed",
+     "input": "Xe chạy 120km/h trên cao tốc dài 55km.",
+     "references": [
+      "xe chạy một trăm hai mươi ki lô mét trên giờ trên cao tốc dài năm mươi lăm ki lô mét",
+      "xe chạy một trăm hai mươi ki lô mét một giờ trên cao tốc dài năm mươi lăm ki lô mét",
+      "xe chạy một trăm hai mươi ki lô mét mỗi giờ trên cao tốc dài năm mươi lăm ki lô mét"
+     ],
+     "output": "Xe chạy một trăm hai mươi ki lô mét trên giờ trên cao tốc dài năm mươi lăm ki lô mét .",
+     "errors": 0,
+     "ref_words": 21,
+     "exact": true
+    },
+    {
+     "id": "dev-mixed-005",
+     "category": "mixed",
+     "input": "Gọi 0909 123 456 trước 17h để được giảm 10%.",
+     "references": [
+      "gọi không chín không chín một hai ba bốn năm sáu trước mười bảy giờ để được giảm mười phần trăm"
+     ],
+     "output": "Gọi không chín không chín một hai ba bốn năm sáu trước mười bảy giờ để được giảm mười phần trăm .",
+     "errors": 0,
+     "ref_words": 21,
+     "exact": true
+    },
+    {
+     "id": "dev-mixed-006",
+     "category": "mixed",
+     "input": "Học phí năm 2025 là 25.000.000đ/năm.",
+     "references": [
+      "học phí năm hai nghìn không trăm hai mươi lăm là hai mươi lăm triệu đồng một năm",
+      "học phí năm hai nghìn không trăm hai mươi lăm là hai mươi lăm triệu đồng mỗi năm",
+      "học phí năm hai nghìn không trăm hai mươi lăm là hai mươi lăm triệu đồng trên năm"
+     ],
+     "output": "Học phí năm hai nghìn không trăm hai mươi lăm là hai mươi lăm triệu đồng trên năm .",
+     "errors": 0,
+     "ref_words": 18,
+     "exact": true
+    },
+    {
+     "id": "dev-mixed-007",
+     "category": "mixed",
+     "input": "Nhiệt độ Hà Nội hôm nay 28-35°C, độ ẩm 80%.",
+     "references": [
+      "nhiệt độ hà nội hôm nay hai mươi tám đến ba mươi lăm độ xê, độ ẩm tám mươi phần trăm",
+      "nhiệt độ hà nội hôm nay hai mươi tám đến ba mươi lăm độ, độ ẩm tám mươi phần trăm"
+     ],
+     "output": "Nhiệt độ Hà Nội hôm nay hai mươi tám đến ba mươi lăm độ xê , độ ẩm tám mươi phần trăm .",
+     "errors": 0,
+     "ref_words": 21,
+     "exact": true
+    },
+    {
+     "id": "dev-mixed-008",
+     "category": "mixed",
+     "input": "Theo UBND TP. Hà Nội, 1.200 hộ dân đã nhận hỗ trợ.",
+     "references": [
+      "theo ủy ban nhân dân thành phố hà nội, một nghìn hai trăm hộ dân đã nhận hỗ trợ"
+     ],
+     "output": "Theo Ủy ban Nhân dân thành phố Hà Nội , một nghìn hai trăm hộ dân đã nhận hỗ trợ .",
+     "errors": 0,
+     "ref_words": 19,
+     "exact": true
+    }
+   ]
+  },
+  {
+   "name": "vietnormalizer",
+   "version": "0.2.3",
+   "seconds": 0.01821083202958107,
+   "cases": [
+    {
+     "id": "dev-number-001",
+     "category": "number",
+     "input": "Lớp có 21 học sinh.",
+     "references": [
+      "lớp có hai mươi mốt học sinh"
+     ],
+     "output": "lớp có hai mươi mốt học sinh.",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-number-002",
+     "category": "number",
+     "input": "Cô ấy 45 tuổi.",
+     "references": [
+      "cô ấy bốn mươi lăm tuổi"
+     ],
+     "output": "cô ấy bốn mươi lăm tuổi.",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-number-003",
+     "category": "number",
+     "input": "Tòa nhà cao 105 tầng.",
+     "references": [
+      "tòa nhà cao một trăm linh năm tầng"
+     ],
+     "output": "tòa nhà cao một trăm lẻ năm tầng.",
+     "errors": 0,
+     "ref_words": 8,
+     "exact": true
+    },
+    {
+     "id": "dev-number-004",
+     "category": "number",
+     "input": "Dân số khoảng 2.500.000 người.",
+     "references": [
+      "dân số khoảng hai triệu năm trăm nghìn người"
+     ],
+     "output": "dân số khoảng hai triệu năm trăm nghìn người.",
+     "errors": 0,
+     "ref_words": 9,
+     "exact": true
+    },
+    {
+     "id": "dev-number-005",
+     "category": "number",
+     "input": "Năm 1945 là năm lịch sử.",
+     "references": [
+      "năm một nghìn chín trăm bốn mươi lăm là năm lịch sử"
+     ],
+     "output": "năm một nghìn chín trăm bốn mươi lăm là năm lịch sử.",
+     "errors": 0,
+     "ref_words": 12,
+     "exact": true
+    },
+    {
+     "id": "dev-number-006",
+     "category": "number",
+     "input": "Có 1.005 người tham gia.",
+     "references": [
+      "có một nghìn không trăm linh năm người tham gia"
+     ],
+     "output": "có một nghìn không trăm lẻ năm người tham gia.",
+     "errors": 0,
+     "ref_words": 10,
+     "exact": true
+    },
+    {
+     "id": "dev-number-007",
+     "category": "number",
+     "input": "Trường có 14 phòng học.",
+     "references": [
+      "trường có mười bốn phòng học"
+     ],
+     "output": "trường có mười bốn phòng học.",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-number-008",
+     "category": "number",
+     "input": "Kho chứa 3.000.000.000 lít.",
+     "references": [
+      "kho chứa ba tỷ lít"
+     ],
+     "output": "kho chứa ba tỷ lít.",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-number-009",
+     "category": "number",
+     "input": "Anh ấy chạy 10 vòng.",
+     "references": [
+      "anh ấy chạy mười vòng"
+     ],
+     "output": "anh ấy chạy mười vòng.",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-number-010",
+     "category": "number",
+     "input": "Cần 310 chữ ký.",
+     "references": [
+      "cần ba trăm mười chữ ký"
+     ],
+     "output": "cần ba trăm mười chữ ký.",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-number-011",
+     "category": "number",
+     "input": "Một ngày có 24 giờ.",
+     "references": [
+      "một ngày có hai mươi tư giờ"
+     ],
+     "output": "một ngày có hai mươi tư giờ.",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-number-012",
+     "category": "number",
+     "input": "Đội có 11 cầu thủ.",
+     "references": [
+      "đội có mười một cầu thủ"
+     ],
+     "output": "đội có mười một cầu thủ.",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-decimal-001",
+     "category": "decimal",
+     "input": "Chiều cao 1,75 mét.",
+     "references": [
+      "chiều cao một phẩy bảy mươi lăm mét",
+      "chiều cao một phẩy bảy lăm mét",
+      "chiều cao một phẩy bảy năm mét"
+     ],
+     "output": "chiều cao một phẩy bảy mươi lăm mét.",
+     "errors": 0,
+     "ref_words": 8,
+     "exact": true
+    },
+    {
+     "id": "dev-decimal-002",
+     "category": "decimal",
+     "input": "Doanh thu tăng 3,5 lần.",
+     "references": [
+      "doanh thu tăng ba phẩy năm lần"
+     ],
+     "output": "doanh thu tăng ba phẩy năm lần.",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-decimal-003",
+     "category": "decimal",
+     "input": "Điểm trung bình là 8,25.",
+     "references": [
+      "điểm trung bình là tám phẩy hai mươi lăm",
+      "điểm trung bình là tám phẩy hai lăm",
+      "điểm trung bình là tám phẩy hai năm"
+     ],
+     "output": "điểm trung bình là tám phẩy hai mươi lăm.",
+     "errors": 0,
+     "ref_words": 9,
+     "exact": true
+    },
+    {
+     "id": "dev-decimal-004",
+     "category": "decimal",
+     "input": "Lãi suất giảm 0,5 điểm.",
+     "references": [
+      "lãi suất giảm không phẩy năm điểm"
+     ],
+     "output": "lãi suất giảm không phẩy năm điểm.",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-decimal-005",
+     "category": "decimal",
+     "input": "Tăng trưởng đạt 6,05.",
+     "references": [
+      "tăng trưởng đạt sáu phẩy không năm"
+     ],
+     "output": "tăng trưởng đạt sáu phẩy năm.",
+     "errors": 1,
+     "ref_words": 7,
+     "exact": false
+    },
+    {
+     "id": "dev-decimal-006",
+     "category": "decimal",
+     "input": "Giá trị hợp đồng 2,1 tỷ.",
+     "references": [
+      "giá trị hợp đồng hai phẩy một tỷ"
+     ],
+     "output": "giá trị hợp đồng hai phẩy một tỷ.",
+     "errors": 0,
+     "ref_words": 8,
+     "exact": true
+    },
+    {
+     "id": "dev-currency-001",
+     "category": "currency",
+     "input": "Giá 100k.",
+     "references": [
+      "giá một trăm nghìn",
+      "giá một trăm nghìn đồng"
+     ],
+     "output": "giá 100k.",
+     "errors": 3,
+     "ref_words": 4,
+     "exact": false
+    },
+    {
+     "id": "dev-currency-002",
+     "category": "currency",
+     "input": "Vé giá 50.000đ.",
+     "references": [
+      "vé giá năm mươi nghìn đồng"
+     ],
+     "output": "vé giá năm mươi nghìn đồng.",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-currency-003",
+     "category": "currency",
+     "input": "Lương 15 triệu đồng.",
+     "references": [
+      "lương mười lăm triệu đồng"
+     ],
+     "output": "lương mười lăm triệu đồng.",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-currency-004",
+     "category": "currency",
+     "input": "Giá 1.250.000 VNĐ.",
+     "references": [
+      "giá một triệu hai trăm năm mươi nghìn đồng"
+     ],
+     "output": "giá một triệu hai trăm năm mươi nghìn đồng.",
+     "errors": 0,
+     "ref_words": 9,
+     "exact": true
+    },
+    {
+     "id": "dev-currency-005",
+     "category": "currency",
+     "input": "Chiếc máy có giá $999.",
+     "references": [
+      "chiếc máy có giá chín trăm chín mươi chín đô la"
+     ],
+     "output": "chiếc máy có giá chín trăm chín mươi chín đô la.",
+     "errors": 0,
+     "ref_words": 11,
+     "exact": true
+    },
+    {
+     "id": "dev-currency-006",
+     "category": "currency",
+     "input": "Chi phí 20 USD.",
+     "references": [
+      "chi phí hai mươi đô la"
+     ],
+     "output": "chi phí hai mươi đô la.",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-currency-007",
+     "category": "currency",
+     "input": "Nợ 5 tỷ đồng.",
+     "references": [
+      "nợ năm tỷ đồng"
+     ],
+     "output": "nợ năm tỷ đồng.",
+     "errors": 0,
+     "ref_words": 4,
+     "exact": true
+    },
+    {
+     "id": "dev-currency-008",
+     "category": "currency",
+     "input": "Quà tặng trị giá 200.000₫.",
+     "references": [
+      "quà tặng trị giá hai trăm nghìn đồng"
+     ],
+     "output": "quà tặng trị giá hai trăm.không.",
+     "errors": 2,
+     "ref_words": 8,
+     "exact": false
+    },
+    {
+     "id": "dev-currency-009",
+     "category": "currency",
+     "input": "Giá xăng 23.450đ/lít.",
+     "references": [
+      "giá xăng hai mươi ba nghìn bốn trăm năm mươi đồng một lít",
+      "giá xăng hai mươi ba nghìn bốn trăm năm mươi đồng mỗi lít",
+      "giá xăng hai mươi ba nghìn bốn trăm năm mươi đồng trên lít"
+     ],
+     "output": "giá xăng hai mươi ba nghìn bốn trăm năm mươi đồng/lít.",
+     "errors": 1,
+     "ref_words": 13,
+     "exact": false
+    },
+    {
+     "id": "dev-currency-010",
+     "category": "currency",
+     "input": "Thu nhập 5tr/tháng.",
+     "references": [
+      "thu nhập năm triệu một tháng",
+      "thu nhập năm triệu mỗi tháng",
+      "thu nhập năm triệu trên tháng"
+     ],
+     "output": "thu nhập 5tr/tháng.",
+     "errors": 3,
+     "ref_words": 6,
+     "exact": false
+    },
+    {
+     "id": "dev-percent-001",
+     "category": "percent",
+     "input": "Doanh số tăng 12%.",
+     "references": [
+      "doanh số tăng mười hai phần trăm"
+     ],
+     "output": "doanh số tăng mười hai phần trăm.",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-percent-002",
+     "category": "percent",
+     "input": "Giảm 0,5%.",
+     "references": [
+      "giảm không phẩy năm phần trăm"
+     ],
+     "output": "giảm không phẩy năm phần trăm.",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-percent-003",
+     "category": "percent",
+     "input": "Chiếm 100% cổ phần.",
+     "references": [
+      "chiếm một trăm phần trăm cổ phần"
+     ],
+     "output": "chiếm một trăm phần trăm cổ phần.",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-percent-004",
+     "category": "percent",
+     "input": "Tỷ lệ đạt 45,7%.",
+     "references": [
+      "tỷ lệ đạt bốn mươi lăm phẩy bảy phần trăm"
+     ],
+     "output": "tỷ lệ đạt bốn mươi lăm phẩy bảy phần trăm.",
+     "errors": 0,
+     "ref_words": 10,
+     "exact": true
+    },
+    {
+     "id": "dev-percent-005",
+     "category": "percent",
+     "input": "Lạm phát 3,25 %.",
+     "references": [
+      "lạm phát ba phẩy hai mươi lăm phần trăm",
+      "lạm phát ba phẩy hai lăm phần trăm",
+      "lạm phát ba phẩy hai năm phần trăm"
+     ],
+     "output": "lạm phát ba phẩy hai mươi lăm phần trăm.",
+     "errors": 0,
+     "ref_words": 9,
+     "exact": true
+    },
+    {
+     "id": "dev-unit-001",
+     "category": "unit",
+     "input": "Quãng đường 15km.",
+     "references": [
+      "quãng đường mười lăm ki lô mét",
+      "quãng đường mười lăm cây số"
+     ],
+     "output": "quãng đường mười lăm ki-lô-mét.",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-unit-002",
+     "category": "unit",
+     "input": "Anh ấy nặng 70kg.",
+     "references": [
+      "anh ấy nặng bảy mươi ki lô gam",
+      "anh ấy nặng bảy mươi cân",
+      "anh ấy nặng bảy mươi ki lô"
+     ],
+     "output": "anh ấy nặng bảy mươi ki-lô-gam.",
+     "errors": 0,
+     "ref_words": 8,
+     "exact": true
+    },
+    {
+     "id": "dev-unit-003",
+     "category": "unit",
+     "input": "Tốc độ tối đa 60km/h.",
+     "references": [
+      "tốc độ tối đa sáu mươi ki lô mét trên giờ",
+      "tốc độ tối đa sáu mươi ki lô mét một giờ",
+      "tốc độ tối đa sáu mươi ki lô mét mỗi giờ",
+      "tốc độ tối đa sáu mươi cây số một giờ"
+     ],
+     "output": "tốc độ tối đa sáu mươi ki-lô-mét trên giờ.",
+     "errors": 0,
+     "ref_words": 11,
+     "exact": true
+    },
+    {
+     "id": "dev-unit-004",
+     "category": "unit",
+     "input": "Diện tích 120m2.",
+     "references": [
+      "diện tích một trăm hai mươi mét vuông"
+     ],
+     "output": "diện tích một trăm hai mươi mét vuông.",
+     "errors": 0,
+     "ref_words": 8,
+     "exact": true
+    },
+    {
+     "id": "dev-unit-005",
+     "category": "unit",
+     "input": "Nhiệt độ 36,5°C.",
+     "references": [
+      "nhiệt độ ba mươi sáu phẩy năm độ xê",
+      "nhiệt độ ba mươi sáu phẩy năm độ"
+     ],
+     "output": "nhiệt độ ba mươi sáu phẩy năm°c.",
+     "errors": 1,
+     "ref_words": 8,
+     "exact": false
+    },
+    {
+     "id": "dev-unit-006",
+     "category": "unit",
+     "input": "Chai nước 500ml.",
+     "references": [
+      "chai nước năm trăm mi li lít"
+     ],
+     "output": "chai nước năm trăm mi-li-lít.",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-unit-007",
+     "category": "unit",
+     "input": "Cao 180cm.",
+     "references": [
+      "cao một trăm tám mươi xen ti mét"
+     ],
+     "output": "cao một trăm tám mươi xăng-ti-mét.",
+     "errors": 0,
+     "ref_words": 8,
+     "exact": true
+    },
+    {
+     "id": "dev-unit-008",
+     "category": "unit",
+     "input": "Ổ cứng 512GB.",
+     "references": [
+      "ổ cứng năm trăm mười hai gi ga bai"
+     ],
+     "output": "ổ cứng 512gb.",
+     "errors": 7,
+     "ref_words": 9,
+     "exact": false
+    },
+    {
+     "id": "dev-unit-009",
+     "category": "unit",
+     "input": "Lượng mưa 50mm.",
+     "references": [
+      "lượng mưa năm mươi mi li mét"
+     ],
+     "output": "lượng mưa năm mươi mi-li-mét.",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-unit-010",
+     "category": "unit",
+     "input": "Trang trại rộng 3 ha.",
+     "references": [
+      "trang trại rộng ba héc ta"
+     ],
+     "output": "trang trại rộng ba héc-ta.",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-date-001",
+     "category": "date",
+     "input": "Ngày 2/9/1945.",
+     "references": [
+      "ngày hai tháng chín năm một nghìn chín trăm bốn mươi lăm"
+     ],
+     "output": "ngày ngày hai tháng chín năm một nghìn chín trăm bốn mươi lăm.",
+     "errors": 1,
+     "ref_words": 12,
+     "exact": false
+    },
+    {
+     "id": "dev-date-002",
+     "category": "date",
+     "input": "Sinh ngày 15/08/2000.",
+     "references": [
+      "sinh ngày mười lăm tháng tám năm hai nghìn"
+     ],
+     "output": "sinh ngày mười lăm tháng tám năm hai nghìn.",
+     "errors": 0,
+     "ref_words": 9,
+     "exact": true
+    },
+    {
+     "id": "dev-date-003",
+     "category": "date",
+     "input": "Hạn chót là 31/12/2024.",
+     "references": [
+      "hạn chót là ngày ba mươi mốt tháng mười hai năm hai nghìn không trăm hai mươi tư",
+      "hạn chót là ba mươi mốt tháng mười hai năm hai nghìn không trăm hai mươi tư"
+     ],
+     "output": "hạn chót là ngày ba mươi mốt tháng mười hai năm hai nghìn không trăm hai mươi tư.",
+     "errors": 0,
+     "ref_words": 18,
+     "exact": true
+    },
+    {
+     "id": "dev-date-004",
+     "category": "date",
+     "input": "Vào tháng 4/2023.",
+     "references": [
+      "vào tháng tư năm hai nghìn không trăm hai mươi ba"
+     ],
+     "output": "vào tháng bốn năm hai nghìn không trăm hai mươi ba.",
+     "errors": 0,
+     "ref_words": 11,
+     "exact": true
+    },
+    {
+     "id": "dev-date-005",
+     "category": "date",
+     "input": "Lễ hội diễn ra ngày 10/3.",
+     "references": [
+      "lễ hội diễn ra ngày mười tháng ba"
+     ],
+     "output": "lễ hội diễn ra ngày mười tháng ba.",
+     "errors": 0,
+     "ref_words": 8,
+     "exact": true
+    },
+    {
+     "id": "dev-date-006",
+     "category": "date",
+     "input": "Khai giảng 5-9-2024.",
+     "references": [
+      "khai giảng ngày năm tháng chín năm hai nghìn không trăm hai mươi tư",
+      "khai giảng năm tháng chín năm hai nghìn không trăm hai mươi tư"
+     ],
+     "output": "khai giảng tháng năm đến tháng chín năm hai nghìn không trăm hai mươi tư.",
+     "errors": 2,
+     "ref_words": 14,
+     "exact": false
+    },
+    {
+     "id": "dev-date-007",
+     "category": "date",
+     "input": "Từ tháng 1/2025.",
+     "references": [
+      "từ tháng một năm hai nghìn không trăm hai mươi lăm",
+      "từ tháng giêng năm hai nghìn không trăm hai mươi lăm"
+     ],
+     "output": "từ tháng một năm hai nghìn không trăm hai mươi lăm.",
+     "errors": 0,
+     "ref_words": 11,
+     "exact": true
+    },
+    {
+     "id": "dev-date-008",
+     "category": "date",
+     "input": "Họp vào 01/06/2026.",
+     "references": [
+      "họp vào ngày một tháng sáu năm hai nghìn không trăm hai mươi sáu",
+      "họp vào một tháng sáu năm hai nghìn không trăm hai mươi sáu"
+     ],
+     "output": "họp vào ngày một tháng sáu năm hai nghìn không trăm hai mươi sáu.",
+     "errors": 0,
+     "ref_words": 14,
+     "exact": true
+    },
+    {
+     "id": "dev-date-009",
+     "category": "date",
+     "input": "Ngày 20/11 là ngày Nhà giáo.",
+     "references": [
+      "ngày hai mươi tháng mười một là ngày nhà giáo"
+     ],
+     "output": "ngày hai mươi tháng mười một là ngày nhà giáo.",
+     "errors": 0,
+     "ref_words": 10,
+     "exact": true
+    },
+    {
+     "id": "dev-time-001",
+     "category": "time",
+     "input": "Lúc 14h30.",
+     "references": [
+      "lúc mười bốn giờ ba mươi",
+      "lúc mười bốn giờ ba mươi phút"
+     ],
+     "output": "lúc mười bốn giờ ba mươi.",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-time-002",
+     "category": "time",
+     "input": "Họp lúc 8:05.",
+     "references": [
+      "họp lúc tám giờ năm phút",
+      "họp lúc tám giờ năm"
+     ],
+     "output": "họp lúc tám giờ năm phút.",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-time-003",
+     "category": "time",
+     "input": "Mở cửa từ 7h đến 22h.",
+     "references": [
+      "mở cửa từ bảy giờ đến hai mươi hai giờ"
+     ],
+     "output": "mở cửa từ bảy giờ đến hai mươi hai giờ.",
+     "errors": 0,
+     "ref_words": 10,
+     "exact": true
+    },
+    {
+     "id": "dev-time-004",
+     "category": "time",
+     "input": "Bắt đầu lúc 9g15.",
+     "references": [
+      "bắt đầu lúc chín giờ mười lăm",
+      "bắt đầu lúc chín giờ mười lăm phút"
+     ],
+     "output": "bắt đầu lúc chín gam.",
+     "errors": 3,
+     "ref_words": 7,
+     "exact": false
+    },
+    {
+     "id": "dev-time-005",
+     "category": "time",
+     "input": "Kết thúc lúc 23:59.",
+     "references": [
+      "kết thúc lúc hai mươi ba giờ năm mươi chín phút",
+      "kết thúc lúc hai mươi ba giờ năm mươi chín"
+     ],
+     "output": "kết thúc lúc hai mươi ba giờ năm mươi chín phút.",
+     "errors": 0,
+     "ref_words": 11,
+     "exact": true
+    },
+    {
+     "id": "dev-time-006",
+     "category": "time",
+     "input": "Hẹn 6h sáng mai.",
+     "references": [
+      "hẹn sáu giờ sáng mai"
+     ],
+     "output": "hẹn sáu giờ sáng mai.",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-phone-001",
+     "category": "phone",
+     "input": "Gọi 0912345678.",
+     "references": [
+      "gọi không chín một hai ba bốn năm sáu bảy tám"
+     ],
+     "output": "gọi không chín một hai ba bốn năm sáu bảy tám.",
+     "errors": 0,
+     "ref_words": 11,
+     "exact": true
+    },
+    {
+     "id": "dev-phone-002",
+     "category": "phone",
+     "input": "Tổng đài 1900 1234.",
+     "references": [
+      "tổng đài một chín không không một hai ba bốn"
+     ],
+     "output": "tổng đài một nghìn chín trăm một nghìn hai trăm ba mươi tư.",
+     "errors": 7,
+     "ref_words": 10,
+     "exact": false
+    },
+    {
+     "id": "dev-phone-003",
+     "category": "phone",
+     "input": "SĐT: 0987 654 321.",
+     "references": [
+      "số điện thoại không chín tám bảy sáu năm bốn ba hai một"
+     ],
+     "output": "sđt: chín trăm tám mươi bảy sáu trăm năm mươi tư ba trăm hai mươi mốt.",
+     "errors": 12,
+     "ref_words": 13,
+     "exact": false
+    },
+    {
+     "id": "dev-phone-004",
+     "category": "phone",
+     "input": "Liên hệ +84 912 345 678.",
+     "references": [
+      "liên hệ cộng tám tư chín một hai ba bốn năm sáu bảy tám",
+      "liên hệ cộng tám bốn chín một hai ba bốn năm sáu bảy tám"
+     ],
+     "output": "liên hệ +tám mươi tư chín trăm mười hai ba trăm bốn mươi lăm sáu trăm bảy mươi tám.",
+     "errors": 9,
+     "ref_words": 14,
+     "exact": false
+    },
+    {
+     "id": "dev-phone-005",
+     "category": "phone",
+     "input": "Số máy bàn 024.3825.1234.",
+     "references": [
+      "số máy bàn không hai bốn ba tám hai năm một hai ba bốn"
+     ],
+     "output": "số máy bàn hai mươi tư.ba nghìn tám trăm hai mươi lăm.một nghìn hai trăm ba mươi tư.",
+     "errors": 11,
+     "ref_words": 14,
+     "exact": false
+    },
+    {
+     "id": "dev-range-001",
+     "category": "range",
+     "input": "Từ 5-10 người.",
+     "references": [
+      "từ năm đến mười người"
+     ],
+     "output": "từ năm tháng mười người.",
+     "errors": 1,
+     "ref_words": 5,
+     "exact": false
+    },
+    {
+     "id": "dev-range-002",
+     "category": "range",
+     "input": "Việt Nam thắng 3-1.",
+     "references": [
+      "việt nam thắng ba một"
+     ],
+     "output": "việt nam thắng ba tháng một.",
+     "errors": 1,
+     "ref_words": 5,
+     "exact": false
+    },
+    {
+     "id": "dev-range-003",
+     "category": "range",
+     "input": "Giai đoạn 2020-2025.",
+     "references": [
+      "giai đoạn hai nghìn không trăm hai mươi đến hai nghìn không trăm hai mươi lăm"
+     ],
+     "output": "giai đoạn hai nghìn không trăm hai mươi đến hai nghìn không trăm hai mươi lăm.",
+     "errors": 0,
+     "ref_words": 16,
+     "exact": true
+    },
+    {
+     "id": "dev-range-004",
+     "category": "range",
+     "input": "Nhiệt độ 25-30°C.",
+     "references": [
+      "nhiệt độ hai mươi lăm đến ba mươi độ xê",
+      "nhiệt độ hai mươi lăm đến ba mươi độ"
+     ],
+     "output": "nhiệt độ hai mươi lăm-ba mươi độ c.",
+     "errors": 2,
+     "ref_words": 10,
+     "exact": false
+    },
+    {
+     "id": "dev-range-005",
+     "category": "range",
+     "input": "Trẻ em 6-12 tuổi.",
+     "references": [
+      "trẻ em sáu đến mười hai tuổi"
+     ],
+     "output": "trẻ em sáu tháng mười hai tuổi.",
+     "errors": 1,
+     "ref_words": 7,
+     "exact": false
+    },
+    {
+     "id": "dev-abbreviation-001",
+     "category": "abbreviation",
+     "input": "UBND tỉnh họp.",
+     "references": [
+      "ủy ban nhân dân tỉnh họp"
+     ],
+     "output": "ủy ban nhân dân tỉnh họp.",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-abbreviation-002",
+     "category": "abbreviation",
+     "input": "Học sinh THPT.",
+     "references": [
+      "học sinh trung học phổ thông"
+     ],
+     "output": "học sinh tê hát pê tê.",
+     "errors": 4,
+     "ref_words": 6,
+     "exact": false
+    },
+    {
+     "id": "dev-abbreviation-003",
+     "category": "abbreviation",
+     "input": "Tại TP.HCM.",
+     "references": [
+      "tại thành phố hồ chí minh"
+     ],
+     "output": "tại tê pê.hát xê em.",
+     "errors": 5,
+     "ref_words": 6,
+     "exact": false
+    },
+    {
+     "id": "dev-abbreviation-004",
+     "category": "abbreviation",
+     "input": "GS. Ngô Bảo Châu.",
+     "references": [
+      "giáo sư ngô bảo châu"
+     ],
+     "output": "giê ét. ngô bảo châu.",
+     "errors": 2,
+     "ref_words": 5,
+     "exact": false
+    },
+    {
+     "id": "dev-abbreviation-005",
+     "category": "abbreviation",
+     "input": "Liên hệ CSGT.",
+     "references": [
+      "liên hệ cảnh sát giao thông"
+     ],
+     "output": "liên hệ xê ét giê tê.",
+     "errors": 4,
+     "ref_words": 6,
+     "exact": false
+    },
+    {
+     "id": "dev-abbreviation-006",
+     "category": "abbreviation",
+     "input": "Đóng BHXH đầy đủ.",
+     "references": [
+      "đóng bảo hiểm xã hội đầy đủ"
+     ],
+     "output": "đóng bê hát ích hát đầy đủ.",
+     "errors": 4,
+     "ref_words": 7,
+     "exact": false
+    },
+    {
+     "id": "dev-abbreviation-007",
+     "category": "abbreviation",
+     "input": "Trường ĐH Bách khoa.",
+     "references": [
+      "trường đại học bách khoa"
+     ],
+     "output": "trường đh bách khoa.",
+     "errors": 2,
+     "ref_words": 5,
+     "exact": false
+    },
+    {
+     "id": "dev-abbreviation-008",
+     "category": "abbreviation",
+     "input": "TS. Nguyễn Văn An.",
+     "references": [
+      "tiến sĩ nguyễn văn an"
+     ],
+     "output": "tê ét. nguyễn văn an.",
+     "errors": 2,
+     "ref_words": 5,
+     "exact": false
+    },
+    {
+     "id": "dev-abbreviation-009",
+     "category": "abbreviation",
+     "input": "Hàng hóa, thực phẩm, v.v.",
+     "references": [
+      "hàng hóa, thực phẩm, vân vân"
+     ],
+     "output": "hàng hóa, thực phẩm, v.v.",
+     "errors": 2,
+     "ref_words": 6,
+     "exact": false
+    },
+    {
+     "id": "dev-abbreviation-010",
+     "category": "abbreviation",
+     "input": "Cấp CCCD mới.",
+     "references": [
+      "cấp căn cước công dân mới"
+     ],
+     "output": "cấp xê xê xê đê mới.",
+     "errors": 4,
+     "ref_words": 6,
+     "exact": false
+    },
+    {
+     "id": "dev-acronym-001",
+     "category": "acronym",
+     "input": "Công nghệ AI phát triển.",
+     "references": [
+      "công nghệ a i phát triển",
+      "công nghệ ây ai phát triển"
+     ],
+     "output": "công nghệ ây ai phát triển.",
+     "errors": 0,
+     "ref_words": 6,
+     "exact": true
+    },
+    {
+     "id": "dev-acronym-002",
+     "category": "acronym",
+     "input": "Đội U23 Việt Nam.",
+     "references": [
+      "đội u hai mươi ba việt nam"
+     ],
+     "output": "đội u hai mươi ba việt nam.",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-acronym-003",
+     "category": "acronym",
+     "input": "Kênh VTV1.",
+     "references": [
+      "kênh vê tê vê một"
+     ],
+     "output": "kênh vê tê vê một.",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-acronym-004",
+     "category": "acronym",
+     "input": "Công ty FPT.",
+     "references": [
+      "công ty ép pê tê"
+     ],
+     "output": "công ty ép pê tê.",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-acronym-005",
+     "category": "acronym",
+     "input": "Bệnh COVID-19.",
+     "references": [
+      "bệnh cô vít mười chín",
+      "bệnh covid mười chín"
+     ],
+     "output": "bệnh xê o vê i đê-mười chín.",
+     "errors": 5,
+     "ref_words": 5,
+     "exact": false
+    },
+    {
+     "id": "dev-plain-001",
+     "category": "plain",
+     "input": "Hôm nay trời đẹp quá.",
+     "references": [
+      "hôm nay trời đẹp quá"
+     ],
+     "output": "hôm nay trời đẹp quá.",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-plain-002",
+     "category": "plain",
+     "input": "Tôi yêu Việt Nam.",
+     "references": [
+      "tôi yêu việt nam"
+     ],
+     "output": "tôi yêu việt nam.",
+     "errors": 0,
+     "ref_words": 4,
+     "exact": true
+    },
+    {
+     "id": "dev-plain-003",
+     "category": "plain",
+     "input": "Cô giáo đang giảng bài.",
+     "references": [
+      "cô giáo đang giảng bài"
+     ],
+     "output": "cô giáo đang giảng bài.",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-plain-004",
+     "category": "plain",
+     "input": "Mẹ đi chợ mua rau.",
+     "references": [
+      "mẹ đi chợ mua rau"
+     ],
+     "output": "mẹ đi chợ mua rau.",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-plain-005",
+     "category": "plain",
+     "input": "Anh ấy làm việc rất chăm chỉ.",
+     "references": [
+      "anh ấy làm việc rất chăm chỉ"
+     ],
+     "output": "anh ấy làm việc rất chăm chỉ.",
+     "errors": 0,
+     "ref_words": 7,
+     "exact": true
+    },
+    {
+     "id": "dev-plain-006",
+     "category": "plain",
+     "input": "Hà Nội là thủ đô của Việt Nam.",
+     "references": [
+      "hà nội là thủ đô của việt nam"
+     ],
+     "output": "hà nội là thủ đô của việt nam.",
+     "errors": 0,
+     "ref_words": 8,
+     "exact": true
+    },
+    {
+     "id": "dev-plain-007",
+     "category": "plain",
+     "input": "Bạn có khỏe không?",
+     "references": [
+      "bạn có khỏe không"
+     ],
+     "output": "bạn có khỏe không?",
+     "errors": 0,
+     "ref_words": 4,
+     "exact": true
+    },
+    {
+     "id": "dev-plain-008",
+     "category": "plain",
+     "input": "Mùa thu lá vàng rơi.",
+     "references": [
+      "mùa thu lá vàng rơi"
+     ],
+     "output": "mùa thu lá vàng rơi.",
+     "errors": 0,
+     "ref_words": 5,
+     "exact": true
+    },
+    {
+     "id": "dev-mixed-001",
+     "category": "mixed",
+     "input": "Ngày 15/3/2024, giá vàng SJC tăng 1,2 triệu đồng/lượng, lên 80,5 triệu đồng.",
+     "references": [
+      "ngày mười lăm tháng ba năm hai nghìn không trăm hai mươi tư, giá vàng ét gi xê tăng một phẩy hai triệu đồng một lượng, lên tám mươi phẩy năm triệu đồng",
+      "ngày mười lăm tháng ba năm hai nghìn không trăm hai mươi tư, giá vàng ét di xê tăng một phẩy hai triệu đồng một lượng, lên tám mươi phẩy năm triệu đồng",
+      "ngày mười lăm tháng ba năm hai nghìn không trăm hai mươi tư, giá vàng ét gi xê tăng một phẩy hai triệu đồng mỗi lượng, lên tám mươi phẩy năm triệu đồng",
+      "ngày mười lăm tháng ba năm hai nghìn không trăm hai mươi tư, giá vàng ét di xê tăng một phẩy hai triệu đồng mỗi lượng, lên tám mươi phẩy năm triệu đồng",
+      "ngày mười lăm tháng ba năm hai nghìn không trăm hai mươi tư, giá vàng ét gi xê tăng một phẩy hai triệu đồng trên lượng, lên tám mươi phẩy năm triệu đồng",
+      "ngày mười lăm tháng ba năm hai nghìn không trăm hai mươi tư, giá vàng ét di xê tăng một phẩy hai triệu đồng trên lượng, lên tám mươi phẩy năm triệu đồng"
+     ],
+     "output": "ngày ngày mười lăm tháng ba năm hai nghìn không trăm hai mươi tư, giá vàng ét giây xê tăng một phẩy hai triệu đồng/lượng, lên tám mươi phẩy năm triệu đồng.",
+     "errors": 3,
+     "ref_words": 33,
+     "exact": false
+    },
+    {
+     "id": "dev-mixed-002",
+     "category": "mixed",
+     "input": "Lúc 19h30 tối 20/11, U23 Việt Nam thắng 2-0.",
+     "references": [
+      "lúc mười chín giờ ba mươi tối hai mươi tháng mười một, u hai mươi ba việt nam thắng hai không",
+      "lúc mười chín giờ ba mươi tối ngày hai mươi tháng mười một, u hai mươi ba việt nam thắng hai không",
+      "lúc mười chín giờ ba mươi phút tối hai mươi tháng mười một, u hai mươi ba việt nam thắng hai không",
+      "lúc mười chín giờ ba mươi phút tối ngày hai mươi tháng mười một, u hai mươi ba việt nam thắng hai không"
+     ],
+     "output": "lúc mười chín giờ ba mươi tối hai mươi tháng mười một, u hai mươi ba việt nam thắng hai-không.",
+     "errors": 0,
+     "ref_words": 21,
+     "exact": true
+    },
+    {
+     "id": "dev-mixed-003",
+     "category": "mixed",
+     "input": "TP.HCM có hơn 9 triệu dân, tăng 2,3% so với năm 2019.",
+     "references": [
+      "thành phố hồ chí minh có hơn chín triệu dân, tăng hai phẩy ba phần trăm so với năm hai nghìn không trăm mười chín"
+     ],
+     "output": "tê pê.hát xê em có hơn chín triệu dân, tăng hai phẩy ba phần trăm so với năm hai nghìn không trăm mười chín.",
+     "errors": 5,
+     "ref_words": 25,
+     "exact": false
+    },
+    {
+     "id": "dev-mixed-004",
+     "category": "mixed",
+     "input": "Xe chạy 120km/h trên cao tốc dài 55km.",
+     "references": [
+      "xe chạy một trăm hai mươi ki lô mét trên giờ trên cao tốc dài năm mươi lăm ki lô mét",
+      "xe chạy một trăm hai mươi ki lô mét một giờ trên cao tốc dài năm mươi lăm ki lô mét",
+      "xe chạy một trăm hai mươi ki lô mét mỗi giờ trên cao tốc dài năm mươi lăm ki lô mét"
+     ],
+     "output": "xe chạy một trăm hai mươi ki-lô-mét trên giờ trên cao tốc dài năm mươi lăm ki-lô-mét.",
+     "errors": 0,
+     "ref_words": 21,
+     "exact": true
+    },
+    {
+     "id": "dev-mixed-005",
+     "category": "mixed",
+     "input": "Gọi 0909 123 456 trước 17h để được giảm 10%.",
+     "references": [
+      "gọi không chín không chín một hai ba bốn năm sáu trước mười bảy giờ để được giảm mười phần trăm"
+     ],
+     "output": "gọi chín trăm lẻ chín một trăm hai mươi ba bốn trăm năm mươi sáu trước mười bảy giờ để được giảm mười phần trăm.",
+     "errors": 7,
+     "ref_words": 21,
+     "exact": false
+    },
+    {
+     "id": "dev-mixed-006",
+     "category": "mixed",
+     "input": "Học phí năm 2025 là 25.000.000đ/năm.",
+     "references": [
+      "học phí năm hai nghìn không trăm hai mươi lăm là hai mươi lăm triệu đồng một năm",
+      "học phí năm hai nghìn không trăm hai mươi lăm là hai mươi lăm triệu đồng mỗi năm",
+      "học phí năm hai nghìn không trăm hai mươi lăm là hai mươi lăm triệu đồng trên năm"
+     ],
+     "output": "học phí năm hai nghìn không trăm hai mươi lăm là hai mươi lăm triệu đồng/năm.",
+     "errors": 1,
+     "ref_words": 18,
+     "exact": false
+    },
+    {
+     "id": "dev-mixed-007",
+     "category": "mixed",
+     "input": "Nhiệt độ Hà Nội hôm nay 28-35°C, độ ẩm 80%.",
+     "references": [
+      "nhiệt độ hà nội hôm nay hai mươi tám đến ba mươi lăm độ xê, độ ẩm tám mươi phần trăm",
+      "nhiệt độ hà nội hôm nay hai mươi tám đến ba mươi lăm độ, độ ẩm tám mươi phần trăm"
+     ],
+     "output": "nhiệt độ hà nội hôm nay hai mươi tám-ba mươi lăm độ c, độ ẩm tám mươi phần trăm.",
+     "errors": 2,
+     "ref_words": 21,
+     "exact": false
+    },
+    {
+     "id": "dev-mixed-008",
+     "category": "mixed",
+     "input": "Theo UBND TP. Hà Nội, 1.200 hộ dân đã nhận hỗ trợ.",
+     "references": [
+      "theo ủy ban nhân dân thành phố hà nội, một nghìn hai trăm hộ dân đã nhận hỗ trợ"
+     ],
+     "output": "theo ủy ban nhân dân tê pê. hà nội, một nghìn hai trăm hộ dân đã nhận hỗ trợ.",
+     "errors": 2,
+     "ref_words": 19,
+     "exact": false
+    }
+   ]
+  }
+ ]
+}

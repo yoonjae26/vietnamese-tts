@@ -1,0 +1,99 @@
+{"id": "dev-number-001", "category": "number", "input": "Lớp có 21 học sinh.", "references": ["lớp có hai mươi mốt học sinh"]}
+{"id": "dev-number-002", "category": "number", "input": "Cô ấy 45 tuổi.", "references": ["cô ấy bốn mươi lăm tuổi"]}
+{"id": "dev-number-003", "category": "number", "input": "Tòa nhà cao 105 tầng.", "references": ["tòa nhà cao một trăm linh năm tầng"]}
+{"id": "dev-number-004", "category": "number", "input": "Dân số khoảng 2.500.000 người.", "references": ["dân số khoảng hai triệu năm trăm nghìn người"]}
+{"id": "dev-number-005", "category": "number", "input": "Năm 1945 là năm lịch sử.", "references": ["năm một nghìn chín trăm bốn mươi lăm là năm lịch sử"]}
+{"id": "dev-number-006", "category": "number", "input": "Có 1.005 người tham gia.", "references": ["có một nghìn không trăm linh năm người tham gia"]}
+{"id": "dev-number-007", "category": "number", "input": "Trường có 14 phòng học.", "references": ["trường có mười bốn phòng học"]}
+{"id": "dev-number-008", "category": "number", "input": "Kho chứa 3.000.000.000 lít.", "references": ["kho chứa ba tỷ lít"]}
+{"id": "dev-number-009", "category": "number", "input": "Anh ấy chạy 10 vòng.", "references": ["anh ấy chạy mười vòng"]}
+{"id": "dev-number-010", "category": "number", "input": "Cần 310 chữ ký.", "references": ["cần ba trăm mười chữ ký"]}
+{"id": "dev-number-011", "category": "number", "input": "Một ngày có 24 giờ.", "references": ["một ngày có hai mươi tư giờ"]}
+{"id": "dev-number-012", "category": "number", "input": "Đội có 11 cầu thủ.", "references": ["đội có mười một cầu thủ"]}
+{"id": "dev-decimal-001", "category": "decimal", "input": "Chiều cao 1,75 mét.", "references": ["chiều cao một phẩy bảy mươi lăm mét", "chiều cao một phẩy bảy lăm mét", "chiều cao một phẩy bảy năm mét"]}
+{"id": "dev-decimal-002", "category": "decimal", "input": "Doanh thu tăng 3,5 lần.", "references": ["doanh thu tăng ba phẩy năm lần"]}
+{"id": "dev-decimal-003", "category": "decimal", "input": "Điểm trung bình là 8,25.", "references": ["điểm trung bình là tám phẩy hai mươi lăm", "điểm trung bình là tám phẩy hai lăm", "điểm trung bình là tám phẩy hai năm"]}
+{"id": "dev-decimal-004", "category": "decimal", "input": "Lãi suất giảm 0,5 điểm.", "references": ["lãi suất giảm không phẩy năm điểm"]}
+{"id": "dev-decimal-005", "category": "decimal", "input": "Tăng trưởng đạt 6,05.", "references": ["tăng trưởng đạt sáu phẩy không năm"]}
+{"id": "dev-decimal-006", "category": "decimal", "input": "Giá trị hợp đồng 2,1 tỷ.", "references": ["giá trị hợp đồng hai phẩy một tỷ"]}
+{"id": "dev-currency-001", "category": "currency", "input": "Giá 100k.", "references": ["giá một trăm nghìn", "giá một trăm nghìn đồng"]}
+{"id": "dev-currency-002", "category": "currency", "input": "Vé giá 50.000đ.", "references": ["vé giá năm mươi nghìn đồng"]}
+{"id": "dev-currency-003", "category": "currency", "input": "Lương 15 triệu đồng.", "references": ["lương mười lăm triệu đồng"]}
+{"id": "dev-currency-004", "category": "currency", "input": "Giá 1.250.000 VNĐ.", "references": ["giá một triệu hai trăm năm mươi nghìn đồng"]}
+{"id": "dev-currency-005", "category": "currency", "input": "Chiếc máy có giá $999.", "references": ["chiếc máy có giá chín trăm chín mươi chín đô la"]}
+{"id": "dev-currency-006", "category": "currency", "input": "Chi phí 20 USD.", "references": ["chi phí hai mươi đô la"]}
+{"id": "dev-currency-007", "category": "currency", "input": "Nợ 5 tỷ đồng.", "references": ["nợ năm tỷ đồng"]}
+{"id": "dev-currency-008", "category": "currency", "input": "Quà tặng trị giá 200.000₫.", "references": ["quà tặng trị giá hai trăm nghìn đồng"]}
+{"id": "dev-currency-009", "category": "currency", "input": "Giá xăng 23.450đ/lít.", "references": ["giá xăng hai mươi ba nghìn bốn trăm năm mươi đồng một lít", "giá xăng hai mươi ba nghìn bốn trăm năm mươi đồng mỗi lít", "giá xăng hai mươi ba nghìn bốn trăm năm mươi đồng trên lít"]}
+{"id": "dev-currency-010", "category": "currency", "input": "Thu nhập 5tr/tháng.", "references": ["thu nhập năm triệu một tháng", "thu nhập năm triệu mỗi tháng", "thu nhập năm triệu trên tháng"]}
+{"id": "dev-percent-001", "category": "percent", "input": "Doanh số tăng 12%.", "references": ["doanh số tăng mười hai phần trăm"]}
+{"id": "dev-percent-002", "category": "percent", "input": "Giảm 0,5%.", "references": ["giảm không phẩy năm phần trăm"]}
+{"id": "dev-percent-003", "category": "percent", "input": "Chiếm 100% cổ phần.", "references": ["chiếm một trăm phần trăm cổ phần"]}
+{"id": "dev-percent-004", "category": "percent", "input": "Tỷ lệ đạt 45,7%.", "references": ["tỷ lệ đạt bốn mươi lăm phẩy bảy phần trăm"]}
+{"id": "dev-percent-005", "category": "percent", "input": "Lạm phát 3,25 %.", "references": ["lạm phát ba phẩy hai mươi lăm phần trăm", "lạm phát ba phẩy hai lăm phần trăm", "lạm phát ba phẩy hai năm phần trăm"]}
+{"id": "dev-unit-001", "category": "unit", "input": "Quãng đường 15km.", "references": ["quãng đường mười lăm ki lô mét", "quãng đường mười lăm cây số"]}
+{"id": "dev-unit-002", "category": "unit", "input": "Anh ấy nặng 70kg.", "references": ["anh ấy nặng bảy mươi ki lô gam", "anh ấy nặng bảy mươi cân", "anh ấy nặng bảy mươi ki lô"]}
+{"id": "dev-unit-003", "category": "unit", "input": "Tốc độ tối đa 60km/h.", "references": ["tốc độ tối đa sáu mươi ki lô mét trên giờ", "tốc độ tối đa sáu mươi ki lô mét một giờ", "tốc độ tối đa sáu mươi ki lô mét mỗi giờ", "tốc độ tối đa sáu mươi cây số một giờ"]}
+{"id": "dev-unit-004", "category": "unit", "input": "Diện tích 120m2.", "references": ["diện tích một trăm hai mươi mét vuông"]}
+{"id": "dev-unit-005", "category": "unit", "input": "Nhiệt độ 36,5°C.", "references": ["nhiệt độ ba mươi sáu phẩy năm độ xê", "nhiệt độ ba mươi sáu phẩy năm độ"]}
+{"id": "dev-unit-006", "category": "unit", "input": "Chai nước 500ml.", "references": ["chai nước năm trăm mi li lít"]}
+{"id": "dev-unit-007", "category": "unit", "input": "Cao 180cm.", "references": ["cao một trăm tám mươi xen ti mét"]}
+{"id": "dev-unit-008", "category": "unit", "input": "Ổ cứng 512GB.", "references": ["ổ cứng năm trăm mười hai gi ga bai"]}
+{"id": "dev-unit-009", "category": "unit", "input": "Lượng mưa 50mm.", "references": ["lượng mưa năm mươi mi li mét"]}
+{"id": "dev-unit-010", "category": "unit", "input": "Trang trại rộng 3 ha.", "references": ["trang trại rộng ba héc ta"]}
+{"id": "dev-date-001", "category": "date", "input": "Ngày 2/9/1945.", "references": ["ngày hai tháng chín năm một nghìn chín trăm bốn mươi lăm"]}
+{"id": "dev-date-002", "category": "date", "input": "Sinh ngày 15/08/2000.", "references": ["sinh ngày mười lăm tháng tám năm hai nghìn"]}
+{"id": "dev-date-003", "category": "date", "input": "Hạn chót là 31/12/2024.", "references": ["hạn chót là ngày ba mươi mốt tháng mười hai năm hai nghìn không trăm hai mươi tư", "hạn chót là ba mươi mốt tháng mười hai năm hai nghìn không trăm hai mươi tư"]}
+{"id": "dev-date-004", "category": "date", "input": "Vào tháng 4/2023.", "references": ["vào tháng tư năm hai nghìn không trăm hai mươi ba"]}
+{"id": "dev-date-005", "category": "date", "input": "Lễ hội diễn ra ngày 10/3.", "references": ["lễ hội diễn ra ngày mười tháng ba"]}
+{"id": "dev-date-006", "category": "date", "input": "Khai giảng 5-9-2024.", "references": ["khai giảng ngày năm tháng chín năm hai nghìn không trăm hai mươi tư", "khai giảng năm tháng chín năm hai nghìn không trăm hai mươi tư"]}
+{"id": "dev-date-007", "category": "date", "input": "Từ tháng 1/2025.", "references": ["từ tháng một năm hai nghìn không trăm hai mươi lăm", "từ tháng giêng năm hai nghìn không trăm hai mươi lăm"]}
+{"id": "dev-date-008", "category": "date", "input": "Họp vào 01/06/2026.", "references": ["họp vào ngày một tháng sáu năm hai nghìn không trăm hai mươi sáu", "họp vào một tháng sáu năm hai nghìn không trăm hai mươi sáu"]}
+{"id": "dev-date-009", "category": "date", "input": "Ngày 20/11 là ngày Nhà giáo.", "references": ["ngày hai mươi tháng mười một là ngày nhà giáo"]}
+{"id": "dev-time-001", "category": "time", "input": "Lúc 14h30.", "references": ["lúc mười bốn giờ ba mươi", "lúc mười bốn giờ ba mươi phút"]}
+{"id": "dev-time-002", "category": "time", "input": "Họp lúc 8:05.", "references": ["họp lúc tám giờ năm phút", "họp lúc tám giờ năm"]}
+{"id": "dev-time-003", "category": "time", "input": "Mở cửa từ 7h đến 22h.", "references": ["mở cửa từ bảy giờ đến hai mươi hai giờ"]}
+{"id": "dev-time-004", "category": "time", "input": "Bắt đầu lúc 9g15.", "references": ["bắt đầu lúc chín giờ mười lăm", "bắt đầu lúc chín giờ mười lăm phút"]}
+{"id": "dev-time-005", "category": "time", "input": "Kết thúc lúc 23:59.", "references": ["kết thúc lúc hai mươi ba giờ năm mươi chín phút", "kết thúc lúc hai mươi ba giờ năm mươi chín"]}
+{"id": "dev-time-006", "category": "time", "input": "Hẹn 6h sáng mai.", "references": ["hẹn sáu giờ sáng mai"]}
+{"id": "dev-phone-001", "category": "phone", "input": "Gọi 0912345678.", "references": ["gọi không chín một hai ba bốn năm sáu bảy tám"]}
+{"id": "dev-phone-002", "category": "phone", "input": "Tổng đài 1900 1234.", "references": ["tổng đài một chín không không một hai ba bốn"]}
+{"id": "dev-phone-003", "category": "phone", "input": "SĐT: 0987 654 321.", "references": ["số điện thoại không chín tám bảy sáu năm bốn ba hai một"]}
+{"id": "dev-phone-004", "category": "phone", "input": "Liên hệ +84 912 345 678.", "references": ["liên hệ cộng tám tư chín một hai ba bốn năm sáu bảy tám", "liên hệ cộng tám bốn chín một hai ba bốn năm sáu bảy tám"]}
+{"id": "dev-phone-005", "category": "phone", "input": "Số máy bàn 024.3825.1234.", "references": ["số máy bàn không hai bốn ba tám hai năm một hai ba bốn"]}
+{"id": "dev-range-001", "category": "range", "input": "Từ 5-10 người.", "references": ["từ năm đến mười người"]}
+{"id": "dev-range-002", "category": "range", "input": "Việt Nam thắng 3-1.", "references": ["việt nam thắng ba một"]}
+{"id": "dev-range-003", "category": "range", "input": "Giai đoạn 2020-2025.", "references": ["giai đoạn hai nghìn không trăm hai mươi đến hai nghìn không trăm hai mươi lăm"]}
+{"id": "dev-range-004", "category": "range", "input": "Nhiệt độ 25-30°C.", "references": ["nhiệt độ hai mươi lăm đến ba mươi độ xê", "nhiệt độ hai mươi lăm đến ba mươi độ"]}
+{"id": "dev-range-005", "category": "range", "input": "Trẻ em 6-12 tuổi.", "references": ["trẻ em sáu đến mười hai tuổi"]}
+{"id": "dev-abbreviation-001", "category": "abbreviation", "input": "UBND tỉnh họp.", "references": ["ủy ban nhân dân tỉnh họp"]}
+{"id": "dev-abbreviation-002", "category": "abbreviation", "input": "Học sinh THPT.", "references": ["học sinh trung học phổ thông"]}
+{"id": "dev-abbreviation-003", "category": "abbreviation", "input": "Tại TP.HCM.", "references": ["tại thành phố hồ chí minh"]}
+{"id": "dev-abbreviation-004", "category": "abbreviation", "input": "GS. Ngô Bảo Châu.", "references": ["giáo sư ngô bảo châu"]}
+{"id": "dev-abbreviation-005", "category": "abbreviation", "input": "Liên hệ CSGT.", "references": ["liên hệ cảnh sát giao thông"]}
+{"id": "dev-abbreviation-006", "category": "abbreviation", "input": "Đóng BHXH đầy đủ.", "references": ["đóng bảo hiểm xã hội đầy đủ"]}
+{"id": "dev-abbreviation-007", "category": "abbreviation", "input": "Trường ĐH Bách khoa.", "references": ["trường đại học bách khoa"]}
+{"id": "dev-abbreviation-008", "category": "abbreviation", "input": "TS. Nguyễn Văn An.", "references": ["tiến sĩ nguyễn văn an"]}
+{"id": "dev-abbreviation-009", "category": "abbreviation", "input": "Hàng hóa, thực phẩm, v.v.", "references": ["hàng hóa, thực phẩm, vân vân"]}
+{"id": "dev-abbreviation-010", "category": "abbreviation", "input": "Cấp CCCD mới.", "references": ["cấp căn cước công dân mới"]}
+{"id": "dev-acronym-001", "category": "acronym", "input": "Công nghệ AI phát triển.", "references": ["công nghệ a i phát triển", "công nghệ ây ai phát triển"]}
+{"id": "dev-acronym-002", "category": "acronym", "input": "Đội U23 Việt Nam.", "references": ["đội u hai mươi ba việt nam"]}
+{"id": "dev-acronym-003", "category": "acronym", "input": "Kênh VTV1.", "references": ["kênh vê tê vê một"]}
+{"id": "dev-acronym-004", "category": "acronym", "input": "Công ty FPT.", "references": ["công ty ép pê tê"]}
+{"id": "dev-acronym-005", "category": "acronym", "input": "Bệnh COVID-19.", "references": ["bệnh cô vít mười chín", "bệnh covid mười chín"]}
+{"id": "dev-plain-001", "category": "plain", "input": "Hôm nay trời đẹp quá.", "references": ["hôm nay trời đẹp quá"]}
+{"id": "dev-plain-002", "category": "plain", "input": "Tôi yêu Việt Nam.", "references": ["tôi yêu việt nam"]}
+{"id": "dev-plain-003", "category": "plain", "input": "Cô giáo đang giảng bài.", "references": ["cô giáo đang giảng bài"]}
+{"id": "dev-plain-004", "category": "plain", "input": "Mẹ đi chợ mua rau.", "references": ["mẹ đi chợ mua rau"]}
+{"id": "dev-plain-005", "category": "plain", "input": "Anh ấy làm việc rất chăm chỉ.", "references": ["anh ấy làm việc rất chăm chỉ"]}
+{"id": "dev-plain-006", "category": "plain", "input": "Hà Nội là thủ đô của Việt Nam.", "references": ["hà nội là thủ đô của việt nam"]}
+{"id": "dev-plain-007", "category": "plain", "input": "Bạn có khỏe không?", "references": ["bạn có khỏe không"]}
+{"id": "dev-plain-008", "category": "plain", "input": "Mùa thu lá vàng rơi.", "references": ["mùa thu lá vàng rơi"]}
+{"id": "dev-mixed-001", "category": "mixed", "input": "Ngày 15/3/2024, giá vàng SJC tăng 1,2 triệu đồng/lượng, lên 80,5 triệu đồng.", "references": ["ngày mười lăm tháng ba năm hai nghìn không trăm hai mươi tư, giá vàng ét gi xê tăng một phẩy hai triệu đồng một lượng, lên tám mươi phẩy năm triệu đồng", "ngày mười lăm tháng ba năm hai nghìn không trăm hai mươi tư, giá vàng ét di xê tăng một phẩy hai triệu đồng một lượng, lên tám mươi phẩy năm triệu đồng", "ngày mười lăm tháng ba năm hai nghìn không trăm hai mươi tư, giá vàng ét gi xê tăng một phẩy hai triệu đồng mỗi lượng, lên tám mươi phẩy năm triệu đồng", "ngày mười lăm tháng ba năm hai nghìn không trăm hai mươi tư, giá vàng ét di xê tăng một phẩy hai triệu đồng mỗi lượng, lên tám mươi phẩy năm triệu đồng", "ngày mười lăm tháng ba năm hai nghìn không trăm hai mươi tư, giá vàng ét gi xê tăng một phẩy hai triệu đồng trên lượng, lên tám mươi phẩy năm triệu đồng", "ngày mười lăm tháng ba năm hai nghìn không trăm hai mươi tư, giá vàng ét di xê tăng một phẩy hai triệu đồng trên lượng, lên tám mươi phẩy năm triệu đồng"]}
+{"id": "dev-mixed-002", "category": "mixed", "input": "Lúc 19h30 tối 20/11, U23 Việt Nam thắng 2-0.", "references": ["lúc mười chín giờ ba mươi tối hai mươi tháng mười một, u hai mươi ba việt nam thắng hai không", "lúc mười chín giờ ba mươi tối ngày hai mươi tháng mười một, u hai mươi ba việt nam thắng hai không", "lúc mười chín giờ ba mươi phút tối hai mươi tháng mười một, u hai mươi ba việt nam thắng hai không", "lúc mười chín giờ ba mươi phút tối ngày hai mươi tháng mười một, u hai mươi ba việt nam thắng hai không"]}
+{"id": "dev-mixed-003", "category": "mixed", "input": "TP.HCM có hơn 9 triệu dân, tăng 2,3% so với năm 2019.", "references": ["thành phố hồ chí minh có hơn chín triệu dân, tăng hai phẩy ba phần trăm so với năm hai nghìn không trăm mười chín"]}
+{"id": "dev-mixed-004", "category": "mixed", "input": "Xe chạy 120km/h trên cao tốc dài 55km.", "references": ["xe chạy một trăm hai mươi ki lô mét trên giờ trên cao tốc dài năm mươi lăm ki lô mét", "xe chạy một trăm hai mươi ki lô mét một giờ trên cao tốc dài năm mươi lăm ki lô mét", "xe chạy một trăm hai mươi ki lô mét mỗi giờ trên cao tốc dài năm mươi lăm ki lô mét"]}
+{"id": "dev-mixed-005", "category": "mixed", "input": "Gọi 0909 123 456 trước 17h để được giảm 10%.", "references": ["gọi không chín không chín một hai ba bốn năm sáu trước mười bảy giờ để được giảm mười phần trăm"]}
+{"id": "dev-mixed-006", "category": "mixed", "input": "Học phí năm 2025 là 25.000.000đ/năm.", "references": ["học phí năm hai nghìn không trăm hai mươi lăm là hai mươi lăm triệu đồng một năm", "học phí năm hai nghìn không trăm hai mươi lăm là hai mươi lăm triệu đồng mỗi năm", "học phí năm hai nghìn không trăm hai mươi lăm là hai mươi lăm triệu đồng trên năm"]}
+{"id": "dev-mixed-007", "category": "mixed", "input": "Nhiệt độ Hà Nội hôm nay 28-35°C, độ ẩm 80%.", "references": ["nhiệt độ hà nội hôm nay hai mươi tám đến ba mươi lăm độ xê, độ ẩm tám mươi phần trăm", "nhiệt độ hà nội hôm nay hai mươi tám đến ba mươi lăm độ, độ ẩm tám mươi phần trăm"]}
+{"id": "dev-mixed-008", "category": "mixed", "input": "Theo UBND TP. Hà Nội, 1.200 hộ dân đã nhận hỗ trợ.", "references": ["theo ủy ban nhân dân thành phố hà nội, một nghìn hai trăm hộ dân đã nhận hỗ trợ"]}

@@ -1,185 +1,114 @@
-# 🇻🇳 Vietnamese TTS
+# 🇻🇳 ViTTS-Bench: Benchmark mở cho Text-to-Speech tiếng Việt
 
 [![CI](https://github.com/yoonjae26/vietnamese-tts/actions/workflows/ci.yml/badge.svg)](https://github.com/yoonjae26/vietnamese-tts/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 ![Python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12-blue)
 
-Bộ công cụ **chuyển văn bản tiếng Việt thành giọng nói**, xây dựng trên [coqui-tts](https://github.com/idiap/coqui-ai-TTS).
+Mảng TTS tiếng Việt mã nguồn mở đã có nhiều lựa chọn: viXTTS, VietTTS, F5-TTS-Vietnamese, VieNeu-TTS, Piper, Meta MMS…
+Mỗi dự án tự báo cáo kết quả trên dữ liệu riêng, nên **rất khó biết nên chọn cái nào**.
 
-coqui-tts hỗ trợ hàng trăm ngôn ngữ nhưng **chưa có xử lý riêng cho tiếng Việt**: XTTS không hỗ trợ `vi`, không có bộ chuẩn hóa văn bản, không có formatter dataset. Dự án này bổ sung những phần còn thiếu đó:
+ViTTS-Bench so sánh chúng **trên cùng một bộ test, cùng một cách chấm, chạy lại được bằng một lệnh**.
+
+| Hạng mục | Trạng thái |
+| --- | --- |
+| 🔤 Chuẩn hóa văn bản (Vinorm, soe-vinorm, VietNormalizer, vitts) | ✅ Có kết quả |
+| 🔊 Model TTS: độ rõ (WER qua ASR), tốc độ (RTF), VRAM, giấy phép | 🚧 Đang làm |
+| 🌐 API chung tương thích OpenAI cho mọi model | 🚧 Có khung (`vitts-server`) |
+
+## Kết quả: chuẩn hóa văn bản
+
+Model TTS chỉ đọc được chữ, nên `"100k"`, `"14h30"`, `"TP.HCM"` phải được đổi sang cách đọc trước. Nếu bước này sai, model tốt đến đâu cũng đọc sai.
+
+**Bộ held-out**, 59 câu, là con số chính thức. Ô là **tỉ lệ câu đọc đúng hoàn toàn** (WER trong ngoặc):
+
+| Nhóm | n | vitts (repo này) | [vinorm](https://github.com/v-nhandt21/Vinorm) 2.0.7 | [soe-vinorm](https://pypi.org/project/soe-vinorm/) 0.3.2 | [vietnormalizer](https://github.com/nghimestudio/vietnormalizer) 0.2.3 |
+|---|---:|---:|---:|---:|---:|
+| number | 13 | 62% (11.8%) | 69% (6.6%) | **100% (0.0%)** | 69% (6.6%) |
+| date | 5 | **100% (0.0%)** | 80% (2.5%) | **100% (0.0%)** | 60% (5.0%) |
+| time | 4 | **100% (0.0%)** | **100% (0.0%)** | **100% (0.0%)** | **100% (0.0%)** |
+| unit | 7 | 29% (33.3%) | 43% (24.0%) | **71% (4.0%)** | 14% (53.3%) |
+| currency | 5 | **80% (9.4%)** | 40% (18.8%) | 40% (25.0%) | 60% (18.8%) |
+| percent | 1 | **100% (0.0%)** | 0% (37.5%) | **100% (0.0%)** | 0% (12.5%) |
+| phone | 3 | **67% (7.4%)** | **67% (7.4%)** | **67% (7.4%)** | 0% (67.9%) |
+| abbreviation | 6 | 17% (43.8%) | **83% (6.2%)** | **83% (6.2%)** | 0% (62.5%) |
+| acronym | 3 | **33% (42.9%)** | 0% (46.2%) | 0% (46.2%) | **33% (38.5%)** |
+| foreign | 3 | 0% (57.9%) | 0% (41.2%) | 0% (35.3%) | **33% (52.6%)** |
+| plain | 4 | **100% (0.0%)** | **100% (0.0%)** | **100% (0.0%)** | **100% (0.0%)** |
+| mixed | 5 | 60% (7.4%) | 40% (12.6%) | **80% (6.3%)** | 0% (20.0%) |
+| **Tổng** | **59** | 59% (15.3%) | 59% (12.7%) | **76% (7.2%)** | 44% (25.3%) |
+| ms / câu | | 0.1 | 30.6 | 0.3 | 0.2 |
+
+**Nhận xét**
+- **soe-vinorm tốt nhất tổng thể** (76%), mạnh ở số, đơn vị và viết tắt.
+- Chưa bộ nào xử lý tốt **từ nước ngoài** (iPhone, SEA Games, IELTS) và **chữ viết tắt đánh vần** (ATM, NATO). Đây là khoảng trống lớn nhất.
+- Tiền tệ viết tắt (`50k`, `99.000đ`, `VND/USD`) là điểm yếu chung. vinorm và soe-vinorm đọc `100k` thành "một trăm ca".
+- vitts (bản của repo này) mạnh về tiền tệ, ngày giờ, điện thoại, nhưng **yếu ở số La Mã, đơn vị dính số (`1m75`, `1.500W`) và viết tắt địa danh (`Q.1`, `P.`)**.
+
+Kết quả chi tiết từng câu: [`results/normalization_heldout_errors.md`](results/normalization_heldout_errors.md).
+
+### Phương pháp, và vì sao có hai bộ test
+
+| Bộ | Số câu | Vai trò |
+| --- | ---: | --- |
+| `dev` | 99 | Dùng trong lúc phát triển vitts. **vitts đã được sửa dựa trên bộ này**, nên điểm của nó ở đây (100%) không phản ánh năng lực thật. |
+| `heldout` | 59 | Viết sau khi vitts đã xong, gồm các hiện tượng chưa được code riêng. **Không sửa vitts dựa trên bộ này.** Đây là con số công bố. |
+
+- Đáp án được **viết tay** theo cách đọc tự nhiên, không sinh từ output của bộ chuẩn hóa nào. Một câu có thể có nhiều đáp án đúng, ví dụ "đồng **một** lít", "đồng **mỗi** lít", "đồng **trên** lít".
+- Trước khi so sánh, bỏ dấu câu và hoa/thường, rồi quy các biến thể vùng miền về một dạng: *ngàn/nghìn, lẻ/linh, tỉ/tỷ, mươi bốn/mươi tư, kí lô/ki lô, tháng bốn/tháng tư, Việt Nam đồng/đồng…* ([`metrics.py`](src/vitts/bench/metrics.py)).
+- **Hạn chế:** bộ test do một người viết và còn nhỏ. Hãy đóng góp thêm câu, nhất là câu từ nguồn thực tế (báo, mạng xã hội, văn bản hành chính). Khi vitts được cải thiện, phiên bản mới phải được đo trên một bộ held-out mới.
+
+### Chạy lại
+
+```bash
+pip install -e ".[bench]"
+python benchmark/normalization/build_testset.py
+python benchmark/normalization/run.py --split heldout
+python benchmark/normalization/run.py --split dev
+```
+
+## Lộ trình
+
+**Giai đoạn 2: benchmark model TTS**
+- [ ] Bộ câu chung cho mọi model: câu ngắn, câu dài, câu có số, từ mượn, tên riêng
+- [ ] Độ rõ: ASR tiếng Việt (PhoWhisper / Whisper) nghe lại audio → WER/CER
+- [ ] Tốc độ: RTF trên CPU và GPU, thời gian ra audio đầu tiên, VRAM
+- [ ] Độ giống giọng khi clone (speaker similarity), MOS dự đoán (UTMOS)
+- [ ] Các model: Meta MMS, viXTTS, VietTTS, F5-TTS-Vietnamese, VieNeu-TTS, Piper VITS
+- [ ] Trang nghe thử: cùng một câu, mọi model
+
+**Giai đoạn 3: API chung**
+- [ ] Một server tương thích OpenAI, chọn model bằng tham số `model`
+
+**vitts normalizer v0.2**
+- [ ] Số dính chữ (`12A`, `1m75`, `1.500W`), số La Mã, phân số, số âm
+- [ ] Viết tắt hành chính (`Q.`, `P.`, `GD&ĐT`, `CNTT`), từ điển từ nước ngoài
+- [ ] Đo trên bộ held-out mới (`HELDOUT_V2`)
+
+## Thành phần khác trong repo
 
 | Thành phần | Mô tả |
 | --- | --- |
-| 🔤 **Chuẩn hóa văn bản** | Đọc số, ngày tháng, giờ, tiền tệ, đơn vị đo, số điện thoại, chữ viết tắt; thống nhất Unicode và vị trí dấu thanh |
-| 🗂️ **Formatter dataset** | Dùng trực tiếp với `load_tts_samples` của coqui: kiểu LJSpeech, cặp wav/txt, Common Voice |
-| 🏋️ **Recipe huấn luyện** | Huấn luyện / fine-tune VITS tiếng Việt với bảng ký tự tiếng Việt đầy đủ |
-| 🌐 **API server** | FastAPI, **tương thích OpenAI** `/v1/audio/speech`: đổi `base_url` là dùng được |
-| 🎛️ **Demo Gradio** | Giao diện web, triển khai được lên Hugging Face Spaces |
-| 🐳 **Docker** | Đóng gói server chạy trên CPU |
-
-## Chuẩn hóa văn bản
-
-Model TTS chỉ nhìn thấy ký tự, nên `"100k"` hay `"14h30"` phải được đổi thành chữ trước khi đọc.
-
-```python
-from vitts import normalize_text
-
-normalize_text("Giá 100k, giao lúc 14h30 ngày 2/9/2024 tại TP.HCM!")
-# 'giá một trăm nghìn, giao lúc mười bốn giờ ba mươi phút ngày hai tháng chín
-#  năm hai nghìn không trăm hai mươi tư tại thành phố hồ chí minh!'
-```
-
-| Đầu vào | Đầu ra |
-| --- | --- |
-| `21`, `105`, `1005` | hai mươi mốt, một trăm linh năm, một nghìn không trăm linh năm |
-| `1.250.000đ`, `$5`, `100k` | một triệu hai trăm năm mươi nghìn đồng, năm đô la, một trăm nghìn |
-| `36,5°C`, `12%`, `60km/h` | ba mươi sáu phẩy năm độ xê, mười hai phần trăm, sáu mươi ki lô mét trên giờ |
-| `2/9/2024`, `tháng 4/2023`, `thứ 4` | ngày hai tháng chín năm …, tháng tư năm …, thứ tư |
-| `14h30`, `8:05` | mười bốn giờ ba mươi phút, tám giờ năm phút |
-| `5-10 người`, `thắng 3-1` | năm đến mười người, thắng ba một |
-| `0912 345 678` | không chín một hai ba bốn năm sáu bảy tám |
-| `UBND`, `THPT`, `AI`, `U23` | ủy ban nhân dân, trung học phổ thông, a i, u hai mươi ba |
-| `hoà`, `thuỷ`, `khoẻ` | hòa, thủy, khỏe (thống nhất vị trí dấu thanh) |
-
-Phần chuẩn hóa **không cần thư viện ngoài**, dùng được cho mọi hệ TTS khác (Piper, F5-TTS, VITS, …).
-
-## Cài đặt
-
-```bash
-git clone https://github.com/yoonjae26/vietnamese-tts.git
-cd vietnamese-tts
-pip install -e ".[server,demo]"     # hoặc chỉ `pip install -e .` nếu chỉ cần chuẩn hóa văn bản
-```
-
-## Sử dụng
-
-### Python
-
-```python
-from vitts.synthesizer import VietnameseTTS
-
-tts = VietnameseTTS()  # mặc định dùng Meta MMS tiếng Việt (tts_models/vie/fairseq/vits)
-audio = tts.synthesize("Xin chào Việt Nam! Hôm nay là ngày 2/9.")
-open("out.wav", "wb").write(audio.to_wav_bytes())
-
-# Dùng checkpoint tự huấn luyện
-tts = VietnameseTTS(model_path="runs/.../best_model.pth", config_path="runs/.../config.json")
-```
-
-Văn bản dài được tự động tách câu, đọc từng đoạn rồi ghép lại.
-
-### API server (tương thích OpenAI)
-
-```bash
-vitts-server --port 8000
-```
-
-```bash
-curl http://localhost:8000/v1/audio/speech \
-  -H "Content-Type: application/json" \
-  -d '{"input": "Xin chào, tôi là trợ lý giọng nói.", "response_format": "wav"}' \
-  -o out.wav
-```
-
-```python
-from openai import OpenAI
-
-client = OpenAI(base_url="http://localhost:8000/v1", api_key="none")
-client.audio.speech.create(model="vitts", voice="default", input="Xin chào!").write_to_file("out.wav")
-```
-
-| Endpoint | Mô tả |
-| --- | --- |
-| `POST /v1/audio/speech` | `input`, `voice`, `speed` (0.25–4), `response_format` (`wav` / `flac` / `pcm`) |
-| `POST /v1/normalize` | Trả về văn bản sau chuẩn hóa, tiện để debug |
-| `GET /v1/models`, `GET /health` | Thông tin model |
-
-Tài liệu tương tác: `http://localhost:8000/docs`.
-
-### Demo web
-
-```bash
-python app.py
-```
-
-### Docker
-
-```bash
-docker build -t vietnamese-tts .
-docker run -p 8000:8000 vietnamese-tts
-```
-
-## Huấn luyện model của riêng bạn
-
-1. Chuẩn bị dữ liệu (mono, 22050 Hz):
-
-   ```
-   data/my_dataset/
-   ├── metadata.csv        # <id>|<văn bản>[|<người nói>]
-   └── wavs/<id>.wav
-   ```
-
-   Các formatter có sẵn trong [`vitts/datasets.py`](src/vitts/datasets.py):
-
-   | Formatter | Định dạng |
-   | --- | --- |
-   | `vi_ljspeech` | `metadata.csv` + `wavs/` |
-   | `vi_wav_txt_pairs` | Thư mục các cặp `x.wav` + `x.txt`; thư mục con là tên người nói |
-   | `vi_common_voice` | Mozilla Common Voice (chạy `scripts/prepare_common_voice.py` để đổi mp3 → wav) |
-
-2. Huấn luyện:
-
-   ```bash
-   pip install -e ".[tts]"
-   python recipes/vits/train_vits.py --data data/my_dataset --output runs
-   tensorboard --logdir runs
-   ```
-
-3. Phục vụ model vừa train:
-
-   ```bash
-   vitts-server --model-path runs/<run>/best_model.pth --config-path runs/<run>/config.json
-   ```
-
-## Cấu trúc dự án
-
-```
-src/vitts/
-├── text/
-│   ├── numbers.py       # đọc số thành chữ
-│   ├── normalizer.py    # pipeline chuẩn hóa + tách câu
-│   └── symbols.py       # bảng ký tự tiếng Việt cho tokenizer
-├── datasets.py          # formatter dataset cho coqui-tts
-├── synthesizer.py       # bọc TTS API: chuẩn hóa → tách câu → ghép audio
-└── server.py            # FastAPI, tương thích OpenAI
-recipes/vits/            # script huấn luyện
-app.py                   # demo Gradio
-tests/                   # pytest
-```
+| [`vitts.text`](src/vitts/text/) | Bộ chuẩn hóa tiếng Việt, không phụ thuộc thư viện ngoài |
+| [`vitts.datasets`](src/vitts/datasets.py) | Formatter dataset cho coqui-tts (LJSpeech, cặp wav/txt, Common Voice) |
+| [`recipes/vits`](recipes/vits/) | Script huấn luyện VITS tiếng Việt bằng coqui-tts |
+| [`vitts.server`](src/vitts/server.py) | FastAPI server tương thích OpenAI `/v1/audio/speech` |
+| [`app.py`](app.py) | Demo Gradio |
 
 ## Phát triển
 
 ```bash
 pip install -e ".[dev]"
-pytest          # unit test + doctest
+pytest
 ruff check . && ruff format --check .
 ```
 
-## Lộ trình
-
-- [ ] Phát hành checkpoint VITS tiếng Việt lên Hugging Face Hub
-- [ ] Demo trên Hugging Face Spaces
-- [ ] Streaming audio qua WebSocket
-- [ ] Fine-tune XTTS v2 cho tiếng Việt (voice cloning)
-- [ ] Hỗ trợ giọng miền Bắc / Trung / Nam
-- [ ] Export ONNX để chạy nhanh trên CPU
+Khi chạy benchmark trên GPU, chỉ định GPU bằng `CUDA_VISIBLE_DEVICES` (ví dụ `CUDA_VISIBLE_DEVICES=0`).
 
 ## Giấy phép
 
-- Mã nguồn dự án: [MIT](LICENSE).
-- [coqui-tts](https://github.com/idiap/coqui-ai-TTS): MPL-2.0.
-- Model mặc định **Meta MMS** (`tts_models/vie/fairseq/vits`): [CC-BY-NC 4.0](https://github.com/facebookresearch/fairseq/tree/main/examples/mms), **không dùng cho mục đích thương mại**. Hãy tự huấn luyện model nếu cần dùng thương mại.
+- Mã nguồn và bộ test: [MIT](LICENSE).
+- Các thư viện và model được benchmark giữ giấy phép riêng. Ví dụ Meta MMS là CC-BY-NC 4.0, không dùng thương mại.
 
 ---
 
-*English:* Vietnamese TTS toolkit on top of coqui-tts: rule-based Vietnamese text normalization (numbers, dates, currency, units, abbreviations, tone-mark placement), dataset formatters, a VITS training recipe, an OpenAI-compatible FastAPI server, and a Gradio demo.
+*English:* ViTTS-Bench is an open, reproducible benchmark for Vietnamese TTS. Stage 1 compares Vietnamese text normalizers on a hand-written held-out set (soe-vinorm currently leads at 76% sentence accuracy). Stage 2 will benchmark TTS models (intelligibility via ASR round-trip WER, RTF, VRAM) under one harness.

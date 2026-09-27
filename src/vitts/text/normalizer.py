@@ -110,12 +110,13 @@ _NUM = r"\d{1,3}(?:\.\d{3})+(?:,\d+)?|\d+(?:[.,]\d+)?"
 _B = r"(?<![\w.,])"  # không dính với chữ/số phía trước
 _E = r"(?![\w])"
 
-_RE_DATE_DMY = re.compile(rf"(?:ngày\s+)?{_B}(\d{{1,2}})[/-](\d{{1,2}})[/-](\d{{4}}){_E}")
+_RE_DATE_DMY = re.compile(rf"(?:[Nn]gày\s+)?{_B}(\d{{1,2}})[/-](\d{{1,2}})[/-](\d{{4}}){_E}")
 _RE_DATE_MY = re.compile(rf"(?<=tháng )(\d{{1,2}})[/-](\d{{4}}){_E}", re.IGNORECASE)
 _RE_DATE_DM = re.compile(rf"{_B}(\d{{1,2}})/(\d{{1,2}}){_E}")
 _RE_TIME = re.compile(rf"{_B}(\d{{1,2}})(?::|h|g)(\d{{2}})(?::(\d{{2}}))?{_E}")
 _RE_HOUR = re.compile(rf"{_B}(\d{{1,2}})(?:h|g){_E}")
-_RE_PHONE = re.compile(rf"{_B}(\+84|0)(\d[\d .]{{7,12}}\d){_E}")
+_RE_PHONE = re.compile(rf"(?<![\w.,+])(\+84\s?|0)(\d[\d .]{{7,12}}\d){_E}")
+_RE_HOTLINE = re.compile(rf"{_B}(1[89]00[\s.]?\d{{2,4}}(?:[\s.]?\d{{2,4}})?){_E}")
 _RE_RANGE = re.compile(rf"{_B}({_NUM})\s*[-–]\s*({_NUM}){_E}")
 _RE_CURRENCY_PREFIX = re.compile(rf"([$€])\s*({_NUM})")
 _RE_UNIT = re.compile(
@@ -127,6 +128,13 @@ _RE_ACRONYM = re.compile(r"\b[A-ZĐ]{2,5}\b")
 _RE_ABBR = re.compile(
     r"(?<!\w)(" + "|".join(re.escape(a) for a in sorted(ABBREVIATIONS, key=len, reverse=True)) + r")(?!\w)"
 )
+
+# "đồng/lít", "triệu/tháng" -> "đồng một lít", "triệu một tháng"
+PER_WORDS = {
+    "giây", "phút", "giờ", "ngày", "tuần", "tháng", "quý", "năm", "lít", "lượng", "chỉ", "tấn", "tạ",
+    "người", "chiếc", "cái", "suất", "vé", "đêm", "lần", "hộp", "gói", "bao", "con", "kg", "g", "m", "m2", "km", "l",
+}  # fmt: skip
+_RE_PER = re.compile(r"(?<=[\w%])\s*/\s*(" + "|".join(sorted(PER_WORDS, key=len, reverse=True)) + r")(?!\w)")
 
 _SPECIAL_ORDINALS = {  # "thứ 4" -> "thứ tư", "tháng 4" -> "tháng tư"
     ("thứ", "1"): "thứ nhất",
@@ -224,7 +232,7 @@ def _range(m: re.Match) -> str:
 
 
 def _phone(m: re.Match) -> str:
-    prefix = "cộng tám tư" if m.group(1) == "+84" else "không"
+    prefix = "cộng tám tư" if m.group(1).strip() == "+84" else "không"
     return f"{prefix} {read_digits(m.group(2))}"
 
 
@@ -256,6 +264,7 @@ def normalize_text(text: str, strict: bool = True) -> str:
     text = _RE_ABBR.sub(lambda m: ABBREVIATIONS[m.group(1)], text)
 
     # Số có ngữ cảnh: ngày, giờ, điện thoại, tiền, đơn vị, khoảng
+    text = _RE_HOTLINE.sub(lambda m: read_digits(m.group(1)), text)
     text = _RE_PHONE.sub(_phone, text)
     text = _RE_DATE_DMY.sub(_date_dmy, text)
     text = _RE_DATE_MY.sub(_date_my, text)
@@ -265,6 +274,7 @@ def normalize_text(text: str, strict: bool = True) -> str:
     text = _RE_CURRENCY_PREFIX.sub(lambda m: f"{read_number_token(m.group(2))} {UNITS[m.group(1)]}", text)
     text = _RE_RANGE.sub(_range, text)
     text = _RE_UNIT.sub(lambda m: f"{read_number_token(m.group(1))} {UNITS[m.group(2)]}", text)
+    text = _RE_PER.sub(lambda m: f" một {UNITS.get(m.group(1), m.group(1))}", text)
     text = _RE_ORDINAL.sub(lambda m: _SPECIAL_ORDINALS[(m.group(1).lower(), m.group(2))], text)
 
     # Chữ viết tắt in hoa còn sót lại: đánh vần (trừ khi cả đoạn văn viết hoa)

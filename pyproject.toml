@@ -3,14 +3,14 @@ requires = ["setuptools>=64"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "vietnamese-tts"
+name = "vitts-bench"
 version = "0.1.0"
-description = "Vietnamese Text-to-Speech toolkit: text normalization, dataset formatters, training recipes and an OpenAI-compatible API server built on coqui-tts."
+description = "Open, reproducible benchmark for Vietnamese text-to-speech: text normalizers, TTS models and a unified OpenAI-compatible API."
 readme = "README.md"
 requires-python = ">=3.10, <3.13"
 license = { text = "MIT" }
 authors = [{ name = "yoonjae26" }]
-keywords = ["tts", "text-to-speech", "vietnamese", "coqui", "vits", "speech-synthesis"]
+keywords = ["tts", "text-to-speech", "vietnamese", "benchmark", "text-normalization", "speech-synthesis"]
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
@@ -21,9 +21,10 @@ classifiers = [
 dependencies = []
 
 [project.optional-dependencies]
+bench = ["vinorm", "soe-vinorm", "vietnormalizer"]
 tts = ["coqui-tts>=0.24.1", "numpy", "soundfile", "librosa"]
-server = ["vietnamese-tts[tts]", "fastapi>=0.110", "uvicorn[standard]>=0.29"]
-demo = ["vietnamese-tts[tts]", "gradio>=4"]
+server = ["vitts-bench[tts]", "fastapi>=0.110", "uvicorn[standard]>=0.29"]
+demo = ["vitts-bench[tts]", "gradio>=4"]
 dev = ["pytest>=8", "ruff>=0.5", "fastapi>=0.110", "httpx", "numpy", "soundfile"]
 
 [project.scripts]
