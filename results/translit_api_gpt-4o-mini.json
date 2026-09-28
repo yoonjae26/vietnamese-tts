@@ -1,0 +1,28 @@
+[
+ {
+  "system": "gpt-4o-mini zero-shot",
+  "exact": 0.15930787589498807,
+  "ser": 0.7550730196613257,
+  "cer": 0.35198685119496215,
+  "seconds": 157.87300416454673,
+  "usage": {
+   "input": 11565,
+   "output": 18693,
+   "requests": 34
+  },
+  "missing": 0
+ },
+ {
+  "system": "gpt-4o-mini few-shot (20 ví dụ từ train)",
+  "exact": 0.1957040572792363,
+  "ser": 0.6643212296851922,
+  "cer": 0.3305387515073565,
+  "seconds": 159.04942681267858,
+  "usage": {
+   "input": 18433,
+   "output": 18534,
+   "requests": 34
+  },
+  "missing": 0
+ }
+]

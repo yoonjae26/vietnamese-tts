@@ -80,10 +80,16 @@ python benchmark/normalization/run.py --split heldout_v2
 | **vitts translit (chữ + âm vị CMUdict), 5.6M tham số** | **55.1%** | **30.0%** |
 | Qwen2.5-7B-Instruct zero-shot, 7.6B tham số | 3.2% | 95.3% |
 | Qwen2.5-7B-Instruct few-shot (20 ví dụ từ train) | 4.2% | 95.9% |
+| gpt-4o-mini zero-shot (OpenAI API) | 15.9% | 75.5% |
+| gpt-4o-mini few-shot (20 ví dụ từ train) | 19.6% | 66.4% |
 
 **So với LLM.** Model 5.6M tham số của repo đúng cả từ gấp khoảng 13 lần Qwen2.5-7B-Instruct, dù nhỏ hơn 1.350 lần và chỉ dùng 0.1 GB VRAM (Qwen dùng 17–21 GB). Output thô của Qwen ([ví dụ](results/translit_llm_raw_examples.txt)) cho thấy lỗi thật chứ không phải do cách chấm: nó giữ nguyên tiếng Anh ("net flix"), chèn chữ Hán ("a s哇th"), hoặc bịa ký tự ("ma kinh töng"). Khi thay model phiên âm trong vitts bằng Qwen, held-out v2 chỉ đạt 40% (so với 70%) ([chi tiết](results/normalization_heldout_v2_with_llm.md)).
 
-Giới hạn của phép so này: chỉ thử **một** LLM cỡ 7B, với một lời nhắc và giải mã tham lam. LLM lớn hơn (70B, hoặc các model thương mại) và lời nhắc được tinh chỉnh kỹ có thể tốt hơn nhiều. Kết luận chính xác là: **với cùng mức tài nguyên chạy cục bộ, một model nhỏ chuyên cho việc này tốt hơn hẳn một LLM đa năng 7B.**
+**gpt-4o-mini** (OpenAI API, gộp 50 từ mỗi request, [script](training/translit/api_baseline.py)) tốt hơn Qwen nhiều nhưng vẫn kém model của repo: 19.6% so với 55.1%. Cả lượt chạy chỉ tốn khoảng 67 nghìn token.
+
+**Một phần khoảng cách là do quy ước viết, không phải đọc sai.** Đáp án lấy từ từ điển của vietnormalizer viết "s" thành "x" và "f" thành "ph". gpt-4o-mini viết "sam sung", "nét flích", "a đam sơn": đọc gần đúng nhưng bị chấm sai. Có trường hợp đáp án còn kém tự nhiên hơn (samsung → "xa mung"). Model của repo học đúng quy ước này nên có lợi thế trong cách chấm khớp nguyên văn. Muốn so công bằng hơn cần người nghe chấm, hoặc bộ test có nhiều cách đọc đúng cho mỗi từ.
+
+Giới hạn khác của phép so này: chỉ thử **một** LLM cỡ 7B, với một lời nhắc và giải mã tham lam. LLM lớn hơn (70B, hoặc các model thương mại) và lời nhắc được tinh chỉnh kỹ có thể tốt hơn nhiều. Kết luận chính xác là: **với cùng mức tài nguyên chạy cục bộ, một model nhỏ chuyên cho việc này tốt hơn hẳn một LLM đa năng 7B.**
 
 | Cấu hình (dò trên dev) | Dev |
 |---|---:|
