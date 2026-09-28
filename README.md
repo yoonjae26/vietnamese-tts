@@ -4,21 +4,65 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 ![Python](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12-blue)
 
-Mảng TTS tiếng Việt mã nguồn mở đã có nhiều lựa chọn: viXTTS, VietTTS, F5-TTS-Vietnamese, VieNeu-TTS, Piper, Meta MMS…
-Mỗi dự án tự báo cáo kết quả trên dữ liệu riêng, nên **rất khó biết nên chọn cái nào**.
+TTS tiếng Việt mã nguồn mở đã có nhiều lựa chọn (IndexTTS-2, F5-TTS, VieNeu-TTS, viXTTS, VietTTS, Piper, Meta MMS…), nhưng mỗi dự án tự báo cáo trên dữ liệu riêng. ViTTS-Bench so sánh chúng **trên cùng bộ test, cùng cách chấm, chạy lại được bằng một lệnh**, kèm bộ chuẩn hóa văn bản tiếng Việt và một API chung cho mọi model.
 
-ViTTS-Bench so sánh chúng **trên cùng một bộ test, cùng một cách chấm, chạy lại được bằng một lệnh**.
+🎧 **[Nghe thử 7 model đọc cùng một câu](https://yoonjae26.github.io/vietnamese-tts/listen/)**
 
-| Hạng mục | Trạng thái |
-| --- | --- |
-| 🔤 Chuẩn hóa văn bản (Vinorm, soe-vinorm, VietNormalizer, vitts) | ✅ vitts 0.2 + model phiên âm đứng đầu held-out v2 |
-| 🔊 Model TTS: độ rõ, lỗi không dừng, giống giọng, UTMOS, tốc độ, VRAM, giấy phép | ✅ 7 model |
-| 🎧 [Trang nghe thử](https://yoonjae26.github.io/vietnamese-tts/listen/): 7 model đọc cùng câu, kèm lời ASR nghe được | ✅ |
-| 🌐 API chung tương thích OpenAI, chọn model bằng tham số `model` | ✅ `vitts-server` |
+## Tóm tắt
+
+- **Model TTS:** IndexTTS-2 rõ nhất (WER 1.8%) nhưng chậm hơn thời gian thực và tốn 8.9 GB VRAM. **VieNeu-TTS v3 Turbo cân bằng nhất cho sản phẩm** (WER 3.3%, nhanh gấp 10 lần thời gian thực, Apache-2.0).
+- **WER không đủ:** IndexTTS-2 có lúc đọc đúng rồi sinh thêm ~28 giây im lặng mà WER không phát hiện, nên benchmark có thêm chỉ số "không dừng". **Kết quả clone giọng phụ thuộc giọng mẫu**: đổi giọng mẫu làm lỗi này biến mất, và làm độ giống giọng của viXTTS tụt từ cao nhất xuống thấp nhất.
+- **Chuẩn hóa văn bản:** vitts 0.2 kèm model phiên âm đạt **70%** câu đọc đúng trên bộ held-out v2, so với 47% của bộ tốt nhất hiện có.
+- **Model phiên âm từ nước ngoài (5.6M tham số):** theo người Việt duyệt mù, **ngang gpt-4o-mini** (24.8% so với 30.9%, chênh lệch không có ý nghĩa thống kê) và **tốt hơn Qwen2.5-7B** (14.8%), chạy cục bộ với 0.1 GB VRAM. Chính từ điển dùng để huấn luyện chỉ được chấp nhận 27.5%.
+- **API chung:** một endpoint `/v1/audio/speech` tương thích OpenAI cho cả 7 model.
+
+## Kết quả: model TTS
+
+50 câu chung, đã ở dạng đọc (không số, không viết tắt), nên chỉ đo chất lượng model. ASR [`vinai/PhoWhisper-large`](https://huggingface.co/vinai/PhoWhisper-large) nghe lại audio, rồi tính WER so với câu gốc. Mỗi model dùng tham số do tác giả khuyến nghị và seed cố định. Các model clone giọng dùng **chung một giọng mẫu**: 8 giây giọng thật của tác giả repo, ghi bằng điện thoại ([`benchmark/tts/reference/`](benchmark/tts/reference/)).
+
+| Model | WER ↓ | WER câu ngắn | WER thanh điệu khó | Không dừng ↓ | Giống giọng ↑ | UTMOS ↑ | RTF ↓ | VRAM | Giấy phép |
+|---|---:|---:|---:|---:|---:|---:|---:|---:|---|
+| [IndexTTS-2 Vietnamese](https://huggingface.co/dinhthuan/index-tts-2-vietnamese) | **1.8%** | **0.0%** | **12.2%** | 0/50 | **0.741** | 1.99 | 1.063 | 8.9 GB | Apache-2.0\* |
+| [F5-TTS-Vietnamese-1000h](https://huggingface.co/hynt/F5-TTS-Vietnamese-ViVoice) | 3.0% | **0.0%** | 14.9% | 0/50 | 0.731 | 2.21 | 0.219 | 0.8 GB | CC-BY-NC-SA-4.0 |
+| [VieNeu-TTS v3 Turbo](https://huggingface.co/pnnbao-ump/VieNeu-TTS-v3-Turbo) | 3.3% | 6.7% | 18.9% | 0/50 | 0.656 | 2.16 | 0.101 | 0.9 GB | **Apache-2.0** |
+| [Piper vi_VN-vais1000-medium](https://huggingface.co/rhasspy/piper-voices) | 5.7% | 4.4% | 39.2% | 0/50 | (0.198) | 2.37 | 0.037 (CPU) | – | CC-BY-4.0 |
+| [MMS-TTS (Meta)](https://huggingface.co/facebook/mms-tts-vie) | 6.9% | 11.1% | 28.4% | 0/50 | (0.318) | **2.74** | **0.013** | **0.4 GB** | CC-BY-NC-4.0 |
+| [viXTTS](https://huggingface.co/capleaf/viXTTS) | 9.2% | 24.4% | 41.9% | 0/50 | 0.638 | 2.20 | 0.202 | 2.3 GB | CPML (NC) |
+| [VietTTS](https://huggingface.co/dangvansam/viet-tts) | 12.0% | 13.3% | 41.9% | 0/50 | 0.728 | 2.39 | 0.395 | 1.7 GB | CC |
+
+RTF đo trên NVIDIA H200 (Piper đo trên CPU). \* Dùng thương mại cần xin phép tác giả IndexTTS. Bảng đầy đủ: [`results/tts.md`](results/tts.md); transcript từng câu: [`results/tts.json`](results/tts.json).
+
+- **Không dừng:** số câu có giây/từ lớn hơn 3 lần trung vị của chính model, tức model sinh thừa khoảng lặng hoặc âm rác. ASR bỏ qua khoảng lặng nên WER không bắt được lỗi này.
+- **Giống giọng:** cosine giữa embedding [ECAPA-TDNN](https://huggingface.co/speechbrain/spkrec-ecapa-voxceleb) của giọng mẫu và audio sinh ra. MMS và Piper không clone giọng, nên điểm của chúng (trong ngoặc) là mốc cho hai người nói khác nhau. `wavlm-base-plus-sv` đã được thử trước rồi bỏ: nó cho một giọng nữ khác hẳn (Piper) 0.94, gần bằng các model clone, tức là gần như chỉ tách được giới tính.
+- **UTMOS:** điểm tự nhiên dự đoán (1 đến 5) của [UTMOS22](https://github.com/tarepan/SpeechMOS), huấn luyện trên tiếng Anh. Model clone giọng bắt chước cả điều kiện ghi âm: giọng mẫu ghi bằng điện thoại chỉ được 1.82, nên các model clone thấp hơn MMS và Piper. Chỉ dùng để so sánh tương đối giữa các model clone.
+
+**Nhận xét**
+- **IndexTTS-2** rõ nhất và giống giọng nhất, nhưng chậm nhất (RTF 1.06), tốn VRAM nhất, và có thể không dừng tùy giọng mẫu (xem bên dưới).
+- **F5-TTS-Vietnamese** ổn định ở mọi nhóm câu và nhẹ, nhưng giấy phép phi thương mại.
+- **VieNeu-TTS v3 Turbo** là lựa chọn cân bằng nhất cho sản phẩm: WER 3.3%, RTF 0.1, âm thanh 48 kHz, Apache-2.0.
+- **Piper và MMS** hợp với thiết bị yếu: rất nhanh, rõ ở câu thường, nhưng kém ở câu nhiều thanh điệu khó.
+- **viXTTS và VietTTS** đọc kém nhất trên bộ này, nhất là câu líu lưỡi (41.9%).
+- **Hạn chế:** WER qua ASR chỉ đo *độ rõ*. Câu líu lưỡi khó với cả ASR. Cần bản ghi người đọc thật để biết mức lỗi nền của chính ASR, và MOS do người nghe chấm.
+
+### Giọng mẫu ảnh hưởng tới kết quả
+
+Benchmark đã chạy với hai giọng mẫu. Kết quả lần đầu lưu ở [`results/archive/`](results/archive/).
+
+| | Giọng mẫu A: file mẫu của viXTTS | Giọng mẫu B: tác giả, ghi bằng điện thoại |
+|---|---:|---:|
+| IndexTTS-2: số câu không dừng | ⚠️ 5/50 | 0/50 |
+| viXTTS: WER câu ngắn | 46.7% | 24.4% |
+| viXTTS: giống giọng | 0.812 (cao nhất) | 0.638 (thấp nhất) |
+| F5 / VieNeu / IndexTTS-2: WER | 2.3% / 2.8% / 1.9% | 3.0% / 3.3% / 1.8% |
+| UTMOS của chính giọng mẫu | 2.41 | 1.82 |
+
+- Lỗi "không dừng" của IndexTTS-2 phụ thuộc giọng mẫu: với giọng A, nó đọc đúng rồi sinh thêm khoảng 28 giây im lặng ở 5/50 câu.
+- viXTTS được lợi khi giọng mẫu lấy từ chính repo của nó.
+- Thứ hạng WER của nhóm dẫn đầu ổn định qua cả hai giọng mẫu. Một benchmark clone giọng đáng tin cần nhiều giọng mẫu hơn (nam, nữ, phòng thu, điện thoại).
 
 ## Kết quả: chuẩn hóa văn bản
 
-Model TTS chỉ đọc được chữ, nên `"100k"`, `"14h30"`, `"TP.HCM"`, `"iPhone"` phải được đổi sang cách đọc trước. Nếu bước này sai, model tốt đến đâu cũng đọc sai.
+Model TTS chỉ đọc được chữ, nên `"100k"`, `"14h30"`, `"TP.HCM"`, `"iPhone"` phải được đổi sang cách đọc trước. Bước này sai thì model tốt đến đâu cũng đọc sai.
 
 **Bộ held-out v2** (60 câu, [commit trước mọi thay đổi của vitts 0.2](benchmark/normalization/build_testset.py)) là con số chính thức. Ô là **tỉ lệ câu đọc đúng hoàn toàn** (WER trong ngoặc):
 
@@ -35,11 +79,10 @@ Model TTS chỉ đọc được chữ, nên `"100k"`, `"14h30"`, `"TP.HCM"`, `"i
 | **Tổng** | 60 | 38% (28.3%) | **70% (7.4%)** | 20% (32.8%) | 28% (29.1%) | 47% (18.6%) |
 | ms / câu | | 0.2 | 296.3 | 30.1 | 0.4 | 0.4 |
 
-- **vitts 0.2 + model phiên âm đứng đầu (70%)**, nhất là ở từ nước ngoài (67%) và chữ viết tắt (75%). Không có model, vitts chỉ đạt 38%, nên phần lớn mức tăng đến từ model.
-- **vietnormalizer mạnh ở tên riêng (57% so với 43%)** nhờ từ điển 17.7k từ.
-- **Tốc độ là điểm yếu:** khoảng 300 ms mỗi câu trên CPU khi câu có nhiều từ nước ngoài, vì mỗi từ được giải mã riêng bằng beam search.
-
-**Đã gặp và chưa gặp.** Model được huấn luyện trên từ điển của vietnormalizer, nên 32/55 từ nước ngoài trong v2 đã có trong phần train. Tách riêng 22 câu mà mọi từ nước ngoài đều **không** có trong train: vitts + phiên âm đạt **64%** (WER 8.6%), vietnormalizer đạt 50% (WER 18.8%). vietnormalizer vẫn có lợi thế ở nhóm này, vì từ điển đầy đủ của nó chứa cả các từ thuộc phần dev/test của model.
+- **vitts 0.2 + model phiên âm đứng đầu (70%)**, nhất là ở từ nước ngoài và chữ viết tắt. Không có model, vitts chỉ đạt 38%.
+- **vietnormalizer mạnh hơn ở tên riêng** (57% so với 43%) nhờ từ điển 17.7k từ.
+- **Đã gặp và chưa gặp:** model được huấn luyện trên từ điển của vietnormalizer, nên 32/55 từ nước ngoài trong v2 đã có trong phần train. Trên 22 câu mà mọi từ nước ngoài đều chưa gặp: vitts + phiên âm 64%, vietnormalizer 50%.
+- **Tốc độ là điểm yếu:** khoảng 300 ms mỗi câu trên CPU khi câu có nhiều từ nước ngoài, vì mỗi từ được giải mã riêng.
 
 <details>
 <summary>Bộ held-out v1 (59 câu) và dev (99 câu)</summary>
@@ -49,75 +92,52 @@ Model TTS chỉ đọc được chữ, nên `"100k"`, `"14h30"`, `"TP.HCM"`, `"i
 | held-out v1 | 59% | 85%\* | 86%\* | 59% | 76% | 44% |
 | dev | 100%\* | 100%\* | 100%\* | 83% | 90% | 66% |
 
-\* Không còn là số đo khách quan: vitts 0.1 được sửa theo bộ dev, và các quy tắc của vitts 0.2 được viết sau khi xem lỗi trên v1. Con số khách quan của vitts 0.1 là 59% trên v1; của vitts 0.2 là kết quả trên v2 ở trên.
+\* Không còn là số đo khách quan: vitts 0.1 được sửa theo bộ dev, và các quy tắc của vitts 0.2 được viết sau khi xem lỗi trên v1.
 </details>
 
-Kết quả từng câu: [`results/normalization_heldout_v2_errors.md`](results/normalization_heldout_v2_errors.md).
-
-### Phương pháp
-
-- Mỗi phiên bản của vitts được đo trên một bộ held-out **viết trước** khi phiên bản đó được phát triển, và không sửa code theo bộ đó. Lịch sử git cho thấy thứ tự này.
-- Đáp án được **viết tay**. Một câu có thể có nhiều đáp án đúng (ví dụ "gu gồ", "gu gơ" cho Google), và các biến thể vùng miền được quy về một dạng: *ngàn/nghìn, lẻ/linh, tỉ/tỷ…* ([`metrics.py`](src/vitts/bench/metrics.py)).
-- **Hạn chế:** bộ test do một người viết và còn nhỏ; từ nước ngoài có nhiều cách đọc hơn số đáp án liệt kê. Hãy đóng góp thêm câu và cách đọc.
-
-```bash
-pip install -e ".[bench]"
-python benchmark/normalization/build_testset.py
-python benchmark/normalization/run.py --split heldout_v2
-```
+**Phương pháp.** Mỗi phiên bản của vitts được đo trên một bộ held-out **viết trước** khi phiên bản đó được phát triển, và không sửa code theo bộ đó (lịch sử git cho thấy thứ tự này). Đáp án được viết tay, một câu có thể có nhiều đáp án, và các biến thể vùng miền (*ngàn/nghìn, lẻ/linh, tỉ/tỷ…*) được quy về một dạng ([`metrics.py`](src/vitts/bench/metrics.py)). **Hạn chế:** bộ test do một người viết và còn nhỏ. Kết quả từng câu: [`results/normalization_heldout_v2_errors.md`](results/normalization_heldout_v2_errors.md).
 
 ## Model phiên âm từ nước ngoài
 
-`vitts.translit` là một transformer seq2seq 5.6M tham số, đọc từng ký tự của từ, kèm âm vị [CMUdict](https://github.com/cmusphinx/cmudict) nếu từ có trong đó, và sinh ra cách đọc tiếng Việt: "container" → "công tê nơ". Model được huấn luyện trên 17.7k cặp từ viết tay của [vietnormalizer](https://github.com/nghimestudio/vietnormalizer) (MIT). Dữ liệu được chia train/dev/test **theo gốc từ**, và cấu hình được chọn chỉ dựa trên dev.
+`vitts.translit` là một transformer seq2seq 5.6M tham số, đọc từng ký tự của từ (kèm âm vị [CMUdict](https://github.com/cmusphinx/cmudict) nếu có), và sinh cách đọc tiếng Việt: "container" → "công tê nơ". Model được huấn luyện trên 17.7k cặp từ viết tay của [vietnormalizer](https://github.com/nghimestudio/vietnormalizer) (MIT), chia train/dev/test **theo gốc từ**, và cấu hình được chọn chỉ dựa trên dev.
 
-**Bộ test: 1.676 từ chưa gặp khi huấn luyện**
+```python
+from vitts import normalize_text
+
+normalize_text("Họp online qua Zoom, rút tiền ở ATM.", translit="auto")
+```
+
+### Đánh giá bằng người duyệt mù
+
+150 từ ngẫu nhiên trong bộ test được một người Việt duyệt: người duyệt thấy mọi cách đọc (từ điển, model của repo, gpt-4o-mini, Qwen, quy tắc, và 3 cách GPT gợi ý thêm) đã xáo trộn, không biết cách nào của hệ thống nào, rồi chọn cách chấp nhận được ([trang duyệt](training/translit/review_page.html), [dữ liệu](data/translit/review/)).
+
+| Hệ thống | Đúng theo người duyệt (149 từ) | KTC 95% |
+|---|---:|---:|
+| gpt-4o-mini few-shot (OpenAI API) | **30.9%** | 23.5–38.3% |
+| gpt-4o-mini zero-shot | 30.2% | |
+| Đáp án gốc của từ điển | 27.5% | 20.8–34.9% |
+| **vitts translit (5.6M tham số, 0.1 GB VRAM)** | **24.8%** | 18.1–32.2% |
+| Qwen2.5-7B-Instruct few-shot (7.6B tham số) | 14.8% | 9.4–20.8% |
+| vietnormalizer (quy tắc) | 4.0% | |
+
+- **Ngang gpt-4o-mini:** GPT hơn 6 điểm, nhưng khoảng tin cậy của chênh lệch là −4% đến +16%, nên chưa kết luận được bên nào tốt hơn.
+- **Tốt hơn Qwen2.5-7B có ý nghĩa thống kê** (+10 điểm, KTC 95% +0.7% đến +19.5%). Qwen giữ nguyên tiếng Anh, chèn chữ Hán, hoặc bịa ký tự ([output thô](results/translit_llm_raw_examples.txt)).
+- **Chính từ điển dùng để huấn luyện chỉ được chấp nhận 27.5%**, và model học theo nó nên đạt mức tương đương.
+- **Hạn chế:** chỉ một người duyệt; người duyệt thường chọn một cách ưa dùng nhất (138/150 từ); mỗi từ có tới 5 ứng viên theo phong cách GPT, so với 1 của mỗi hệ thống khác.
+
+<details>
+<summary>Chấm tự động theo đáp án của từ điển (1.676 từ chưa gặp)</summary>
 
 | Hệ thống | Đúng cả từ ↑ | Lỗi âm tiết ↓ |
 |---|---:|---:|
 | soe-vinorm | 0.5% | 110.5% |
-| vietnormalizer (quy tắc phiên âm, không tra từ điển) | 7.8% | 73.1% |
+| vietnormalizer (quy tắc, không tra từ điển) | 7.8% | 73.1% |
 | vitts translit v1 (chỉ chữ) | 47.1% | 37.2% |
-| **vitts translit (chữ + âm vị CMUdict), 5.6M tham số** | **55.1%** | **30.0%** |
-| Qwen2.5-7B-Instruct zero-shot, 7.6B tham số | 3.2% | 95.3% |
-| Qwen2.5-7B-Instruct few-shot (20 ví dụ từ train) | 4.2% | 95.9% |
-| gpt-4o-mini zero-shot (OpenAI API) | 15.9% | 75.5% |
-| gpt-4o-mini few-shot (20 ví dụ từ train) | 19.6% | 66.4% |
+| **vitts translit (chữ + âm vị CMUdict)** | **55.1%** | **30.0%** |
+| Qwen2.5-7B-Instruct zero-shot / few-shot | 3.2% / 4.2% | 95.3% / 95.9% |
+| gpt-4o-mini zero-shot / few-shot | 15.9% / 19.6% | 75.5% / 66.4% |
 
-**So với LLM (chấm theo từ điển; xem phần kiểm chứng bằng người duyệt bên dưới).** Model 5.6M tham số của repo đúng cả từ gấp khoảng 13 lần Qwen2.5-7B-Instruct, dù nhỏ hơn 1.350 lần và chỉ dùng 0.1 GB VRAM (Qwen dùng 17–21 GB). Output thô của Qwen ([ví dụ](results/translit_llm_raw_examples.txt)) cho thấy lỗi thật chứ không phải do cách chấm: nó giữ nguyên tiếng Anh ("net flix"), chèn chữ Hán ("a s哇th"), hoặc bịa ký tự ("ma kinh töng"). Khi thay model phiên âm trong vitts bằng Qwen, held-out v2 chỉ đạt 40% (so với 70%) ([chi tiết](results/normalization_heldout_v2_with_llm.md)).
-
-**gpt-4o-mini** (OpenAI API, gộp 50 từ mỗi request, [script](training/translit/api_baseline.py)) tốt hơn Qwen nhiều nhưng vẫn kém model của repo: 19.6% so với 55.1%. Cả lượt chạy chỉ tốn khoảng 67 nghìn token.
-
-**Một phần khoảng cách là do quy ước viết, không phải đọc sai.** Đáp án lấy từ từ điển của vietnormalizer viết "s" thành "x" và "f" thành "ph". gpt-4o-mini viết "sam sung", "nét flích", "a đam sơn": đọc gần đúng nhưng bị chấm sai. Có trường hợp đáp án còn kém tự nhiên hơn (samsung → "xa mung"). Model của repo học đúng quy ước này nên có lợi thế trong cách chấm khớp nguyên văn. Muốn so công bằng hơn cần người nghe chấm, hoặc bộ test có nhiều cách đọc đúng cho mỗi từ.
-
-### Kiểm chứng bằng người duyệt: kết luận thay đổi
-
-Các con số trên chấm theo **một** đáp án của từ điển vietnormalizer. Để kiểm tra, 150 từ ngẫu nhiên trong bộ test được **người Việt duyệt mù**: người duyệt thấy mọi cách đọc (từ điển, model của repo, gpt-4o-mini, Qwen, quy tắc, và 3 cách GPT gợi ý thêm) đã xáo trộn, không biết cách nào của hệ thống nào, rồi chọn cách chấp nhận được ([trang duyệt](training/translit/review_page.html), [dữ liệu](data/translit/review/)).
-
-| Hệ thống | Đúng theo người duyệt (149 từ) | KTC 95% |
-|---|---:|---:|
-| gpt-4o-mini few-shot | **30.9%** | 23.5–38.3% |
-| gpt-4o-mini zero-shot | 30.2% | |
-| Đáp án gốc của từ điển | 27.5% | 20.8–34.9% |
-| vitts translit (5.6M) | 24.8% | 18.1–32.2% |
-| Qwen2.5-7B few-shot | 14.8% | 9.4–20.8% |
-| vietnormalizer (quy tắc) | 4.0% | |
-
-- **Chính từ điển dùng để huấn luyện chỉ được chấp nhận 27.5%.** Model của repo học theo từ điển nên đạt mức tương đương (24.8%; chênh lệch với từ điển không có ý nghĩa thống kê). Kết quả "55% so với 20%" ở trên chủ yếu đo việc khớp quy ước của từ điển, không phải đọc hay hơn.
-- **So với gpt-4o-mini: gần như ngang nhau.** GPT hơn 6 điểm nhưng khoảng tin cậy của chênh lệch là −4% đến +16%, nên chưa kết luận được bên nào tốt hơn trên 149 từ. Ưu điểm còn lại của model nhỏ: chạy cục bộ, 0.1 GB VRAM, miễn phí.
-- **So với Qwen2.5-7B: model của repo tốt hơn có ý nghĩa** (+10 điểm, KTC 95% +0.7% đến +19.5%).
-- **Hạn chế:** chỉ một người duyệt; người duyệt thường chọn **một** cách ưa dùng nhất (138/150 từ), nên đây là tiêu chí chặt; mỗi từ có tới 5 ứng viên theo phong cách GPT so với 1 của mỗi hệ thống khác.
-
-**Thử nghiệm: gắn nhãn lại bằng GPT (kết quả âm).** Toàn bộ 16 nghìn từ train/dev được gắn nhãn lại bằng gpt-4o-mini few-shot (khoảng 390 nghìn token, [script](training/translit/relabel_gpt.py)). Sau đó huấn luyện lại với đúng cấu hình cũ, và chấm một lần trên 149 từ đã duyệt (không dùng để huấn luyện):
-
-| Nhãn huấn luyện | Đúng theo người duyệt | So với gpt-4o-mini (KTC 95%) |
-|---|---:|---:|
-| V0: từ điển (mặc định) | **24.8%** | −6.0% (−16.1% đến +4.0%) |
-| V2: từ điển + GPT | 24.2% | −6.7% (−16.1% đến +2.7%) |
-| V1: chỉ GPT | 12.8% | −18.1% (−24.8% đến −11.4%) |
-
-Học theo nhãn GPT làm model **kém đi một nửa**. Lý do: 11% nhãn GPT còn lẫn chữ Latin ("blai th", "a ri s tô"), và GPT đọc từng từ theo hiểu biết riêng về từ đó, không theo một quy tắc nhất quán. Model 5.6M tham số đọc từng ký tự học được phần nhiễu mà không học được phần hiểu biết (chỉ trùng output của GPT ở 50/149 từ). Từ điển nhất quán hơn nên vẫn là nguồn dữ liệu tốt nhất cho model nhỏ. Người duyệt cũng thường chấp nhận cách đọc gần chính tả gốc ("bring", "ca ra mel"), nên muốn cải thiện thật cần **nhãn do người gắn, nhất quán**, và nhiều người duyệt hơn.
-
-Giới hạn khác của phép so này: chỉ thử **một** LLM cỡ 7B, với một lời nhắc và giải mã tham lam. LLM lớn hơn (70B, hoặc các model thương mại) và lời nhắc được tinh chỉnh kỹ có thể tốt hơn nhiều. Kết luận chính xác là: **với cùng mức tài nguyên chạy cục bộ, một model nhỏ chuyên cho việc này tốt hơn hẳn một LLM đa năng 7B.**
+Cách chấm này thiên về model của repo, vì model học đúng quy ước viết của từ điển ("s" → "x", "f" → "ph"), trong khi GPT viết "sam sung", "nét flích" và bị chấm sai. Vì vậy kết quả người duyệt ở trên là con số chính. Đánh giá gpt-4o-mini trên 1.676 từ tốn khoảng 67 nghìn token ([script](training/translit/api_baseline.py)).
 
 | Cấu hình (dò trên dev) | Dev |
 |---|---:|
@@ -126,76 +146,23 @@ Giới hạn khác của phép so này: chỉ thử **một** LLM cỡ 7B, với
 | d384, 4 lớp, dropout 0.2 | 52.3% |
 | **d256, 3 lớp, dropout 0.2, + âm vị** (được chọn) | **53.1%** |
 | d384, 4 lớp, dropout 0.2, + âm vị | 53.1% |
+</details>
 
-```python
-from vitts import normalize_text
+### Thử nghiệm: gắn nhãn lại bằng GPT (kết quả âm)
 
-normalize_text("Họp online qua Zoom, rút tiền ở ATM.", translit="auto")
-```
+16 nghìn từ train/dev được gắn nhãn lại bằng gpt-4o-mini (khoảng 390 nghìn token, [script](training/translit/relabel_gpt.py)), rồi huấn luyện lại với đúng cấu hình cũ và chấm một lần trên 149 từ đã duyệt:
 
-```bash
-python training/translit/prepare_data.py
-bash training/translit/sweep.sh                       # dò cấu hình (chỉ GPU 0)
-CUDA_VISIBLE_DEVICES=0 python training/translit/evaluate.py
-```
-
-## Kết quả: model TTS
-
-50 câu chung, đã ở dạng đọc (không số, không viết tắt), nên chỉ đo chất lượng model. ASR [`vinai/PhoWhisper-large`](https://huggingface.co/vinai/PhoWhisper-large) nghe lại audio, rồi tính WER so với câu gốc. Mỗi model dùng tham số do tác giả khuyến nghị và seed cố định. Các model clone giọng dùng **chung một giọng mẫu**: 8 giây giọng thật của tác giả repo, ghi bằng điện thoại ([`benchmark/tts/reference/`](benchmark/tts/reference/)).
-
-| Model | WER ↓ | WER câu ngắn | WER thanh điệu khó | Không dừng ↓ | Giống giọng ↑ | UTMOS ↑ | RTF ↓ | VRAM | Giấy phép |
-|---|---:|---:|---:|---:|---:|---:|---:|---:|---|
-| [IndexTTS-2 Vietnamese](https://huggingface.co/dinhthuan/index-tts-2-vietnamese) | **1.8%** | **0.0%** | **12.2%** | 0/50 | **0.741** | 1.99 | 1.063 | 8.9 GB | Apache-2.0* |
-| [F5-TTS-Vietnamese-1000h](https://huggingface.co/hynt/F5-TTS-Vietnamese-ViVoice) | 3.0% | **0.0%** | 14.9% | 0/50 | 0.731 | 2.21 | 0.219 | 0.8 GB | CC-BY-NC-SA-4.0 |
-| [VieNeu-TTS v3 Turbo](https://huggingface.co/pnnbao-ump/VieNeu-TTS-v3-Turbo) | 3.3% | 6.7% | 18.9% | 0/50 | 0.656 | 2.16 | 0.101 | 0.9 GB | **Apache-2.0** |
-| [Piper vi_VN-vais1000-medium](https://huggingface.co/rhasspy/piper-voices) | 5.7% | 4.4% | 39.2% | 0/50 | (0.198) | 2.37 | 0.037 (CPU) | – | CC-BY-4.0 |
-| [MMS-TTS (Meta)](https://huggingface.co/facebook/mms-tts-vie) | 6.9% | 11.1% | 28.4% | 0/50 | (0.318) | **2.74** | **0.013** | **0.4 GB** | CC-BY-NC-4.0 |
-| [viXTTS](https://huggingface.co/capleaf/viXTTS) | 9.2% | 24.4% | 41.9% | 0/50 | 0.638 | 2.20 | 0.202 | 2.3 GB | CPML (NC) |
-| [VietTTS](https://huggingface.co/dangvansam/viet-tts) | 12.0% | 13.3% | 41.9% | 0/50 | 0.728 | 2.39 | 0.395 | 1.7 GB | CC |
-
-RTF đo trên NVIDIA H200 (Piper đo trên CPU). \* Dùng thương mại cần xin phép tác giả IndexTTS.
-
-**Giống giọng** là cosine giữa embedding [ECAPA-TDNN](https://huggingface.co/speechbrain/spkrec-ecapa-voxceleb) của giọng mẫu và của audio sinh ra. MMS và Piper không clone giọng, nên điểm của chúng (trong ngoặc) là mốc cho hai người nói khác nhau. Model `wavlm-base-plus-sv` từng được thử trước nhưng đã bỏ: nó cho một giọng nữ khác hẳn (Piper) 0.94, gần bằng các model clone, tức là gần như chỉ tách được giới tính.
-
-**UTMOS** là điểm tự nhiên dự đoán (1 đến 5) của [UTMOS22](https://github.com/tarepan/SpeechMOS), model huấn luyện trên tiếng Anh. Model clone giọng bắt chước cả điều kiện ghi âm của giọng mẫu: giọng mẫu ghi bằng điện thoại chỉ được 1.82, nên điểm của các model clone thấp hơn MMS và Piper (giọng thu trong phòng thu). Chỉ dùng cột này để so sánh tương đối giữa các model clone.
-
-### Giọng mẫu ảnh hưởng tới kết quả thế nào
-
-Benchmark đã chạy với hai giọng mẫu. Lần đầu dùng giọng nữ trong file mẫu của repo viXTTS; lần hai dùng giọng thật của tác giả. Kết quả lần đầu lưu ở [`results/archive/`](results/archive/).
-
-| | Giọng mẫu A: file mẫu của viXTTS | Giọng mẫu B: tác giả, ghi bằng điện thoại |
+| Nhãn huấn luyện | Đúng theo người duyệt | So với gpt-4o-mini (KTC 95%) |
 |---|---:|---:|
-| IndexTTS-2: số câu không dừng | ⚠️ 5/50 | 0/50 |
-| viXTTS: WER câu ngắn | 46.7% | 24.4% |
-| viXTTS: giống giọng | 0.812 (cao nhất) | 0.638 (thấp nhất) |
-| F5 / VieNeu / IndexTTS-2: WER | 2.3% / 2.8% / 1.9% | 3.0% / 3.3% / 1.8% |
-| UTMOS của chính giọng mẫu | 2.41 | 1.82 |
+| **Từ điển (mặc định)** | **24.8%** | −6.0% (−16.1% đến +4.0%) |
+| Từ điển + GPT | 24.2% | −6.7% (−16.1% đến +2.7%) |
+| Chỉ GPT | 12.8% | −18.1% (−24.8% đến −11.4%) |
 
-- **Lỗi "không dừng" của IndexTTS-2 phụ thuộc giọng mẫu.** Với giọng A, nó đọc đúng rồi sinh thêm khoảng 28 giây im lặng ở 5/50 câu. ASR bỏ qua khoảng lặng nên WER không phát hiện được; đó là lý do bảng có cột "Không dừng" (số câu có giây/từ lớn hơn 3 lần trung vị của chính model). Với giọng B, lỗi này không xuất hiện.
-- **viXTTS được lợi khi giọng mẫu lấy từ chính repo của nó.** Với một giọng lạ, độ giống giọng của nó tụt từ cao nhất xuống thấp nhất.
-- **Thứ hạng WER của nhóm dẫn đầu ổn định** (IndexTTS-2, F5, VieNeu) qua cả hai giọng mẫu.
-- Vì vậy một benchmark clone giọng đáng tin cần nhiều giọng mẫu (nam, nữ, phòng thu, điện thoại). Đây là việc tiếp theo trong lộ trình.
-
-**Nhận xét**
-- **IndexTTS-2 rõ nhất và giống giọng nhất**, nhưng chậm nhất (RTF 1.06, chậm hơn thời gian thực), tốn 8.9 GB VRAM, và có thể không dừng tùy giọng mẫu.
-- **F5-TTS-Vietnamese ổn định**: rõ ở mọi nhóm câu, nhẹ (0.8 GB), nhưng giấy phép phi thương mại.
-- **VieNeu-TTS v3 Turbo là lựa chọn cân bằng nhất cho sản phẩm**: WER 3.3%, nhanh (RTF 0.1), âm thanh 48 kHz và **giấy phép Apache-2.0**, cho phép dùng thương mại.
-- **Piper và MMS** hợp với thiết bị yếu: rất nhanh, rõ ở câu thường, nhưng đọc kém câu nhiều thanh điệu khó.
-- **viXTTS và VietTTS** đọc kém nhất trên bộ này, nhất là câu líu lưỡi (41.9%).
-- Bảng đầy đủ: [`results/tts.md`](results/tts.md). Transcript từng câu: [`results/tts.json`](results/tts.json).
-- **Hạn chế:** WER qua ASR đo *độ rõ*. Nhóm "thanh điệu khó" gồm các câu líu lưỡi, nên ASR cũng dễ nghe nhầm. Cần thêm bản ghi người đọc thật để biết mức lỗi nền của chính ASR.
-- 🎧 **Nghe trực tiếp:** [trang nghe thử](https://yoonjae26.github.io/vietnamese-tts/listen/) ([`docs/listen`](docs/listen/)) cho 8 câu tiêu biểu, tô màu từ mà ASR nghe sai.
-
-```bash
-# tạo môi trường cho từng model (mã nguồn model được clone vào ~/vitts-engines)
-bash benchmark/tts/envs/coqui.sh   # và f5.sh, vieneu.sh, viettts.sh, indextts.sh
-# sinh audio cho tất cả model rồi chấm điểm (chỉ dùng GPU 0)
-bash benchmark/tts/run_all.sh
-```
+Nhãn GPT làm model **kém đi một nửa**: 11% nhãn còn lẫn chữ Latin ("blai th"), và GPT đọc từng từ theo hiểu biết riêng thay vì một quy tắc nhất quán, nên model nhỏ học được phần nhiễu mà không học được phần hiểu biết. Muốn cải thiện thật cần nhãn do người gắn, nhất quán, và nhiều người duyệt hơn.
 
 ## API chung tương thích OpenAI
 
-Mỗi model chạy trong một worker riêng (môi trường riêng, vì thư viện của chúng xung đột nhau). `vitts-server` gom các worker lại thành một API `/v1/audio/speech`. Gateway tự chuẩn hóa văn bản tiếng Việt, tách câu, gửi tới model được chọn rồi ghép audio.
+Mỗi model chạy trong một worker riêng (môi trường riêng, vì thư viện của chúng xung đột nhau). `vitts-server` gom các worker thành một API `/v1/audio/speech`: tự chuẩn hóa văn bản tiếng Việt, tách câu, gửi tới model được chọn rồi ghép audio.
 
 ```bash
 bash benchmark/tts/serve_all.sh vieneu f5 mms     # bật worker + gateway ở :8000 (chỉ GPU 0)
@@ -205,57 +172,60 @@ bash benchmark/tts/serve_all.sh vieneu f5 mms     # bật worker + gateway ở :
 from openai import OpenAI
 
 client = OpenAI(base_url="http://localhost:8000/v1", api_key="none")
-client.audio.speech.create(model="vieneu", voice="default", input="Giá 100k, giao lúc 14h30 tại TP.HCM.").write_to_file(
-    "out.wav"
-)
+speech = client.audio.speech.create(model="vieneu", voice="default", input="Giá 100k, giao lúc 14h30 tại TP.HCM.")
+speech.write_to_file("out.wav")
 ```
 
-| | |
+| Tham số | |
 | --- | --- |
-| `model` | `vieneu`, `f5`, `indextts2`, `vixtts`, `viettts`, `mms`, `piper`. `tts-1` hoặc bỏ trống sẽ dùng model mặc định (model đầu tiên được bật). |
+| `model` | `vieneu`, `f5`, `indextts2`, `vixtts`, `viettts`, `mms`, `piper`. `tts-1` hoặc bỏ trống: model đầu tiên được bật. |
 | `normalize` | `true` (mặc định): đọc số, ngày giờ, tiền, viết tắt trước khi gửi tới model. Văn bản sau chuẩn hóa trả về trong header `X-Normalized-Text`. |
-| `response_format`, `speed`, `seed` | `wav` / `flac` / `pcm`; tốc độ 0.25 đến 4; seed cố định cho model sinh ngẫu nhiên. |
+| `response_format`, `speed`, `seed` | `wav` / `flac` / `pcm`; tốc độ 0.25 đến 4; seed cho model sinh ngẫu nhiên. |
 | `GET /v1/models`, `POST /v1/normalize` | Danh sách model đang bật; chỉ chuẩn hóa văn bản. |
 
-Không có GPU? `vitts-server --local` chạy MMS ngay trong tiến trình, không cần worker.
+`voice` được chấp nhận để tương thích OpenAI nhưng hiện mỗi model dùng giọng mặc định của nó. Không có GPU? `vitts-server --local` chạy MMS ngay trong tiến trình.
+
+## Chạy lại
+
+```bash
+git clone https://github.com/yoonjae26/vietnamese-tts.git && cd vietnamese-tts
+pip install -e ".[bench,translit]"
+
+# chuẩn hóa văn bản
+python benchmark/normalization/build_testset.py
+python benchmark/normalization/run.py --split heldout_v2
+
+# model TTS: mỗi model một môi trường conda (mã nguồn model được clone vào ~/vitts-engines)
+bash benchmark/tts/envs/coqui.sh      # và f5.sh, vieneu.sh, viettts.sh, indextts.sh
+bash benchmark/tts/run_all.sh         # sinh audio cho mọi model rồi chấm điểm
+
+# model phiên âm
+python training/translit/prepare_data.py
+bash training/translit/sweep.sh
+CUDA_VISIBLE_DEVICES=0 python training/translit/evaluate.py
+```
+
+Script GPU tự từ chối chạy nếu `CUDA_VISIBLE_DEVICES` khác `0`; sửa hằng số `ALLOWED_GPU` trong [`synthesize.py`](benchmark/tts/synthesize.py) nếu máy của bạn khác.
 
 ## Lộ trình
 
-**Giai đoạn 2: benchmark model TTS**
-- [x] Bộ câu chung cho mọi model: câu ngắn, câu vừa, câu dài, thanh điệu khó, tên riêng
-- [x] Độ rõ: ASR tiếng Việt (PhoWhisper) nghe lại audio → WER/CER, phát hiện lỗi không dừng
-- [x] Tốc độ (RTF) và VRAM
-- [ ] Thời gian ra audio đầu tiên khi streaming, RTF trên CPU cho mọi model
-- [x] Độ giống giọng khi clone (ECAPA-TDNN), MOS dự đoán (UTMOS)
-- [ ] MOS bằng người nghe tiếng Việt
-- [ ] Nhiều giọng mẫu (nam, nữ, phòng thu, điện thoại): kết quả clone giọng thay đổi theo giọng mẫu
-- [x] Các model: Meta MMS, viXTTS, VietTTS, F5-TTS-Vietnamese, VieNeu-TTS, IndexTTS-2, Piper
-- [x] Trang nghe thử: cùng một câu, mọi model
+- [ ] MOS do người nghe tiếng Việt chấm; nhiều giọng mẫu (nam, nữ, phòng thu, điện thoại)
+- [ ] Thời gian ra audio đầu tiên khi streaming; RTF trên CPU cho mọi model
+- [ ] API: streaming audio, chọn giọng mẫu qua `voice`
+- [ ] Phiên âm: nhãn do nhiều người gắn; tăng tốc (giải mã theo lô, ONNX); tên riêng không phải tiếng Anh
+- [ ] Chuẩn hóa: bộ held-out v3 do nhiều người viết
 
-**Giai đoạn 3: API chung**
-- [x] Một server tương thích OpenAI, chọn model bằng tham số `model`
-- [ ] Streaming audio, chọn giọng mẫu qua tham số `voice`
-
-**vitts normalizer 0.2**
-- [x] Số dính chữ (`12A`, `1m75`, `1.500W`), số La Mã, phân số, số âm
-- [x] Viết tắt hành chính (`Q.`, `P.`, `GD&ĐT`, `CNTT`)
-- [x] Model phiên âm từ nước ngoài; chữ viết tắt đọc thành từ (NATO) hoặc đánh vần (ATM)
-- [x] Đo trên bộ held-out mới (`heldout_v2`)
-- [ ] Tăng tốc phiên âm: giải mã theo lô, xuất ONNX
-- [ ] So với LLM lớn hơn (Qwen2.5-72B, model thương mại) và dùng LLM mạnh để sinh thêm dữ liệu huấn luyện
-- [ ] Tên riêng không phải tiếng Anh (Hàn, Nga, Ả Rập…), bộ held-out v3
-
-## Thành phần khác trong repo
+## Cấu trúc repo
 
 | Thành phần | Mô tả |
 | --- | --- |
-| [`vitts.text`](src/vitts/text/) | Bộ chuẩn hóa tiếng Việt (phần quy tắc không cần thư viện ngoài) |
-| [`vitts.translit`](src/vitts/translit/) | Model phiên âm từ nước ngoài (cần torch) |
-| [`vitts.datasets`](src/vitts/datasets.py) | Formatter dataset cho coqui-tts (LJSpeech, cặp wav/txt, Common Voice) |
-| [`recipes/vits`](recipes/vits/) | Script huấn luyện VITS tiếng Việt bằng coqui-tts |
-| [`vitts.server`](src/vitts/server.py) | Gateway tương thích OpenAI `/v1/audio/speech` cho mọi model |
-| [`docs/listen`](docs/listen/) | Trang nghe thử (GitHub Pages); tạo lại bằng `python docs/listen/build.py` |
-| [`app.py`](app.py) | Demo Gradio |
+| [`benchmark/tts/`](benchmark/tts/) | Bộ câu, adapter cho 7 model, chấm điểm (WER, không dừng, giống giọng, UTMOS), worker cho API |
+| [`benchmark/normalization/`](benchmark/normalization/) | Bộ test dev / held-out v1 / held-out v2 và script so sánh các bộ chuẩn hóa |
+| [`src/vitts/text/`](src/vitts/text/) | Bộ chuẩn hóa tiếng Việt (phần quy tắc không cần thư viện ngoài) |
+| [`src/vitts/translit/`](src/vitts/translit/), [`training/translit/`](training/translit/) | Model phiên âm, huấn luyện, đánh giá, so với LLM, trang duyệt mù |
+| [`src/vitts/server.py`](src/vitts/server.py) | Gateway tương thích OpenAI |
+| [`docs/listen/`](docs/listen/) | Trang nghe thử (GitHub Pages), tạo lại bằng `python docs/listen/build.py` |
+| [`results/`](results/) | Mọi bảng kết quả và output từng câu |
 
 ## Phát triển
 
@@ -265,13 +235,13 @@ pytest
 ruff check . && ruff format --check .
 ```
 
-Khi chạy benchmark trên GPU, chỉ định GPU bằng `CUDA_VISIBLE_DEVICES` (ví dụ `CUDA_VISIBLE_DEVICES=0`).
-
-## Giấy phép
+## Giấy phép và nguồn
 
 - Mã nguồn và bộ test: [MIT](LICENSE).
-- Các thư viện và model được benchmark giữ giấy phép riêng. Ví dụ Meta MMS là CC-BY-NC 4.0, không dùng thương mại.
+- Dữ liệu phiên âm lấy từ [vietnormalizer](https://github.com/nghimestudio/vietnormalizer) (MIT, [giấy phép](data/translit/LICENSE-vietnormalizer)).
+- Giọng mẫu trong `benchmark/tts/reference/` là giọng của tác giả repo, được công khai để phục vụ benchmark.
+- Các model được benchmark giữ giấy phép riêng (xem bảng). Nhiều model không cho dùng thương mại.
 
 ---
 
-*English:* ViTTS-Bench is an open, reproducible benchmark for Vietnamese TTS. Stage 1 compares Vietnamese text normalizers on hand-written held-out sets; vitts 0.2 with a trained 5.6M-parameter loanword transliteration model leads held-out v2 at 70% sentence accuracy. Scored against its training dictionary the model reaches 55% exact on unseen words; a blind human review of 150 words shows the dictionary itself is accepted only 27.5% of the time, the model 24.8%, gpt-4o-mini 30.9% (difference not significant) and Qwen2.5-7B 14.8%. Stage 2 benchmarks 7 TTS models (ASR round-trip WER, a runaway-generation check that WER misses, ECAPA speaker similarity, UTMOS, RTF, VRAM) with a listening page, and an OpenAI-compatible gateway serves all of them behind one `/v1/audio/speech` endpoint.
+*English:* ViTTS-Bench is an open, reproducible benchmark for Vietnamese TTS. It compares 7 open models on one shared sentence set (ASR round-trip WER, a runaway-generation check that WER misses, ECAPA speaker similarity, UTMOS, RTF, VRAM), shows that voice-cloning results depend on the reference voice, and serves every model behind one OpenAI-compatible `/v1/audio/speech` gateway. The bundled normalizer vitts 0.2, with a 5.6M-parameter loanword transliteration model, leads a held-out set at 70% sentence accuracy (next best 47%). In a blind human review the transliteration model is on par with gpt-4o-mini (24.8% vs 30.9%, not significant) and better than Qwen2.5-7B (14.8%).
