@@ -28,3 +28,4 @@ models/translit/sweep/
 .env
 .env.*
 *.env
+models/translit/variants/

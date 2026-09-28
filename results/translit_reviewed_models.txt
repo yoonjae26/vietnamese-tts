@@ -1,0 +1,5 @@
+gpt-4o-mini few-shot     30.9% [23.5%, 38.3%]
+V0_tu_dien               24.8% [18.1%, 31.5%] | so với GPT -6.0% [-16.1%, +4.0%]
+V1_gpt                   12.8% [7.4%, 18.1%] | so với GPT -18.1% [-24.8%, -11.4%]
+V2_ca_hai                24.2% [17.4%, 31.5%] | so với GPT -6.7% [-16.1%, +2.7%]
+DONE /home/hong/vietnamese-tts/results/translit_reviewed_models.json

@@ -26,9 +26,9 @@ from vitts.translit.model import PAD, Config, Seq2Seq, Vocab, save, source_token
 DATA = ROOT / "data" / "translit"
 
 
-def read(split: str) -> list[tuple[str, list[str]]]:
+def read(split: str, data_dir: Path = DATA) -> list[tuple[str, list[str]]]:
     rows = []
-    for line in (DATA / f"{split}.tsv").read_text(encoding="utf-8").splitlines():
+    for line in (data_dir / f"{split}.tsv").read_text(encoding="utf-8").splitlines():
         word, refs = line.split("\t")
         rows.append((word, refs.split(" | ")))
     return rows
@@ -88,6 +88,7 @@ def main():
     p.add_argument("--seed", type=int, default=42)
     p.add_argument("--phonemes", action="store_true", help="thêm âm vị CMUdict vào đầu vào")
     p.add_argument("--out", default=str(ROOT / "models" / "translit" / "translit.pt"))
+    p.add_argument("--data", default="", help="thư mục con của data/translit: '' (từ điển), 'gpt', 'both'")
     args = p.parse_args()
 
     if os.environ.get("CUDA_VISIBLE_DEVICES") != "0":
@@ -96,7 +97,8 @@ def main():
     random.seed(args.seed)
     torch.manual_seed(args.seed)
 
-    train, dev = read("train"), read("dev")
+    data_dir = DATA / args.data if args.data else DATA
+    train, dev = read("train", data_dir), read("dev", data_dir)
     train_pairs = [(w, t) for w, refs in train for t in refs]
     if args.phonemes:
         import cmudict

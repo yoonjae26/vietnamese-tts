@@ -106,7 +106,16 @@ Các con số trên chấm theo **một** đáp án của từ điển vietnorma
 - **So với gpt-4o-mini: gần như ngang nhau.** GPT hơn 6 điểm nhưng khoảng tin cậy của chênh lệch là −4% đến +16%, nên chưa kết luận được bên nào tốt hơn trên 149 từ. Ưu điểm còn lại của model nhỏ: chạy cục bộ, 0.1 GB VRAM, miễn phí.
 - **So với Qwen2.5-7B: model của repo tốt hơn có ý nghĩa** (+10 điểm, KTC 95% +0.7% đến +19.5%).
 - **Hạn chế:** chỉ một người duyệt; người duyệt thường chọn **một** cách ưa dùng nhất (138/150 từ), nên đây là tiêu chí chặt; mỗi từ có tới 5 ứng viên theo phong cách GPT so với 1 của mỗi hệ thống khác.
-- **Việc cần làm tiếp:** chất lượng model bị giới hạn bởi dữ liệu huấn luyện. Muốn vượt GPT cần dữ liệu tốt hơn từ điển, ví dụ gắn nhãn lại bằng cách đọc được người duyệt ưa dùng.
+
+**Thử nghiệm: gắn nhãn lại bằng GPT (kết quả âm).** Toàn bộ 16 nghìn từ train/dev được gắn nhãn lại bằng gpt-4o-mini few-shot (khoảng 390 nghìn token, [script](training/translit/relabel_gpt.py)). Sau đó huấn luyện lại với đúng cấu hình cũ, và chấm một lần trên 149 từ đã duyệt (không dùng để huấn luyện):
+
+| Nhãn huấn luyện | Đúng theo người duyệt | So với gpt-4o-mini (KTC 95%) |
+|---|---:|---:|
+| V0: từ điển (mặc định) | **24.8%** | −6.0% (−16.1% đến +4.0%) |
+| V2: từ điển + GPT | 24.2% | −6.7% (−16.1% đến +2.7%) |
+| V1: chỉ GPT | 12.8% | −18.1% (−24.8% đến −11.4%) |
+
+Học theo nhãn GPT làm model **kém đi một nửa**. Lý do: 11% nhãn GPT còn lẫn chữ Latin ("blai th", "a ri s tô"), và GPT đọc từng từ theo hiểu biết riêng về từ đó, không theo một quy tắc nhất quán. Model 5.6M tham số đọc từng ký tự học được phần nhiễu mà không học được phần hiểu biết (chỉ trùng output của GPT ở 50/149 từ). Từ điển nhất quán hơn nên vẫn là nguồn dữ liệu tốt nhất cho model nhỏ. Người duyệt cũng thường chấp nhận cách đọc gần chính tả gốc ("bring", "ca ra mel"), nên muốn cải thiện thật cần **nhãn do người gắn, nhất quán**, và nhiều người duyệt hơn.
 
 Giới hạn khác của phép so này: chỉ thử **một** LLM cỡ 7B, với một lời nhắc và giải mã tham lam. LLM lớn hơn (70B, hoặc các model thương mại) và lời nhắc được tinh chỉnh kỹ có thể tốt hơn nhiều. Kết luận chính xác là: **với cùng mức tài nguyên chạy cục bộ, một model nhỏ chuyên cho việc này tốt hơn hẳn một LLM đa năng 7B.**
 
