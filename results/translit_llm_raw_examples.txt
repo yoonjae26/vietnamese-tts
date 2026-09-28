@@ -1,0 +1,19 @@
+== shots: 0
+  aaswath    RAW='a s哇th'                                 CLEAN='a s th'
+  abuse      RAW='abu.se'                                 CLEAN='abu se'
+  adapt      RAW='adaptdown'                              CLEAN='adaptdown'
+  airbus     RAW='áir bús'                                CLEAN='áir bús'
+  container  RAW='công tê nơ'                             CLEAN='công tê nơ'
+  iphone     RAW='iphone'                                 CLEAN='iphone'
+  marketing  RAW='ma kêt ing'                             CLEAN='ma kêt ing'
+  netflix    RAW='net flix'                               CLEAN='net flix'
+== shots: 20
+  aaswath    RAW='a s哇特'                                  CLEAN='a s'
+  abuse      RAW='ab us'                                  CLEAN='ab us'
+  adapt      RAW='ad áp tít'                              CLEAN='ad áp tít'
+  airbus     RAW='ây bù sê'                               CLEAN='ây bù sê'
+  container  RAW='công tê nơ'                             CLEAN='công tê nơ'
+  iphone     RAW='a i phôn'                               CLEAN='a i phôn'
+  marketing  RAW='ma kinh töng'                           CLEAN='ma kinh t ng'
+  netflix    RAW='net flix'                               CLEAN='net flix'
+RAWDONE

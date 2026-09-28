@@ -1,6 +1,7 @@
 """Đánh giá phiên âm từ nước ngoài trên bộ test (từ chưa gặp khi huấn luyện).
 
     CUDA_VISIBLE_DEVICES=0 python training/translit/evaluate.py
+    CUDA_VISIBLE_DEVICES=0 python training/translit/evaluate.py --llm Qwen/Qwen2.5-7B-Instruct
 
 Chỉ số (so với đáp án gần nhất khi một từ có nhiều cách đọc đúng):
 - Đúng cả từ: output trùng khớp một đáp án
@@ -35,7 +36,9 @@ def score(pred: str, refs: list[str]) -> dict:
     return best
 
 
-def systems():
+def systems(llm: str | None):
+    import torch
+
     from vitts.translit import Transliterator
 
     yield "Giữ nguyên chữ tiếng Anh", lambda w: w
@@ -50,9 +53,22 @@ def systems():
     yield "soe-vinorm", lambda w: soe.normalize(w)
 
     greedy = Transliterator.from_pretrained(device="cuda:0", beam=1)
+    greedy.params = sum(p.numel() for p in greedy.model.parameters())
     yield "vitts translit (greedy)", greedy
     beam = Transliterator.from_pretrained(device="cuda:0", beam=5)
+    beam.params = greedy.params
     yield "vitts translit (beam 5)", beam
+
+    if llm:
+        from llm_baseline import LLMTransliterator, few_shot_examples
+
+        del greedy, beam
+        torch.cuda.empty_cache()
+        model = LLMTransliterator(llm)
+        short = llm.split("/")[-1]
+        yield f"{short} zero-shot", model
+        model.shots, model.cache = few_shot_examples(read("train"), k=20), {}
+        yield f"{short} few-shot (20 ví dụ từ train)", model
 
 
 def main():
@@ -60,11 +76,21 @@ def main():
 
     if os.environ.get("CUDA_VISIBLE_DEVICES") != "0":
         sys.exit("Cần CUDA_VISIBLE_DEVICES=0 (máy dùng chung, chỉ GPU 0).")
+    import argparse
+
+    import torch
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("--llm", help="model id trên Hugging Face, ví dụ Qwen/Qwen2.5-7B-Instruct")
+    args = parser.parse_args()
+
     test = read("test")
     results, examples = [], {}
-    for name, fn in systems():
+    for name, fn in systems(args.llm):
+        torch.cuda.reset_peak_memory_stats()
         t0 = time.perf_counter()
-        preds = [fn(w) for w, _ in test]
+        words = [w for w, _ in test]
+        preds = fn.batch(words) if hasattr(fn, "batch") else [fn(w) for w in words]  # LLM: sinh theo lô
         ms = 1000 * (time.perf_counter() - t0) / len(test)
         scores = [score(p, refs) for p, (_, refs) in zip(preds, test, strict=True)]
         r = {
@@ -73,6 +99,8 @@ def main():
             "ser": sum(s["ser"] for s in scores) / len(scores),
             "cer": sum(s["cer"] for s in scores) / len(scores),
             "ms_per_word": ms,
+            "params": getattr(fn, "params", None),
+            "peak_vram_gb": torch.cuda.max_memory_allocated() / 1e9 if hasattr(fn, "params") else None,
         }
         results.append(r)
         examples[name] = preds
@@ -84,12 +112,24 @@ def main():
     lines = [
         f"# Phiên âm từ nước ngoài: bộ test ({len(test)} từ chưa gặp khi huấn luyện)",
         "",
-        "| Hệ thống | Đúng cả từ ↑ | Lỗi âm tiết (SER) ↓ | Lỗi ký tự (CER) ↓ | ms/từ |",
-        "|---|---:|---:|---:|---:|",
+        "| Hệ thống | Tham số | Đúng cả từ ↑ | Lỗi âm tiết (SER) ↓ | Lỗi ký tự (CER) ↓ | ms/từ | VRAM |",
+        "|---|---:|---:|---:|---:|---:|---:|",
+    ]
+
+    def fmt_params(n):
+        return "–" if n is None else f"{n / 1e9:.1f}B" if n >= 1e9 else f"{n / 1e6:.1f}M"
+
+    def fmt_vram(gb):
+        return "–" if gb is None else f"{gb:.1f} GB"
+
+    lines += [
+        f"| {r['system']} | {fmt_params(r['params'])} | {r['exact']:.1%} | {r['ser']:.1%} | {r['cer']:.1%} "
+        f"| {r['ms_per_word']:.2f} | {fmt_vram(r['peak_vram_gb'])} |"
+        for r in results
     ]
     lines += [
-        f"| {r['system']} | {r['exact']:.1%} | {r['ser']:.1%} | {r['cer']:.1%} | {r['ms_per_word']:.2f} |"
-        for r in results
+        "",
+        "vitts giải mã từng từ một; LLM sinh theo lô 64 từ trên GPU (ms/từ là thời gian trung bình khi chạy cả bộ).",
     ]
     lines += ["", "## Ví dụ (30 từ đầu của bộ test)", "", "| Từ | Đáp án | " + " | ".join(examples) + " |"]
     lines.append("|---|---|" + "---|" * len(examples))

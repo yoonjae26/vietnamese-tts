@@ -4,34 +4,62 @@
   "exact": 0.0059665871121718375,
   "ser": 0.9934367541766109,
   "cer": 0.5466560387235483,
-  "ms_per_word": 3.5817021401799095e-05
+  "ms_per_word": 0.00010574845539357042,
+  "params": null,
+  "peak_vram_gb": null
  },
  {
   "system": "vietnormalizer (quy tắc, không tra từ điển)",
   "exact": 0.07816229116945107,
   "ser": 0.7312379247641777,
   "cer": 0.40510047857285564,
-  "ms_per_word": 0.07427217069844358
+  "ms_per_word": 0.07388957271570237,
+  "params": null,
+  "peak_vram_gb": null
  },
  {
   "system": "soe-vinorm",
   "exact": 0.00477326968973747,
   "ser": 1.1050261393340155,
   "cer": 0.5860760012192865,
-  "ms_per_word": 0.05236777047980088
+  "ms_per_word": 0.050701052039363786,
+  "params": null,
+  "peak_vram_gb": null
  },
  {
   "system": "vitts translit (greedy)",
   "exact": 0.5423627684964201,
   "ser": 0.3073474258438457,
   "cer": 0.15378925640358643,
-  "ms_per_word": 17.70137090387094
+  "ms_per_word": 15.79855370439749,
+  "params": 5618521,
+  "peak_vram_gb": 0.05741056
  },
  {
   "system": "vitts translit (beam 5)",
   "exact": 0.5507159904534606,
   "ser": 0.29988919195363084,
   "cer": 0.14876177178928796,
-  "ms_per_word": 23.97336489643217
+  "ms_per_word": 21.564856500571555,
+  "params": 5618521,
+  "peak_vram_gb": 0.080588288
+ },
+ {
+  "system": "Qwen2.5-7B-Instruct zero-shot",
+  "exact": 0.032219570405727926,
+  "ser": 0.9531821797931583,
+  "cer": 0.5930022372646616,
+  "ms_per_word": 6.611760763500357,
+  "params": 7615616512,
+  "peak_vram_gb": 16.605820416
+ },
+ {
+  "system": "Qwen2.5-7B-Instruct few-shot (20 ví dụ từ train)",
+  "exact": 0.042362768496420046,
+  "ser": 0.9585123309466984,
+  "cer": 0.5819565849354911,
+  "ms_per_word": 22.091044024130895,
+  "params": 7615616512,
+  "peak_vram_gb": 20.76450304
  }
 ]

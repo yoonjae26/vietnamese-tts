@@ -77,7 +77,13 @@ python benchmark/normalization/run.py --split heldout_v2
 | soe-vinorm | 0.5% | 110.5% |
 | vietnormalizer (quy tắc phiên âm, không tra từ điển) | 7.8% | 73.1% |
 | vitts translit v1 (chỉ chữ) | 47.1% | 37.2% |
-| **vitts translit (chữ + âm vị CMUdict)** | **55.1%** | **30.0%** |
+| **vitts translit (chữ + âm vị CMUdict), 5.6M tham số** | **55.1%** | **30.0%** |
+| Qwen2.5-7B-Instruct zero-shot, 7.6B tham số | 3.2% | 95.3% |
+| Qwen2.5-7B-Instruct few-shot (20 ví dụ từ train) | 4.2% | 95.9% |
+
+**So với LLM.** Model 5.6M tham số của repo đúng cả từ gấp khoảng 13 lần Qwen2.5-7B-Instruct, dù nhỏ hơn 1.350 lần và chỉ dùng 0.1 GB VRAM (Qwen dùng 17–21 GB). Output thô của Qwen ([ví dụ](results/translit_llm_raw_examples.txt)) cho thấy lỗi thật chứ không phải do cách chấm: nó giữ nguyên tiếng Anh ("net flix"), chèn chữ Hán ("a s哇th"), hoặc bịa ký tự ("ma kinh töng"). Khi thay model phiên âm trong vitts bằng Qwen, held-out v2 chỉ đạt 40% (so với 70%) ([chi tiết](results/normalization_heldout_v2_with_llm.md)).
+
+Giới hạn của phép so này: chỉ thử **một** LLM cỡ 7B, với một lời nhắc và giải mã tham lam. LLM lớn hơn (70B, hoặc các model thương mại) và lời nhắc được tinh chỉnh kỹ có thể tốt hơn nhiều. Kết luận chính xác là: **với cùng mức tài nguyên chạy cục bộ, một model nhỏ chuyên cho việc này tốt hơn hẳn một LLM đa năng 7B.**
 
 | Cấu hình (dò trên dev) | Dev |
 |---|---:|
@@ -202,6 +208,7 @@ Không có GPU? `vitts-server --local` chạy MMS ngay trong tiến trình, khô
 - [x] Model phiên âm từ nước ngoài; chữ viết tắt đọc thành từ (NATO) hoặc đánh vần (ATM)
 - [x] Đo trên bộ held-out mới (`heldout_v2`)
 - [ ] Tăng tốc phiên âm: giải mã theo lô, xuất ONNX
+- [ ] So với LLM lớn hơn (Qwen2.5-72B, model thương mại) và dùng LLM mạnh để sinh thêm dữ liệu huấn luyện
 - [ ] Tên riêng không phải tiếng Anh (Hàn, Nga, Ả Rập…), bộ held-out v3
 
 ## Thành phần khác trong repo
@@ -233,4 +240,4 @@ Khi chạy benchmark trên GPU, chỉ định GPU bằng `CUDA_VISIBLE_DEVICES` 
 
 ---
 
-*English:* ViTTS-Bench is an open, reproducible benchmark for Vietnamese TTS. Stage 1 compares Vietnamese text normalizers on hand-written held-out sets; vitts 0.2 with a trained 5.6M-parameter loanword transliteration model (55% exact / 30% syllable error on unseen words, vs 8% / 73% for the best rule-based transliterator) leads held-out v2 at 70% sentence accuracy. Stage 2 benchmarks 7 TTS models (ASR round-trip WER, a runaway-generation check that WER misses, ECAPA speaker similarity, UTMOS, RTF, VRAM) with a listening page, and an OpenAI-compatible gateway serves all of them behind one `/v1/audio/speech` endpoint.
+*English:* ViTTS-Bench is an open, reproducible benchmark for Vietnamese TTS. Stage 1 compares Vietnamese text normalizers on hand-written held-out sets; vitts 0.2 with a trained 5.6M-parameter loanword transliteration model (55% exact / 30% syllable error on unseen words, vs 8% / 73% for the best rule-based transliterator and 4% / 96% for Qwen2.5-7B-Instruct few-shot) leads held-out v2 at 70% sentence accuracy. Stage 2 benchmarks 7 TTS models (ASR round-trip WER, a runaway-generation check that WER misses, ECAPA speaker similarity, UTMOS, RTF, VRAM) with a listening page, and an OpenAI-compatible gateway serves all of them behind one `/v1/audio/speech` endpoint.
