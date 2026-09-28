@@ -9,6 +9,8 @@ Every number here is produced by scripts in this repository. Raw outputs are in 
 
 ## TTS models
 
+All seven models are published by other authors (linked below); this repo only benchmarks them.
+
 50 shared sentences, already written as spoken words (no digits or abbreviations), so only the TTS model is measured. [`vinai/PhoWhisper-large`](https://huggingface.co/vinai/PhoWhisper-large) transcribes each clip and WER is computed against the input. Each model uses its authors' recommended settings and a fixed seed. Voice-cloning models all use the same reference: 8 seconds of the repository author's voice, recorded on a phone ([`benchmark/tts/reference/`](../benchmark/tts/reference/)).
 
 | Model | WER ↓ | WER short | WER tongue twisters | Runaway ↓ | Voice similarity ↑ | UTMOS ↑ | RTF ↓ | VRAM | License |

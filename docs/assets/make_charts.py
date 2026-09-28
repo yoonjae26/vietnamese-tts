@@ -2,7 +2,7 @@
 
     python docs/assets/make_charts.py
 
-Palette: one blue hue in two steps (highlight vs. others), validated as an ordinal
+Palette: one blue hue in two steps (this repo's own systems vs. others), validated as an ordinal
 ramp against both surfaces. Text uses neutral ink, never the series colour.
 """
 
@@ -71,7 +71,7 @@ def rounded_barh(ax, y, width, height, color, t):
 
 def save(fig, name, mode):
     fig.savefig(OUT / f"{name}-{mode}.svg", transparent=True, bbox_inches="tight", pad_inches=0.15)
-    preview = os.environ.get("CHART_PREVIEW_DIR")  # PNG trên nền trang, chỉ để xem trước
+    preview = os.environ.get("CHART_PREVIEW_DIR")  # PNG on the page background, preview only
     if preview:
         bg = "#ffffff" if mode == "light" else "#0d1117"
         fig.savefig(Path(preview) / f"{name}-{mode}.png", facecolor=bg, dpi=110, bbox_inches="tight", pad_inches=0.15)
@@ -94,12 +94,11 @@ def chart_tts():
         for r in data:
             e = r["engine"]
             x, y = r["rtf"], 100 * r["overall"]["wer"]
-            best = e == "vieneu"
-            ax.scatter(x, y, s=110 if best else 80, color=t["hi"] if best else t["lo"], edgecolor=t["surface"],
-                       linewidth=2, zorder=3)  # fmt: skip
+            # One colour for every point: none of these TTS models is ours, so none is highlighted.
+            ax.scatter(x, y, s=90, color=t["hi"], edgecolor=t["surface"], linewidth=2, zorder=3)
             dx, dy, ha = offsets[e]
             ax.annotate(short[e], (x, y), xytext=(dx, dy), textcoords="offset points", ha=ha, va="center",
-                        color=t["ink"], fontsize=10.5, fontweight="bold" if best else "normal")  # fmt: skip
+                        color=t["ink"], fontsize=10.5)  # fmt: skip
         ax.set_xscale("log")
         ax.set_xlim(0.008, 2.2)
         ax.set_ylim(0, 13.5)

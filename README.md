@@ -1,6 +1,6 @@
 # ViTTS-Bench
 
-**An open, reproducible benchmark for Vietnamese text-to-speech**, plus a Vietnamese text normalizer and one OpenAI-compatible API for every model.
+**An open, reproducible benchmark for Vietnamese text-to-speech**, plus a Vietnamese text normalizer, a small loanword transliteration model, and one OpenAI-compatible API for every model.
 
 [![CI](https://github.com/yoonjae26/vietnamese-tts/actions/workflows/ci.yml/badge.svg)](https://github.com/yoonjae26/vietnamese-tts/actions/workflows/ci.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
@@ -10,8 +10,8 @@
 
 ## Highlights
 
-- **7 open Vietnamese TTS models**, one shared test set, one scoring pipeline.
-- **VieNeu-TTS v3 Turbo** is the best all-rounder for products: 3.3% WER, 10× faster than real time, Apache-2.0.
+- **7 open Vietnamese TTS models** from other authors, one shared test set, one scoring pipeline. This repo evaluates them; it does not train a TTS model.
+- **VieNeu-TTS v3 Turbo** (by its own authors) is the best all-rounder for products: 3.3% WER, 10× faster than real time, Apache-2.0.
 - **WER alone misses failures:** some models finish the sentence and then keep generating silence. The benchmark adds a check for this.
 - **Text normalizer vitts 0.2** reads numbers, dates, units, acronyms and loanwords. It gets **70%** of held-out sentences exactly right; the next best tool gets 47%.
 - **A 5.6M-parameter loanword model** matches gpt-4o-mini in a blind human review and beats Qwen2.5-7B, using 0.1 GB of VRAM.
@@ -22,6 +22,8 @@
   <source media="(prefers-color-scheme: dark)" srcset="docs/assets/tts-dark.svg">
   <img src="docs/assets/tts-light.svg" alt="Scatter plot of word error rate against real-time factor for 7 Vietnamese TTS models. IndexTTS-2 has the lowest error (1.8%) but is slower than real time; VieNeu-TTS v3 Turbo reaches 3.3% at a real-time factor of 0.1; MMS is fastest at 0.013 with 6.9% error.">
 </picture>
+
+All seven models are third-party; links and licenses are in the [full table](docs/RESULTS.md#tts-models). What this repo adds is the test set, the scoring (including the silence check) and the shared API.
 
 - **IndexTTS-2** is the clearest (1.8% WER) but slower than real time and needs 8.9 GB of VRAM.
 - **F5-TTS** is nearly as clear and light, but non-commercial. **MMS** and **Piper** are tiny and fast, and struggle with tongue twisters.
