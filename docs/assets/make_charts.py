@@ -48,7 +48,7 @@ def style_axes(ax, t, grid_axis):
     for side in ("top", "right", "left"):
         ax.spines[side].set_visible(False)
     ax.spines["bottom"].set_color(t["grid"])
-    ax.tick_params(colors=t["ink2"], length=0)
+    ax.tick_params(which="both", colors=t["ink2"], length=0)
     ax.grid(axis=grid_axis, color=t["grid"], linewidth=0.8)
     ax.set_axisbelow(True)
 
