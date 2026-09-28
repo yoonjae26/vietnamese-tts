@@ -9,7 +9,8 @@ dist/
 .ruff_cache/
 
 # dữ liệu và checkpoint (không đẩy lên GitHub)
-data/
+/data/*
+!/data/translit/
 runs/
 *.pth
 *.wav

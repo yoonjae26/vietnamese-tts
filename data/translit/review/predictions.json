@@ -1,0 +1,1202 @@
+{
+ "chapi": {
+  "gold": "cha pi",
+  "vietnormalizer_rules": "cha-pi",
+  "gpt-4o-mini_zero-shot": "cha pi",
+  "gpt-4o-mini_few-shot": "cha pi",
+  "vitts": "cha pi",
+  "qwen2.5-7b_few-shot": "cháp i"
+ },
+ "insuline": {
+  "gold": "in xu lin",
+  "vietnormalizer_rules": "in-xu-lai",
+  "gpt-4o-mini_zero-shot": "in su lin",
+  "gpt-4o-mini_few-shot": "in su lin",
+  "vitts": "in xu lin",
+  "qwen2.5-7b_few-shot": "i súc lin"
+ },
+ "negev": {
+  "gold": "nê ghếp",
+  "vietnormalizer_rules": "ne-ge",
+  "gpt-4o-mini_zero-shot": "ne gét",
+  "gpt-4o-mini_few-shot": "ne gét",
+  "vitts": "nê ghép",
+  "qwen2.5-7b_few-shot": "ne gê"
+ },
+ "nilsawai": {
+  "gold": "nin xa oai",
+  "vietnormalizer_rules": "ni-xauai",
+  "gpt-4o-mini_zero-shot": "ni l sa wai",
+  "gpt-4o-mini_few-shot": "ni l sa wai",
+  "vitts": "nin xa oai",
+  "qwen2.5-7b_few-shot": "ni lô sài"
+ },
+ "scrum": {
+  "gold": "cờ râm",
+  "vietnormalizer_rules": "râm",
+  "gpt-4o-mini_zero-shot": "scrum",
+  "gpt-4o-mini_few-shot": "scrum",
+  "vitts": "xờ crum",
+  "qwen2.5-7b_few-shot": "s rum không có từ tương đương trong tiếng việt nên phiên âm theo cách phát âm tiếng anh"
+ },
+ "caramel": {
+  "gold": "ca ra mên",
+  "vietnormalizer_rules": "ca-ra-meo",
+  "gpt-4o-mini_zero-shot": "ca ra mên",
+  "gpt-4o-mini_few-shot": "ca ra mên",
+  "vitts": "ca ra mên",
+  "qwen2.5-7b_few-shot": "ca ra m l"
+ },
+ "faz": {
+  "gold": "phát",
+  "vietnormalizer_rules": "pha",
+  "gpt-4o-mini_zero-shot": "faz",
+  "gpt-4o-mini_few-shot": "phát",
+  "vitts": "phát",
+  "qwen2.5-7b_few-shot": "fa zê"
+ },
+ "reduction": {
+  "gold": "ri đắc xần",
+  "vietnormalizer_rules": "re-du-cân",
+  "gpt-4o-mini_zero-shot": "ri đắc shần",
+  "gpt-4o-mini_few-shot": "ri đắc shần",
+  "vitts": "rê đắc xần",
+  "qwen2.5-7b_few-shot": "riduce nôn"
+ },
+ "russia": {
+  "gold": "rắt xa",
+  "vietnormalizer_rules": "ru-xia",
+  "gpt-4o-mini_zero-shot": "rút si a",
+  "gpt-4o-mini_few-shot": "ru xì a",
+  "vitts": "rắt xi a",
+  "qwen2.5-7b_few-shot": "ru ssi a"
+ },
+ "pereira": {
+  "gold": "pê rê i ra",
+  "vietnormalizer_rules": "pe-râi-ra",
+  "gpt-4o-mini_zero-shot": "pe re ra",
+  "gpt-4o-mini_few-shot": "pe re ra",
+  "vitts": "pê rê ra",
+  "qwen2.5-7b_few-shot": "pe ri a ra"
+ },
+ "lovren": {
+  "gold": "lốp ren",
+  "vietnormalizer_rules": "lo-ren",
+  "gpt-4o-mini_zero-shot": "lố ven",
+  "gpt-4o-mini_few-shot": "lô v ren",
+  "vitts": "lô vơn",
+  "qwen2.5-7b_few-shot": "lố vần"
+ },
+ "wccdaily": {
+  "gold": "uê xê đây li",
+  "vietnormalizer_rules": "u-dai-li",
+  "gpt-4o-mini_zero-shot": "đêi ly",
+  "gpt-4o-mini_few-shot": "đêi si si đêi ly",
+  "vitts": "oắc đai li",
+  "qwen2.5-7b_few-shot": "vơ kơ dái li"
+ },
+ "poste": {
+  "gold": "pốt",
+  "vietnormalizer_rules": "po-te",
+  "gpt-4o-mini_zero-shot": "pô s tê",
+  "gpt-4o-mini_few-shot": "pô tê",
+  "vitts": "pốt tê",
+  "qwen2.5-7b_few-shot": "po s"
+ },
+ "part": {
+  "gold": "pát",
+  "vietnormalizer_rules": "pa",
+  "gpt-4o-mini_zero-shot": "pát",
+  "gpt-4o-mini_few-shot": "pát",
+  "vitts": "pát",
+  "qwen2.5-7b_few-shot": "párt"
+ },
+ "thiamin": {
+  "gold": "thi a min",
+  "vietnormalizer_rules": "thia-min",
+  "gpt-4o-mini_zero-shot": "thi a min",
+  "gpt-4o-mini_few-shot": "thi a min",
+  "vitts": "thi a min",
+  "qwen2.5-7b_few-shot": "ti am in"
+ },
+ "viwaseen": {
+  "gold": "vi oa xin",
+  "vietnormalizer_rules": "viua-xeen",
+  "gpt-4o-mini_zero-shot": "vi wa sin",
+  "gpt-4o-mini_few-shot": "vi wa sin",
+  "vitts": "vi oa xen",
+  "qwen2.5-7b_few-shot": "vi wa seen"
+ },
+ "versace": {
+  "gold": "vơ xát chê",
+  "vietnormalizer_rules": "ve-xa-ke",
+  "gpt-4o-mini_zero-shot": "vơ sa chê",
+  "gpt-4o-mini_few-shot": "vơ sa chê",
+  "vitts": "vơ xê chê",
+  "qwen2.5-7b_few-shot": "vi sa cê"
+ },
+ "nacio": {
+  "gold": "na xi ô",
+  "vietnormalizer_rules": "na-kio",
+  "gpt-4o-mini_zero-shot": "na si ô",
+  "gpt-4o-mini_few-shot": "na si ô",
+  "vitts": "na xi ô",
+  "qwen2.5-7b_few-shot": "na si o"
+ },
+ "ugledar": {
+  "gold": "u glê đa",
+  "vietnormalizer_rules": "ú-ồ-da",
+  "gpt-4o-mini_zero-shot": "u g l e đ a r",
+  "gpt-4o-mini_few-shot": "u gờ la đờ",
+  "vitts": "u glê đa",
+  "qwen2.5-7b_few-shot": "u gle dar"
+ },
+ "vincent": {
+  "gold": "vin xen",
+  "vietnormalizer_rules": "vin-ken",
+  "gpt-4o-mini_zero-shot": "vin sơn",
+  "gpt-4o-mini_few-shot": "vin sần",
+  "vitts": "vin xen",
+  "qwen2.5-7b_few-shot": "viên tín"
+ },
+ "qiao": {
+  "gold": "chi ao",
+  "vietnormalizer_rules": "qiao",
+  "gpt-4o-mini_zero-shot": "chi ao",
+  "gpt-4o-mini_few-shot": "chi ao",
+  "vitts": "chi ao",
+  "qwen2.5-7b_few-shot": "cầu"
+ },
+ "markets": {
+  "gold": "mác két",
+  "vietnormalizer_rules": "ma-cét",
+  "gpt-4o-mini_zero-shot": "ma kẹt s",
+  "gpt-4o-mini_few-shot": "ma kẹt s",
+  "vitts": "mác kết",
+  "qwen2.5-7b_few-shot": "már ket s"
+ },
+ "ford": {
+  "gold": "pho",
+  "vietnormalizer_rules": "pho",
+  "gpt-4o-mini_zero-shot": "phôrd",
+  "gpt-4o-mini_few-shot": "phô d",
+  "vitts": "pho",
+  "qwen2.5-7b_few-shot": "fôr dô"
+ },
+ "achalasia": {
+  "gold": "a ca la xi a",
+  "vietnormalizer_rules": "a-cha-la-xia",
+  "gpt-4o-mini_zero-shot": "a ch a l a z i a",
+  "gpt-4o-mini_few-shot": "a cha la zi a",
+  "vitts": "a cha la xi a",
+  "qwen2.5-7b_few-shot": "a xả lả ya"
+ },
+ "roddick": {
+  "gold": "rốt đích",
+  "vietnormalizer_rules": "ro-di",
+  "gpt-4o-mini_zero-shot": "rót đích",
+  "gpt-4o-mini_few-shot": "rót đích",
+  "vitts": "rô đích",
+  "qwen2.5-7b_few-shot": "rod đíc"
+ },
+ "blyth": {
+  "gold": "blai thờ",
+  "vietnormalizer_rules": "lít",
+  "gpt-4o-mini_zero-shot": "blai th",
+  "gpt-4o-mini_few-shot": "blai th",
+  "vitts": "blít",
+  "qwen2.5-7b_few-shot": "bli thê"
+ },
+ "catherine": {
+  "gold": "ca thơ rin",
+  "vietnormalizer_rules": "cát-he-rai",
+  "gpt-4o-mini_zero-shot": "cát thê rin",
+  "gpt-4o-mini_few-shot": "ca thê rin",
+  "vitts": "ca thơ rin",
+  "qwen2.5-7b_few-shot": "ka tê in"
+ },
+ "headnlines": {
+  "gold": "hét lain",
+  "vietnormalizer_rules": "hi-nli-nẹt",
+  "gpt-4o-mini_zero-shot": "hê đai n lài n",
+  "gpt-4o-mini_few-shot": "hê đai n lài",
+  "vitts": "hét lain",
+  "qwen2.5-7b_few-shot": "hi ên linês"
+ },
+ "zongyi": {
+  "gold": "tổng nghệ",
+  "vietnormalizer_rules": "don-gi",
+  "gpt-4o-mini_zero-shot": "zong yi",
+  "gpt-4o-mini_few-shot": "zông y",
+  "vitts": "zông y i",
+  "qwen2.5-7b_few-shot": "tông yi"
+ },
+ "calvert": {
+  "gold": "ca vớt",
+  "vietnormalizer_rules": "ca-ve",
+  "gpt-4o-mini_zero-shot": "cáo vớt",
+  "gpt-4o-mini_few-shot": "cáo vớt",
+  "vitts": "ca vớt",
+  "qwen2.5-7b_few-shot": "ca lê furt"
+ },
+ "matrooshi": {
+  "gold": "ma tru xi",
+  "vietnormalizer_rules": "mát-ru-xi",
+  "gpt-4o-mini_zero-shot": "ma tro u si",
+  "gpt-4o-mini_few-shot": "ma tro ô si",
+  "vitts": "ma trô xô xi",
+  "qwen2.5-7b_few-shot": "mát ro ô si"
+ },
+ "albopictus": {
+  "gold": "an bô pích tút",
+  "vietnormalizer_rules": "a-bo-pi-tợt",
+  "gpt-4o-mini_zero-shot": "a l b o p i c t u s",
+  "gpt-4o-mini_few-shot": "a bô pic tứ s",
+  "vitts": "an bô pích tút",
+  "qwen2.5-7b_few-shot": "al bo pích tus"
+ },
+ "zhidan": {
+  "gold": "chi đan",
+  "vietnormalizer_rules": "hi-dan",
+  "gpt-4o-mini_zero-shot": "zhi đan",
+  "gpt-4o-mini_few-shot": "chi đan",
+  "vitts": "chi đan",
+  "qwen2.5-7b_few-shot": "trí đan"
+ },
+ "soo": {
+  "gold": "xu",
+  "vietnormalizer_rules": "xu",
+  "gpt-4o-mini_zero-shot": "su",
+  "gpt-4o-mini_few-shot": "su",
+  "vitts": "xu",
+  "qwen2.5-7b_few-shot": "sồ"
+ },
+ "mykyta": {
+  "gold": "my ky ta",
+  "vietnormalizer_rules": "mi-ki-ta",
+  "gpt-4o-mini_zero-shot": "mi ki ta",
+  "gpt-4o-mini_few-shot": "mi ki ta",
+  "vitts": "mi ki ta",
+  "qwen2.5-7b_few-shot": "mi ky ta"
+ },
+ "smugglers": {
+  "gold": "xờ măng gờ lơ",
+  "vietnormalizer_rules": "mú-gồ",
+  "gpt-4o-mini_zero-shot": "smắc gơ lơs",
+  "gpt-4o-mini_few-shot": "smắc gơ lơs",
+  "vitts": "x mu glơ",
+  "qwen2.5-7b_few-shot": "sm gê rơ"
+ },
+ "ifpri": {
+  "gold": "i phờ pri",
+  "vietnormalizer_rules": "íp-pri",
+  "gpt-4o-mini_zero-shot": "i ph pri",
+  "gpt-4o-mini_few-shot": "i phri",
+  "vitts": "íp phờ ri",
+  "qwen2.5-7b_few-shot": "i fpi"
+ },
+ "eritrea": {
+  "gold": "ê ri trê a",
+  "vietnormalizer_rules": "e-rít-ri",
+  "gpt-4o-mini_zero-shot": "ê ri t rê a",
+  "gpt-4o-mini_few-shot": "ê ri tre a",
+  "vitts": "ê ri trê a",
+  "qwen2.5-7b_few-shot": "e ri tri ê a"
+ },
+ "legends": {
+  "gold": "lê giần",
+  "vietnormalizer_rules": "ồ-gen",
+  "gpt-4o-mini_zero-shot": "lê dầnz",
+  "gpt-4o-mini_few-shot": "lê dần z",
+  "vitts": "lê giần",
+  "qwen2.5-7b_few-shot": "lề gendês"
+ },
+ "garmin": {
+  "gold": "ga min",
+  "vietnormalizer_rules": "ga-min",
+  "gpt-4o-mini_zero-shot": "ga min",
+  "gpt-4o-mini_few-shot": "ga min",
+  "vitts": "ga min",
+  "qwen2.5-7b_few-shot": "ga r m n"
+ },
+ "kallo": {
+  "gold": "ca lô",
+  "vietnormalizer_rules": "ca-lo",
+  "gpt-4o-mini_zero-shot": "ka lô",
+  "gpt-4o-mini_few-shot": "ka lô",
+  "vitts": "ca lô",
+  "qwen2.5-7b_few-shot": "ka lo"
+ },
+ "kayak": {
+  "gold": "ca dắc",
+  "vietnormalizer_rules": "ca-dát",
+  "gpt-4o-mini_zero-shot": "ka yak",
+  "gpt-4o-mini_few-shot": "ka yak",
+  "vitts": "ca yắc",
+  "qwen2.5-7b_few-shot": "ka yak"
+ },
+ "yeoncheon": {
+  "gold": "diên cho uôn",
+  "vietnormalizer_rules": "đeon-cheon",
+  "gpt-4o-mini_zero-shot": "ye on chơn",
+  "gpt-4o-mini_few-shot": "yeon chôn",
+  "vitts": "diên chơn",
+  "qwen2.5-7b_few-shot": "yên chen"
+ },
+ "krista": {
+  "gold": "crít ta",
+  "vietnormalizer_rules": "ri-ta",
+  "gpt-4o-mini_zero-shot": "kris ta",
+  "gpt-4o-mini_few-shot": "kri ta",
+  "vitts": "crít ta",
+  "qwen2.5-7b_few-shot": "krista"
+ },
+ "tripoli": {
+  "gold": "tri pô li",
+  "vietnormalizer_rules": "tri-po-li",
+  "gpt-4o-mini_zero-shot": "tri p ô li",
+  "gpt-4o-mini_few-shot": "tri po li",
+  "vitts": "tri pô li",
+  "qwen2.5-7b_few-shot": "tri pô li"
+ },
+ "nitric": {
+  "gold": "ni trích",
+  "vietnormalizer_rules": "nít-ri",
+  "gpt-4o-mini_zero-shot": "ni trích",
+  "gpt-4o-mini_few-shot": "nai trích",
+  "vitts": "ni trích",
+  "qwen2.5-7b_few-shot": "ni tri kíc"
+ },
+ "santham": {
+  "gold": "xan thăm",
+  "vietnormalizer_rules": "xan-tham",
+  "gpt-4o-mini_zero-shot": "san tham",
+  "gpt-4o-mini_few-shot": "san tham",
+  "vitts": "xan tham",
+  "qwen2.5-7b_few-shot": "san than măm"
+ },
+ "bitstamp": {
+  "gold": "bít xtăm",
+  "vietnormalizer_rules": "bít-tam",
+  "gpt-4o-mini_zero-shot": "bit stêm p",
+  "gpt-4o-mini_few-shot": "bit stêm",
+  "vitts": "bít xtăm",
+  "qwen2.5-7b_few-shot": "bít stam pê"
+ },
+ "tenet": {
+  "gold": "tê nét",
+  "vietnormalizer_rules": "te-nét",
+  "gpt-4o-mini_zero-shot": "tê nết",
+  "gpt-4o-mini_few-shot": "tê nết",
+  "vitts": "tê nét",
+  "qwen2.5-7b_few-shot": "ti en et"
+ },
+ "jssel": {
+  "gold": "ai xen",
+  "vietnormalizer_rules": "xeo",
+  "gpt-4o-mini_zero-shot": "jê s sồ",
+  "gpt-4o-mini_few-shot": "dê s sồ",
+  "vitts": "giê xen",
+  "qwen2.5-7b_few-shot": "x"
+ },
+ "bring": {
+  "gold": "bring",
+  "vietnormalizer_rules": "rin",
+  "gpt-4o-mini_zero-shot": "brinh",
+  "gpt-4o-mini_few-shot": "brin",
+  "vitts": "bring",
+  "qwen2.5-7b_few-shot": "brinh"
+ },
+ "perla": {
+  "gold": "pơ la",
+  "vietnormalizer_rules": "pe-la",
+  "gpt-4o-mini_zero-shot": "pơ la",
+  "gpt-4o-mini_few-shot": "pơ la",
+  "vitts": "pơ la",
+  "qwen2.5-7b_few-shot": "per la"
+ },
+ "oxalic": {
+  "gold": "ốc xa lích",
+  "vietnormalizer_rules": "o-xa-li",
+  "gpt-4o-mini_zero-shot": "ô xa lic",
+  "gpt-4o-mini_few-shot": "ô xa lic",
+  "vitts": "ốc xa lích",
+  "qwen2.5-7b_few-shot": "ox ô líc"
+ },
+ "heon": {
+  "gold": "hi on",
+  "vietnormalizer_rules": "heon",
+  "gpt-4o-mini_zero-shot": "hi ơn",
+  "gpt-4o-mini_few-shot": "hi ơn",
+  "vitts": "hi on",
+  "qwen2.5-7b_few-shot": "hên"
+ },
+ "health": {
+  "gold": "hếu",
+  "vietnormalizer_rules": "hi",
+  "gpt-4o-mini_zero-shot": "hê alth",
+  "gpt-4o-mini_few-shot": "hê alth",
+  "vitts": "hếu",
+  "qwen2.5-7b_few-shot": "hệ thơi"
+ },
+ "melania": {
+  "gold": "mê la ni a",
+  "vietnormalizer_rules": "me-la-nia",
+  "gpt-4o-mini_zero-shot": "me la ni a",
+  "gpt-4o-mini_few-shot": "mê la ni a",
+  "vitts": "mê la ni a",
+  "qwen2.5-7b_few-shot": "mê la ni á"
+ },
+ "commonwealth": {
+  "gold": "com mần oen",
+  "vietnormalizer_rules": "com-mo-nui",
+  "gpt-4o-mini_zero-shot": "cô mơn wên",
+  "gpt-4o-mini_few-shot": "côm mơn wên",
+  "vitts": "com môn uên thờ",
+  "qwen2.5-7b_few-shot": "côn minh thuým"
+ },
+ "schuster": {
+  "gold": "su xtơ",
+  "vietnormalizer_rules": "cu-tơ",
+  "gpt-4o-mini_zero-shot": "shu tơ",
+  "gpt-4o-mini_few-shot": "shu tơ",
+  "vitts": "xờ chút xtơ",
+  "qwen2.5-7b_few-shot": "xu ch ster"
+ },
+ "sultan": {
+  "gold": "xun tần",
+  "vietnormalizer_rules": "xu-tan",
+  "gpt-4o-mini_zero-shot": "sul tân",
+  "gpt-4o-mini_few-shot": "sul tân",
+  "vitts": "xun tần",
+  "qwen2.5-7b_few-shot": "sút lân"
+ },
+ "tart": {
+  "gold": "tát",
+  "vietnormalizer_rules": "ta",
+  "gpt-4o-mini_zero-shot": "tát",
+  "gpt-4o-mini_few-shot": "tát",
+  "vitts": "tát",
+  "qwen2.5-7b_few-shot": "tart"
+ },
+ "prison": {
+  "gold": "pri zần",
+  "vietnormalizer_rules": "ri-xon",
+  "gpt-4o-mini_zero-shot": "pri zơn",
+  "gpt-4o-mini_few-shot": "pri zơn",
+  "vitts": "pri zần",
+  "qwen2.5-7b_few-shot": "phê sin"
+ },
+ "hyatt": {
+  "gold": "ha y át",
+  "vietnormalizer_rules": "hiát",
+  "gpt-4o-mini_zero-shot": "hi at",
+  "gpt-4o-mini_few-shot": "hai ăt",
+  "vitts": "hai át",
+  "qwen2.5-7b_few-shot": "hi át"
+ },
+ "angelina": {
+  "gold": "an giê li na",
+  "vietnormalizer_rules": "an-ge-li-na",
+  "gpt-4o-mini_zero-shot": "an ge li na",
+  "gpt-4o-mini_few-shot": "an ge li na",
+  "vitts": "an giê li na",
+  "qwen2.5-7b_few-shot": "an jê lin a"
+ },
+ "t-scan": {
+  "gold": "tê xcăn",
+  "vietnormalizer_rules": "t-kan",
+  "gpt-4o-mini_zero-shot": "ti scan",
+  "gpt-4o-mini_few-shot": "ti scan",
+  "vitts": "tít can",
+  "qwen2.5-7b_few-shot": "ti scan"
+ },
+ "kiwior": {
+  "gold": "ki vi o",
+  "vietnormalizer_rules": "kiuio",
+  "gpt-4o-mini_zero-shot": "ki wi or",
+  "gpt-4o-mini_few-shot": "ki wi ôr",
+  "vitts": "ki ui ơ",
+  "qwen2.5-7b_few-shot": "ki ê uô"
+ },
+ "kidada": {
+  "gold": "ki đa đa",
+  "vietnormalizer_rules": "ki-da-da",
+  "gpt-4o-mini_zero-shot": "ki đa đa",
+  "gpt-4o-mini_few-shot": "ki đa đa",
+  "vitts": "ki đa đa",
+  "qwen2.5-7b_few-shot": "ki da da"
+ },
+ "methan": {
+  "gold": "mê than",
+  "vietnormalizer_rules": "mét-han",
+  "gpt-4o-mini_zero-shot": "mê than",
+  "gpt-4o-mini_few-shot": "mê than",
+  "vitts": "mê than",
+  "qwen2.5-7b_few-shot": "met han"
+ },
+ "lucia": {
+  "gold": "lu ci a",
+  "vietnormalizer_rules": "lu-kia",
+  "gpt-4o-mini_zero-shot": "lú si a",
+  "gpt-4o-mini_few-shot": "lu si a",
+  "vitts": "lu xi a",
+  "qwen2.5-7b_few-shot": "li ucia"
+ },
+ "bru": {
+  "gold": "bru",
+  "vietnormalizer_rules": "ru",
+  "gpt-4o-mini_zero-shot": "bờ ru",
+  "gpt-4o-mini_few-shot": "bru",
+  "vitts": "bru",
+  "qwen2.5-7b_few-shot": "brú"
+ },
+ "leningrad": {
+  "gold": "lê nin grát",
+  "vietnormalizer_rules": "ồ-nin-rát",
+  "gpt-4o-mini_zero-shot": "lê ninh grát",
+  "gpt-4o-mini_few-shot": "lê ninh grad",
+  "vitts": "lê nin grát",
+  "qwen2.5-7b_few-shot": "lê nin grà đan"
+ },
+ "puyol": {
+  "gold": "pu y ôn",
+  "vietnormalizer_rules": "pu-dôn",
+  "gpt-4o-mini_zero-shot": "pu y ô l",
+  "gpt-4o-mini_few-shot": "pu yôn",
+  "vitts": "pu yôn",
+  "qwen2.5-7b_few-shot": "pui ól"
+ },
+ "pelecanoides": {
+  "gold": "pê lê ca nôi đê",
+  "vietnormalizer_rules": "pe-ồ-ca-noi-dẹt",
+  "gpt-4o-mini_zero-shot": "pe le ca nô i đê",
+  "gpt-4o-mini_few-shot": "pê le ca nô i đê",
+  "vitts": "pê lê ca nôi đê",
+  "qwen2.5-7b_few-shot": "pe le ca noi des"
+ },
+ "narco": {
+  "gold": "nác cô",
+  "vietnormalizer_rules": "na-co",
+  "gpt-4o-mini_zero-shot": "na cô",
+  "gpt-4o-mini_few-shot": "na cô",
+  "vitts": "nác cô",
+  "qwen2.5-7b_few-shot": "na ro"
+ },
+ "chain": {
+  "gold": "chên",
+  "vietnormalizer_rules": "chain",
+  "gpt-4o-mini_zero-shot": "chên",
+  "gpt-4o-mini_few-shot": "chên",
+  "vitts": "chên",
+  "qwen2.5-7b_few-shot": "chay"
+ },
+ "mackenzie": {
+  "gold": "mác ken zi",
+  "vietnormalizer_rules": "ma-ken-dai",
+  "gpt-4o-mini_zero-shot": "mắc ken zi",
+  "gpt-4o-mini_few-shot": "mắc ken zi",
+  "vitts": "mắc ken zi",
+  "qwen2.5-7b_few-shot": "mắc ni kê"
+ },
+ "neuron": {
+  "gold": "niu rôn",
+  "vietnormalizer_rules": "niu-ron",
+  "gpt-4o-mini_zero-shot": "nơ rôn",
+  "gpt-4o-mini_few-shot": "nơ ron",
+  "vitts": "nêu rôn",
+  "qwen2.5-7b_few-shot": "ni uôn"
+ },
+ "yandex": {
+  "gold": "yan đếch",
+  "vietnormalizer_rules": "đan-de",
+  "gpt-4o-mini_zero-shot": "yan đéc",
+  "gpt-4o-mini_few-shot": "yan đéc",
+  "vitts": "yan đếch",
+  "qwen2.5-7b_few-shot": "yan dăng"
+ },
+ "tuxedo": {
+  "gold": "tắc xi đô",
+  "vietnormalizer_rules": "tu-xe-do",
+  "gpt-4o-mini_zero-shot": "túc xê đ ô",
+  "gpt-4o-mini_few-shot": "tắc xi đô",
+  "vitts": "túc xê đô",
+  "qwen2.5-7b_few-shot": "túc sê đô"
+ },
+ "ream": {
+  "gold": "ri âm",
+  "vietnormalizer_rules": "ream",
+  "gpt-4o-mini_zero-shot": "ri em",
+  "gpt-4o-mini_few-shot": "ri êm",
+  "vitts": "rim",
+  "qwen2.5-7b_few-shot": "ri em"
+ },
+ "lemoore": {
+  "gold": "lê mu ơ",
+  "vietnormalizer_rules": "ồ-mu",
+  "gpt-4o-mini_zero-shot": "lê mù",
+  "gpt-4o-mini_few-shot": "lê mô",
+  "vitts": "lê mô rê",
+  "qwen2.5-7b_few-shot": "lê mư ô"
+ },
+ "offender": {
+  "gold": "ốp phên đơ",
+  "vietnormalizer_rules": "óp-phen-dơ",
+  "gpt-4o-mini_zero-shot": "ô ph fen đờ",
+  "gpt-4o-mini_few-shot": "ô ph fen đờ",
+  "vitts": "ô phen đơ",
+  "qwen2.5-7b_few-shot": "ô fender"
+ },
+ "germanium": {
+  "gold": "giơ ma ni um",
+  "vietnormalizer_rules": "ge-ma-niâm",
+  "gpt-4o-mini_zero-shot": "giê ma ni um",
+  "gpt-4o-mini_few-shot": "giê ma ni um",
+  "vitts": "giơ ma ni um",
+  "qwen2.5-7b_few-shot": "ghi ma ni êm"
+ },
+ "lovehay": {
+  "gold": "lắp hay",
+  "vietnormalizer_rules": "lo-ve-hai",
+  "gpt-4o-mini_zero-shot": "lớp hê",
+  "gpt-4o-mini_few-shot": "lô v hê",
+  "vitts": "lô vê hay",
+  "qwen2.5-7b_few-shot": "yêu hay"
+ },
+ "pinwheel": {
+  "gold": "pin uyn",
+  "vietnormalizer_rules": "pin-cuin",
+  "gpt-4o-mini_zero-shot": "pin wi l",
+  "gpt-4o-mini_few-shot": "pin wi ên",
+  "vitts": "pin hin",
+  "qwen2.5-7b_few-shot": "pi nhái"
+ },
+ "monster": {
+  "gold": "môn xtơ",
+  "vietnormalizer_rules": "mon-tơ",
+  "gpt-4o-mini_zero-shot": "môn tơ",
+  "gpt-4o-mini_few-shot": "môn tơ",
+  "vitts": "môn xtơ",
+  "qwen2.5-7b_few-shot": "mô nê stê"
+ },
+ "nirvana": {
+  "gold": "ni va na",
+  "vietnormalizer_rules": "ni-va-na",
+  "gpt-4o-mini_zero-shot": "ni văng na",
+  "gpt-4o-mini_few-shot": "ni văng na",
+  "vitts": "ni va na",
+  "qwen2.5-7b_few-shot": "ni rav na"
+ },
+ "noronha": {
+  "gold": "nô rôn ha",
+  "vietnormalizer_rules": "no-ron-ha",
+  "gpt-4o-mini_zero-shot": "nô rôn nha",
+  "gpt-4o-mini_few-shot": "nô rôn nha",
+  "vitts": "nô rôn ha",
+  "qwen2.5-7b_few-shot": "no ro na"
+ },
+ "anglicarum": {
+  "gold": "ang li ca rum",
+  "vietnormalizer_rules": "an-li-ca-râm",
+  "gpt-4o-mini_zero-shot": "an gli ca rum",
+  "gpt-4o-mini_few-shot": "an gli ca rum",
+  "vitts": "an gli ca rum",
+  "qwen2.5-7b_few-shot": "ang li ka um"
+ },
+ "primary": {
+  "gold": "pờ rai ma ri",
+  "vietnormalizer_rules": "ri-ma-ri",
+  "gpt-4o-mini_zero-shot": "pra i m e ry",
+  "gpt-4o-mini_few-shot": "pra i mơ ry",
+  "vitts": "prai ma ri",
+  "qwen2.5-7b_few-shot": "prí uyên"
+ },
+ "fecal": {
+  "gold": "phi cần",
+  "vietnormalizer_rules": "phe-can",
+  "gpt-4o-mini_zero-shot": "phi ca",
+  "gpt-4o-mini_few-shot": "phê ca",
+  "vitts": "phê cần",
+  "qwen2.5-7b_few-shot": "fê kal"
+ },
+ "vanderbilt": {
+  "gold": "van đơ bin",
+  "vietnormalizer_rules": "van-de-bi",
+  "gpt-4o-mini_zero-shot": "van đơ bít",
+  "gpt-4o-mini_few-shot": "van đơ bít",
+  "vitts": "van đơ bin",
+  "qwen2.5-7b_few-shot": "van der bilt"
+ },
+ "ciaz": {
+  "gold": "xi át",
+  "vietnormalizer_rules": "kia",
+  "gpt-4o-mini_zero-shot": "chi az",
+  "gpt-4o-mini_few-shot": "chi az",
+  "vitts": "xi át",
+  "qwen2.5-7b_few-shot": "tía zê"
+ },
+ "zuckerbergkhi": {
+  "gold": "zắc cơ bớc khi",
+  "vietnormalizer_rules": "du-ke-be-gkhi",
+  "gpt-4o-mini_zero-shot": "zu cờ bơ g khì",
+  "gpt-4o-mini_few-shot": "zúc kơ bơ g khi",
+  "vitts": "zắc cơ bớc khi",
+  "qwen2.5-7b_few-shot": "tsú ker bê khi"
+ },
+ "bakhmut": {
+  "gold": "bắc mút",
+  "vietnormalizer_rules": "ba-chmút",
+  "gpt-4o-mini_zero-shot": "ba kh mút",
+  "gpt-4o-mini_few-shot": "ba khmút",
+  "vitts": "bắc mút",
+  "qwen2.5-7b_few-shot": "ba khmuét"
+ },
+ "sunghai": {
+  "gold": "xung hai",
+  "vietnormalizer_rules": "xân-ghai",
+  "gpt-4o-mini_zero-shot": "sân g hai",
+  "gpt-4o-mini_few-shot": "sân g hai",
+  "vitts": "xung hai",
+  "qwen2.5-7b_few-shot": "sơn hai"
+ },
+ "ocotillol": {
+  "gold": "ô cô ti lô",
+  "vietnormalizer_rules": "o-co-ti-lôn",
+  "gpt-4o-mini_zero-shot": "ô cô ti lô",
+  "gpt-4o-mini_few-shot": "ô cô ti lô",
+  "vitts": "ô cô ti lôn",
+  "qwen2.5-7b_few-shot": "o cô ti lố lô"
+ },
+ "silk": {
+  "gold": "xích",
+  "vietnormalizer_rules": "xi",
+  "gpt-4o-mini_zero-shot": "sil k",
+  "gpt-4o-mini_few-shot": "sil k",
+  "vitts": "xích",
+  "qwen2.5-7b_few-shot": "siếp"
+ },
+ "tatuy": {
+  "gold": "ta tuy",
+  "vietnormalizer_rules": "ta-tui",
+  "gpt-4o-mini_zero-shot": "ta tuy",
+  "gpt-4o-mini_few-shot": "ta tu y",
+  "vitts": "ta tuy",
+  "qwen2.5-7b_few-shot": "tạ tu y"
+ },
+ "rutkowska": {
+  "gold": "rút cốp xca",
+  "vietnormalizer_rules": "rút-cu-ca",
+  "gpt-4o-mini_zero-shot": "rút kô v s ka",
+  "gpt-4o-mini_few-shot": "rút kô v s ka",
+  "vitts": "rút cốp xca",
+  "qwen2.5-7b_few-shot": "rút kho va ka"
+ },
+ "magellan": {
+  "gold": "ma gien lần",
+  "vietnormalizer_rules": "ma-ge-lan",
+  "gpt-4o-mini_zero-shot": "ma ge lan",
+  "gpt-4o-mini_few-shot": "ma ge lan",
+  "vitts": "ma gien lần",
+  "qwen2.5-7b_few-shot": "ma ga lanh"
+ },
+ "minji": {
+  "gold": "min gi",
+  "vietnormalizer_rules": "min-di",
+  "gpt-4o-mini_zero-shot": "min ji",
+  "gpt-4o-mini_few-shot": "min ji",
+  "vitts": "min gi",
+  "qwen2.5-7b_few-shot": "min ji"
+ },
+ "compiste": {
+  "gold": "com pô xít",
+  "vietnormalizer_rules": "com-pi-te",
+  "gpt-4o-mini_zero-shot": "côm pi ste",
+  "gpt-4o-mini_few-shot": "côm pi tê",
+  "vitts": "com pít",
+  "qwen2.5-7b_few-shot": "com pi stê"
+ },
+ "morita": {
+  "gold": "mô ri ta",
+  "vietnormalizer_rules": "mo-ri-ta",
+  "gpt-4o-mini_zero-shot": "mô ri ta",
+  "gpt-4o-mini_few-shot": "mô ri ta",
+  "vitts": "mô ri ta",
+  "qwen2.5-7b_few-shot": "mô ri ta"
+ },
+ "feuille": {
+  "gold": "phui yê",
+  "vietnormalizer_rules": "pheui-lồ",
+  "gpt-4o-mini_zero-shot": "fơ i",
+  "gpt-4o-mini_few-shot": "phê uy",
+  "vitts": "phêu i lê",
+  "qwen2.5-7b_few-shot": "fơ le"
+ },
+ "cheniere": {
+  "gold": "chê ni ơ",
+  "vietnormalizer_rules": "che-nai-re",
+  "gpt-4o-mini_zero-shot": "chê ni ơ",
+  "gpt-4o-mini_few-shot": "chê ni ơ",
+  "vitts": "chê ni ê",
+  "qwen2.5-7b_few-shot": "chê ni ê"
+ },
+ "sadkin": {
+  "gold": "xát kin",
+  "vietnormalizer_rules": "xa-kin",
+  "gpt-4o-mini_zero-shot": "sát kin",
+  "gpt-4o-mini_few-shot": "sát kin",
+  "vitts": "xát kin",
+  "qwen2.5-7b_few-shot": "sá dê kin"
+ },
+ "studded": {
+  "gold": "xtắt địt",
+  "vietnormalizer_rules": "tu-dét",
+  "gpt-4o-mini_zero-shot": "stát đêd",
+  "gpt-4o-mini_few-shot": "stát địt",
+  "vitts": "xtu đét",
+  "qwen2.5-7b_few-shot": "sút đụt"
+ },
+ "melamine": {
+  "gold": "mê la min",
+  "vietnormalizer_rules": "me-la-mai",
+  "gpt-4o-mini_zero-shot": "me la min",
+  "gpt-4o-mini_few-shot": "mê la min",
+  "vitts": "mê la min",
+  "qwen2.5-7b_few-shot": "mê la mi ne"
+ },
+ "sironi": {
+  "gold": "xi rô ni",
+  "vietnormalizer_rules": "xi-ro-ni",
+  "gpt-4o-mini_zero-shot": "si ro ni",
+  "gpt-4o-mini_few-shot": "si rô ni",
+  "vitts": "xi rô ni",
+  "qwen2.5-7b_few-shot": "si ro ni"
+ },
+ "mingo": {
+  "gold": "min gô",
+  "vietnormalizer_rules": "min-go",
+  "gpt-4o-mini_zero-shot": "ming gô",
+  "gpt-4o-mini_few-shot": "min gô",
+  "vitts": "min gô",
+  "qwen2.5-7b_few-shot": "min go"
+ },
+ "tarascan": {
+  "gold": "ta rát can",
+  "vietnormalizer_rules": "ta-ra-can",
+  "gpt-4o-mini_zero-shot": "ta ra scan",
+  "gpt-4o-mini_few-shot": "ta ra scan",
+  "vitts": "ta rát can",
+  "qwen2.5-7b_few-shot": "ta ra can"
+ },
+ "parker": {
+  "gold": "pác cơ",
+  "vietnormalizer_rules": "pa-cơ",
+  "gpt-4o-mini_zero-shot": "pác kơ",
+  "gpt-4o-mini_few-shot": "pa kơ",
+  "vitts": "pác cơ",
+  "qwen2.5-7b_few-shot": "park er"
+ },
+ "garlinghouse": {
+  "gold": "ga ling hao",
+  "vietnormalizer_rules": "ga-lin-ghu-xe",
+  "gpt-4o-mini_zero-shot": "ga lin hau s",
+  "gpt-4o-mini_few-shot": "ga lin hau",
+  "vitts": "ga ling hao",
+  "qwen2.5-7b_few-shot": "ga rling hou se"
+ },
+ "photography": {
+  "gold": "phô tô gra phi",
+  "vietnormalizer_rules": "pho-tó-ráp-hi",
+  "gpt-4o-mini_zero-shot": "phô tô gra phi",
+  "gpt-4o-mini_few-shot": "phô tô gra phi",
+  "vitts": "phô tô gra phi",
+  "qwen2.5-7b_few-shot": "fô to grà fi"
+ },
+ "levine": {
+  "gold": "lê vin",
+  "vietnormalizer_rules": "ồ-vai",
+  "gpt-4o-mini_zero-shot": "lê vìn",
+  "gpt-4o-mini_few-shot": "lê vin",
+  "vitts": "lê vin",
+  "qwen2.5-7b_few-shot": "li vi ne"
+ },
+ "sigmund": {
+  "gold": "xích mần",
+  "vietnormalizer_rules": "xí-mân",
+  "gpt-4o-mini_zero-shot": "sig mần",
+  "gpt-4o-mini_few-shot": "sig mần",
+  "vitts": "xích mần",
+  "qwen2.5-7b_few-shot": "si gụm"
+ },
+ "huu": {
+  "gold": "hữu",
+  "vietnormalizer_rules": "huu",
+  "gpt-4o-mini_zero-shot": "hư",
+  "gpt-4o-mini_few-shot": "hưu",
+  "vitts": "hu",
+  "qwen2.5-7b_few-shot": "hữu"
+ },
+ "parthasarathy": {
+  "gold": "pa tha xa ra thi",
+  "vietnormalizer_rules": "pa-tha-xa-rát-hi",
+  "gpt-4o-mini_zero-shot": "pa tha sa ra thỳ",
+  "gpt-4o-mini_few-shot": "pa tha sa ra thi",
+  "vitts": "pác tha xa ra ti",
+  "qwen2.5-7b_few-shot": "pa thâ sa ra thi y"
+ },
+ "xii": {
+  "gold": "tá nhị",
+  "vietnormalizer_rules": "xii",
+  "gpt-4o-mini_zero-shot": "xi",
+  "gpt-4o-mini_few-shot": "xii",
+  "vitts": "tây",
+  "qwen2.5-7b_few-shot": "xi"
+ },
+ "scripps": {
+  "gold": "xờ críp",
+  "vietnormalizer_rules": "ríp",
+  "gpt-4o-mini_zero-shot": "scrips",
+  "gpt-4o-mini_few-shot": "scrips",
+  "vitts": "xờ críp",
+  "qwen2.5-7b_few-shot": "sri ps"
+ },
+ "need": {
+  "gold": "nít",
+  "vietnormalizer_rules": "neét",
+  "gpt-4o-mini_zero-shot": "ni d",
+  "gpt-4o-mini_few-shot": "ni d",
+  "vitts": "nít",
+  "qwen2.5-7b_few-shot": "ne đay"
+ },
+ "stream": {
+  "gold": "xtrim",
+  "vietnormalizer_rules": "tream",
+  "gpt-4o-mini_zero-shot": "strim",
+  "gpt-4o-mini_few-shot": "stri m",
+  "vitts": "xtrim",
+  "qwen2.5-7b_few-shot": "stri em"
+ },
+ "mons": {
+  "gold": "môn",
+  "vietnormalizer_rules": "mon",
+  "gpt-4o-mini_zero-shot": "môn",
+  "gpt-4o-mini_few-shot": "môn s",
+  "vitts": "môn",
+  "qwen2.5-7b_few-shot": "mon sê"
+ },
+ "maire": {
+  "gold": "me",
+  "vietnormalizer_rules": "maai",
+  "gpt-4o-mini_zero-shot": "mê r",
+  "gpt-4o-mini_few-shot": "mê r",
+  "vitts": "me rơ",
+  "qwen2.5-7b_few-shot": "mai ê"
+ },
+ "elko": {
+  "gold": "ên cô",
+  "vietnormalizer_rules": "e-co",
+  "gpt-4o-mini_zero-shot": "ê l kô",
+  "gpt-4o-mini_few-shot": "ê l cô",
+  "vitts": "ên cô",
+  "qwen2.5-7b_few-shot": "el ko"
+ },
+ "hicham": {
+  "gold": "hi cham",
+  "vietnormalizer_rules": "hi-cham",
+  "gpt-4o-mini_zero-shot": "hi cham",
+  "gpt-4o-mini_few-shot": "hi cham",
+  "vitts": "hi cham",
+  "qwen2.5-7b_few-shot": "hi châm"
+ },
+ "golden": {
+  "gold": "gôn đần",
+  "vietnormalizer_rules": "go-den",
+  "gpt-4o-mini_zero-shot": "gôn đần",
+  "gpt-4o-mini_few-shot": "gô đần",
+  "vitts": "gôn đần",
+  "qwen2.5-7b_few-shot": "gỗ đinh"
+ },
+ "aissata": {
+  "gold": "ai xa ta",
+  "vietnormalizer_rules": "ai-xa-ta",
+  "gpt-4o-mini_zero-shot": "a i s s a t a",
+  "gpt-4o-mini_few-shot": "ai sa ta",
+  "vitts": "ai xa ta",
+  "qwen2.5-7b_few-shot": "ai sà ta"
+ },
+ "aristolochic": {
+  "gold": "a rít tô lô chích",
+  "vietnormalizer_rules": "a-ri-to-lo-chi",
+  "gpt-4o-mini_zero-shot": "a ri sto lo chic",
+  "gpt-4o-mini_few-shot": "a ri s tô lô chic",
+  "vitts": "a rít tô lô chích",
+  "qwen2.5-7b_few-shot": "a ri sô lô kích"
+ },
+ "cosmo": {
+  "gold": "cốt mô",
+  "vietnormalizer_rules": "co-mo",
+  "gpt-4o-mini_zero-shot": "cốt mô",
+  "gpt-4o-mini_few-shot": "cô z mô",
+  "vitts": "cốt mô",
+  "qwen2.5-7b_few-shot": "ko sô mô"
+ },
+ "shan": {
+  "gold": "sơn",
+  "vietnormalizer_rules": "xan",
+  "gpt-4o-mini_zero-shot": "shan",
+  "gpt-4o-mini_few-shot": "shan",
+  "vitts": "xan",
+  "qwen2.5-7b_few-shot": "shan"
+ },
+ "ras": {
+  "gold": "rát",
+  "vietnormalizer_rules": "rẹt",
+  "gpt-4o-mini_zero-shot": "ra s",
+  "gpt-4o-mini_few-shot": "ra",
+  "vitts": "rát",
+  "qwen2.5-7b_few-shot": "ras"
+ },
+ "meloni": {
+  "gold": "mê lô ni",
+  "vietnormalizer_rules": "me-lo-ni",
+  "gpt-4o-mini_zero-shot": "me lô ni",
+  "gpt-4o-mini_few-shot": "mê lô ni",
+  "vitts": "mê lô ni",
+  "qwen2.5-7b_few-shot": "mê lô ni"
+ },
+ "yavuz": {
+  "gold": "ya vút",
+  "vietnormalizer_rules": "đa-vu",
+  "gpt-4o-mini_zero-shot": "ya vuz",
+  "gpt-4o-mini_few-shot": "ya vút",
+  "vitts": "ya vút",
+  "qwen2.5-7b_few-shot": "ya vù u"
+ },
+ "ochakov": {
+  "gold": "ô cha cốp",
+  "vietnormalizer_rules": "o-cha-co",
+  "gpt-4o-mini_zero-shot": "ô cha kốp",
+  "gpt-4o-mini_few-shot": "ô cha kốp",
+  "vitts": "ô cha cốp",
+  "qwen2.5-7b_few-shot": "ô ca chô"
+ },
+ "mustaqim": {
+  "gold": "mút ta quim",
+  "vietnormalizer_rules": "mu-ta-cuim",
+  "gpt-4o-mini_zero-shot": "mu ta kim",
+  "gpt-4o-mini_few-shot": "mút ta kim",
+  "vitts": "mút ta quim",
+  "qwen2.5-7b_few-shot": "mu sác im"
+ },
+ "kendall": {
+  "gold": "ken đần",
+  "vietnormalizer_rules": "ken-dâu",
+  "gpt-4o-mini_zero-shot": "ken đan",
+  "gpt-4o-mini_few-shot": "ken đan",
+  "vitts": "ken đần",
+  "qwen2.5-7b_few-shot": "kend all"
+ },
+ "electra": {
+  "gold": "ê lê tra",
+  "vietnormalizer_rules": "e-ồ-tra",
+  "gpt-4o-mini_zero-shot": "ê léc tra",
+  "gpt-4o-mini_few-shot": "ê léc tra",
+  "vitts": "ê lếch tra",
+  "qwen2.5-7b_few-shot": "e le tri a"
+ },
+ "geun": {
+  "gold": "ge un",
+  "vietnormalizer_rules": "geun",
+  "gpt-4o-mini_zero-shot": "gơ un",
+  "gpt-4o-mini_few-shot": "gơn",
+  "vitts": "ghên",
+  "qwen2.5-7b_few-shot": "gyên"
+ },
+ "stadion": {
+  "gold": "xta đi on",
+  "vietnormalizer_rules": "ta-dion",
+  "gpt-4o-mini_zero-shot": "sta di on",
+  "gpt-4o-mini_few-shot": "sta di on",
+  "vitts": "xta đi on",
+  "qwen2.5-7b_few-shot": "stah di ôn"
+ },
+ "mubarraz": {
+  "gold": "mu ba rát",
+  "vietnormalizer_rules": "mu-ba-ra",
+  "gpt-4o-mini_zero-shot": "mu ba ra",
+  "gpt-4o-mini_few-shot": "mu ba ra z",
+  "vitts": "mu ba rát",
+  "qwen2.5-7b_few-shot": "mu ba ra zôn"
+ },
+ "millennial": {
+  "gold": "mi lê ni ần",
+  "vietnormalizer_rules": "mi-len-nian",
+  "gpt-4o-mini_zero-shot": "mi len ni ơ",
+  "gpt-4o-mini_few-shot": "mi len ni al",
+  "vitts": "mi lên ni ần",
+  "qwen2.5-7b_few-shot": "mi lê ni ên"
+ },
+ "nilon": {
+  "gold": "ni lông",
+  "vietnormalizer_rules": "ni-lon",
+  "gpt-4o-mini_zero-shot": "ni lôn",
+  "gpt-4o-mini_few-shot": "ni lôn",
+  "vitts": "ni lông",
+  "qwen2.5-7b_few-shot": "ni lôn"
+ },
+ "vashunin": {
+  "gold": "va xu nin",
+  "vietnormalizer_rules": "va-xu-nin",
+  "gpt-4o-mini_zero-shot": "va su ninh",
+  "gpt-4o-mini_few-shot": "va su ni",
+  "vitts": "va xu nin",
+  "qwen2.5-7b_few-shot": "vơ sù ni"
+ },
+ "napier": {
+  "gold": "na pi ơ",
+  "vietnormalizer_rules": "na-piơ",
+  "gpt-4o-mini_zero-shot": "na pi ơ",
+  "gpt-4o-mini_few-shot": "na pi ơ",
+  "vitts": "na pi ê",
+  "qwen2.5-7b_few-shot": "náp i ear"
+ },
+ "yueyue": {
+  "gold": "nguyệt nguyệt",
+  "vietnormalizer_rules": "yueyue",
+  "gpt-4o-mini_zero-shot": "yue yue",
+  "gpt-4o-mini_few-shot": "yue yue",
+  "vitts": "yu ê yu",
+  "qwen2.5-7b_few-shot": "y e y e"
+ },
+ "malacia": {
+  "gold": "ma la xi a",
+  "vietnormalizer_rules": "ma-la-kia",
+  "gpt-4o-mini_zero-shot": "ma la si a",
+  "gpt-4o-mini_few-shot": "ma la si a",
+  "vitts": "ma la xi a",
+  "qwen2.5-7b_few-shot": "ma la á chia"
+ },
+ "perth": {
+  "gold": "pớt",
+  "vietnormalizer_rules": "pe",
+  "gpt-4o-mini_zero-shot": "pơ th",
+  "gpt-4o-mini_few-shot": "pơ th",
+  "vitts": "pớt",
+  "qwen2.5-7b_few-shot": "per thêt"
+ },
+ "shipping": {
+  "gold": "xíp pinh",
+  "vietnormalizer_rules": "xíp-pin",
+  "gpt-4o-mini_zero-shot": "ship ping",
+  "gpt-4o-mini_few-shot": "ship ping",
+  "vitts": "xíp pinh",
+  "qwen2.5-7b_few-shot": "số phăng"
+ },
+ "ariya": {
+  "gold": "a ri ya",
+  "vietnormalizer_rules": "a-ri-da",
+  "gpt-4o-mini_zero-shot": "a ri ya",
+  "gpt-4o-mini_few-shot": "a ri ya",
+  "vitts": "a ri ya",
+  "qwen2.5-7b_few-shot": "ari ya"
+ }
+}

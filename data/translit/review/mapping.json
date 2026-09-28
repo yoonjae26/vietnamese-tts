@@ -1,0 +1,3794 @@
+{
+ "w000": {
+  "word": "chapi",
+  "candidates": {
+   "c0": [
+    "gpt_alt_1"
+   ],
+   "c1": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c2": [
+    "gold",
+    "vietnormalizer_rules",
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "vitts",
+    "gpt_alt_0",
+    "gpt_alt_2"
+   ]
+  }
+ },
+ "w001": {
+  "word": "insuline",
+  "candidates": {
+   "c0": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c1": [
+    "gpt_alt_1"
+   ],
+   "c2": [
+    "vietnormalizer_rules"
+   ],
+   "c3": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_0"
+   ],
+   "c4": [
+    "gpt_alt_2"
+   ],
+   "c5": [
+    "gold",
+    "vitts"
+   ]
+  }
+ },
+ "w002": {
+  "word": "negev",
+  "candidates": {
+   "c0": [
+    "gold"
+   ],
+   "c1": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c2": [
+    "gpt_alt_2"
+   ],
+   "c3": [
+    "gpt_alt_0"
+   ],
+   "c4": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_1"
+   ],
+   "c5": [
+    "vietnormalizer_rules"
+   ],
+   "c6": [
+    "vitts"
+   ]
+  }
+ },
+ "w003": {
+  "word": "nilsawai",
+  "candidates": {
+   "c0": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c1": [
+    "gpt_alt_2"
+   ],
+   "c2": [
+    "vietnormalizer_rules"
+   ],
+   "c3": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot"
+   ],
+   "c4": [
+    "gold",
+    "vitts"
+   ],
+   "c5": [
+    "gpt_alt_0"
+   ],
+   "c6": [
+    "gpt_alt_1"
+   ]
+  }
+ },
+ "w004": {
+  "word": "scrum",
+  "candidates": {
+   "c0": [
+    "vietnormalizer_rules"
+   ],
+   "c1": [
+    "gold"
+   ],
+   "c2": [
+    "gpt_alt_2"
+   ],
+   "c3": [
+    "vitts"
+   ],
+   "c4": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot"
+   ],
+   "c5": [
+    "gpt_alt_0"
+   ],
+   "c6": [
+    "gpt_alt_1"
+   ],
+   "c7": [
+    "qwen2.5-7b_few-shot"
+   ]
+  }
+ },
+ "w005": {
+  "word": "caramel",
+  "candidates": {
+   "c0": [
+    "gpt_alt_0"
+   ],
+   "c1": [
+    "gold",
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "vitts",
+    "gpt_alt_1"
+   ],
+   "c2": [
+    "gpt_alt_2"
+   ],
+   "c3": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c4": [
+    "vietnormalizer_rules"
+   ]
+  }
+ },
+ "w006": {
+  "word": "faz",
+  "candidates": {
+   "c0": [
+    "gpt-4o-mini_zero-shot"
+   ],
+   "c1": [
+    "gold",
+    "gpt-4o-mini_few-shot",
+    "vitts",
+    "gpt_alt_0",
+    "gpt_alt_2"
+   ],
+   "c2": [
+    "vietnormalizer_rules"
+   ],
+   "c3": [
+    "gpt_alt_1"
+   ],
+   "c4": [
+    "qwen2.5-7b_few-shot"
+   ]
+  }
+ },
+ "w007": {
+  "word": "reduction",
+  "candidates": {
+   "c0": [
+    "vietnormalizer_rules"
+   ],
+   "c1": [
+    "gold"
+   ],
+   "c2": [
+    "gpt_alt_1"
+   ],
+   "c3": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c4": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_0"
+   ],
+   "c5": [
+    "vitts"
+   ],
+   "c6": [
+    "gpt_alt_2"
+   ]
+  }
+ },
+ "w008": {
+  "word": "russia",
+  "candidates": {
+   "c0": [
+    "vitts"
+   ],
+   "c1": [
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_0",
+    "gpt_alt_1"
+   ],
+   "c2": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c3": [
+    "gpt-4o-mini_zero-shot"
+   ],
+   "c4": [
+    "gold"
+   ],
+   "c5": [
+    "vietnormalizer_rules",
+    "gpt_alt_2"
+   ]
+  }
+ },
+ "w009": {
+  "word": "pereira",
+  "candidates": {
+   "c0": [
+    "gpt_alt_2"
+   ],
+   "c1": [
+    "gpt_alt_1"
+   ],
+   "c2": [
+    "vietnormalizer_rules"
+   ],
+   "c3": [
+    "vitts"
+   ],
+   "c4": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_0"
+   ],
+   "c5": [
+    "gold"
+   ],
+   "c6": [
+    "qwen2.5-7b_few-shot"
+   ]
+  }
+ },
+ "w010": {
+  "word": "lovren",
+  "candidates": {
+   "c0": [
+    "gpt-4o-mini_few-shot"
+   ],
+   "c1": [
+    "vietnormalizer_rules"
+   ],
+   "c2": [
+    "gpt_alt_1"
+   ],
+   "c3": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c4": [
+    "gold"
+   ],
+   "c5": [
+    "vitts"
+   ],
+   "c6": [
+    "gpt_alt_2"
+   ],
+   "c7": [
+    "gpt-4o-mini_zero-shot",
+    "gpt_alt_0"
+   ]
+  }
+ },
+ "w011": {
+  "word": "wccdaily",
+  "candidates": {
+   "c0": [
+    "gpt-4o-mini_zero-shot",
+    "gpt_alt_0"
+   ],
+   "c1": [
+    "vitts"
+   ],
+   "c2": [
+    "gpt_alt_1"
+   ],
+   "c3": [
+    "gold"
+   ],
+   "c4": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c5": [
+    "gpt_alt_2"
+   ],
+   "c6": [
+    "gpt-4o-mini_few-shot"
+   ],
+   "c7": [
+    "vietnormalizer_rules"
+   ]
+  }
+ },
+ "w012": {
+  "word": "poste",
+  "candidates": {
+   "c0": [
+    "vietnormalizer_rules"
+   ],
+   "c1": [
+    "gpt-4o-mini_few-shot"
+   ],
+   "c2": [
+    "gpt-4o-mini_zero-shot"
+   ],
+   "c3": [
+    "gold"
+   ],
+   "c4": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c5": [
+    "vitts",
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ]
+  }
+ },
+ "w013": {
+  "word": "part",
+  "candidates": {
+   "c0": [
+    "vietnormalizer_rules"
+   ],
+   "c1": [
+    "gold",
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "vitts",
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c2": [
+    "qwen2.5-7b_few-shot"
+   ]
+  }
+ },
+ "w014": {
+  "word": "thiamin",
+  "candidates": {
+   "c0": [
+    "gpt_alt_0"
+   ],
+   "c1": [
+    "gold",
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "vitts"
+   ],
+   "c2": [
+    "gpt_alt_2"
+   ],
+   "c3": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c4": [
+    "vietnormalizer_rules"
+   ],
+   "c5": [
+    "gpt_alt_1"
+   ]
+  }
+ },
+ "w015": {
+  "word": "viwaseen",
+  "candidates": {
+   "c0": [
+    "gpt_alt_0"
+   ],
+   "c1": [
+    "vietnormalizer_rules"
+   ],
+   "c2": [
+    "vitts"
+   ],
+   "c3": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c4": [
+    "gpt_alt_2"
+   ],
+   "c5": [
+    "gpt_alt_1"
+   ],
+   "c6": [
+    "gold"
+   ],
+   "c7": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot"
+   ]
+  }
+ },
+ "w016": {
+  "word": "versace",
+  "candidates": {
+   "c0": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_0",
+    "gpt_alt_1"
+   ],
+   "c1": [
+    "gold"
+   ],
+   "c2": [
+    "vietnormalizer_rules"
+   ],
+   "c3": [
+    "gpt_alt_2"
+   ],
+   "c4": [
+    "vitts"
+   ],
+   "c5": [
+    "qwen2.5-7b_few-shot"
+   ]
+  }
+ },
+ "w017": {
+  "word": "nacio",
+  "candidates": {
+   "c0": [
+    "gold",
+    "vitts"
+   ],
+   "c1": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_0"
+   ],
+   "c2": [
+    "gpt_alt_1"
+   ],
+   "c3": [
+    "vietnormalizer_rules"
+   ],
+   "c4": [
+    "gpt_alt_2"
+   ],
+   "c5": [
+    "qwen2.5-7b_few-shot"
+   ]
+  }
+ },
+ "w018": {
+  "word": "ugledar",
+  "candidates": {
+   "c0": [
+    "gpt_alt_0",
+    "gpt_alt_2"
+   ],
+   "c1": [
+    "gpt_alt_1"
+   ],
+   "c2": [
+    "gpt-4o-mini_zero-shot"
+   ],
+   "c3": [
+    "gpt-4o-mini_few-shot"
+   ],
+   "c4": [
+    "gold",
+    "vitts"
+   ],
+   "c5": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c6": [
+    "vietnormalizer_rules"
+   ]
+  }
+ },
+ "w019": {
+  "word": "vincent",
+  "candidates": {
+   "c0": [
+    "gpt-4o-mini_zero-shot"
+   ],
+   "c1": [
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_1"
+   ],
+   "c2": [
+    "gold",
+    "vitts"
+   ],
+   "c3": [
+    "vietnormalizer_rules"
+   ],
+   "c4": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c5": [
+    "gpt_alt_2"
+   ],
+   "c6": [
+    "gpt_alt_0"
+   ]
+  }
+ },
+ "w020": {
+  "word": "qiao",
+  "candidates": {
+   "c0": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c1": [
+    "gpt_alt_1"
+   ],
+   "c2": [
+    "gpt_alt_0",
+    "gpt_alt_2"
+   ],
+   "c3": [
+    "gold",
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "vitts"
+   ],
+   "c4": [
+    "vietnormalizer_rules"
+   ]
+  }
+ },
+ "w021": {
+  "word": "markets",
+  "candidates": {
+   "c0": [
+    "gpt_alt_0"
+   ],
+   "c1": [
+    "gold"
+   ],
+   "c2": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c3": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot"
+   ],
+   "c4": [
+    "vietnormalizer_rules"
+   ],
+   "c5": [
+    "gpt_alt_2"
+   ],
+   "c6": [
+    "vitts",
+    "gpt_alt_1"
+   ]
+  }
+ },
+ "w022": {
+  "word": "ford",
+  "candidates": {
+   "c0": [
+    "gold",
+    "vietnormalizer_rules",
+    "vitts"
+   ],
+   "c1": [
+    "gpt-4o-mini_zero-shot",
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c2": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c3": [
+    "gpt-4o-mini_few-shot"
+   ]
+  }
+ },
+ "w023": {
+  "word": "achalasia",
+  "candidates": {
+   "c0": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c1": [
+    "gold"
+   ],
+   "c2": [
+    "gpt_alt_0",
+    "gpt_alt_2"
+   ],
+   "c3": [
+    "gpt-4o-mini_few-shot"
+   ],
+   "c4": [
+    "gpt_alt_1"
+   ],
+   "c5": [
+    "vietnormalizer_rules"
+   ],
+   "c6": [
+    "gpt-4o-mini_zero-shot"
+   ],
+   "c7": [
+    "vitts"
+   ]
+  }
+ },
+ "w024": {
+  "word": "roddick",
+  "candidates": {
+   "c0": [
+    "gold"
+   ],
+   "c1": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c2": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot"
+   ],
+   "c3": [
+    "gpt_alt_1"
+   ],
+   "c4": [
+    "vitts"
+   ],
+   "c5": [
+    "vietnormalizer_rules"
+   ],
+   "c6": [
+    "gpt_alt_0",
+    "gpt_alt_2"
+   ]
+  }
+ },
+ "w025": {
+  "word": "blyth",
+  "candidates": {
+   "c0": [
+    "gold"
+   ],
+   "c1": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c2": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot"
+   ],
+   "c3": [
+    "vitts"
+   ],
+   "c4": [
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c5": [
+    "vietnormalizer_rules"
+   ]
+  }
+ },
+ "w026": {
+  "word": "catherine",
+  "candidates": {
+   "c0": [
+    "gold",
+    "vitts"
+   ],
+   "c1": [
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_0"
+   ],
+   "c2": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c3": [
+    "gpt_alt_2"
+   ],
+   "c4": [
+    "gpt_alt_1"
+   ],
+   "c5": [
+    "gpt-4o-mini_zero-shot"
+   ],
+   "c6": [
+    "vietnormalizer_rules"
+   ]
+  }
+ },
+ "w027": {
+  "word": "headnlines",
+  "candidates": {
+   "c0": [
+    "gpt-4o-mini_few-shot"
+   ],
+   "c1": [
+    "gpt_alt_2"
+   ],
+   "c2": [
+    "gold",
+    "vitts"
+   ],
+   "c3": [
+    "vietnormalizer_rules"
+   ],
+   "c4": [
+    "gpt_alt_1"
+   ],
+   "c5": [
+    "gpt-4o-mini_zero-shot"
+   ],
+   "c6": [
+    "gpt_alt_0"
+   ],
+   "c7": [
+    "qwen2.5-7b_few-shot"
+   ]
+  }
+ },
+ "w028": {
+  "word": "zongyi",
+  "candidates": {
+   "c0": [
+    "gpt_alt_0",
+    "gpt_alt_1"
+   ],
+   "c1": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c2": [
+    "vietnormalizer_rules"
+   ],
+   "c3": [
+    "vitts"
+   ],
+   "c4": [
+    "gold"
+   ],
+   "c5": [
+    "gpt_alt_2"
+   ],
+   "c6": [
+    "gpt-4o-mini_zero-shot"
+   ],
+   "c7": [
+    "gpt-4o-mini_few-shot"
+   ]
+  }
+ },
+ "w029": {
+  "word": "calvert",
+  "candidates": {
+   "c0": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_0"
+   ],
+   "c1": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c2": [
+    "gpt_alt_1"
+   ],
+   "c3": [
+    "gold",
+    "vitts"
+   ],
+   "c4": [
+    "vietnormalizer_rules"
+   ],
+   "c5": [
+    "gpt_alt_2"
+   ]
+  }
+ },
+ "w030": {
+  "word": "matrooshi",
+  "candidates": {
+   "c0": [
+    "vietnormalizer_rules"
+   ],
+   "c1": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c2": [
+    "gold"
+   ],
+   "c3": [
+    "gpt-4o-mini_few-shot"
+   ],
+   "c4": [
+    "gpt_alt_1"
+   ],
+   "c5": [
+    "vitts"
+   ],
+   "c6": [
+    "gpt-4o-mini_zero-shot",
+    "gpt_alt_0",
+    "gpt_alt_2"
+   ]
+  }
+ },
+ "w031": {
+  "word": "albopictus",
+  "candidates": {
+   "c0": [
+    "gpt_alt_0"
+   ],
+   "c1": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c2": [
+    "gpt_alt_2"
+   ],
+   "c3": [
+    "gpt-4o-mini_few-shot"
+   ],
+   "c4": [
+    "vietnormalizer_rules"
+   ],
+   "c5": [
+    "gold",
+    "vitts"
+   ],
+   "c6": [
+    "gpt-4o-mini_zero-shot"
+   ],
+   "c7": [
+    "gpt_alt_1"
+   ]
+  }
+ },
+ "w032": {
+  "word": "zhidan",
+  "candidates": {
+   "c0": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c1": [
+    "gpt-4o-mini_zero-shot",
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c2": [
+    "gold",
+    "gpt-4o-mini_few-shot",
+    "vitts"
+   ],
+   "c3": [
+    "vietnormalizer_rules"
+   ]
+  }
+ },
+ "w033": {
+  "word": "soo",
+  "candidates": {
+   "c0": [
+    "gold",
+    "vietnormalizer_rules",
+    "vitts"
+   ],
+   "c1": [
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c2": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c3": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot"
+   ]
+  }
+ },
+ "w034": {
+  "word": "mykyta",
+  "candidates": {
+   "c0": [
+    "vietnormalizer_rules",
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "vitts",
+    "gpt_alt_0"
+   ],
+   "c1": [
+    "gold"
+   ],
+   "c2": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c3": [
+    "gpt_alt_2"
+   ],
+   "c4": [
+    "gpt_alt_1"
+   ]
+  }
+ },
+ "w035": {
+  "word": "smugglers",
+  "candidates": {
+   "c0": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot"
+   ],
+   "c1": [
+    "vitts"
+   ],
+   "c2": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c3": [
+    "vietnormalizer_rules"
+   ],
+   "c4": [
+    "gold"
+   ],
+   "c5": [
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ]
+  }
+ },
+ "w036": {
+  "word": "ifpri",
+  "candidates": {
+   "c0": [
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c1": [
+    "gpt-4o-mini_few-shot"
+   ],
+   "c2": [
+    "gold"
+   ],
+   "c3": [
+    "vietnormalizer_rules"
+   ],
+   "c4": [
+    "gpt-4o-mini_zero-shot"
+   ],
+   "c5": [
+    "vitts"
+   ],
+   "c6": [
+    "qwen2.5-7b_few-shot"
+   ]
+  }
+ },
+ "w037": {
+  "word": "eritrea",
+  "candidates": {
+   "c0": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c1": [
+    "gpt-4o-mini_zero-shot"
+   ],
+   "c2": [
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c3": [
+    "gpt-4o-mini_few-shot"
+   ],
+   "c4": [
+    "vietnormalizer_rules"
+   ],
+   "c5": [
+    "gold",
+    "vitts"
+   ]
+  }
+ },
+ "w038": {
+  "word": "legends",
+  "candidates": {
+   "c0": [
+    "gpt-4o-mini_few-shot"
+   ],
+   "c1": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c2": [
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c3": [
+    "vietnormalizer_rules"
+   ],
+   "c4": [
+    "gpt-4o-mini_zero-shot"
+   ],
+   "c5": [
+    "gold",
+    "vitts"
+   ]
+  }
+ },
+ "w039": {
+  "word": "garmin",
+  "candidates": {
+   "c0": [
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c1": [
+    "gold",
+    "vietnormalizer_rules",
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "vitts",
+    "gpt_alt_0"
+   ],
+   "c2": [
+    "qwen2.5-7b_few-shot"
+   ]
+  }
+ },
+ "w040": {
+  "word": "kallo",
+  "candidates": {
+   "c0": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c1": [
+    "gold",
+    "vitts"
+   ],
+   "c2": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c3": [
+    "vietnormalizer_rules"
+   ]
+  }
+ },
+ "w041": {
+  "word": "kayak",
+  "candidates": {
+   "c0": [
+    "vietnormalizer_rules"
+   ],
+   "c1": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "qwen2.5-7b_few-shot",
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c2": [
+    "gold"
+   ],
+   "c3": [
+    "vitts"
+   ]
+  }
+ },
+ "w042": {
+  "word": "yeoncheon",
+  "candidates": {
+   "c0": [
+    "gold"
+   ],
+   "c1": [
+    "gpt-4o-mini_zero-shot"
+   ],
+   "c2": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c3": [
+    "vitts"
+   ],
+   "c4": [
+    "vietnormalizer_rules"
+   ],
+   "c5": [
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_0"
+   ],
+   "c6": [
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ]
+  }
+ },
+ "w043": {
+  "word": "krista",
+  "candidates": {
+   "c0": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c1": [
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_0"
+   ],
+   "c2": [
+    "gpt-4o-mini_zero-shot"
+   ],
+   "c3": [
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c4": [
+    "gold",
+    "vitts"
+   ],
+   "c5": [
+    "vietnormalizer_rules"
+   ]
+  }
+ },
+ "w044": {
+  "word": "tripoli",
+  "candidates": {
+   "c0": [
+    "vietnormalizer_rules",
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_0"
+   ],
+   "c1": [
+    "gpt-4o-mini_zero-shot"
+   ],
+   "c2": [
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c3": [
+    "gold",
+    "vitts",
+    "qwen2.5-7b_few-shot"
+   ]
+  }
+ },
+ "w045": {
+  "word": "nitric",
+  "candidates": {
+   "c0": [
+    "vietnormalizer_rules"
+   ],
+   "c1": [
+    "gpt-4o-mini_few-shot"
+   ],
+   "c2": [
+    "gold",
+    "gpt-4o-mini_zero-shot",
+    "vitts",
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c3": [
+    "qwen2.5-7b_few-shot"
+   ]
+  }
+ },
+ "w046": {
+  "word": "santham",
+  "candidates": {
+   "c0": [
+    "gold"
+   ],
+   "c1": [
+    "vietnormalizer_rules",
+    "vitts"
+   ],
+   "c2": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c3": [
+    "qwen2.5-7b_few-shot"
+   ]
+  }
+ },
+ "w047": {
+  "word": "bitstamp",
+  "candidates": {
+   "c0": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c1": [
+    "gpt_alt_0"
+   ],
+   "c2": [
+    "gpt-4o-mini_zero-shot"
+   ],
+   "c3": [
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c4": [
+    "vietnormalizer_rules"
+   ],
+   "c5": [
+    "gold",
+    "vitts"
+   ],
+   "c6": [
+    "gpt-4o-mini_few-shot"
+   ]
+  }
+ },
+ "w048": {
+  "word": "tenet",
+  "candidates": {
+   "c0": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot"
+   ],
+   "c1": [
+    "gold",
+    "vitts"
+   ],
+   "c2": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c3": [
+    "vietnormalizer_rules"
+   ],
+   "c4": [
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ]
+  }
+ },
+ "w049": {
+  "word": "jssel",
+  "candidates": {
+   "c0": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c1": [
+    "vitts"
+   ],
+   "c2": [
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c3": [
+    "vietnormalizer_rules"
+   ],
+   "c4": [
+    "gpt-4o-mini_few-shot"
+   ],
+   "c5": [
+    "gold"
+   ],
+   "c6": [
+    "gpt-4o-mini_zero-shot"
+   ]
+  }
+ },
+ "w050": {
+  "word": "bring",
+  "candidates": {
+   "c0": [
+    "gold",
+    "vitts"
+   ],
+   "c1": [
+    "vietnormalizer_rules"
+   ],
+   "c2": [
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c3": [
+    "gpt-4o-mini_few-shot"
+   ],
+   "c4": [
+    "gpt-4o-mini_zero-shot",
+    "qwen2.5-7b_few-shot",
+    "gpt_alt_0"
+   ]
+  }
+ },
+ "w051": {
+  "word": "perla",
+  "candidates": {
+   "c0": [
+    "vietnormalizer_rules",
+    "gpt_alt_0"
+   ],
+   "c1": [
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c2": [
+    "gold",
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "vitts"
+   ],
+   "c3": [
+    "qwen2.5-7b_few-shot"
+   ]
+  }
+ },
+ "w052": {
+  "word": "oxalic",
+  "candidates": {
+   "c0": [
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c1": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_0"
+   ],
+   "c2": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c3": [
+    "gold",
+    "vitts"
+   ],
+   "c4": [
+    "vietnormalizer_rules"
+   ]
+  }
+ },
+ "w053": {
+  "word": "heon",
+  "candidates": {
+   "c0": [
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c1": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c2": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_0"
+   ],
+   "c3": [
+    "gold",
+    "vitts"
+   ],
+   "c4": [
+    "vietnormalizer_rules"
+   ]
+  }
+ },
+ "w054": {
+  "word": "health",
+  "candidates": {
+   "c0": [
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c1": [
+    "vietnormalizer_rules"
+   ],
+   "c2": [
+    "gold",
+    "vitts"
+   ],
+   "c3": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c4": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot"
+   ]
+  }
+ },
+ "w055": {
+  "word": "melania",
+  "candidates": {
+   "c0": [
+    "vietnormalizer_rules"
+   ],
+   "c1": [
+    "gold",
+    "gpt-4o-mini_few-shot",
+    "vitts"
+   ],
+   "c2": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c3": [
+    "gpt-4o-mini_zero-shot",
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ]
+  }
+ },
+ "w056": {
+  "word": "commonwealth",
+  "candidates": {
+   "c0": [
+    "gold"
+   ],
+   "c1": [
+    "vitts"
+   ],
+   "c2": [
+    "gpt-4o-mini_few-shot"
+   ],
+   "c3": [
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c4": [
+    "vietnormalizer_rules"
+   ],
+   "c5": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c6": [
+    "gpt-4o-mini_zero-shot"
+   ]
+  }
+ },
+ "w057": {
+  "word": "schuster",
+  "candidates": {
+   "c0": [
+    "vitts"
+   ],
+   "c1": [
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c2": [
+    "vietnormalizer_rules"
+   ],
+   "c3": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c4": [
+    "gold"
+   ],
+   "c5": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot"
+   ]
+  }
+ },
+ "w058": {
+  "word": "sultan",
+  "candidates": {
+   "c0": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot"
+   ],
+   "c1": [
+    "gold",
+    "vitts"
+   ],
+   "c2": [
+    "vietnormalizer_rules"
+   ],
+   "c3": [
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c4": [
+    "qwen2.5-7b_few-shot"
+   ]
+  }
+ },
+ "w059": {
+  "word": "tart",
+  "candidates": {
+   "c0": [
+    "vietnormalizer_rules"
+   ],
+   "c1": [
+    "gold",
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "vitts"
+   ],
+   "c2": [
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c3": [
+    "qwen2.5-7b_few-shot"
+   ]
+  }
+ },
+ "w060": {
+  "word": "prison",
+  "candidates": {
+   "c0": [
+    "vietnormalizer_rules"
+   ],
+   "c1": [
+    "gold",
+    "vitts"
+   ],
+   "c2": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c3": [
+    "qwen2.5-7b_few-shot"
+   ]
+  }
+ },
+ "w061": {
+  "word": "hyatt",
+  "candidates": {
+   "c0": [
+    "gold"
+   ],
+   "c1": [
+    "gpt-4o-mini_zero-shot"
+   ],
+   "c2": [
+    "vietnormalizer_rules"
+   ],
+   "c3": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c4": [
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c5": [
+    "vitts"
+   ]
+  }
+ },
+ "w062": {
+  "word": "angelina",
+  "candidates": {
+   "c0": [
+    "gold",
+    "vitts"
+   ],
+   "c1": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c2": [
+    "vietnormalizer_rules",
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ]
+  }
+ },
+ "w063": {
+  "word": "t-scan",
+  "candidates": {
+   "c0": [
+    "vitts"
+   ],
+   "c1": [
+    "gold"
+   ],
+   "c2": [
+    "vietnormalizer_rules"
+   ],
+   "c3": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "qwen2.5-7b_few-shot",
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ]
+  }
+ },
+ "w064": {
+  "word": "kiwior",
+  "candidates": {
+   "c0": [
+    "vietnormalizer_rules"
+   ],
+   "c1": [
+    "gpt-4o-mini_zero-shot",
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c2": [
+    "gpt-4o-mini_few-shot"
+   ],
+   "c3": [
+    "vitts"
+   ],
+   "c4": [
+    "gold"
+   ],
+   "c5": [
+    "qwen2.5-7b_few-shot"
+   ]
+  }
+ },
+ "w065": {
+  "word": "kidada",
+  "candidates": {
+   "c0": [
+    "gold",
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "vitts",
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c1": [
+    "vietnormalizer_rules",
+    "qwen2.5-7b_few-shot"
+   ]
+  }
+ },
+ "w066": {
+  "word": "methan",
+  "candidates": {
+   "c0": [
+    "vietnormalizer_rules"
+   ],
+   "c1": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c2": [
+    "gold",
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "vitts"
+   ],
+   "c3": [
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ]
+  }
+ },
+ "w067": {
+  "word": "lucia",
+  "candidates": {
+   "c0": [
+    "vietnormalizer_rules"
+   ],
+   "c1": [
+    "gpt-4o-mini_zero-shot"
+   ],
+   "c2": [
+    "vitts"
+   ],
+   "c3": [
+    "gold"
+   ],
+   "c4": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c5": [
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ]
+  }
+ },
+ "w068": {
+  "word": "bru",
+  "candidates": {
+   "c0": [
+    "gold",
+    "gpt-4o-mini_few-shot",
+    "vitts"
+   ],
+   "c1": [
+    "vietnormalizer_rules"
+   ],
+   "c2": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c3": [
+    "gpt-4o-mini_zero-shot",
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ]
+  }
+ },
+ "w069": {
+  "word": "leningrad",
+  "candidates": {
+   "c0": [
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c1": [
+    "gold",
+    "vitts"
+   ],
+   "c2": [
+    "vietnormalizer_rules"
+   ],
+   "c3": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c4": [
+    "gpt-4o-mini_zero-shot"
+   ],
+   "c5": [
+    "gpt-4o-mini_few-shot"
+   ]
+  }
+ },
+ "w070": {
+  "word": "puyol",
+  "candidates": {
+   "c0": [
+    "gold"
+   ],
+   "c1": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c2": [
+    "vietnormalizer_rules"
+   ],
+   "c3": [
+    "gpt-4o-mini_few-shot",
+    "vitts",
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c4": [
+    "gpt-4o-mini_zero-shot"
+   ]
+  }
+ },
+ "w071": {
+  "word": "pelecanoides",
+  "candidates": {
+   "c0": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c1": [
+    "vietnormalizer_rules"
+   ],
+   "c2": [
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c3": [
+    "gold",
+    "vitts"
+   ],
+   "c4": [
+    "gpt-4o-mini_zero-shot"
+   ],
+   "c5": [
+    "gpt-4o-mini_few-shot"
+   ]
+  }
+ },
+ "w072": {
+  "word": "narco",
+  "candidates": {
+   "c0": [
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c1": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c2": [
+    "vietnormalizer_rules"
+   ],
+   "c3": [
+    "gold",
+    "vitts"
+   ],
+   "c4": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot"
+   ]
+  }
+ },
+ "w073": {
+  "word": "chain",
+  "candidates": {
+   "c0": [
+    "vietnormalizer_rules"
+   ],
+   "c1": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c2": [
+    "gold",
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "vitts"
+   ],
+   "c3": [
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ]
+  }
+ },
+ "w074": {
+  "word": "mackenzie",
+  "candidates": {
+   "c0": [
+    "vietnormalizer_rules"
+   ],
+   "c1": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c2": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "vitts",
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c3": [
+    "gold"
+   ]
+  }
+ },
+ "w075": {
+  "word": "neuron",
+  "candidates": {
+   "c0": [
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c1": [
+    "gpt-4o-mini_zero-shot"
+   ],
+   "c2": [
+    "gold"
+   ],
+   "c3": [
+    "vietnormalizer_rules"
+   ],
+   "c4": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c5": [
+    "vitts"
+   ]
+  }
+ },
+ "w076": {
+  "word": "yandex",
+  "candidates": {
+   "c0": [
+    "vietnormalizer_rules"
+   ],
+   "c1": [
+    "gold",
+    "vitts"
+   ],
+   "c2": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c3": [
+    "qwen2.5-7b_few-shot"
+   ]
+  }
+ },
+ "w077": {
+  "word": "tuxedo",
+  "candidates": {
+   "c0": [
+    "gpt-4o-mini_zero-shot"
+   ],
+   "c1": [
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c2": [
+    "vietnormalizer_rules"
+   ],
+   "c3": [
+    "gold",
+    "gpt-4o-mini_few-shot"
+   ],
+   "c4": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c5": [
+    "vitts"
+   ]
+  }
+ },
+ "w078": {
+  "word": "ream",
+  "candidates": {
+   "c0": [
+    "vitts"
+   ],
+   "c1": [
+    "vietnormalizer_rules"
+   ],
+   "c2": [
+    "gpt-4o-mini_zero-shot",
+    "qwen2.5-7b_few-shot"
+   ],
+   "c3": [
+    "gold"
+   ],
+   "c4": [
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ]
+  }
+ },
+ "w079": {
+  "word": "lemoore",
+  "candidates": {
+   "c0": [
+    "vitts"
+   ],
+   "c1": [
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c2": [
+    "gold"
+   ],
+   "c3": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c4": [
+    "gpt-4o-mini_few-shot"
+   ],
+   "c5": [
+    "gpt-4o-mini_zero-shot"
+   ],
+   "c6": [
+    "vietnormalizer_rules"
+   ]
+  }
+ },
+ "w080": {
+  "word": "offender",
+  "candidates": {
+   "c0": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot"
+   ],
+   "c1": [
+    "gold"
+   ],
+   "c2": [
+    "vitts"
+   ],
+   "c3": [
+    "vietnormalizer_rules"
+   ],
+   "c4": [
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c5": [
+    "qwen2.5-7b_few-shot"
+   ]
+  }
+ },
+ "w081": {
+  "word": "germanium",
+  "candidates": {
+   "c0": [
+    "vietnormalizer_rules"
+   ],
+   "c1": [
+    "gold",
+    "vitts"
+   ],
+   "c2": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot"
+   ],
+   "c3": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c4": [
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ]
+  }
+ },
+ "w082": {
+  "word": "lovehay",
+  "candidates": {
+   "c0": [
+    "vietnormalizer_rules"
+   ],
+   "c1": [
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c2": [
+    "gpt-4o-mini_zero-shot"
+   ],
+   "c3": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c4": [
+    "vitts"
+   ],
+   "c5": [
+    "gpt-4o-mini_few-shot"
+   ],
+   "c6": [
+    "gold"
+   ]
+  }
+ },
+ "w083": {
+  "word": "pinwheel",
+  "candidates": {
+   "c0": [
+    "gold"
+   ],
+   "c1": [
+    "gpt-4o-mini_zero-shot"
+   ],
+   "c2": [
+    "vietnormalizer_rules"
+   ],
+   "c3": [
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c4": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c5": [
+    "gpt-4o-mini_few-shot"
+   ],
+   "c6": [
+    "vitts"
+   ]
+  }
+ },
+ "w084": {
+  "word": "monster",
+  "candidates": {
+   "c0": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c1": [
+    "gold",
+    "vitts"
+   ],
+   "c2": [
+    "vietnormalizer_rules",
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c3": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot"
+   ]
+  }
+ },
+ "w085": {
+  "word": "nirvana",
+  "candidates": {
+   "c0": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot"
+   ],
+   "c1": [
+    "gold",
+    "vietnormalizer_rules",
+    "vitts",
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c2": [
+    "qwen2.5-7b_few-shot"
+   ]
+  }
+ },
+ "w086": {
+  "word": "noronha",
+  "candidates": {
+   "c0": [
+    "gold",
+    "vitts"
+   ],
+   "c1": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c2": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot"
+   ],
+   "c3": [
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c4": [
+    "vietnormalizer_rules"
+   ]
+  }
+ },
+ "w087": {
+  "word": "anglicarum",
+  "candidates": {
+   "c0": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c1": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "vitts",
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c2": [
+    "gold"
+   ],
+   "c3": [
+    "vietnormalizer_rules"
+   ]
+  }
+ },
+ "w088": {
+  "word": "primary",
+  "candidates": {
+   "c0": [
+    "gold"
+   ],
+   "c1": [
+    "gpt-4o-mini_zero-shot"
+   ],
+   "c2": [
+    "vietnormalizer_rules"
+   ],
+   "c3": [
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c4": [
+    "vitts"
+   ],
+   "c5": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c6": [
+    "gpt-4o-mini_few-shot"
+   ]
+  }
+ },
+ "w089": {
+  "word": "fecal",
+  "candidates": {
+   "c0": [
+    "gpt-4o-mini_zero-shot"
+   ],
+   "c1": [
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c2": [
+    "vietnormalizer_rules"
+   ],
+   "c3": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c4": [
+    "vitts"
+   ],
+   "c5": [
+    "gold"
+   ],
+   "c6": [
+    "gpt-4o-mini_few-shot"
+   ]
+  }
+ },
+ "w090": {
+  "word": "vanderbilt",
+  "candidates": {
+   "c0": [
+    "vietnormalizer_rules"
+   ],
+   "c1": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c2": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c3": [
+    "gold",
+    "vitts"
+   ]
+  }
+ },
+ "w091": {
+  "word": "ciaz",
+  "candidates": {
+   "c0": [
+    "vietnormalizer_rules"
+   ],
+   "c1": [
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c2": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot"
+   ],
+   "c3": [
+    "gold",
+    "vitts"
+   ],
+   "c4": [
+    "qwen2.5-7b_few-shot"
+   ]
+  }
+ },
+ "w092": {
+  "word": "zuckerbergkhi",
+  "candidates": {
+   "c0": [
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c1": [
+    "gold",
+    "vitts"
+   ],
+   "c2": [
+    "gpt-4o-mini_few-shot"
+   ],
+   "c3": [
+    "vietnormalizer_rules"
+   ],
+   "c4": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c5": [
+    "gpt-4o-mini_zero-shot"
+   ]
+  }
+ },
+ "w093": {
+  "word": "bakhmut",
+  "candidates": {
+   "c0": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c1": [
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c2": [
+    "gold",
+    "vitts"
+   ],
+   "c3": [
+    "vietnormalizer_rules"
+   ],
+   "c4": [
+    "gpt-4o-mini_zero-shot"
+   ]
+  }
+ },
+ "w094": {
+  "word": "sunghai",
+  "candidates": {
+   "c0": [
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c1": [
+    "vietnormalizer_rules"
+   ],
+   "c2": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c3": [
+    "gold",
+    "vitts"
+   ],
+   "c4": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot"
+   ]
+  }
+ },
+ "w095": {
+  "word": "ocotillol",
+  "candidates": {
+   "c0": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c1": [
+    "vitts"
+   ],
+   "c2": [
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c3": [
+    "gold",
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot"
+   ],
+   "c4": [
+    "vietnormalizer_rules"
+   ]
+  }
+ },
+ "w096": {
+  "word": "silk",
+  "candidates": {
+   "c0": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c1": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c2": [
+    "vietnormalizer_rules"
+   ],
+   "c3": [
+    "gold",
+    "vitts"
+   ]
+  }
+ },
+ "w097": {
+  "word": "tatuy",
+  "candidates": {
+   "c0": [
+    "gold",
+    "gpt-4o-mini_zero-shot",
+    "vitts"
+   ],
+   "c1": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c2": [
+    "vietnormalizer_rules"
+   ],
+   "c3": [
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ]
+  }
+ },
+ "w098": {
+  "word": "rutkowska",
+  "candidates": {
+   "c0": [
+    "gold",
+    "vitts"
+   ],
+   "c1": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c2": [
+    "vietnormalizer_rules"
+   ],
+   "c3": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot"
+   ],
+   "c4": [
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ]
+  }
+ },
+ "w099": {
+  "word": "magellan",
+  "candidates": {
+   "c0": [
+    "vietnormalizer_rules",
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c1": [
+    "gold",
+    "vitts"
+   ],
+   "c2": [
+    "qwen2.5-7b_few-shot"
+   ]
+  }
+ },
+ "w100": {
+  "word": "minji",
+  "candidates": {
+   "c0": [
+    "gold",
+    "vitts"
+   ],
+   "c1": [
+    "vietnormalizer_rules",
+    "gpt_alt_1"
+   ],
+   "c2": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "qwen2.5-7b_few-shot",
+    "gpt_alt_0"
+   ],
+   "c3": [
+    "gpt_alt_2"
+   ]
+  }
+ },
+ "w101": {
+  "word": "compiste",
+  "candidates": {
+   "c0": [
+    "gpt_alt_1"
+   ],
+   "c1": [
+    "vietnormalizer_rules"
+   ],
+   "c2": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c3": [
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_2"
+   ],
+   "c4": [
+    "gold"
+   ],
+   "c5": [
+    "gpt-4o-mini_zero-shot"
+   ],
+   "c6": [
+    "vitts"
+   ],
+   "c7": [
+    "gpt_alt_0"
+   ]
+  }
+ },
+ "w102": {
+  "word": "morita",
+  "candidates": {
+   "c0": [
+    "gpt_alt_2"
+   ],
+   "c1": [
+    "vietnormalizer_rules",
+    "gpt_alt_0"
+   ],
+   "c2": [
+    "gold",
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "vitts",
+    "qwen2.5-7b_few-shot",
+    "gpt_alt_1"
+   ]
+  }
+ },
+ "w103": {
+  "word": "feuille",
+  "candidates": {
+   "c0": [
+    "gold"
+   ],
+   "c1": [
+    "gpt-4o-mini_few-shot"
+   ],
+   "c2": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c3": [
+    "vitts"
+   ],
+   "c4": [
+    "vietnormalizer_rules"
+   ],
+   "c5": [
+    "gpt_alt_0"
+   ],
+   "c6": [
+    "gpt_alt_1"
+   ],
+   "c7": [
+    "gpt_alt_2"
+   ],
+   "c8": [
+    "gpt-4o-mini_zero-shot"
+   ]
+  }
+ },
+ "w104": {
+  "word": "cheniere",
+  "candidates": {
+   "c0": [
+    "gpt_alt_2"
+   ],
+   "c1": [
+    "gpt_alt_1"
+   ],
+   "c2": [
+    "gpt_alt_0"
+   ],
+   "c3": [
+    "vitts",
+    "qwen2.5-7b_few-shot"
+   ],
+   "c4": [
+    "gold",
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot"
+   ],
+   "c5": [
+    "vietnormalizer_rules"
+   ]
+  }
+ },
+ "w105": {
+  "word": "sadkin",
+  "candidates": {
+   "c0": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c1": [
+    "gpt_alt_1"
+   ],
+   "c2": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_0"
+   ],
+   "c3": [
+    "vietnormalizer_rules"
+   ],
+   "c4": [
+    "gpt_alt_2"
+   ],
+   "c5": [
+    "gold",
+    "vitts"
+   ]
+  }
+ },
+ "w106": {
+  "word": "studded",
+  "candidates": {
+   "c0": [
+    "gpt_alt_1"
+   ],
+   "c1": [
+    "gpt_alt_2"
+   ],
+   "c2": [
+    "gpt-4o-mini_zero-shot"
+   ],
+   "c3": [
+    "vitts"
+   ],
+   "c4": [
+    "gpt_alt_0"
+   ],
+   "c5": [
+    "gpt-4o-mini_few-shot"
+   ],
+   "c6": [
+    "gold"
+   ],
+   "c7": [
+    "vietnormalizer_rules"
+   ],
+   "c8": [
+    "qwen2.5-7b_few-shot"
+   ]
+  }
+ },
+ "w107": {
+  "word": "melamine",
+  "candidates": {
+   "c0": [
+    "gpt-4o-mini_zero-shot",
+    "gpt_alt_0"
+   ],
+   "c1": [
+    "gold",
+    "gpt-4o-mini_few-shot",
+    "vitts",
+    "gpt_alt_1"
+   ],
+   "c2": [
+    "vietnormalizer_rules"
+   ],
+   "c3": [
+    "gpt_alt_2"
+   ],
+   "c4": [
+    "qwen2.5-7b_few-shot"
+   ]
+  }
+ },
+ "w108": {
+  "word": "sironi",
+  "candidates": {
+   "c0": [
+    "gold",
+    "vitts"
+   ],
+   "c1": [
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_1"
+   ],
+   "c2": [
+    "vietnormalizer_rules"
+   ],
+   "c3": [
+    "gpt_alt_2"
+   ],
+   "c4": [
+    "gpt-4o-mini_zero-shot",
+    "qwen2.5-7b_few-shot",
+    "gpt_alt_0"
+   ]
+  }
+ },
+ "w109": {
+  "word": "mingo",
+  "candidates": {
+   "c0": [
+    "gpt_alt_1"
+   ],
+   "c1": [
+    "vietnormalizer_rules",
+    "qwen2.5-7b_few-shot",
+    "gpt_alt_0"
+   ],
+   "c2": [
+    "gpt_alt_2"
+   ],
+   "c3": [
+    "gpt-4o-mini_zero-shot"
+   ],
+   "c4": [
+    "gold",
+    "gpt-4o-mini_few-shot",
+    "vitts"
+   ]
+  }
+ },
+ "w110": {
+  "word": "tarascan",
+  "candidates": {
+   "c0": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_0"
+   ],
+   "c1": [
+    "vietnormalizer_rules",
+    "qwen2.5-7b_few-shot"
+   ],
+   "c2": [
+    "gold",
+    "vitts"
+   ],
+   "c3": [
+    "gpt_alt_2"
+   ],
+   "c4": [
+    "gpt_alt_1"
+   ]
+  }
+ },
+ "w111": {
+  "word": "parker",
+  "candidates": {
+   "c0": [
+    "gold",
+    "vitts"
+   ],
+   "c1": [
+    "vietnormalizer_rules"
+   ],
+   "c2": [
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_0"
+   ],
+   "c3": [
+    "gpt_alt_2"
+   ],
+   "c4": [
+    "gpt_alt_1"
+   ],
+   "c5": [
+    "gpt-4o-mini_zero-shot"
+   ],
+   "c6": [
+    "qwen2.5-7b_few-shot"
+   ]
+  }
+ },
+ "w112": {
+  "word": "garlinghouse",
+  "candidates": {
+   "c0": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c1": [
+    "vietnormalizer_rules"
+   ],
+   "c2": [
+    "gpt_alt_1"
+   ],
+   "c3": [
+    "gpt_alt_0"
+   ],
+   "c4": [
+    "gpt_alt_2"
+   ],
+   "c5": [
+    "gpt-4o-mini_few-shot"
+   ],
+   "c6": [
+    "gold",
+    "vitts"
+   ],
+   "c7": [
+    "gpt-4o-mini_zero-shot"
+   ]
+  }
+ },
+ "w113": {
+  "word": "photography",
+  "candidates": {
+   "c0": [
+    "gold",
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "vitts",
+    "gpt_alt_0"
+   ],
+   "c1": [
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c2": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c3": [
+    "vietnormalizer_rules"
+   ]
+  }
+ },
+ "w114": {
+  "word": "levine",
+  "candidates": {
+   "c0": [
+    "gpt_alt_2"
+   ],
+   "c1": [
+    "gold",
+    "gpt-4o-mini_few-shot",
+    "vitts",
+    "gpt_alt_0"
+   ],
+   "c2": [
+    "gpt-4o-mini_zero-shot",
+    "gpt_alt_1"
+   ],
+   "c3": [
+    "vietnormalizer_rules"
+   ],
+   "c4": [
+    "qwen2.5-7b_few-shot"
+   ]
+  }
+ },
+ "w115": {
+  "word": "sigmund",
+  "candidates": {
+   "c0": [
+    "vietnormalizer_rules"
+   ],
+   "c1": [
+    "gpt_alt_2"
+   ],
+   "c2": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c3": [
+    "gpt_alt_0"
+   ],
+   "c4": [
+    "gpt_alt_1"
+   ],
+   "c5": [
+    "gold",
+    "vitts"
+   ],
+   "c6": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot"
+   ]
+  }
+ },
+ "w116": {
+  "word": "huu",
+  "candidates": {
+   "c0": [
+    "gpt_alt_1"
+   ],
+   "c1": [
+    "gold",
+    "qwen2.5-7b_few-shot"
+   ],
+   "c2": [
+    "gpt-4o-mini_zero-shot"
+   ],
+   "c3": [
+    "gpt_alt_2"
+   ],
+   "c4": [
+    "vitts"
+   ],
+   "c5": [
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_0"
+   ],
+   "c6": [
+    "vietnormalizer_rules"
+   ]
+  }
+ },
+ "w117": {
+  "word": "parthasarathy",
+  "candidates": {
+   "c0": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c1": [
+    "vietnormalizer_rules"
+   ],
+   "c2": [
+    "gpt_alt_1"
+   ],
+   "c3": [
+    "gpt_alt_2"
+   ],
+   "c4": [
+    "gpt-4o-mini_zero-shot"
+   ],
+   "c5": [
+    "vitts"
+   ],
+   "c6": [
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_0"
+   ],
+   "c7": [
+    "gold"
+   ]
+  }
+ },
+ "w118": {
+  "word": "xii",
+  "candidates": {
+   "c0": [
+    "vitts"
+   ],
+   "c1": [
+    "gpt-4o-mini_zero-shot",
+    "qwen2.5-7b_few-shot",
+    "gpt_alt_1"
+   ],
+   "c2": [
+    "vietnormalizer_rules",
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_0"
+   ],
+   "c3": [
+    "gpt_alt_2"
+   ],
+   "c4": [
+    "gold"
+   ]
+  }
+ },
+ "w119": {
+  "word": "scripps",
+  "candidates": {
+   "c0": [
+    "gold",
+    "vitts"
+   ],
+   "c1": [
+    "gpt_alt_0"
+   ],
+   "c2": [
+    "gpt_alt_2"
+   ],
+   "c3": [
+    "gpt_alt_1"
+   ],
+   "c4": [
+    "vietnormalizer_rules"
+   ],
+   "c5": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot"
+   ],
+   "c6": [
+    "qwen2.5-7b_few-shot"
+   ]
+  }
+ },
+ "w120": {
+  "word": "need",
+  "candidates": {
+   "c0": [
+    "gold",
+    "vitts",
+    "gpt_alt_2"
+   ],
+   "c1": [
+    "vietnormalizer_rules"
+   ],
+   "c2": [
+    "gpt_alt_1"
+   ],
+   "c3": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c4": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_0"
+   ]
+  }
+ },
+ "w121": {
+  "word": "stream",
+  "candidates": {
+   "c0": [
+    "gpt_alt_1"
+   ],
+   "c1": [
+    "gpt_alt_0",
+    "gpt_alt_2"
+   ],
+   "c2": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c3": [
+    "vietnormalizer_rules"
+   ],
+   "c4": [
+    "gpt-4o-mini_zero-shot"
+   ],
+   "c5": [
+    "gold",
+    "vitts"
+   ],
+   "c6": [
+    "gpt-4o-mini_few-shot"
+   ]
+  }
+ },
+ "w122": {
+  "word": "mons",
+  "candidates": {
+   "c0": [
+    "gold",
+    "gpt-4o-mini_zero-shot",
+    "vitts",
+    "gpt_alt_0"
+   ],
+   "c1": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c2": [
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_2"
+   ],
+   "c3": [
+    "gpt_alt_1"
+   ],
+   "c4": [
+    "vietnormalizer_rules"
+   ]
+  }
+ },
+ "w123": {
+  "word": "maire",
+  "candidates": {
+   "c0": [
+    "gpt_alt_2"
+   ],
+   "c1": [
+    "vitts"
+   ],
+   "c2": [
+    "gold"
+   ],
+   "c3": [
+    "gpt_alt_1"
+   ],
+   "c4": [
+    "vietnormalizer_rules"
+   ],
+   "c5": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_0"
+   ],
+   "c6": [
+    "qwen2.5-7b_few-shot"
+   ]
+  }
+ },
+ "w124": {
+  "word": "elko",
+  "candidates": {
+   "c0": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c1": [
+    "gpt_alt_1"
+   ],
+   "c2": [
+    "gold",
+    "vitts"
+   ],
+   "c3": [
+    "gpt-4o-mini_few-shot"
+   ],
+   "c4": [
+    "vietnormalizer_rules"
+   ],
+   "c5": [
+    "gpt_alt_0"
+   ],
+   "c6": [
+    "gpt-4o-mini_zero-shot",
+    "gpt_alt_2"
+   ]
+  }
+ },
+ "w125": {
+  "word": "hicham",
+  "candidates": {
+   "c0": [
+    "qwen2.5-7b_few-shot",
+    "gpt_alt_2"
+   ],
+   "c1": [
+    "gold",
+    "vietnormalizer_rules",
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "vitts",
+    "gpt_alt_0"
+   ],
+   "c2": [
+    "gpt_alt_1"
+   ]
+  }
+ },
+ "w126": {
+  "word": "golden",
+  "candidates": {
+   "c0": [
+    "gpt_alt_1"
+   ],
+   "c1": [
+    "gpt_alt_0"
+   ],
+   "c2": [
+    "gold",
+    "gpt-4o-mini_zero-shot",
+    "vitts"
+   ],
+   "c3": [
+    "gpt_alt_2"
+   ],
+   "c4": [
+    "gpt-4o-mini_few-shot"
+   ],
+   "c5": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c6": [
+    "vietnormalizer_rules"
+   ]
+  }
+ },
+ "w127": {
+  "word": "aissata",
+  "candidates": {
+   "c0": [
+    "qwen2.5-7b_few-shot",
+    "gpt_alt_1"
+   ],
+   "c1": [
+    "gpt-4o-mini_zero-shot"
+   ],
+   "c2": [
+    "gold",
+    "vietnormalizer_rules",
+    "vitts"
+   ],
+   "c3": [
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_0"
+   ],
+   "c4": [
+    "gpt_alt_2"
+   ]
+  }
+ },
+ "w128": {
+  "word": "aristolochic",
+  "candidates": {
+   "c0": [
+    "gold",
+    "vitts"
+   ],
+   "c1": [
+    "vietnormalizer_rules"
+   ],
+   "c2": [
+    "gpt-4o-mini_few-shot"
+   ],
+   "c3": [
+    "gpt_alt_0"
+   ],
+   "c4": [
+    "gpt-4o-mini_zero-shot"
+   ],
+   "c5": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c6": [
+    "gpt_alt_2"
+   ],
+   "c7": [
+    "gpt_alt_1"
+   ]
+  }
+ },
+ "w129": {
+  "word": "cosmo",
+  "candidates": {
+   "c0": [
+    "gpt_alt_2"
+   ],
+   "c1": [
+    "gold",
+    "gpt-4o-mini_zero-shot",
+    "vitts"
+   ],
+   "c2": [
+    "vietnormalizer_rules"
+   ],
+   "c3": [
+    "gpt-4o-mini_few-shot"
+   ],
+   "c4": [
+    "gpt_alt_1"
+   ],
+   "c5": [
+    "gpt_alt_0"
+   ],
+   "c6": [
+    "qwen2.5-7b_few-shot"
+   ]
+  }
+ },
+ "w130": {
+  "word": "shan",
+  "candidates": {
+   "c0": [
+    "vietnormalizer_rules",
+    "vitts"
+   ],
+   "c1": [
+    "gold"
+   ],
+   "c2": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "qwen2.5-7b_few-shot",
+    "gpt_alt_0"
+   ],
+   "c3": [
+    "gpt_alt_2"
+   ],
+   "c4": [
+    "gpt_alt_1"
+   ]
+  }
+ },
+ "w131": {
+  "word": "ras",
+  "candidates": {
+   "c0": [
+    "vietnormalizer_rules"
+   ],
+   "c1": [
+    "gpt_alt_2"
+   ],
+   "c2": [
+    "gpt-4o-mini_few-shot"
+   ],
+   "c3": [
+    "gold",
+    "vitts",
+    "gpt_alt_1"
+   ],
+   "c4": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c5": [
+    "gpt-4o-mini_zero-shot",
+    "gpt_alt_0"
+   ]
+  }
+ },
+ "w132": {
+  "word": "meloni",
+  "candidates": {
+   "c0": [
+    "gpt-4o-mini_zero-shot"
+   ],
+   "c1": [
+    "vietnormalizer_rules",
+    "gpt_alt_0"
+   ],
+   "c2": [
+    "gpt_alt_1"
+   ],
+   "c3": [
+    "gold",
+    "gpt-4o-mini_few-shot",
+    "vitts",
+    "qwen2.5-7b_few-shot",
+    "gpt_alt_2"
+   ]
+  }
+ },
+ "w133": {
+  "word": "yavuz",
+  "candidates": {
+   "c0": [
+    "gold",
+    "gpt-4o-mini_few-shot",
+    "vitts",
+    "gpt_alt_0",
+    "gpt_alt_2"
+   ],
+   "c1": [
+    "gpt_alt_1"
+   ],
+   "c2": [
+    "gpt-4o-mini_zero-shot"
+   ],
+   "c3": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c4": [
+    "vietnormalizer_rules"
+   ]
+  }
+ },
+ "w134": {
+  "word": "ochakov",
+  "candidates": {
+   "c0": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_1"
+   ],
+   "c1": [
+    "vietnormalizer_rules"
+   ],
+   "c2": [
+    "gpt_alt_2"
+   ],
+   "c3": [
+    "gold",
+    "vitts"
+   ],
+   "c4": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c5": [
+    "gpt_alt_0"
+   ]
+  }
+ },
+ "w135": {
+  "word": "mustaqim",
+  "candidates": {
+   "c0": [
+    "gpt-4o-mini_zero-shot"
+   ],
+   "c1": [
+    "gpt_alt_2"
+   ],
+   "c2": [
+    "gold",
+    "vitts"
+   ],
+   "c3": [
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_0"
+   ],
+   "c4": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c5": [
+    "vietnormalizer_rules"
+   ],
+   "c6": [
+    "gpt_alt_1"
+   ]
+  }
+ },
+ "w136": {
+  "word": "kendall",
+  "candidates": {
+   "c0": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_0",
+    "gpt_alt_2"
+   ],
+   "c1": [
+    "vietnormalizer_rules"
+   ],
+   "c2": [
+    "gold",
+    "vitts"
+   ],
+   "c3": [
+    "gpt_alt_1"
+   ],
+   "c4": [
+    "qwen2.5-7b_few-shot"
+   ]
+  }
+ },
+ "w137": {
+  "word": "electra",
+  "candidates": {
+   "c0": [
+    "gold"
+   ],
+   "c1": [
+    "vitts"
+   ],
+   "c2": [
+    "gpt_alt_2"
+   ],
+   "c3": [
+    "vietnormalizer_rules"
+   ],
+   "c4": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c5": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_1"
+   ],
+   "c6": [
+    "gpt_alt_0"
+   ]
+  }
+ },
+ "w138": {
+  "word": "geun",
+  "candidates": {
+   "c0": [
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_0"
+   ],
+   "c1": [
+    "gold"
+   ],
+   "c2": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c3": [
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c4": [
+    "gpt-4o-mini_zero-shot"
+   ],
+   "c5": [
+    "vietnormalizer_rules"
+   ],
+   "c6": [
+    "vitts"
+   ]
+  }
+ },
+ "w139": {
+  "word": "stadion",
+  "candidates": {
+   "c0": [
+    "vietnormalizer_rules"
+   ],
+   "c1": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c2": [
+    "gold",
+    "vitts"
+   ],
+   "c3": [
+    "gpt_alt_1"
+   ],
+   "c4": [
+    "gpt_alt_2"
+   ],
+   "c5": [
+    "gpt_alt_0"
+   ],
+   "c6": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot"
+   ]
+  }
+ },
+ "w140": {
+  "word": "mubarraz",
+  "candidates": {
+   "c0": [
+    "gold",
+    "vitts",
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c1": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c2": [
+    "gpt-4o-mini_few-shot"
+   ],
+   "c3": [
+    "vietnormalizer_rules",
+    "gpt-4o-mini_zero-shot"
+   ]
+  }
+ },
+ "w141": {
+  "word": "millennial",
+  "candidates": {
+   "c0": [
+    "vitts"
+   ],
+   "c1": [
+    "gold"
+   ],
+   "c2": [
+    "gpt-4o-mini_zero-shot"
+   ],
+   "c3": [
+    "gpt_alt_1"
+   ],
+   "c4": [
+    "gpt_alt_2"
+   ],
+   "c5": [
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_0"
+   ],
+   "c6": [
+    "vietnormalizer_rules"
+   ],
+   "c7": [
+    "qwen2.5-7b_few-shot"
+   ]
+  }
+ },
+ "w142": {
+  "word": "nilon",
+  "candidates": {
+   "c0": [
+    "gold",
+    "vitts"
+   ],
+   "c1": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "qwen2.5-7b_few-shot",
+    "gpt_alt_1"
+   ],
+   "c2": [
+    "gpt_alt_2"
+   ],
+   "c3": [
+    "vietnormalizer_rules",
+    "gpt_alt_0"
+   ]
+  }
+ },
+ "w143": {
+  "word": "vashunin",
+  "candidates": {
+   "c0": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c1": [
+    "gpt_alt_0"
+   ],
+   "c2": [
+    "gpt_alt_2"
+   ],
+   "c3": [
+    "gold",
+    "vietnormalizer_rules",
+    "vitts"
+   ],
+   "c4": [
+    "gpt-4o-mini_zero-shot"
+   ],
+   "c5": [
+    "gpt_alt_1"
+   ],
+   "c6": [
+    "gpt-4o-mini_few-shot"
+   ]
+  }
+ },
+ "w144": {
+  "word": "napier",
+  "candidates": {
+   "c0": [
+    "vitts",
+    "gpt_alt_1"
+   ],
+   "c1": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c2": [
+    "vietnormalizer_rules"
+   ],
+   "c3": [
+    "gold",
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot"
+   ],
+   "c4": [
+    "gpt_alt_0",
+    "gpt_alt_2"
+   ]
+  }
+ },
+ "w145": {
+  "word": "yueyue",
+  "candidates": {
+   "c0": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c1": [
+    "vitts"
+   ],
+   "c2": [
+    "gold"
+   ],
+   "c3": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_0",
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c4": [
+    "vietnormalizer_rules"
+   ]
+  }
+ },
+ "w146": {
+  "word": "malacia",
+  "candidates": {
+   "c0": [
+    "vietnormalizer_rules"
+   ],
+   "c1": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c2": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_0"
+   ],
+   "c3": [
+    "gold",
+    "vitts"
+   ],
+   "c4": [
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ]
+  }
+ },
+ "w147": {
+  "word": "perth",
+  "candidates": {
+   "c0": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c1": [
+    "gpt_alt_1",
+    "gpt_alt_2"
+   ],
+   "c2": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "gpt_alt_0"
+   ],
+   "c3": [
+    "gold",
+    "vitts"
+   ],
+   "c4": [
+    "vietnormalizer_rules"
+   ]
+  }
+ },
+ "w148": {
+  "word": "shipping",
+  "candidates": {
+   "c0": [
+    "gpt_alt_2"
+   ],
+   "c1": [
+    "gpt_alt_1"
+   ],
+   "c2": [
+    "vietnormalizer_rules"
+   ],
+   "c3": [
+    "gpt_alt_0"
+   ],
+   "c4": [
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot"
+   ],
+   "c5": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c6": [
+    "gold",
+    "vitts"
+   ]
+  }
+ },
+ "w149": {
+  "word": "ariya",
+  "candidates": {
+   "c0": [
+    "gold",
+    "gpt-4o-mini_zero-shot",
+    "gpt-4o-mini_few-shot",
+    "vitts",
+    "gpt_alt_0"
+   ],
+   "c1": [
+    "vietnormalizer_rules"
+   ],
+   "c2": [
+    "gpt_alt_1"
+   ],
+   "c3": [
+    "qwen2.5-7b_few-shot"
+   ],
+   "c4": [
+    "gpt_alt_2"
+   ]
+  }
+ }
+}
