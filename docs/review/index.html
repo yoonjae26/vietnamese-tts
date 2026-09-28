@@ -1,3 +1,8 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Duyệt phiên âm ViTTS</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,20 +17,16 @@
     --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
   }
   @media (prefers-color-scheme: dark) {
-    :root:not([data-theme="light"]) {
+    :root {
       color-scheme: dark;
       --bg: #0D1311; --surface: #151D1A; --ink: #E4EBE8; --muted: #97A6A0; --rule: #27332F;
       --accent: #45C2AD; --accent-ink: #06231E; --accent-soft: #173B35; --warn: #E3AA4A; --warn-soft: #3A2C12;
     }
   }
-  :root[data-theme="dark"] {
-    color-scheme: dark;
-    --bg: #0D1311; --surface: #151D1A; --ink: #E4EBE8; --muted: #97A6A0; --rule: #27332F;
-    --accent: #45C2AD; --accent-ink: #06231E; --accent-soft: #173B35; --warn: #E3AA4A; --warn-soft: #3A2C12;
-  }
-  body { background: var(--bg); color: var(--ink); font: 15px/1.55 var(--sans); padding-inline: 16px; padding-block: 24px 48px; }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--ink); font: 15px/1.55 var(--sans); padding: 24px 16px 48px; }
   .wrap { max-width: 920px; margin-inline: auto; display: grid; gap: 24px; }
-  h1 { margin: 0; font-size: 24px; line-height: 1.2; text-wrap: balance; }
+  h1 { margin: 0; font-size: 24px; line-height: 1.2; }
   p { margin: 0; max-width: 68ch; }
   .muted { color: var(--muted); }
   .num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
@@ -36,6 +37,7 @@
   .progress { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; }
   .bar { flex: 1 1 240px; height: 8px; border-radius: 999px; background: var(--rule); overflow: hidden; }
   .bar > span { display: block; height: 100%; width: 0; background: var(--accent); transition: width .3s; }
+  .files { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
 
   .card { background: var(--surface); border: 1px solid var(--rule); border-radius: 12px; padding: 20px; display: grid; gap: 18px; }
   .word-row { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px; }
@@ -45,10 +47,7 @@
   .status.unsure { background: var(--warn-soft); color: var(--warn); }
 
   .cands { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 8px; }
-  .cand {
-    all: unset; box-sizing: border-box; cursor: pointer; display: flex; align-items: center; gap: 10px;
-    padding: 12px 14px; border-radius: 10px; border: 1px solid var(--rule); background: var(--bg);
-  }
+  .cand { all: unset; box-sizing: border-box; cursor: pointer; display: flex; align-items: center; gap: 10px; padding: 12px 14px; border-radius: 10px; border: 1px solid var(--rule); background: var(--bg); }
   .cand:hover { border-color: var(--accent); }
   .cand:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
   .cand .k { font: 12px var(--mono); color: var(--muted); min-width: 14px; }
@@ -60,14 +59,12 @@
 
   .custom { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
   .custom input { flex: 1 1 240px; font: 17px var(--serif); padding: 9px 12px; border-radius: 8px; border: 1px solid var(--rule); background: var(--bg); color: var(--ink); min-width: 0; }
-  .custom input:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
   .chips { display: flex; flex-wrap: wrap; gap: 6px; }
   .chip { display: inline-flex; align-items: center; gap: 6px; font-family: var(--serif); font-size: 15px; padding: 3px 4px 3px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); }
   .chip button { all: unset; cursor: pointer; font: 14px var(--sans); padding: 0 6px; border-radius: 999px; }
-  .chip button:focus-visible { outline: 2px solid var(--accent); }
 
   .actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
-  .btn { font: 500 14px var(--sans); cursor: pointer; border: 1px solid var(--accent); background: var(--accent); color: var(--accent-ink); padding: 9px 16px; border-radius: 999px; }
+  .btn { font: 500 14px var(--sans); cursor: pointer; border: 1px solid var(--accent); background: var(--accent); color: var(--accent-ink); padding: 9px 16px; border-radius: 999px; text-decoration: none; }
   .btn.ghost { background: transparent; color: var(--accent); }
   .btn.warn { background: transparent; border-color: var(--warn); color: var(--warn); }
   .btn:disabled { opacity: .45; cursor: default; }
@@ -79,17 +76,16 @@
   .filters { display: flex; gap: 6px; }
   .filters button { all: unset; cursor: pointer; font-size: 13px; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--rule); }
   .filters button[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
-  .filters button:focus-visible { outline: 2px solid var(--accent); }
   .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 6px; }
   .cell { all: unset; box-sizing: border-box; cursor: pointer; padding: 6px 10px; border-radius: 8px; border: 1px solid var(--rule); font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
   .cell.done { background: var(--accent-soft); border-color: transparent; }
   .cell.unsure { background: var(--warn-soft); border-color: transparent; }
   .cell.current { border-color: var(--ink); }
-  .cell:focus-visible { outline: 2px solid var(--accent); }
   .empty { padding: 32px; text-align: center; color: var(--muted); }
   @media (prefers-reduced-motion: reduce) { .bar > span { transition: none; } }
 </style>
-
+</head>
+<body>
 <div class="wrap">
   <header>
     <span class="label">ViTTS-Bench · bộ test phiên âm có nhiều đáp án</span>
@@ -99,7 +95,14 @@
     <div class="progress">
       <span class="num" id="count">0/0</span>
       <div class="bar" aria-hidden="true"><span id="bar"></span></div>
-      <span class="muted" style="font-size:13px" id="conn">Đang kết nối dữ liệu…</span>
+    </div>
+    <div class="files">
+      <button class="btn" type="button" id="export" disabled>Tải kết quả (reviews.jsonl)</button>
+      <label class="btn ghost" for="import-reviews">Nạp kết quả đã lưu</label>
+      <input type="file" id="import-reviews" accept=".jsonl,.json" hidden>
+      <label class="btn ghost" for="import-items" id="items-label" hidden>Chọn file items.json</label>
+      <input type="file" id="import-items" accept=".json" hidden>
+      <span class="muted" style="font-size:13px" id="conn">Đang tải danh sách từ…</span>
     </div>
   </header>
 
@@ -122,12 +125,25 @@
 
 <script>
 (() => {
+  // Tiến độ lưu trong trình duyệt; kết quả cuối cùng tải về dạng reviews.jsonl
+  // (mỗi dòng: {id, word, accepted, custom, unsure}), đúng định dạng của data/translit/review/.
+  const STORE = "vitts-review-v1";
   const $ = (id) => document.getElementById(id);
-  let db = null, items = [], reviews = {}, idx = 0, filter = "all";
-  let draft = null; // {accepted:Set, custom:[]} cho từ đang mở
+  let items = [], reviews = {}, idx = 0, filter = "all", draft = null;
 
   const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
-  const statusOf = (id) => reviews[id] ? (reviews[id].unsure ? "unsure" : "done") : "todo";
+  const statusOf = (id) => (reviews[id] ? (reviews[id].unsure ? "unsure" : "done") : "todo");
+
+  function persist() {
+    try { localStorage.setItem(STORE, JSON.stringify({ reviews, idx })); } catch (_) {}
+  }
+  function restore() {
+    try {
+      const s = JSON.parse(localStorage.getItem(STORE) || "{}");
+      reviews = s.reviews || {};
+      if (Number.isInteger(s.idx)) idx = s.idx;
+    } catch (_) { reviews = {}; }
+  }
 
   function loadDraft() {
     const it = items[idx];
@@ -139,6 +155,7 @@
     const done = items.filter((it) => reviews[it.id]).length;
     $("count").textContent = `${done}/${items.length} đã duyệt`;
     $("bar").style.width = items.length ? `${(100 * done) / items.length}%` : "0";
+    $("export").disabled = done === 0;
   }
 
   function renderGrid() {
@@ -176,17 +193,16 @@
         <button class="btn ghost" type="button" id="prev" ${idx === 0 ? "disabled" : ""}>← Trước</button>
         <button class="btn warn" type="button" id="unsure">Không chắc</button>
         <span class="spacer"></span>
-        <button class="btn" type="button" id="save" ${db ? "" : "disabled"}>Lưu và sang từ tiếp</button>
+        <button class="btn" type="button" id="save">Lưu và sang từ tiếp</button>
       </div>
-      <div class="toast" id="toast">${msg || (draft.accepted.size + draft.custom.length === 0 ? "Chưa chọn cách đọc nào. Lưu như vậy nghĩa là không cách nào chấp nhận được." : "")}</div>`;
+      <div class="toast">${msg || (draft.accepted.size + draft.custom.length === 0 ? "Chưa chọn cách đọc nào. Lưu như vậy nghĩa là không cách nào chấp nhận được." : "")}</div>`;
   }
 
   function render(msg) { renderProgress(); renderCard(msg); renderGrid(); }
 
   function go(i) {
     if (i < 0 || i >= items.length) return;
-    idx = i; loadDraft(); render();
-    try { localStorage.setItem("vitts-review-idx", String(idx)); } catch (_) {}
+    idx = i; loadDraft(); render(); persist();
   }
 
   function nextTodo() {
@@ -197,19 +213,13 @@
     return Math.min(idx + 1, items.length - 1);
   }
 
-  async function save(unsure) {
+  function save(unsure) {
     const it = items[idx];
-    if (!db || !it) return;
-    const body = { word: it.word, accepted: [...draft.accepted], custom: draft.custom, unsure: !!unsure, updatedAt: new Date().toISOString() };
-    try {
-      await db.doc(`reviews/${it.id}`).set(body);
-      reviews[it.id] = body;
-      const done = items.every((x) => reviews[x.id]);
-      if (done) { render("Đã duyệt xong cả " + items.length + " từ. Cảm ơn bạn!"); return; }
-      go(nextTodo());
-    } catch (e) {
-      renderCard(e && e.code === "invalid_argument" ? "Bạn không có quyền lưu trên trang này." : "Chưa lưu được, hãy thử lại.");
-    }
+    if (!it) return;
+    reviews[it.id] = { id: it.id, word: it.word, accepted: [...draft.accepted], custom: draft.custom, unsure: !!unsure };
+    persist();
+    if (items.every((x) => reviews[x.id])) { render(`Đã duyệt xong cả ${items.length} từ. Bấm "Tải kết quả" để lưu file.`); return; }
+    go(nextTodo());
   }
 
   function addCustom() {
@@ -217,6 +227,34 @@
     const t = input.value.trim().toLowerCase().replace(/\s+/g, " ");
     if (!t || draft.custom.includes(t)) { input.value = ""; return; }
     draft.custom.push(t); renderCard(); $("custom-input").focus();
+  }
+
+  function exportReviews() {
+    const lines = items.filter((it) => reviews[it.id]).map((it) => JSON.stringify(reviews[it.id]));
+    const blob = new Blob([lines.join("\n") + "\n"], { type: "application/x-ndjson" });
+    const a = document.createElement("a");
+    a.href = URL.createObjectURL(blob);
+    a.download = "reviews.jsonl";
+    a.click();
+    setTimeout(() => URL.revokeObjectURL(a.href), 1000);
+  }
+
+  async function importReviews(file) {
+    const text = await file.text();
+    let n = 0;
+    for (const line of text.split(/\r?\n/)) {
+      if (!line.trim()) continue;
+      try { const r = JSON.parse(line); if (r.id) { reviews[r.id] = r; n++; } } catch (_) {}
+    }
+    persist(); loadDraft(); render(`Đã nạp ${n} kết quả.`);
+  }
+
+  function useItems(list) {
+    items = [...list].sort((a, b) => a.order - b.order);
+    if (idx >= items.length) idx = 0;
+    $("conn").textContent = "Tiến độ được lưu trong trình duyệt này.";
+    $("items-label").hidden = true;
+    loadDraft(); render();
   }
 
   document.addEventListener("click", (ev) => {
@@ -232,11 +270,11 @@
     if (ev.target.id === "save") save(false);
     if (ev.target.id === "unsure") save(true);
     if (ev.target.id === "prev") go(idx - 1);
+    if (ev.target.id === "export") exportReviews();
   });
 
   document.addEventListener("keydown", (ev) => {
-    const typing = ev.target && ev.target.id === "custom-input";
-    if (typing) { if (ev.key === "Enter") { ev.preventDefault(); addCustom(); } return; }
+    if (ev.target && ev.target.id === "custom-input") { if (ev.key === "Enter") { ev.preventDefault(); addCustom(); } return; }
     if (ev.metaKey || ev.ctrlKey || ev.altKey) return;
     const it = items[idx];
     if (!it) return;
@@ -249,33 +287,23 @@
     else if (ev.key.toLowerCase() === "u") save(true);
   });
 
-  (async () => {
-    db = await window.claude?.use?.("db");
-    if (!db) {
-      $("conn").textContent = "Không kết nối được kho dữ liệu: hãy mở trang này trong claude.ai.";
-      $("card").innerHTML = `<div class="empty">Trang cần kho dữ liệu của Artifact để tải từ và lưu kết quả duyệt.</div>`;
-      return;
-    }
-    try {
-      const snap = await db.collection("items").limit(1000).get();
-      items = snap.docs.map((d) => ({ id: d.id, ...d.data() })).sort((a, b) => a.order - b.order);
-    } catch (e) {
-      $("conn").textContent = "Không tải được danh sách từ, hãy tải lại trang.";
-      return;
-    }
-    // Tải kết quả đã lưu TRƯỚC khi hiện từ đầu tiên, để không ghi đè lựa chọn cũ bằng một bản trống
-    try {
-      const rs = await db.collection("reviews").limit(1000).get();
-      rs.docs.forEach((d) => { reviews[d.id] = d.data(); });
-    } catch (_) {}
-    $("conn").textContent = "Kết quả được lưu ngay khi bấm Lưu.";
-    try { const saved = Number(localStorage.getItem("vitts-review-idx")); if (saved >= 0 && saved < items.length) idx = saved; } catch (_) {}
-    loadDraft(); render();
-    db.collection("reviews").limit(1000).onSnapshot((snap) => {
-      reviews = {};
-      snap.docs.forEach((d) => { reviews[d.id] = d.data(); });
-      renderProgress(); renderGrid();
-    }, () => { $("conn").textContent = "Mất kết nối dữ liệu, hãy tải lại trang."; });
-  })();
+  $("import-reviews").addEventListener("change", (ev) => { const f = ev.target.files[0]; if (f) importReviews(f); ev.target.value = ""; });
+  $("import-items").addEventListener("change", async (ev) => {
+    const f = ev.target.files[0];
+    if (f) { try { useItems(JSON.parse(await f.text())); } catch (_) { $("conn").textContent = "File items.json không hợp lệ."; } }
+  });
+
+  restore();
+  fetch("items.json")
+    .then((r) => { if (!r.ok) throw new Error(); return r.json(); })
+    .then(useItems)
+    .catch(() => {
+      // Mở trực tiếp từ ổ đĩa (file://) thì trình duyệt chặn fetch: cho chọn file bằng tay
+      $("conn").textContent = "Không tự tải được items.json. Hãy chọn file (data/translit/review/items.json).";
+      $("items-label").hidden = false;
+      $("card").innerHTML = `<div class="empty">Chọn file items.json để bắt đầu.</div>`;
+    });
 })();
 </script>
+</body>
+</html>

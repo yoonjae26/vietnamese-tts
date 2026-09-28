@@ -109,7 +109,7 @@ normalize_text("Họp online qua Zoom, rút tiền ở ATM.", translit="auto")
 
 ### Đánh giá bằng người duyệt mù
 
-150 từ ngẫu nhiên trong bộ test được một người Việt duyệt: người duyệt thấy mọi cách đọc (từ điển, model của repo, gpt-4o-mini, Qwen, quy tắc, và 3 cách GPT gợi ý thêm) đã xáo trộn, không biết cách nào của hệ thống nào, rồi chọn cách chấp nhận được ([trang duyệt](training/translit/review_page.html), [dữ liệu](data/translit/review/)).
+150 từ ngẫu nhiên trong bộ test được một người Việt duyệt: người duyệt thấy mọi cách đọc (từ điển, model của repo, gpt-4o-mini, Qwen, quy tắc, và 3 cách GPT gợi ý thêm) đã xáo trộn, không biết cách nào của hệ thống nào, rồi chọn cách chấp nhận được ([trang duyệt](https://yoonjae26.github.io/vietnamese-tts/review/), [mã nguồn](docs/review/), [dữ liệu](data/translit/review/)).
 
 | Hệ thống | Đúng theo người duyệt (149 từ) | KTC 95% |
 |---|---:|---:|
@@ -222,9 +222,10 @@ Script GPU tự từ chối chạy nếu `CUDA_VISIBLE_DEVICES` khác `0`; sửa
 | [`benchmark/tts/`](benchmark/tts/) | Bộ câu, adapter cho 7 model, chấm điểm (WER, không dừng, giống giọng, UTMOS), worker cho API |
 | [`benchmark/normalization/`](benchmark/normalization/) | Bộ test dev / held-out v1 / held-out v2 và script so sánh các bộ chuẩn hóa |
 | [`src/vitts/text/`](src/vitts/text/) | Bộ chuẩn hóa tiếng Việt (phần quy tắc không cần thư viện ngoài) |
-| [`src/vitts/translit/`](src/vitts/translit/), [`training/translit/`](training/translit/) | Model phiên âm, huấn luyện, đánh giá, so với LLM, trang duyệt mù |
+| [`src/vitts/translit/`](src/vitts/translit/), [`training/translit/`](training/translit/) | Model phiên âm, huấn luyện, đánh giá, so với LLM |
 | [`src/vitts/server.py`](src/vitts/server.py) | Gateway tương thích OpenAI |
 | [`docs/listen/`](docs/listen/) | Trang nghe thử (GitHub Pages), tạo lại bằng `python docs/listen/build.py` |
+| [`docs/review/`](docs/review/) | Trang duyệt mù cách đọc (GitHub Pages); tiến độ lưu trong trình duyệt, xuất `reviews.jsonl` |
 | [`results/`](results/) | Mọi bảng kết quả và output từng câu |
 
 ## Phát triển

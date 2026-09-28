@@ -1,0 +1,4436 @@
+[
+ {
+  "id": "w000",
+  "word": "chapi",
+  "order": 0,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "cháp pi"
+   },
+   {
+    "id": "c1",
+    "text": "cháp i"
+   },
+   {
+    "id": "c2",
+    "text": "cha pi"
+   }
+  ]
+ },
+ {
+  "id": "w001",
+  "word": "insuline",
+  "order": 1,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "i súc lin"
+   },
+   {
+    "id": "c1",
+    "text": "in su li"
+   },
+   {
+    "id": "c2",
+    "text": "in xu lai"
+   },
+   {
+    "id": "c3",
+    "text": "in su lin"
+   },
+   {
+    "id": "c4",
+    "text": "in su lìn"
+   },
+   {
+    "id": "c5",
+    "text": "in xu lin"
+   }
+  ]
+ },
+ {
+  "id": "w002",
+  "word": "negev",
+  "order": 2,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "nê ghếp"
+   },
+   {
+    "id": "c1",
+    "text": "ne gê"
+   },
+   {
+    "id": "c2",
+    "text": "ne gẹv"
+   },
+   {
+    "id": "c3",
+    "text": "ne gẹp"
+   },
+   {
+    "id": "c4",
+    "text": "ne gét"
+   },
+   {
+    "id": "c5",
+    "text": "ne ge"
+   },
+   {
+    "id": "c6",
+    "text": "nê ghép"
+   }
+  ]
+ },
+ {
+  "id": "w003",
+  "word": "nilsawai",
+  "order": 3,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "ni lô sài"
+   },
+   {
+    "id": "c1",
+    "text": "nils a wai"
+   },
+   {
+    "id": "c2",
+    "text": "ni xauai"
+   },
+   {
+    "id": "c3",
+    "text": "ni l sa wai"
+   },
+   {
+    "id": "c4",
+    "text": "nin xa oai"
+   },
+   {
+    "id": "c5",
+    "text": "nil sa wai"
+   },
+   {
+    "id": "c6",
+    "text": "níl sa wai"
+   }
+  ]
+ },
+ {
+  "id": "w004",
+  "word": "scrum",
+  "order": 4,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "râm"
+   },
+   {
+    "id": "c1",
+    "text": "cờ râm"
+   },
+   {
+    "id": "c2",
+    "text": "sờ cờm"
+   },
+   {
+    "id": "c3",
+    "text": "xờ crum"
+   },
+   {
+    "id": "c4",
+    "text": "scrum"
+   },
+   {
+    "id": "c5",
+    "text": "sờ cờ râm"
+   },
+   {
+    "id": "c6",
+    "text": "sờ cờ rôm"
+   },
+   {
+    "id": "c7",
+    "text": "s rum không có từ tương đương trong tiếng việt nên phiên âm theo cách phát âm tiếng anh"
+   }
+  ]
+ },
+ {
+  "id": "w005",
+  "word": "caramel",
+  "order": 5,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "ca ra mel"
+   },
+   {
+    "id": "c1",
+    "text": "ca ra mên"
+   },
+   {
+    "id": "c2",
+    "text": "ca ra mèn"
+   },
+   {
+    "id": "c3",
+    "text": "ca ra m l"
+   },
+   {
+    "id": "c4",
+    "text": "ca ra meo"
+   }
+  ]
+ },
+ {
+  "id": "w006",
+  "word": "faz",
+  "order": 6,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "faz"
+   },
+   {
+    "id": "c1",
+    "text": "phát"
+   },
+   {
+    "id": "c2",
+    "text": "pha"
+   },
+   {
+    "id": "c3",
+    "text": "phátz"
+   },
+   {
+    "id": "c4",
+    "text": "fa zê"
+   }
+  ]
+ },
+ {
+  "id": "w007",
+  "word": "reduction",
+  "order": 7,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "re du cân"
+   },
+   {
+    "id": "c1",
+    "text": "ri đắc xần"
+   },
+   {
+    "id": "c2",
+    "text": "ri đắc tần"
+   },
+   {
+    "id": "c3",
+    "text": "riduce nôn"
+   },
+   {
+    "id": "c4",
+    "text": "ri đắc shần"
+   },
+   {
+    "id": "c5",
+    "text": "rê đắc xần"
+   },
+   {
+    "id": "c6",
+    "text": "ri đắc shun"
+   }
+  ]
+ },
+ {
+  "id": "w008",
+  "word": "russia",
+  "order": 8,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "rắt xi a"
+   },
+   {
+    "id": "c1",
+    "text": "ru xì a"
+   },
+   {
+    "id": "c2",
+    "text": "ru ssi a"
+   },
+   {
+    "id": "c3",
+    "text": "rút si a"
+   },
+   {
+    "id": "c4",
+    "text": "rắt xa"
+   },
+   {
+    "id": "c5",
+    "text": "ru xia"
+   }
+  ]
+ },
+ {
+  "id": "w009",
+  "word": "pereira",
+  "order": 9,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "pe rê ra"
+   },
+   {
+    "id": "c1",
+    "text": "pe rây ra"
+   },
+   {
+    "id": "c2",
+    "text": "pe râi ra"
+   },
+   {
+    "id": "c3",
+    "text": "pê rê ra"
+   },
+   {
+    "id": "c4",
+    "text": "pe re ra"
+   },
+   {
+    "id": "c5",
+    "text": "pê rê i ra"
+   },
+   {
+    "id": "c6",
+    "text": "pe ri a ra"
+   }
+  ]
+ },
+ {
+  "id": "w010",
+  "word": "lovren",
+  "order": 10,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "lô v ren"
+   },
+   {
+    "id": "c1",
+    "text": "lo ren"
+   },
+   {
+    "id": "c2",
+    "text": "lố vren"
+   },
+   {
+    "id": "c3",
+    "text": "lố vần"
+   },
+   {
+    "id": "c4",
+    "text": "lốp ren"
+   },
+   {
+    "id": "c5",
+    "text": "lô vơn"
+   },
+   {
+    "id": "c6",
+    "text": "lô vren"
+   },
+   {
+    "id": "c7",
+    "text": "lố ven"
+   }
+  ]
+ },
+ {
+  "id": "w011",
+  "word": "wccdaily",
+  "order": 11,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "đêi ly"
+   },
+   {
+    "id": "c1",
+    "text": "oắc đai li"
+   },
+   {
+    "id": "c2",
+    "text": "đêi li"
+   },
+   {
+    "id": "c3",
+    "text": "uê xê đây li"
+   },
+   {
+    "id": "c4",
+    "text": "vơ kơ dái li"
+   },
+   {
+    "id": "c5",
+    "text": "đêi lỳ"
+   },
+   {
+    "id": "c6",
+    "text": "đêi si si đêi ly"
+   },
+   {
+    "id": "c7",
+    "text": "u dai li"
+   }
+  ]
+ },
+ {
+  "id": "w012",
+  "word": "poste",
+  "order": 12,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "po te"
+   },
+   {
+    "id": "c1",
+    "text": "pô tê"
+   },
+   {
+    "id": "c2",
+    "text": "pô s tê"
+   },
+   {
+    "id": "c3",
+    "text": "pốt"
+   },
+   {
+    "id": "c4",
+    "text": "po s"
+   },
+   {
+    "id": "c5",
+    "text": "pốt tê"
+   }
+  ]
+ },
+ {
+  "id": "w013",
+  "word": "part",
+  "order": 13,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "pa"
+   },
+   {
+    "id": "c1",
+    "text": "pát"
+   },
+   {
+    "id": "c2",
+    "text": "párt"
+   }
+  ]
+ },
+ {
+  "id": "w014",
+  "word": "thiamin",
+  "order": 14,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "ti a min"
+   },
+   {
+    "id": "c1",
+    "text": "thi a min"
+   },
+   {
+    "id": "c2",
+    "text": "ti a mịn"
+   },
+   {
+    "id": "c3",
+    "text": "ti am in"
+   },
+   {
+    "id": "c4",
+    "text": "thia min"
+   },
+   {
+    "id": "c5",
+    "text": "ti a mìn"
+   }
+  ]
+ },
+ {
+  "id": "w015",
+  "word": "viwaseen",
+  "order": 15,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "vi wa xin"
+   },
+   {
+    "id": "c1",
+    "text": "viua xeen"
+   },
+   {
+    "id": "c2",
+    "text": "vi oa xen"
+   },
+   {
+    "id": "c3",
+    "text": "vi wa seen"
+   },
+   {
+    "id": "c4",
+    "text": "vi wa sên"
+   },
+   {
+    "id": "c5",
+    "text": "vi wa sìn"
+   },
+   {
+    "id": "c6",
+    "text": "vi oa xin"
+   },
+   {
+    "id": "c7",
+    "text": "vi wa sin"
+   }
+  ]
+ },
+ {
+  "id": "w016",
+  "word": "versace",
+  "order": 16,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "vơ sa chê"
+   },
+   {
+    "id": "c1",
+    "text": "vơ xát chê"
+   },
+   {
+    "id": "c2",
+    "text": "ve xa ke"
+   },
+   {
+    "id": "c3",
+    "text": "vơ sa kè"
+   },
+   {
+    "id": "c4",
+    "text": "vơ xê chê"
+   },
+   {
+    "id": "c5",
+    "text": "vi sa cê"
+   }
+  ]
+ },
+ {
+  "id": "w017",
+  "word": "nacio",
+  "order": 17,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "na xi ô"
+   },
+   {
+    "id": "c1",
+    "text": "na si ô"
+   },
+   {
+    "id": "c2",
+    "text": "na xì ô"
+   },
+   {
+    "id": "c3",
+    "text": "na kio"
+   },
+   {
+    "id": "c4",
+    "text": "na xìo"
+   },
+   {
+    "id": "c5",
+    "text": "na si o"
+   }
+  ]
+ },
+ {
+  "id": "w018",
+  "word": "ugledar",
+  "order": 18,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "u gle đà"
+   },
+   {
+    "id": "c1",
+    "text": "u gle đar"
+   },
+   {
+    "id": "c2",
+    "text": "u g l e đ a r"
+   },
+   {
+    "id": "c3",
+    "text": "u gờ la đờ"
+   },
+   {
+    "id": "c4",
+    "text": "u glê đa"
+   },
+   {
+    "id": "c5",
+    "text": "u gle dar"
+   },
+   {
+    "id": "c6",
+    "text": "ú ồ da"
+   }
+  ]
+ },
+ {
+  "id": "w019",
+  "word": "vincent",
+  "order": 19,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "vin sơn"
+   },
+   {
+    "id": "c1",
+    "text": "vin sần"
+   },
+   {
+    "id": "c2",
+    "text": "vin xen"
+   },
+   {
+    "id": "c3",
+    "text": "vin ken"
+   },
+   {
+    "id": "c4",
+    "text": "viên tín"
+   },
+   {
+    "id": "c5",
+    "text": "vin sệt"
+   },
+   {
+    "id": "c6",
+    "text": "vin xent"
+   }
+  ]
+ },
+ {
+  "id": "w020",
+  "word": "qiao",
+  "order": 20,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "cầu"
+   },
+   {
+    "id": "c1",
+    "text": "ki ảo"
+   },
+   {
+    "id": "c2",
+    "text": "ki ao"
+   },
+   {
+    "id": "c3",
+    "text": "chi ao"
+   },
+   {
+    "id": "c4",
+    "text": "qiao"
+   }
+  ]
+ },
+ {
+  "id": "w021",
+  "word": "markets",
+  "order": 21,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "mác kets"
+   },
+   {
+    "id": "c1",
+    "text": "mác két"
+   },
+   {
+    "id": "c2",
+    "text": "már ket s"
+   },
+   {
+    "id": "c3",
+    "text": "ma kẹt s"
+   },
+   {
+    "id": "c4",
+    "text": "ma cét"
+   },
+   {
+    "id": "c5",
+    "text": "mác kẹt"
+   },
+   {
+    "id": "c6",
+    "text": "mác kết"
+   }
+  ]
+ },
+ {
+  "id": "w022",
+  "word": "ford",
+  "order": 22,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "pho"
+   },
+   {
+    "id": "c1",
+    "text": "phôrd"
+   },
+   {
+    "id": "c2",
+    "text": "fôr dô"
+   },
+   {
+    "id": "c3",
+    "text": "phô d"
+   }
+  ]
+ },
+ {
+  "id": "w023",
+  "word": "achalasia",
+  "order": 23,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "a xả lả ya"
+   },
+   {
+    "id": "c1",
+    "text": "a ca la xi a"
+   },
+   {
+    "id": "c2",
+    "text": "a cha la si a"
+   },
+   {
+    "id": "c3",
+    "text": "a cha la zi a"
+   },
+   {
+    "id": "c4",
+    "text": "a cha la zia"
+   },
+   {
+    "id": "c5",
+    "text": "a cha la xia"
+   },
+   {
+    "id": "c6",
+    "text": "a ch a l a z i a"
+   },
+   {
+    "id": "c7",
+    "text": "a cha la xi a"
+   }
+  ]
+ },
+ {
+  "id": "w024",
+  "word": "roddick",
+  "order": 24,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "rốt đích"
+   },
+   {
+    "id": "c1",
+    "text": "rod đíc"
+   },
+   {
+    "id": "c2",
+    "text": "rót đích"
+   },
+   {
+    "id": "c3",
+    "text": "ro đik"
+   },
+   {
+    "id": "c4",
+    "text": "rô đích"
+   },
+   {
+    "id": "c5",
+    "text": "ro di"
+   },
+   {
+    "id": "c6",
+    "text": "ro đích"
+   }
+  ]
+ },
+ {
+  "id": "w025",
+  "word": "blyth",
+  "order": 25,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "blai thờ"
+   },
+   {
+    "id": "c1",
+    "text": "bli thê"
+   },
+   {
+    "id": "c2",
+    "text": "blai th"
+   },
+   {
+    "id": "c3",
+    "text": "blít"
+   },
+   {
+    "id": "c4",
+    "text": "bai th"
+   },
+   {
+    "id": "c5",
+    "text": "lít"
+   }
+  ]
+ },
+ {
+  "id": "w026",
+  "word": "catherine",
+  "order": 26,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "ca thơ rin"
+   },
+   {
+    "id": "c1",
+    "text": "ca thê rin"
+   },
+   {
+    "id": "c2",
+    "text": "ka tê in"
+   },
+   {
+    "id": "c3",
+    "text": "ca thê rên"
+   },
+   {
+    "id": "c4",
+    "text": "ca thê rìn"
+   },
+   {
+    "id": "c5",
+    "text": "cát thê rin"
+   },
+   {
+    "id": "c6",
+    "text": "cát he rai"
+   }
+  ]
+ },
+ {
+  "id": "w027",
+  "word": "headnlines",
+  "order": 27,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "hê đai n lài"
+   },
+   {
+    "id": "c1",
+    "text": "hê đan lây"
+   },
+   {
+    "id": "c2",
+    "text": "hét lain"
+   },
+   {
+    "id": "c3",
+    "text": "hi nli nẹt"
+   },
+   {
+    "id": "c4",
+    "text": "hê đan lìn"
+   },
+   {
+    "id": "c5",
+    "text": "hê đai n lài n"
+   },
+   {
+    "id": "c6",
+    "text": "hê đan lai"
+   },
+   {
+    "id": "c7",
+    "text": "hi ên linês"
+   }
+  ]
+ },
+ {
+  "id": "w028",
+  "word": "zongyi",
+  "order": 28,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "zong yì"
+   },
+   {
+    "id": "c1",
+    "text": "tông yi"
+   },
+   {
+    "id": "c2",
+    "text": "don gi"
+   },
+   {
+    "id": "c3",
+    "text": "zông y i"
+   },
+   {
+    "id": "c4",
+    "text": "tổng nghệ"
+   },
+   {
+    "id": "c5",
+    "text": "zong y"
+   },
+   {
+    "id": "c6",
+    "text": "zong yi"
+   },
+   {
+    "id": "c7",
+    "text": "zông y"
+   }
+  ]
+ },
+ {
+  "id": "w029",
+  "word": "calvert",
+  "order": 29,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "cáo vớt"
+   },
+   {
+    "id": "c1",
+    "text": "ca lê furt"
+   },
+   {
+    "id": "c2",
+    "text": "cáo vệt"
+   },
+   {
+    "id": "c3",
+    "text": "ca vớt"
+   },
+   {
+    "id": "c4",
+    "text": "ca ve"
+   },
+   {
+    "id": "c5",
+    "text": "cáo vẹt"
+   }
+  ]
+ },
+ {
+  "id": "w030",
+  "word": "matrooshi",
+  "order": 30,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "mát ru xi"
+   },
+   {
+    "id": "c1",
+    "text": "mát ro ô si"
+   },
+   {
+    "id": "c2",
+    "text": "ma tru xi"
+   },
+   {
+    "id": "c3",
+    "text": "ma tro ô si"
+   },
+   {
+    "id": "c4",
+    "text": "ma tro u shì"
+   },
+   {
+    "id": "c5",
+    "text": "ma trô xô xi"
+   },
+   {
+    "id": "c6",
+    "text": "ma tro u si"
+   }
+  ]
+ },
+ {
+  "id": "w031",
+  "word": "albopictus",
+  "order": 31,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "al bo pic tus"
+   },
+   {
+    "id": "c1",
+    "text": "al bo pích tus"
+   },
+   {
+    "id": "c2",
+    "text": "al bo pic tứ"
+   },
+   {
+    "id": "c3",
+    "text": "a bô pic tứ s"
+   },
+   {
+    "id": "c4",
+    "text": "a bo pi tợt"
+   },
+   {
+    "id": "c5",
+    "text": "an bô pích tút"
+   },
+   {
+    "id": "c6",
+    "text": "a l b o p i c t u s"
+   },
+   {
+    "id": "c7",
+    "text": "al bo pic tớt"
+   }
+  ]
+ },
+ {
+  "id": "w032",
+  "word": "zhidan",
+  "order": 32,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "trí đan"
+   },
+   {
+    "id": "c1",
+    "text": "zhi đan"
+   },
+   {
+    "id": "c2",
+    "text": "chi đan"
+   },
+   {
+    "id": "c3",
+    "text": "hi dan"
+   }
+  ]
+ },
+ {
+  "id": "w033",
+  "word": "soo",
+  "order": 33,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "xu"
+   },
+   {
+    "id": "c1",
+    "text": "sô"
+   },
+   {
+    "id": "c2",
+    "text": "sồ"
+   },
+   {
+    "id": "c3",
+    "text": "su"
+   }
+  ]
+ },
+ {
+  "id": "w034",
+  "word": "mykyta",
+  "order": 34,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "mi ki ta"
+   },
+   {
+    "id": "c1",
+    "text": "my ky ta"
+   },
+   {
+    "id": "c2",
+    "text": "mi ky ta"
+   },
+   {
+    "id": "c3",
+    "text": "mi ki tạ"
+   },
+   {
+    "id": "c4",
+    "text": "mi ki tả"
+   }
+  ]
+ },
+ {
+  "id": "w035",
+  "word": "smugglers",
+  "order": 35,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "smắc gơ lơs"
+   },
+   {
+    "id": "c1",
+    "text": "x mu glơ"
+   },
+   {
+    "id": "c2",
+    "text": "sm gê rơ"
+   },
+   {
+    "id": "c3",
+    "text": "mú gồ"
+   },
+   {
+    "id": "c4",
+    "text": "xờ măng gờ lơ"
+   },
+   {
+    "id": "c5",
+    "text": "sờ mờ gờ lờ"
+   }
+  ]
+ },
+ {
+  "id": "w036",
+  "word": "ifpri",
+  "order": 36,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "ai phờ ri"
+   },
+   {
+    "id": "c1",
+    "text": "i phri"
+   },
+   {
+    "id": "c2",
+    "text": "i phờ pri"
+   },
+   {
+    "id": "c3",
+    "text": "íp pri"
+   },
+   {
+    "id": "c4",
+    "text": "i ph pri"
+   },
+   {
+    "id": "c5",
+    "text": "íp phờ ri"
+   },
+   {
+    "id": "c6",
+    "text": "i fpi"
+   }
+  ]
+ },
+ {
+  "id": "w037",
+  "word": "eritrea",
+  "order": 37,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "e ri tri ê a"
+   },
+   {
+    "id": "c1",
+    "text": "ê ri t rê a"
+   },
+   {
+    "id": "c2",
+    "text": "ê ri tê ra"
+   },
+   {
+    "id": "c3",
+    "text": "ê ri tre a"
+   },
+   {
+    "id": "c4",
+    "text": "e rít ri"
+   },
+   {
+    "id": "c5",
+    "text": "ê ri trê a"
+   }
+  ]
+ },
+ {
+  "id": "w038",
+  "word": "legends",
+  "order": 38,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "lê dần z"
+   },
+   {
+    "id": "c1",
+    "text": "lề gendês"
+   },
+   {
+    "id": "c2",
+    "text": "lê ghen"
+   },
+   {
+    "id": "c3",
+    "text": "ồ gen"
+   },
+   {
+    "id": "c4",
+    "text": "lê dầnz"
+   },
+   {
+    "id": "c5",
+    "text": "lê giần"
+   }
+  ]
+ },
+ {
+  "id": "w039",
+  "word": "garmin",
+  "order": 39,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "ga mìn"
+   },
+   {
+    "id": "c1",
+    "text": "ga min"
+   },
+   {
+    "id": "c2",
+    "text": "ga r m n"
+   }
+  ]
+ },
+ {
+  "id": "w040",
+  "word": "kallo",
+  "order": 40,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "ka lô"
+   },
+   {
+    "id": "c1",
+    "text": "ca lô"
+   },
+   {
+    "id": "c2",
+    "text": "ka lo"
+   },
+   {
+    "id": "c3",
+    "text": "ca lo"
+   }
+  ]
+ },
+ {
+  "id": "w041",
+  "word": "kayak",
+  "order": 41,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "ca dát"
+   },
+   {
+    "id": "c1",
+    "text": "ka yak"
+   },
+   {
+    "id": "c2",
+    "text": "ca dắc"
+   },
+   {
+    "id": "c3",
+    "text": "ca yắc"
+   }
+  ]
+ },
+ {
+  "id": "w042",
+  "word": "yeoncheon",
+  "order": 42,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "diên cho uôn"
+   },
+   {
+    "id": "c1",
+    "text": "ye on chơn"
+   },
+   {
+    "id": "c2",
+    "text": "yên chen"
+   },
+   {
+    "id": "c3",
+    "text": "diên chơn"
+   },
+   {
+    "id": "c4",
+    "text": "đeon cheon"
+   },
+   {
+    "id": "c5",
+    "text": "yeon chôn"
+   },
+   {
+    "id": "c6",
+    "text": "yeon chơn"
+   }
+  ]
+ },
+ {
+  "id": "w043",
+  "word": "krista",
+  "order": 43,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "krista"
+   },
+   {
+    "id": "c1",
+    "text": "kri ta"
+   },
+   {
+    "id": "c2",
+    "text": "kris ta"
+   },
+   {
+    "id": "c3",
+    "text": "kri s ta"
+   },
+   {
+    "id": "c4",
+    "text": "crít ta"
+   },
+   {
+    "id": "c5",
+    "text": "ri ta"
+   }
+  ]
+ },
+ {
+  "id": "w044",
+  "word": "tripoli",
+  "order": 44,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "tri po li"
+   },
+   {
+    "id": "c1",
+    "text": "tri p ô li"
+   },
+   {
+    "id": "c2",
+    "text": "tri po ly"
+   },
+   {
+    "id": "c3",
+    "text": "tri pô li"
+   }
+  ]
+ },
+ {
+  "id": "w045",
+  "word": "nitric",
+  "order": 45,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "nít ri"
+   },
+   {
+    "id": "c1",
+    "text": "nai trích"
+   },
+   {
+    "id": "c2",
+    "text": "ni trích"
+   },
+   {
+    "id": "c3",
+    "text": "ni tri kíc"
+   }
+  ]
+ },
+ {
+  "id": "w046",
+  "word": "santham",
+  "order": 46,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "xan thăm"
+   },
+   {
+    "id": "c1",
+    "text": "xan tham"
+   },
+   {
+    "id": "c2",
+    "text": "san tham"
+   },
+   {
+    "id": "c3",
+    "text": "san than măm"
+   }
+  ]
+ },
+ {
+  "id": "w047",
+  "word": "bitstamp",
+  "order": 47,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "bít stam pê"
+   },
+   {
+    "id": "c1",
+    "text": "bit stamp"
+   },
+   {
+    "id": "c2",
+    "text": "bit stêm p"
+   },
+   {
+    "id": "c3",
+    "text": "bit tăm"
+   },
+   {
+    "id": "c4",
+    "text": "bít tam"
+   },
+   {
+    "id": "c5",
+    "text": "bít xtăm"
+   },
+   {
+    "id": "c6",
+    "text": "bit stêm"
+   }
+  ]
+ },
+ {
+  "id": "w048",
+  "word": "tenet",
+  "order": 48,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "tê nết"
+   },
+   {
+    "id": "c1",
+    "text": "tê nét"
+   },
+   {
+    "id": "c2",
+    "text": "ti en et"
+   },
+   {
+    "id": "c3",
+    "text": "te nét"
+   },
+   {
+    "id": "c4",
+    "text": "te nết"
+   }
+  ]
+ },
+ {
+  "id": "w049",
+  "word": "jssel",
+  "order": 49,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "x"
+   },
+   {
+    "id": "c1",
+    "text": "giê xen"
+   },
+   {
+    "id": "c2",
+    "text": "gi sồ"
+   },
+   {
+    "id": "c3",
+    "text": "xeo"
+   },
+   {
+    "id": "c4",
+    "text": "dê s sồ"
+   },
+   {
+    "id": "c5",
+    "text": "ai xen"
+   },
+   {
+    "id": "c6",
+    "text": "jê s sồ"
+   }
+  ]
+ },
+ {
+  "id": "w050",
+  "word": "bring",
+  "order": 50,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "bring"
+   },
+   {
+    "id": "c1",
+    "text": "rin"
+   },
+   {
+    "id": "c2",
+    "text": "bri ng"
+   },
+   {
+    "id": "c3",
+    "text": "brin"
+   },
+   {
+    "id": "c4",
+    "text": "brinh"
+   }
+  ]
+ },
+ {
+  "id": "w051",
+  "word": "perla",
+  "order": 51,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "pe la"
+   },
+   {
+    "id": "c1",
+    "text": "pe rla"
+   },
+   {
+    "id": "c2",
+    "text": "pơ la"
+   },
+   {
+    "id": "c3",
+    "text": "per la"
+   }
+  ]
+ },
+ {
+  "id": "w052",
+  "word": "oxalic",
+  "order": 52,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "ô xa líc"
+   },
+   {
+    "id": "c1",
+    "text": "ô xa lic"
+   },
+   {
+    "id": "c2",
+    "text": "ox ô líc"
+   },
+   {
+    "id": "c3",
+    "text": "ốc xa lích"
+   },
+   {
+    "id": "c4",
+    "text": "o xa li"
+   }
+  ]
+ },
+ {
+  "id": "w053",
+  "word": "heon",
+  "order": 53,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "hê ơn"
+   },
+   {
+    "id": "c1",
+    "text": "hên"
+   },
+   {
+    "id": "c2",
+    "text": "hi ơn"
+   },
+   {
+    "id": "c3",
+    "text": "hi on"
+   },
+   {
+    "id": "c4",
+    "text": "heon"
+   }
+  ]
+ },
+ {
+  "id": "w054",
+  "word": "health",
+  "order": 54,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "hẹt"
+   },
+   {
+    "id": "c1",
+    "text": "hi"
+   },
+   {
+    "id": "c2",
+    "text": "hếu"
+   },
+   {
+    "id": "c3",
+    "text": "hệ thơi"
+   },
+   {
+    "id": "c4",
+    "text": "hê alth"
+   }
+  ]
+ },
+ {
+  "id": "w055",
+  "word": "melania",
+  "order": 55,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "me la nia"
+   },
+   {
+    "id": "c1",
+    "text": "mê la ni a"
+   },
+   {
+    "id": "c2",
+    "text": "mê la ni á"
+   },
+   {
+    "id": "c3",
+    "text": "me la ni a"
+   }
+  ]
+ },
+ {
+  "id": "w056",
+  "word": "commonwealth",
+  "order": 56,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "com mần oen"
+   },
+   {
+    "id": "c1",
+    "text": "com môn uên thờ"
+   },
+   {
+    "id": "c2",
+    "text": "côm mơn wên"
+   },
+   {
+    "id": "c3",
+    "text": "côm mơn uê"
+   },
+   {
+    "id": "c4",
+    "text": "com mo nui"
+   },
+   {
+    "id": "c5",
+    "text": "côn minh thuým"
+   },
+   {
+    "id": "c6",
+    "text": "cô mơn wên"
+   }
+  ]
+ },
+ {
+  "id": "w057",
+  "word": "schuster",
+  "order": 57,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "xờ chút xtơ"
+   },
+   {
+    "id": "c1",
+    "text": "xu tơ"
+   },
+   {
+    "id": "c2",
+    "text": "cu tơ"
+   },
+   {
+    "id": "c3",
+    "text": "xu ch ster"
+   },
+   {
+    "id": "c4",
+    "text": "su xtơ"
+   },
+   {
+    "id": "c5",
+    "text": "shu tơ"
+   }
+  ]
+ },
+ {
+  "id": "w058",
+  "word": "sultan",
+  "order": 58,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "sul tân"
+   },
+   {
+    "id": "c1",
+    "text": "xun tần"
+   },
+   {
+    "id": "c2",
+    "text": "xu tan"
+   },
+   {
+    "id": "c3",
+    "text": "su tan"
+   },
+   {
+    "id": "c4",
+    "text": "sút lân"
+   }
+  ]
+ },
+ {
+  "id": "w059",
+  "word": "tart",
+  "order": 59,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "ta"
+   },
+   {
+    "id": "c1",
+    "text": "tát"
+   },
+   {
+    "id": "c2",
+    "text": "ta t"
+   },
+   {
+    "id": "c3",
+    "text": "tart"
+   }
+  ]
+ },
+ {
+  "id": "w060",
+  "word": "prison",
+  "order": 60,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "ri xon"
+   },
+   {
+    "id": "c1",
+    "text": "pri zần"
+   },
+   {
+    "id": "c2",
+    "text": "pri zơn"
+   },
+   {
+    "id": "c3",
+    "text": "phê sin"
+   }
+  ]
+ },
+ {
+  "id": "w061",
+  "word": "hyatt",
+  "order": 61,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "ha y át"
+   },
+   {
+    "id": "c1",
+    "text": "hi at"
+   },
+   {
+    "id": "c2",
+    "text": "hiát"
+   },
+   {
+    "id": "c3",
+    "text": "hi át"
+   },
+   {
+    "id": "c4",
+    "text": "hai ăt"
+   },
+   {
+    "id": "c5",
+    "text": "hai át"
+   }
+  ]
+ },
+ {
+  "id": "w062",
+  "word": "angelina",
+  "order": 62,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "an giê li na"
+   },
+   {
+    "id": "c1",
+    "text": "an jê lin a"
+   },
+   {
+    "id": "c2",
+    "text": "an ge li na"
+   }
+  ]
+ },
+ {
+  "id": "w063",
+  "word": "t-scan",
+  "order": 63,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "tít can"
+   },
+   {
+    "id": "c1",
+    "text": "tê xcăn"
+   },
+   {
+    "id": "c2",
+    "text": "t kan"
+   },
+   {
+    "id": "c3",
+    "text": "ti scan"
+   }
+  ]
+ },
+ {
+  "id": "w064",
+  "word": "kiwior",
+  "order": 64,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "kiuio"
+   },
+   {
+    "id": "c1",
+    "text": "ki wi or"
+   },
+   {
+    "id": "c2",
+    "text": "ki wi ôr"
+   },
+   {
+    "id": "c3",
+    "text": "ki ui ơ"
+   },
+   {
+    "id": "c4",
+    "text": "ki vi o"
+   },
+   {
+    "id": "c5",
+    "text": "ki ê uô"
+   }
+  ]
+ },
+ {
+  "id": "w065",
+  "word": "kidada",
+  "order": 65,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "ki đa đa"
+   },
+   {
+    "id": "c1",
+    "text": "ki da da"
+   }
+  ]
+ },
+ {
+  "id": "w066",
+  "word": "methan",
+  "order": 66,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "mét han"
+   },
+   {
+    "id": "c1",
+    "text": "met han"
+   },
+   {
+    "id": "c2",
+    "text": "mê than"
+   },
+   {
+    "id": "c3",
+    "text": "me than"
+   }
+  ]
+ },
+ {
+  "id": "w067",
+  "word": "lucia",
+  "order": 67,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "lu kia"
+   },
+   {
+    "id": "c1",
+    "text": "lú si a"
+   },
+   {
+    "id": "c2",
+    "text": "lu xi a"
+   },
+   {
+    "id": "c3",
+    "text": "lu ci a"
+   },
+   {
+    "id": "c4",
+    "text": "li ucia"
+   },
+   {
+    "id": "c5",
+    "text": "lu si a"
+   }
+  ]
+ },
+ {
+  "id": "w068",
+  "word": "bru",
+  "order": 68,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "bru"
+   },
+   {
+    "id": "c1",
+    "text": "ru"
+   },
+   {
+    "id": "c2",
+    "text": "brú"
+   },
+   {
+    "id": "c3",
+    "text": "bờ ru"
+   }
+  ]
+ },
+ {
+  "id": "w069",
+  "word": "leningrad",
+  "order": 69,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "le nin grad"
+   },
+   {
+    "id": "c1",
+    "text": "lê nin grát"
+   },
+   {
+    "id": "c2",
+    "text": "ồ nin rát"
+   },
+   {
+    "id": "c3",
+    "text": "lê nin grà đan"
+   },
+   {
+    "id": "c4",
+    "text": "lê ninh grát"
+   },
+   {
+    "id": "c5",
+    "text": "lê ninh grad"
+   }
+  ]
+ },
+ {
+  "id": "w070",
+  "word": "puyol",
+  "order": 70,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "pu y ôn"
+   },
+   {
+    "id": "c1",
+    "text": "pui ól"
+   },
+   {
+    "id": "c2",
+    "text": "pu dôn"
+   },
+   {
+    "id": "c3",
+    "text": "pu yôn"
+   },
+   {
+    "id": "c4",
+    "text": "pu y ô l"
+   }
+  ]
+ },
+ {
+  "id": "w071",
+  "word": "pelecanoides",
+  "order": 71,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "pe le ca noi des"
+   },
+   {
+    "id": "c1",
+    "text": "pe ồ ca noi dẹt"
+   },
+   {
+    "id": "c2",
+    "text": "pe le ca no i đê"
+   },
+   {
+    "id": "c3",
+    "text": "pê lê ca nôi đê"
+   },
+   {
+    "id": "c4",
+    "text": "pe le ca nô i đê"
+   },
+   {
+    "id": "c5",
+    "text": "pê le ca nô i đê"
+   }
+  ]
+ },
+ {
+  "id": "w072",
+  "word": "narco",
+  "order": 72,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "na rco"
+   },
+   {
+    "id": "c1",
+    "text": "na ro"
+   },
+   {
+    "id": "c2",
+    "text": "na co"
+   },
+   {
+    "id": "c3",
+    "text": "nác cô"
+   },
+   {
+    "id": "c4",
+    "text": "na cô"
+   }
+  ]
+ },
+ {
+  "id": "w073",
+  "word": "chain",
+  "order": 73,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "chain"
+   },
+   {
+    "id": "c1",
+    "text": "chay"
+   },
+   {
+    "id": "c2",
+    "text": "chên"
+   },
+   {
+    "id": "c3",
+    "text": "che in"
+   }
+  ]
+ },
+ {
+  "id": "w074",
+  "word": "mackenzie",
+  "order": 74,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "ma ken dai"
+   },
+   {
+    "id": "c1",
+    "text": "mắc ni kê"
+   },
+   {
+    "id": "c2",
+    "text": "mắc ken zi"
+   },
+   {
+    "id": "c3",
+    "text": "mác ken zi"
+   }
+  ]
+ },
+ {
+  "id": "w075",
+  "word": "neuron",
+  "order": 75,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "nơ ron"
+   },
+   {
+    "id": "c1",
+    "text": "nơ rôn"
+   },
+   {
+    "id": "c2",
+    "text": "niu rôn"
+   },
+   {
+    "id": "c3",
+    "text": "niu ron"
+   },
+   {
+    "id": "c4",
+    "text": "ni uôn"
+   },
+   {
+    "id": "c5",
+    "text": "nêu rôn"
+   }
+  ]
+ },
+ {
+  "id": "w076",
+  "word": "yandex",
+  "order": 76,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "đan de"
+   },
+   {
+    "id": "c1",
+    "text": "yan đếch"
+   },
+   {
+    "id": "c2",
+    "text": "yan đéc"
+   },
+   {
+    "id": "c3",
+    "text": "yan dăng"
+   }
+  ]
+ },
+ {
+  "id": "w077",
+  "word": "tuxedo",
+  "order": 77,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "túc xê đ ô"
+   },
+   {
+    "id": "c1",
+    "text": "túc xi đô"
+   },
+   {
+    "id": "c2",
+    "text": "tu xe do"
+   },
+   {
+    "id": "c3",
+    "text": "tắc xi đô"
+   },
+   {
+    "id": "c4",
+    "text": "túc sê đô"
+   },
+   {
+    "id": "c5",
+    "text": "túc xê đô"
+   }
+  ]
+ },
+ {
+  "id": "w078",
+  "word": "ream",
+  "order": 78,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "rim"
+   },
+   {
+    "id": "c1",
+    "text": "ream"
+   },
+   {
+    "id": "c2",
+    "text": "ri em"
+   },
+   {
+    "id": "c3",
+    "text": "ri âm"
+   },
+   {
+    "id": "c4",
+    "text": "ri êm"
+   }
+  ]
+ },
+ {
+  "id": "w079",
+  "word": "lemoore",
+  "order": 79,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "lê mô rê"
+   },
+   {
+    "id": "c1",
+    "text": "le mo o"
+   },
+   {
+    "id": "c2",
+    "text": "lê mu ơ"
+   },
+   {
+    "id": "c3",
+    "text": "lê mư ô"
+   },
+   {
+    "id": "c4",
+    "text": "lê mô"
+   },
+   {
+    "id": "c5",
+    "text": "lê mù"
+   },
+   {
+    "id": "c6",
+    "text": "ồ mu"
+   }
+  ]
+ },
+ {
+  "id": "w080",
+  "word": "offender",
+  "order": 80,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "ô ph fen đờ"
+   },
+   {
+    "id": "c1",
+    "text": "ốp phên đơ"
+   },
+   {
+    "id": "c2",
+    "text": "ô phen đơ"
+   },
+   {
+    "id": "c3",
+    "text": "óp phen dơ"
+   },
+   {
+    "id": "c4",
+    "text": "ô fen đờ"
+   },
+   {
+    "id": "c5",
+    "text": "ô fender"
+   }
+  ]
+ },
+ {
+  "id": "w081",
+  "word": "germanium",
+  "order": 81,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "ge ma niâm"
+   },
+   {
+    "id": "c1",
+    "text": "giơ ma ni um"
+   },
+   {
+    "id": "c2",
+    "text": "giê ma ni um"
+   },
+   {
+    "id": "c3",
+    "text": "ghi ma ni êm"
+   },
+   {
+    "id": "c4",
+    "text": "gơ ma ni um"
+   }
+  ]
+ },
+ {
+  "id": "w082",
+  "word": "lovehay",
+  "order": 82,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "lo ve hai"
+   },
+   {
+    "id": "c1",
+    "text": "lớp he"
+   },
+   {
+    "id": "c2",
+    "text": "lớp hê"
+   },
+   {
+    "id": "c3",
+    "text": "yêu hay"
+   },
+   {
+    "id": "c4",
+    "text": "lô vê hay"
+   },
+   {
+    "id": "c5",
+    "text": "lô v hê"
+   },
+   {
+    "id": "c6",
+    "text": "lắp hay"
+   }
+  ]
+ },
+ {
+  "id": "w083",
+  "word": "pinwheel",
+  "order": 83,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "pin uyn"
+   },
+   {
+    "id": "c1",
+    "text": "pin wi l"
+   },
+   {
+    "id": "c2",
+    "text": "pin cuin"
+   },
+   {
+    "id": "c3",
+    "text": "pin huê"
+   },
+   {
+    "id": "c4",
+    "text": "pi nhái"
+   },
+   {
+    "id": "c5",
+    "text": "pin wi ên"
+   },
+   {
+    "id": "c6",
+    "text": "pin hin"
+   }
+  ]
+ },
+ {
+  "id": "w084",
+  "word": "monster",
+  "order": 84,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "mô nê stê"
+   },
+   {
+    "id": "c1",
+    "text": "môn xtơ"
+   },
+   {
+    "id": "c2",
+    "text": "mon tơ"
+   },
+   {
+    "id": "c3",
+    "text": "môn tơ"
+   }
+  ]
+ },
+ {
+  "id": "w085",
+  "word": "nirvana",
+  "order": 85,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "ni văng na"
+   },
+   {
+    "id": "c1",
+    "text": "ni va na"
+   },
+   {
+    "id": "c2",
+    "text": "ni rav na"
+   }
+  ]
+ },
+ {
+  "id": "w086",
+  "word": "noronha",
+  "order": 86,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "nô rôn ha"
+   },
+   {
+    "id": "c1",
+    "text": "no ro na"
+   },
+   {
+    "id": "c2",
+    "text": "nô rôn nha"
+   },
+   {
+    "id": "c3",
+    "text": "no rôn nha"
+   },
+   {
+    "id": "c4",
+    "text": "no ron ha"
+   }
+  ]
+ },
+ {
+  "id": "w087",
+  "word": "anglicarum",
+  "order": 87,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "ang li ka um"
+   },
+   {
+    "id": "c1",
+    "text": "an gli ca rum"
+   },
+   {
+    "id": "c2",
+    "text": "ang li ca rum"
+   },
+   {
+    "id": "c3",
+    "text": "an li ca râm"
+   }
+  ]
+ },
+ {
+  "id": "w088",
+  "word": "primary",
+  "order": 88,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "pờ rai ma ri"
+   },
+   {
+    "id": "c1",
+    "text": "pra i m e ry"
+   },
+   {
+    "id": "c2",
+    "text": "ri ma ri"
+   },
+   {
+    "id": "c3",
+    "text": "pra i ma ry"
+   },
+   {
+    "id": "c4",
+    "text": "prai ma ri"
+   },
+   {
+    "id": "c5",
+    "text": "prí uyên"
+   },
+   {
+    "id": "c6",
+    "text": "pra i mơ ry"
+   }
+  ]
+ },
+ {
+  "id": "w089",
+  "word": "fecal",
+  "order": 89,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "phi ca"
+   },
+   {
+    "id": "c1",
+    "text": "phê cal"
+   },
+   {
+    "id": "c2",
+    "text": "phe can"
+   },
+   {
+    "id": "c3",
+    "text": "fê kal"
+   },
+   {
+    "id": "c4",
+    "text": "phê cần"
+   },
+   {
+    "id": "c5",
+    "text": "phi cần"
+   },
+   {
+    "id": "c6",
+    "text": "phê ca"
+   }
+  ]
+ },
+ {
+  "id": "w090",
+  "word": "vanderbilt",
+  "order": 90,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "van de bi"
+   },
+   {
+    "id": "c1",
+    "text": "van der bilt"
+   },
+   {
+    "id": "c2",
+    "text": "van đơ bít"
+   },
+   {
+    "id": "c3",
+    "text": "van đơ bin"
+   }
+  ]
+ },
+ {
+  "id": "w091",
+  "word": "ciaz",
+  "order": 91,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "kia"
+   },
+   {
+    "id": "c1",
+    "text": "si a z"
+   },
+   {
+    "id": "c2",
+    "text": "chi az"
+   },
+   {
+    "id": "c3",
+    "text": "xi át"
+   },
+   {
+    "id": "c4",
+    "text": "tía zê"
+   }
+  ]
+ },
+ {
+  "id": "w092",
+  "word": "zuckerbergkhi",
+  "order": 92,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "zu cker béc khi"
+   },
+   {
+    "id": "c1",
+    "text": "zắc cơ bớc khi"
+   },
+   {
+    "id": "c2",
+    "text": "zúc kơ bơ g khi"
+   },
+   {
+    "id": "c3",
+    "text": "du ke be gkhi"
+   },
+   {
+    "id": "c4",
+    "text": "tsú ker bê khi"
+   },
+   {
+    "id": "c5",
+    "text": "zu cờ bơ g khì"
+   }
+  ]
+ },
+ {
+  "id": "w093",
+  "word": "bakhmut",
+  "order": 93,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "ba khmuét"
+   },
+   {
+    "id": "c1",
+    "text": "ba khmút"
+   },
+   {
+    "id": "c2",
+    "text": "bắc mút"
+   },
+   {
+    "id": "c3",
+    "text": "ba chmút"
+   },
+   {
+    "id": "c4",
+    "text": "ba kh mút"
+   }
+  ]
+ },
+ {
+  "id": "w094",
+  "word": "sunghai",
+  "order": 94,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "sơn gải"
+   },
+   {
+    "id": "c1",
+    "text": "xân ghai"
+   },
+   {
+    "id": "c2",
+    "text": "sơn hai"
+   },
+   {
+    "id": "c3",
+    "text": "xung hai"
+   },
+   {
+    "id": "c4",
+    "text": "sân g hai"
+   }
+  ]
+ },
+ {
+  "id": "w095",
+  "word": "ocotillol",
+  "order": 95,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "o cô ti lố lô"
+   },
+   {
+    "id": "c1",
+    "text": "ô cô ti lôn"
+   },
+   {
+    "id": "c2",
+    "text": "ô co ti lô"
+   },
+   {
+    "id": "c3",
+    "text": "ô cô ti lô"
+   },
+   {
+    "id": "c4",
+    "text": "o co ti lôn"
+   }
+  ]
+ },
+ {
+  "id": "w096",
+  "word": "silk",
+  "order": 96,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "siếp"
+   },
+   {
+    "id": "c1",
+    "text": "sil k"
+   },
+   {
+    "id": "c2",
+    "text": "xi"
+   },
+   {
+    "id": "c3",
+    "text": "xích"
+   }
+  ]
+ },
+ {
+  "id": "w097",
+  "word": "tatuy",
+  "order": 97,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "ta tuy"
+   },
+   {
+    "id": "c1",
+    "text": "tạ tu y"
+   },
+   {
+    "id": "c2",
+    "text": "ta tui"
+   },
+   {
+    "id": "c3",
+    "text": "ta tu y"
+   }
+  ]
+ },
+ {
+  "id": "w098",
+  "word": "rutkowska",
+  "order": 98,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "rút cốp xca"
+   },
+   {
+    "id": "c1",
+    "text": "rút kho va ka"
+   },
+   {
+    "id": "c2",
+    "text": "rút cu ca"
+   },
+   {
+    "id": "c3",
+    "text": "rút kô v s ka"
+   },
+   {
+    "id": "c4",
+    "text": "rút kô vka"
+   }
+  ]
+ },
+ {
+  "id": "w099",
+  "word": "magellan",
+  "order": 99,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "ma ge lan"
+   },
+   {
+    "id": "c1",
+    "text": "ma gien lần"
+   },
+   {
+    "id": "c2",
+    "text": "ma ga lanh"
+   }
+  ]
+ },
+ {
+  "id": "w100",
+  "word": "minji",
+  "order": 100,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "min gi"
+   },
+   {
+    "id": "c1",
+    "text": "min di"
+   },
+   {
+    "id": "c2",
+    "text": "min ji"
+   },
+   {
+    "id": "c3",
+    "text": "mi nh ji"
+   }
+  ]
+ },
+ {
+  "id": "w101",
+  "word": "compiste",
+  "order": 101,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "com pi ste"
+   },
+   {
+    "id": "c1",
+    "text": "com pi te"
+   },
+   {
+    "id": "c2",
+    "text": "com pi stê"
+   },
+   {
+    "id": "c3",
+    "text": "côm pi tê"
+   },
+   {
+    "id": "c4",
+    "text": "com pô xít"
+   },
+   {
+    "id": "c5",
+    "text": "côm pi ste"
+   },
+   {
+    "id": "c6",
+    "text": "com pít"
+   },
+   {
+    "id": "c7",
+    "text": "com pis te"
+   }
+  ]
+ },
+ {
+  "id": "w102",
+  "word": "morita",
+  "order": 102,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "mô rít ta"
+   },
+   {
+    "id": "c1",
+    "text": "mo ri ta"
+   },
+   {
+    "id": "c2",
+    "text": "mô ri ta"
+   }
+  ]
+ },
+ {
+  "id": "w103",
+  "word": "feuille",
+  "order": 103,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "phui yê"
+   },
+   {
+    "id": "c1",
+    "text": "phê uy"
+   },
+   {
+    "id": "c2",
+    "text": "fơ le"
+   },
+   {
+    "id": "c3",
+    "text": "phêu i lê"
+   },
+   {
+    "id": "c4",
+    "text": "pheui lồ"
+   },
+   {
+    "id": "c5",
+    "text": "phoi"
+   },
+   {
+    "id": "c6",
+    "text": "phê u"
+   },
+   {
+    "id": "c7",
+    "text": "phê u y"
+   },
+   {
+    "id": "c8",
+    "text": "fơ i"
+   }
+  ]
+ },
+ {
+  "id": "w104",
+  "word": "cheniere",
+  "order": 104,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "chê ni ờ"
+   },
+   {
+    "id": "c1",
+    "text": "che ni ờ"
+   },
+   {
+    "id": "c2",
+    "text": "che ni er"
+   },
+   {
+    "id": "c3",
+    "text": "chê ni ê"
+   },
+   {
+    "id": "c4",
+    "text": "chê ni ơ"
+   },
+   {
+    "id": "c5",
+    "text": "che nai re"
+   }
+  ]
+ },
+ {
+  "id": "w105",
+  "word": "sadkin",
+  "order": 105,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "sá dê kin"
+   },
+   {
+    "id": "c1",
+    "text": "sát kìn"
+   },
+   {
+    "id": "c2",
+    "text": "sát kin"
+   },
+   {
+    "id": "c3",
+    "text": "xa kin"
+   },
+   {
+    "id": "c4",
+    "text": "sát kên"
+   },
+   {
+    "id": "c5",
+    "text": "xát kin"
+   }
+  ]
+ },
+ {
+  "id": "w106",
+  "word": "studded",
+  "order": 106,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "s tát đít"
+   },
+   {
+    "id": "c1",
+    "text": "s tát đê đ"
+   },
+   {
+    "id": "c2",
+    "text": "stát đêd"
+   },
+   {
+    "id": "c3",
+    "text": "xtu đét"
+   },
+   {
+    "id": "c4",
+    "text": "s tát đê"
+   },
+   {
+    "id": "c5",
+    "text": "stát địt"
+   },
+   {
+    "id": "c6",
+    "text": "xtắt địt"
+   },
+   {
+    "id": "c7",
+    "text": "tu dét"
+   },
+   {
+    "id": "c8",
+    "text": "sút đụt"
+   }
+  ]
+ },
+ {
+  "id": "w107",
+  "word": "melamine",
+  "order": 107,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "me la min"
+   },
+   {
+    "id": "c1",
+    "text": "mê la min"
+   },
+   {
+    "id": "c2",
+    "text": "me la mai"
+   },
+   {
+    "id": "c3",
+    "text": "mê la mìn"
+   },
+   {
+    "id": "c4",
+    "text": "mê la mi ne"
+   }
+  ]
+ },
+ {
+  "id": "w108",
+  "word": "sironi",
+  "order": 108,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "xi rô ni"
+   },
+   {
+    "id": "c1",
+    "text": "si rô ni"
+   },
+   {
+    "id": "c2",
+    "text": "xi ro ni"
+   },
+   {
+    "id": "c3",
+    "text": "si rôn ni"
+   },
+   {
+    "id": "c4",
+    "text": "si ro ni"
+   }
+  ]
+ },
+ {
+  "id": "w109",
+  "word": "mingo",
+  "order": 109,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "mình go"
+   },
+   {
+    "id": "c1",
+    "text": "min go"
+   },
+   {
+    "id": "c2",
+    "text": "mình gô"
+   },
+   {
+    "id": "c3",
+    "text": "ming gô"
+   },
+   {
+    "id": "c4",
+    "text": "min gô"
+   }
+  ]
+ },
+ {
+  "id": "w110",
+  "word": "tarascan",
+  "order": 110,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "ta ra scan"
+   },
+   {
+    "id": "c1",
+    "text": "ta ra can"
+   },
+   {
+    "id": "c2",
+    "text": "ta rát can"
+   },
+   {
+    "id": "c3",
+    "text": "ta ra sờ kân"
+   },
+   {
+    "id": "c4",
+    "text": "ta ra sờ can"
+   }
+  ]
+ },
+ {
+  "id": "w111",
+  "word": "parker",
+  "order": 111,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "pác cơ"
+   },
+   {
+    "id": "c1",
+    "text": "pa cơ"
+   },
+   {
+    "id": "c2",
+    "text": "pa kơ"
+   },
+   {
+    "id": "c3",
+    "text": "pa kờ"
+   },
+   {
+    "id": "c4",
+    "text": "pa kè"
+   },
+   {
+    "id": "c5",
+    "text": "pác kơ"
+   },
+   {
+    "id": "c6",
+    "text": "park er"
+   }
+  ]
+ },
+ {
+  "id": "w112",
+  "word": "garlinghouse",
+  "order": 112,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "ga rling hou se"
+   },
+   {
+    "id": "c1",
+    "text": "ga lin ghu xe"
+   },
+   {
+    "id": "c2",
+    "text": "gar ling hô"
+   },
+   {
+    "id": "c3",
+    "text": "gar ling hâu"
+   },
+   {
+    "id": "c4",
+    "text": "gá rlin hâu"
+   },
+   {
+    "id": "c5",
+    "text": "ga lin hau"
+   },
+   {
+    "id": "c6",
+    "text": "ga ling hao"
+   },
+   {
+    "id": "c7",
+    "text": "ga lin hau s"
+   }
+  ]
+ },
+ {
+  "id": "w113",
+  "word": "photography",
+  "order": 113,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "phô tô gra phi"
+   },
+   {
+    "id": "c1",
+    "text": "phô tô gờ ra phi"
+   },
+   {
+    "id": "c2",
+    "text": "fô to grà fi"
+   },
+   {
+    "id": "c3",
+    "text": "pho tó ráp hi"
+   }
+  ]
+ },
+ {
+  "id": "w114",
+  "word": "levine",
+  "order": 114,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "lê vân"
+   },
+   {
+    "id": "c1",
+    "text": "lê vin"
+   },
+   {
+    "id": "c2",
+    "text": "lê vìn"
+   },
+   {
+    "id": "c3",
+    "text": "ồ vai"
+   },
+   {
+    "id": "c4",
+    "text": "li vi ne"
+   }
+  ]
+ },
+ {
+  "id": "w115",
+  "word": "sigmund",
+  "order": 115,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "xí mân"
+   },
+   {
+    "id": "c1",
+    "text": "si gờ mân"
+   },
+   {
+    "id": "c2",
+    "text": "si gụm"
+   },
+   {
+    "id": "c3",
+    "text": "si gmun"
+   },
+   {
+    "id": "c4",
+    "text": "si gờ mùn"
+   },
+   {
+    "id": "c5",
+    "text": "xích mần"
+   },
+   {
+    "id": "c6",
+    "text": "sig mần"
+   }
+  ]
+ },
+ {
+  "id": "w116",
+  "word": "huu",
+  "order": 116,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "hú"
+   },
+   {
+    "id": "c1",
+    "text": "hữu"
+   },
+   {
+    "id": "c2",
+    "text": "hư"
+   },
+   {
+    "id": "c3",
+    "text": "hù"
+   },
+   {
+    "id": "c4",
+    "text": "hu"
+   },
+   {
+    "id": "c5",
+    "text": "hưu"
+   },
+   {
+    "id": "c6",
+    "text": "huu"
+   }
+  ]
+ },
+ {
+  "id": "w117",
+  "word": "parthasarathy",
+  "order": 117,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "pa thâ sa ra thi y"
+   },
+   {
+    "id": "c1",
+    "text": "pa tha xa rát hi"
+   },
+   {
+    "id": "c2",
+    "text": "pa tha sa ra tì"
+   },
+   {
+    "id": "c3",
+    "text": "pa tha sa ra thí"
+   },
+   {
+    "id": "c4",
+    "text": "pa tha sa ra thỳ"
+   },
+   {
+    "id": "c5",
+    "text": "pác tha xa ra ti"
+   },
+   {
+    "id": "c6",
+    "text": "pa tha sa ra thi"
+   },
+   {
+    "id": "c7",
+    "text": "pa tha xa ra thi"
+   }
+  ]
+ },
+ {
+  "id": "w118",
+  "word": "xii",
+  "order": 118,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "tây"
+   },
+   {
+    "id": "c1",
+    "text": "xi"
+   },
+   {
+    "id": "c2",
+    "text": "xii"
+   },
+   {
+    "id": "c3",
+    "text": "xì"
+   },
+   {
+    "id": "c4",
+    "text": "tá nhị"
+   }
+  ]
+ },
+ {
+  "id": "w119",
+  "word": "scripps",
+  "order": 119,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "xờ críp"
+   },
+   {
+    "id": "c1",
+    "text": "scrip"
+   },
+   {
+    "id": "c2",
+    "text": "s k ríp"
+   },
+   {
+    "id": "c3",
+    "text": "scripp"
+   },
+   {
+    "id": "c4",
+    "text": "ríp"
+   },
+   {
+    "id": "c5",
+    "text": "scrips"
+   },
+   {
+    "id": "c6",
+    "text": "sri ps"
+   }
+  ]
+ },
+ {
+  "id": "w120",
+  "word": "need",
+  "order": 120,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "nít"
+   },
+   {
+    "id": "c1",
+    "text": "neét"
+   },
+   {
+    "id": "c2",
+    "text": "ni đ"
+   },
+   {
+    "id": "c3",
+    "text": "ne đay"
+   },
+   {
+    "id": "c4",
+    "text": "ni d"
+   }
+  ]
+ },
+ {
+  "id": "w121",
+  "word": "stream",
+  "order": 121,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "s t rì m"
+   },
+   {
+    "id": "c1",
+    "text": "s t rêm"
+   },
+   {
+    "id": "c2",
+    "text": "stri em"
+   },
+   {
+    "id": "c3",
+    "text": "tream"
+   },
+   {
+    "id": "c4",
+    "text": "strim"
+   },
+   {
+    "id": "c5",
+    "text": "xtrim"
+   },
+   {
+    "id": "c6",
+    "text": "stri m"
+   }
+  ]
+ },
+ {
+  "id": "w122",
+  "word": "mons",
+  "order": 122,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "môn"
+   },
+   {
+    "id": "c1",
+    "text": "mon sê"
+   },
+   {
+    "id": "c2",
+    "text": "môn s"
+   },
+   {
+    "id": "c3",
+    "text": "món"
+   },
+   {
+    "id": "c4",
+    "text": "mon"
+   }
+  ]
+ },
+ {
+  "id": "w123",
+  "word": "maire",
+  "order": 123,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "mê rờ"
+   },
+   {
+    "id": "c1",
+    "text": "me rơ"
+   },
+   {
+    "id": "c2",
+    "text": "me"
+   },
+   {
+    "id": "c3",
+    "text": "mê ờ"
+   },
+   {
+    "id": "c4",
+    "text": "maai"
+   },
+   {
+    "id": "c5",
+    "text": "mê r"
+   },
+   {
+    "id": "c6",
+    "text": "mai ê"
+   }
+  ]
+ },
+ {
+  "id": "w124",
+  "word": "elko",
+  "order": 124,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "el ko"
+   },
+   {
+    "id": "c1",
+    "text": "ê l co"
+   },
+   {
+    "id": "c2",
+    "text": "ên cô"
+   },
+   {
+    "id": "c3",
+    "text": "ê l cô"
+   },
+   {
+    "id": "c4",
+    "text": "e co"
+   },
+   {
+    "id": "c5",
+    "text": "el co"
+   },
+   {
+    "id": "c6",
+    "text": "ê l kô"
+   }
+  ]
+ },
+ {
+  "id": "w125",
+  "word": "hicham",
+  "order": 125,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "hi châm"
+   },
+   {
+    "id": "c1",
+    "text": "hi cham"
+   },
+   {
+    "id": "c2",
+    "text": "hi chàm"
+   }
+  ]
+ },
+ {
+  "id": "w126",
+  "word": "golden",
+  "order": 126,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "gô l đen"
+   },
+   {
+    "id": "c1",
+    "text": "gô đen"
+   },
+   {
+    "id": "c2",
+    "text": "gôn đần"
+   },
+   {
+    "id": "c3",
+    "text": "gô l đèn"
+   },
+   {
+    "id": "c4",
+    "text": "gô đần"
+   },
+   {
+    "id": "c5",
+    "text": "gỗ đinh"
+   },
+   {
+    "id": "c6",
+    "text": "go den"
+   }
+  ]
+ },
+ {
+  "id": "w127",
+  "word": "aissata",
+  "order": 127,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "ai sà ta"
+   },
+   {
+    "id": "c1",
+    "text": "a i s s a t a"
+   },
+   {
+    "id": "c2",
+    "text": "ai xa ta"
+   },
+   {
+    "id": "c3",
+    "text": "ai sa ta"
+   },
+   {
+    "id": "c4",
+    "text": "ai sà tả"
+   }
+  ]
+ },
+ {
+  "id": "w128",
+  "word": "aristolochic",
+  "order": 128,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "a rít tô lô chích"
+   },
+   {
+    "id": "c1",
+    "text": "a ri to lo chi"
+   },
+   {
+    "id": "c2",
+    "text": "a ri s tô lô chic"
+   },
+   {
+    "id": "c3",
+    "text": "a ri s t ô lô chic"
+   },
+   {
+    "id": "c4",
+    "text": "a ri sto lo chic"
+   },
+   {
+    "id": "c5",
+    "text": "a ri sô lô kích"
+   },
+   {
+    "id": "c6",
+    "text": "a ri s t ô lô chích"
+   },
+   {
+    "id": "c7",
+    "text": "a ri s t ô lô kích"
+   }
+  ]
+ },
+ {
+  "id": "w129",
+  "word": "cosmo",
+  "order": 129,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "cô s mồ"
+   },
+   {
+    "id": "c1",
+    "text": "cốt mô"
+   },
+   {
+    "id": "c2",
+    "text": "co mo"
+   },
+   {
+    "id": "c3",
+    "text": "cô z mô"
+   },
+   {
+    "id": "c4",
+    "text": "cô s mo"
+   },
+   {
+    "id": "c5",
+    "text": "cốt mo"
+   },
+   {
+    "id": "c6",
+    "text": "ko sô mô"
+   }
+  ]
+ },
+ {
+  "id": "w130",
+  "word": "shan",
+  "order": 130,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "xan"
+   },
+   {
+    "id": "c1",
+    "text": "sơn"
+   },
+   {
+    "id": "c2",
+    "text": "shan"
+   },
+   {
+    "id": "c3",
+    "text": "sang"
+   },
+   {
+    "id": "c4",
+    "text": "sân"
+   }
+  ]
+ },
+ {
+  "id": "w131",
+  "word": "ras",
+  "order": 131,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "rẹt"
+   },
+   {
+    "id": "c1",
+    "text": "rát s"
+   },
+   {
+    "id": "c2",
+    "text": "ra"
+   },
+   {
+    "id": "c3",
+    "text": "rát"
+   },
+   {
+    "id": "c4",
+    "text": "ras"
+   },
+   {
+    "id": "c5",
+    "text": "ra s"
+   }
+  ]
+ },
+ {
+  "id": "w132",
+  "word": "meloni",
+  "order": 132,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "me lô ni"
+   },
+   {
+    "id": "c1",
+    "text": "me lo ni"
+   },
+   {
+    "id": "c2",
+    "text": "mê lo ni"
+   },
+   {
+    "id": "c3",
+    "text": "mê lô ni"
+   }
+  ]
+ },
+ {
+  "id": "w133",
+  "word": "yavuz",
+  "order": 133,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "ya vút"
+   },
+   {
+    "id": "c1",
+    "text": "ya vù"
+   },
+   {
+    "id": "c2",
+    "text": "ya vuz"
+   },
+   {
+    "id": "c3",
+    "text": "ya vù u"
+   },
+   {
+    "id": "c4",
+    "text": "đa vu"
+   }
+  ]
+ },
+ {
+  "id": "w134",
+  "word": "ochakov",
+  "order": 134,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "ô cha kốp"
+   },
+   {
+    "id": "c1",
+    "text": "o cha co"
+   },
+   {
+    "id": "c2",
+    "text": "ô cha kô"
+   },
+   {
+    "id": "c3",
+    "text": "ô cha cốp"
+   },
+   {
+    "id": "c4",
+    "text": "ô ca chô"
+   },
+   {
+    "id": "c5",
+    "text": "ô cha kôv"
+   }
+  ]
+ },
+ {
+  "id": "w135",
+  "word": "mustaqim",
+  "order": 135,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "mu ta kim"
+   },
+   {
+    "id": "c1",
+    "text": "mút ta kím"
+   },
+   {
+    "id": "c2",
+    "text": "mút ta quim"
+   },
+   {
+    "id": "c3",
+    "text": "mút ta kim"
+   },
+   {
+    "id": "c4",
+    "text": "mu sác im"
+   },
+   {
+    "id": "c5",
+    "text": "mu ta cuim"
+   },
+   {
+    "id": "c6",
+    "text": "mút ta kìm"
+   }
+  ]
+ },
+ {
+  "id": "w136",
+  "word": "kendall",
+  "order": 136,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "ken đan"
+   },
+   {
+    "id": "c1",
+    "text": "ken dâu"
+   },
+   {
+    "id": "c2",
+    "text": "ken đần"
+   },
+   {
+    "id": "c3",
+    "text": "ken đà"
+   },
+   {
+    "id": "c4",
+    "text": "kend all"
+   }
+  ]
+ },
+ {
+  "id": "w137",
+  "word": "electra",
+  "order": 137,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "ê lê tra"
+   },
+   {
+    "id": "c1",
+    "text": "ê lếch tra"
+   },
+   {
+    "id": "c2",
+    "text": "ê léc tờ ra"
+   },
+   {
+    "id": "c3",
+    "text": "e ồ tra"
+   },
+   {
+    "id": "c4",
+    "text": "e le tri a"
+   },
+   {
+    "id": "c5",
+    "text": "ê léc tra"
+   },
+   {
+    "id": "c6",
+    "text": "ê lec tra"
+   }
+  ]
+ },
+ {
+  "id": "w138",
+  "word": "geun",
+  "order": 138,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "gơn"
+   },
+   {
+    "id": "c1",
+    "text": "ge un"
+   },
+   {
+    "id": "c2",
+    "text": "gyên"
+   },
+   {
+    "id": "c3",
+    "text": "gừn"
+   },
+   {
+    "id": "c4",
+    "text": "gơ un"
+   },
+   {
+    "id": "c5",
+    "text": "geun"
+   },
+   {
+    "id": "c6",
+    "text": "ghên"
+   }
+  ]
+ },
+ {
+  "id": "w139",
+  "word": "stadion",
+  "order": 139,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "ta dion"
+   },
+   {
+    "id": "c1",
+    "text": "stah di ôn"
+   },
+   {
+    "id": "c2",
+    "text": "xta đi on"
+   },
+   {
+    "id": "c3",
+    "text": "s t a di ơn"
+   },
+   {
+    "id": "c4",
+    "text": "s t a di ồ"
+   },
+   {
+    "id": "c5",
+    "text": "s t a di on"
+   },
+   {
+    "id": "c6",
+    "text": "sta di on"
+   }
+  ]
+ },
+ {
+  "id": "w140",
+  "word": "mubarraz",
+  "order": 140,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "mu ba rát"
+   },
+   {
+    "id": "c1",
+    "text": "mu ba ra zôn"
+   },
+   {
+    "id": "c2",
+    "text": "mu ba ra z"
+   },
+   {
+    "id": "c3",
+    "text": "mu ba ra"
+   }
+  ]
+ },
+ {
+  "id": "w141",
+  "word": "millennial",
+  "order": 141,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "mi lên ni ần"
+   },
+   {
+    "id": "c1",
+    "text": "mi lê ni ần"
+   },
+   {
+    "id": "c2",
+    "text": "mi len ni ơ"
+   },
+   {
+    "id": "c3",
+    "text": "mi len ni ờ"
+   },
+   {
+    "id": "c4",
+    "text": "mi len ni ồ"
+   },
+   {
+    "id": "c5",
+    "text": "mi len ni al"
+   },
+   {
+    "id": "c6",
+    "text": "mi len nian"
+   },
+   {
+    "id": "c7",
+    "text": "mi lê ni ên"
+   }
+  ]
+ },
+ {
+  "id": "w142",
+  "word": "nilon",
+  "order": 142,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "ni lông"
+   },
+   {
+    "id": "c1",
+    "text": "ni lôn"
+   },
+   {
+    "id": "c2",
+    "text": "ni lòn"
+   },
+   {
+    "id": "c3",
+    "text": "ni lon"
+   }
+  ]
+ },
+ {
+  "id": "w143",
+  "word": "vashunin",
+  "order": 143,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "vơ sù ni"
+   },
+   {
+    "id": "c1",
+    "text": "va shu nin"
+   },
+   {
+    "id": "c2",
+    "text": "va shun in"
+   },
+   {
+    "id": "c3",
+    "text": "va xu nin"
+   },
+   {
+    "id": "c4",
+    "text": "va su ninh"
+   },
+   {
+    "id": "c5",
+    "text": "va shù nin"
+   },
+   {
+    "id": "c6",
+    "text": "va su ni"
+   }
+  ]
+ },
+ {
+  "id": "w144",
+  "word": "napier",
+  "order": 144,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "na pi ê"
+   },
+   {
+    "id": "c1",
+    "text": "náp i ear"
+   },
+   {
+    "id": "c2",
+    "text": "na piơ"
+   },
+   {
+    "id": "c3",
+    "text": "na pi ơ"
+   },
+   {
+    "id": "c4",
+    "text": "na pi ờ"
+   }
+  ]
+ },
+ {
+  "id": "w145",
+  "word": "yueyue",
+  "order": 145,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "y e y e"
+   },
+   {
+    "id": "c1",
+    "text": "yu ê yu"
+   },
+   {
+    "id": "c2",
+    "text": "nguyệt nguyệt"
+   },
+   {
+    "id": "c3",
+    "text": "yue yue"
+   },
+   {
+    "id": "c4",
+    "text": "yueyue"
+   }
+  ]
+ },
+ {
+  "id": "w146",
+  "word": "malacia",
+  "order": 146,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "ma la kia"
+   },
+   {
+    "id": "c1",
+    "text": "ma la á chia"
+   },
+   {
+    "id": "c2",
+    "text": "ma la si a"
+   },
+   {
+    "id": "c3",
+    "text": "ma la xi a"
+   },
+   {
+    "id": "c4",
+    "text": "ma la xì a"
+   }
+  ]
+ },
+ {
+  "id": "w147",
+  "word": "perth",
+  "order": 147,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "per thêt"
+   },
+   {
+    "id": "c1",
+    "text": "pơ t"
+   },
+   {
+    "id": "c2",
+    "text": "pơ th"
+   },
+   {
+    "id": "c3",
+    "text": "pớt"
+   },
+   {
+    "id": "c4",
+    "text": "pe"
+   }
+  ]
+ },
+ {
+  "id": "w148",
+  "word": "shipping",
+  "order": 148,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "síp pìng"
+   },
+   {
+    "id": "c1",
+    "text": "síp pìn"
+   },
+   {
+    "id": "c2",
+    "text": "xíp pin"
+   },
+   {
+    "id": "c3",
+    "text": "síp ping"
+   },
+   {
+    "id": "c4",
+    "text": "ship ping"
+   },
+   {
+    "id": "c5",
+    "text": "số phăng"
+   },
+   {
+    "id": "c6",
+    "text": "xíp pinh"
+   }
+  ]
+ },
+ {
+  "id": "w149",
+  "word": "ariya",
+  "order": 149,
+  "candidates": [
+   {
+    "id": "c0",
+    "text": "a ri ya"
+   },
+   {
+    "id": "c1",
+    "text": "a ri da"
+   },
+   {
+    "id": "c2",
+    "text": "a ri ờ"
+   },
+   {
+    "id": "c3",
+    "text": "ari ya"
+   },
+   {
+    "id": "c4",
+    "text": "a ri a"
+   }
+  ]
+ }
+]
