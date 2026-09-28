@@ -1,0 +1,281 @@
+<title>Duyệt phiên âm ViTTS</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;700&family=IBM+Plex+Mono:wght@400;500&family=Literata:opsz,wght@7..72,500;7..72,600&display=swap">
+<style>
+  :root {
+    --bg: #F2F5F3; --surface: #FFFFFF; --ink: #15201D; --muted: #5A6964; --rule: #D5DDD9;
+    --accent: #0E7A6A; --accent-ink: #FFFFFF; --accent-soft: #DCEEEA;
+    --warn: #9A5F06; --warn-soft: #F8EBD2;
+    --sans: "Be Vietnam Pro", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --serif: "Literata", Georgia, "Times New Roman", serif;
+    --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      color-scheme: dark;
+      --bg: #0D1311; --surface: #151D1A; --ink: #E4EBE8; --muted: #97A6A0; --rule: #27332F;
+      --accent: #45C2AD; --accent-ink: #06231E; --accent-soft: #173B35; --warn: #E3AA4A; --warn-soft: #3A2C12;
+    }
+  }
+  :root[data-theme="dark"] {
+    color-scheme: dark;
+    --bg: #0D1311; --surface: #151D1A; --ink: #E4EBE8; --muted: #97A6A0; --rule: #27332F;
+    --accent: #45C2AD; --accent-ink: #06231E; --accent-soft: #173B35; --warn: #E3AA4A; --warn-soft: #3A2C12;
+  }
+  body { background: var(--bg); color: var(--ink); font: 15px/1.55 var(--sans); padding-inline: 16px; padding-block: 24px 48px; }
+  .wrap { max-width: 920px; margin-inline: auto; display: grid; gap: 24px; }
+  h1 { margin: 0; font-size: 24px; line-height: 1.2; text-wrap: balance; }
+  p { margin: 0; max-width: 68ch; }
+  .muted { color: var(--muted); }
+  .num { font-family: var(--mono); font-variant-numeric: tabular-nums; }
+  .label { font-size: 11px; font-weight: 500; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+  kbd { font: 12px var(--mono); border: 1px solid var(--rule); border-bottom-width: 2px; border-radius: 4px; padding: 0 5px; background: var(--surface); }
+
+  header { display: grid; gap: 10px; }
+  .progress { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 16px; }
+  .bar { flex: 1 1 240px; height: 8px; border-radius: 999px; background: var(--rule); overflow: hidden; }
+  .bar > span { display: block; height: 100%; width: 0; background: var(--accent); transition: width .3s; }
+
+  .card { background: var(--surface); border: 1px solid var(--rule); border-radius: 12px; padding: 20px; display: grid; gap: 18px; }
+  .word-row { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 16px; }
+  .word { font-family: var(--serif); font-weight: 600; font-size: clamp(34px, 6vw, 52px); line-height: 1.05; overflow-wrap: anywhere; }
+  .status { font-size: 12px; font-weight: 500; padding: 2px 10px; border-radius: 999px; background: var(--rule); color: var(--muted); }
+  .status.done { background: var(--accent-soft); color: var(--accent); }
+  .status.unsure { background: var(--warn-soft); color: var(--warn); }
+
+  .cands { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 8px; }
+  .cand {
+    all: unset; box-sizing: border-box; cursor: pointer; display: flex; align-items: center; gap: 10px;
+    padding: 12px 14px; border-radius: 10px; border: 1px solid var(--rule); background: var(--bg);
+  }
+  .cand:hover { border-color: var(--accent); }
+  .cand:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+  .cand .k { font: 12px var(--mono); color: var(--muted); min-width: 14px; }
+  .cand .t { font-family: var(--serif); font-size: 19px; line-height: 1.3; overflow-wrap: anywhere; }
+  .cand .box { margin-left: auto; width: 20px; height: 20px; border-radius: 6px; border: 2px solid var(--rule); flex: none; display: grid; place-items: center; }
+  .cand[aria-pressed="true"] { background: var(--accent-soft); border-color: var(--accent); }
+  .cand[aria-pressed="true"] .box { background: var(--accent); border-color: var(--accent); }
+  .cand[aria-pressed="true"] .box::after { content: ""; width: 9px; height: 5px; border: solid var(--accent-ink); border-width: 0 0 2px 2px; transform: rotate(-45deg) translate(1px, -1px); }
+
+  .custom { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  .custom input { flex: 1 1 240px; font: 17px var(--serif); padding: 9px 12px; border-radius: 8px; border: 1px solid var(--rule); background: var(--bg); color: var(--ink); min-width: 0; }
+  .custom input:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 6px; }
+  .chip { display: inline-flex; align-items: center; gap: 6px; font-family: var(--serif); font-size: 15px; padding: 3px 4px 3px 10px; border-radius: 999px; background: var(--accent-soft); color: var(--accent); }
+  .chip button { all: unset; cursor: pointer; font: 14px var(--sans); padding: 0 6px; border-radius: 999px; }
+  .chip button:focus-visible { outline: 2px solid var(--accent); }
+
+  .actions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  .btn { font: 500 14px var(--sans); cursor: pointer; border: 1px solid var(--accent); background: var(--accent); color: var(--accent-ink); padding: 9px 16px; border-radius: 999px; }
+  .btn.ghost { background: transparent; color: var(--accent); }
+  .btn.warn { background: transparent; border-color: var(--warn); color: var(--warn); }
+  .btn:disabled { opacity: .45; cursor: default; }
+  .btn:focus-visible { outline: 2px solid var(--ink); outline-offset: 2px; }
+  .spacer { flex: 1; }
+  .toast { font-size: 13px; color: var(--muted); min-height: 1.4em; }
+
+  .list-head { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; }
+  .filters { display: flex; gap: 6px; }
+  .filters button { all: unset; cursor: pointer; font-size: 13px; padding: 4px 10px; border-radius: 999px; border: 1px solid var(--rule); }
+  .filters button[aria-pressed="true"] { background: var(--ink); color: var(--bg); border-color: var(--ink); }
+  .filters button:focus-visible { outline: 2px solid var(--accent); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 6px; }
+  .cell { all: unset; box-sizing: border-box; cursor: pointer; padding: 6px 10px; border-radius: 8px; border: 1px solid var(--rule); font-size: 13px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  .cell.done { background: var(--accent-soft); border-color: transparent; }
+  .cell.unsure { background: var(--warn-soft); border-color: transparent; }
+  .cell.current { border-color: var(--ink); }
+  .cell:focus-visible { outline: 2px solid var(--accent); }
+  .empty { padding: 32px; text-align: center; color: var(--muted); }
+  @media (prefers-reduced-motion: reduce) { .bar > span { transition: none; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <span class="label">ViTTS-Bench · bộ test phiên âm có nhiều đáp án</span>
+    <h1>Duyệt cách đọc từ nước ngoài</h1>
+    <p class="muted">Với mỗi từ, chọn <b>mọi</b> cách đọc mà một người Việt nghe thấy chấp nhận được nếu model TTS đọc như vậy. Các cách đọc đến từ nhiều nguồn khác nhau và đã được xáo trộn, nên trang không cho biết cách nào do hệ thống nào tạo ra. Thiếu cách đọc đúng thì tự gõ thêm.</p>
+    <p class="muted" style="font-size:13px">Phím tắt: <kbd>1</kbd>–<kbd>9</kbd> chọn/bỏ chọn, <kbd>Enter</kbd> lưu và sang từ tiếp, <kbd>←</kbd> <kbd>→</kbd> đổi từ, <kbd>U</kbd> đánh dấu không chắc.</p>
+    <div class="progress">
+      <span class="num" id="count">0/0</span>
+      <div class="bar" aria-hidden="true"><span id="bar"></span></div>
+      <span class="muted" style="font-size:13px" id="conn">Đang kết nối dữ liệu…</span>
+    </div>
+  </header>
+
+  <section class="card" id="card" aria-live="polite">
+    <div class="empty">Đang tải danh sách từ…</div>
+  </section>
+
+  <section style="display:grid;gap:10px">
+    <div class="list-head">
+      <span class="label">Tất cả từ</span>
+      <div class="filters" role="group" aria-label="Lọc">
+        <button type="button" data-filter="all" aria-pressed="true">Tất cả</button>
+        <button type="button" data-filter="todo" aria-pressed="false">Chưa duyệt</button>
+        <button type="button" data-filter="unsure" aria-pressed="false">Không chắc</button>
+      </div>
+    </div>
+    <div class="grid" id="grid"></div>
+  </section>
+</div>
+
+<script>
+(() => {
+  const $ = (id) => document.getElementById(id);
+  let db = null, items = [], reviews = {}, idx = 0, filter = "all";
+  let draft = null; // {accepted:Set, custom:[]} cho từ đang mở
+
+  const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+  const statusOf = (id) => reviews[id] ? (reviews[id].unsure ? "unsure" : "done") : "todo";
+
+  function loadDraft() {
+    const it = items[idx];
+    const r = it && reviews[it.id];
+    draft = { accepted: new Set(r ? r.accepted : []), custom: r ? [...(r.custom || [])] : [] };
+  }
+
+  function renderProgress() {
+    const done = items.filter((it) => reviews[it.id]).length;
+    $("count").textContent = `${done}/${items.length} đã duyệt`;
+    $("bar").style.width = items.length ? `${(100 * done) / items.length}%` : "0";
+  }
+
+  function renderGrid() {
+    const list = items.map((it, i) => ({ it, i })).filter(({ it }) => filter === "all" || statusOf(it.id) === filter);
+    $("grid").innerHTML = list.length
+      ? list.map(({ it, i }) => `<button type="button" class="cell ${statusOf(it.id)} ${i === idx ? "current" : ""}" data-i="${i}" title="${esc(it.word)}">${esc(it.word)}</button>`).join("")
+      : `<span class="muted" style="font-size:13px">Không có từ nào.</span>`;
+  }
+
+  function renderCard(msg) {
+    const it = items[idx];
+    if (!it) { $("card").innerHTML = `<div class="empty">Chưa có từ nào để duyệt.</div>`; return; }
+    const st = statusOf(it.id);
+    const stText = { todo: "Chưa duyệt", done: "Đã lưu", unsure: "Không chắc" }[st];
+    $("card").innerHTML = `
+      <div class="word-row">
+        <div><span class="label">Từ ${idx + 1}/${items.length}</span><div class="word">${esc(it.word)}</div></div>
+        <span class="status ${st === "todo" ? "" : st}">${stText}</span>
+      </div>
+      <div class="cands" role="group" aria-label="Các cách đọc">
+        ${it.candidates.map((c, k) => `
+          <button type="button" class="cand" data-c="${c.id}" aria-pressed="${draft.accepted.has(c.id)}">
+            <span class="k">${k < 9 ? k + 1 : ""}</span><span class="t">${esc(c.text)}</span><span class="box" aria-hidden="true"></span>
+          </button>`).join("")}
+      </div>
+      <div style="display:grid;gap:8px">
+        <label class="label" for="custom-input">Cách đọc khác (tùy chọn)</label>
+        <div class="custom">
+          <input id="custom-input" type="text" autocomplete="off" placeholder="ví dụ: phây búc">
+          <button class="btn ghost" type="button" id="add-custom">Thêm</button>
+        </div>
+        <div class="chips">${draft.custom.map((t, k) => `<span class="chip">${esc(t)}<button type="button" data-rm="${k}" aria-label="Bỏ ${esc(t)}">×</button></span>`).join("")}</div>
+      </div>
+      <div class="actions">
+        <button class="btn ghost" type="button" id="prev" ${idx === 0 ? "disabled" : ""}>← Trước</button>
+        <button class="btn warn" type="button" id="unsure">Không chắc</button>
+        <span class="spacer"></span>
+        <button class="btn" type="button" id="save" ${db ? "" : "disabled"}>Lưu và sang từ tiếp</button>
+      </div>
+      <div class="toast" id="toast">${msg || (draft.accepted.size + draft.custom.length === 0 ? "Chưa chọn cách đọc nào. Lưu như vậy nghĩa là không cách nào chấp nhận được." : "")}</div>`;
+  }
+
+  function render(msg) { renderProgress(); renderCard(msg); renderGrid(); }
+
+  function go(i) {
+    if (i < 0 || i >= items.length) return;
+    idx = i; loadDraft(); render();
+    try { localStorage.setItem("vitts-review-idx", String(idx)); } catch (_) {}
+  }
+
+  function nextTodo() {
+    for (let k = 1; k <= items.length; k++) {
+      const j = (idx + k) % items.length;
+      if (!reviews[items[j].id]) return j;
+    }
+    return Math.min(idx + 1, items.length - 1);
+  }
+
+  async function save(unsure) {
+    const it = items[idx];
+    if (!db || !it) return;
+    const body = { word: it.word, accepted: [...draft.accepted], custom: draft.custom, unsure: !!unsure, updatedAt: new Date().toISOString() };
+    try {
+      await db.doc(`reviews/${it.id}`).set(body);
+      reviews[it.id] = body;
+      const done = items.every((x) => reviews[x.id]);
+      if (done) { render("Đã duyệt xong cả " + items.length + " từ. Cảm ơn bạn!"); return; }
+      go(nextTodo());
+    } catch (e) {
+      renderCard(e && e.code === "invalid_argument" ? "Bạn không có quyền lưu trên trang này." : "Chưa lưu được, hãy thử lại.");
+    }
+  }
+
+  function addCustom() {
+    const input = $("custom-input");
+    const t = input.value.trim().toLowerCase().replace(/\s+/g, " ");
+    if (!t || draft.custom.includes(t)) { input.value = ""; return; }
+    draft.custom.push(t); renderCard(); $("custom-input").focus();
+  }
+
+  document.addEventListener("click", (ev) => {
+    const c = ev.target.closest(".cand");
+    if (c) { const id = c.dataset.c; draft.accepted.has(id) ? draft.accepted.delete(id) : draft.accepted.add(id); c.setAttribute("aria-pressed", String(draft.accepted.has(id))); return; }
+    const rm = ev.target.closest("[data-rm]");
+    if (rm) { draft.custom.splice(Number(rm.dataset.rm), 1); renderCard(); return; }
+    const cell = ev.target.closest(".cell");
+    if (cell) { go(Number(cell.dataset.i)); $("card").scrollIntoView({ block: "start", behavior: "smooth" }); return; }
+    const f = ev.target.closest("[data-filter]");
+    if (f) { filter = f.dataset.filter; document.querySelectorAll("[data-filter]").forEach((b) => b.setAttribute("aria-pressed", String(b === f))); renderGrid(); return; }
+    if (ev.target.id === "add-custom") addCustom();
+    if (ev.target.id === "save") save(false);
+    if (ev.target.id === "unsure") save(true);
+    if (ev.target.id === "prev") go(idx - 1);
+  });
+
+  document.addEventListener("keydown", (ev) => {
+    const typing = ev.target && ev.target.id === "custom-input";
+    if (typing) { if (ev.key === "Enter") { ev.preventDefault(); addCustom(); } return; }
+    if (ev.metaKey || ev.ctrlKey || ev.altKey) return;
+    const it = items[idx];
+    if (!it) return;
+    if (/^[1-9]$/.test(ev.key)) {
+      const c = it.candidates[Number(ev.key) - 1];
+      if (c) { draft.accepted.has(c.id) ? draft.accepted.delete(c.id) : draft.accepted.add(c.id); renderCard(); }
+    } else if (ev.key === "Enter") { ev.preventDefault(); save(false); }
+    else if (ev.key === "ArrowRight") go(idx + 1);
+    else if (ev.key === "ArrowLeft") go(idx - 1);
+    else if (ev.key.toLowerCase() === "u") save(true);
+  });
+
+  (async () => {
+    db = await window.claude?.use?.("db");
+    if (!db) {
+      $("conn").textContent = "Không kết nối được kho dữ liệu: hãy mở trang này trong claude.ai.";
+      $("card").innerHTML = `<div class="empty">Trang cần kho dữ liệu của Artifact để tải từ và lưu kết quả duyệt.</div>`;
+      return;
+    }
+    try {
+      const snap = await db.collection("items").limit(1000).get();
+      items = snap.docs.map((d) => ({ id: d.id, ...d.data() })).sort((a, b) => a.order - b.order);
+    } catch (e) {
+      $("conn").textContent = "Không tải được danh sách từ, hãy tải lại trang.";
+      return;
+    }
+    // Tải kết quả đã lưu TRƯỚC khi hiện từ đầu tiên, để không ghi đè lựa chọn cũ bằng một bản trống
+    try {
+      const rs = await db.collection("reviews").limit(1000).get();
+      rs.docs.forEach((d) => { reviews[d.id] = d.data(); });
+    } catch (_) {}
+    $("conn").textContent = "Kết quả được lưu ngay khi bấm Lưu.";
+    try { const saved = Number(localStorage.getItem("vitts-review-idx")); if (saved >= 0 && saved < items.length) idx = saved; } catch (_) {}
+    loadDraft(); render();
+    db.collection("reviews").limit(1000).onSnapshot((snap) => {
+      reviews = {};
+      snap.docs.forEach((d) => { reviews[d.id] = d.data(); });
+      renderProgress(); renderGrid();
+    }, () => { $("conn").textContent = "Mất kết nối dữ liệu, hãy tải lại trang."; });
+  })();
+})();
+</script>
