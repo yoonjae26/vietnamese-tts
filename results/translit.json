@@ -1,6 +1,6 @@
 [
  {
-  "system": "Giữ nguyên chữ tiếng Anh",
+  "system": "Keep English spelling",
   "exact": 0.0059665871121718375,
   "ser": 0.9934367541766109,
   "cer": 0.5466560387235483,
@@ -9,7 +9,7 @@
   "peak_vram_gb": null
  },
  {
-  "system": "vietnormalizer (quy tắc, không tra từ điển)",
+  "system": "vietnormalizer (rules, no dictionary lookup)",
   "exact": 0.07816229116945107,
   "ser": 0.7312379247641777,
   "cer": 0.40510047857285564,
@@ -54,7 +54,7 @@
   "peak_vram_gb": 16.605820416
  },
  {
-  "system": "Qwen2.5-7B-Instruct few-shot (20 ví dụ từ train)",
+  "system": "Qwen2.5-7B-Instruct few-shot (20 examples from train)",
   "exact": 0.042362768496420046,
   "ser": 0.9585123309466984,
   "cer": 0.5819565849354911,

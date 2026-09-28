@@ -29,8 +29,8 @@ SYSTEMS = {
     "gpt-4o-mini_few-shot": "gpt-4o-mini few-shot",
     "gpt-4o-mini_zero-shot": "gpt-4o-mini zero-shot",
     "qwen2.5-7b_few-shot": "Qwen2.5-7B-Instruct few-shot",
-    "vietnormalizer_rules": "vietnormalizer (quy tắc)",
-    "gold": "Đáp án gốc của từ điển vietnormalizer",
+    "vietnormalizer_rules": "vietnormalizer (rules)",
+    "gold": "vietnormalizer dictionary reading",
 }
 
 
@@ -84,13 +84,13 @@ def main():
     rows.sort(key=lambda r: -r["exact"])
 
     lines = [
-        f"# Phiên âm: bộ test nhiều đáp án do người duyệt ({len(words)} từ)",
+        f"# Transliteration: human-reviewed multi-reference test ({len(words)} words)",
         "",
-        "Người duyệt chọn mọi cách đọc chấp nhận được trong các ứng viên đã xáo trộn, không biết ứng viên đến từ "
-        "hệ thống nào (duyệt mù), và có thể tự gõ thêm. Một output được tính là đúng nếu nằm trong các cách đọc "
-        f"được chấp nhận. Bỏ qua {unsure} từ đánh dấu không chắc.",
+        "A reviewer marked every acceptable reading among shuffled candidates without knowing which system "
+        "produced them (blind review), and could type their own. An output counts as correct if it is one of "
+        f"the accepted readings. {unsure} word(s) marked unsure are skipped.",
         "",
-        "| Hệ thống | Đúng ↑ | Lỗi âm tiết ↓ |",
+        "| System | Accepted ↑ | Syllable error ↓ |",
         "|---|---:|---:|",
     ]
     lines += [f"| {r['system']} | {r['exact']:.1%} | {r['ser']:.1%} |" for r in rows]

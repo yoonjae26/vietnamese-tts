@@ -19,7 +19,7 @@ REPO = "dangvansam/viet-tts"
 
 class Engine:
     name = "VietTTS"
-    license = "CC (model card)"
+    license = "CC (see model card)"
     repo = REPO
 
     def __init__(self, device: str):  # noqa: ARG002

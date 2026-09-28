@@ -1,6 +1,6 @@
-## vitts (ours): 37 câu sai
+## vitts (ours): 37 wrong
 
-| id | input | output | đáp án |
+| id | input | output | reference |
 |---|---|---|---|
 | heldout_v2-foreign-001 | Tôi vừa mua iPhone mới. | tôi vừa mua iphone mới | tôi vừa mua ai phôn mới |
 | heldout_v2-foreign-002 | Bạn có dùng Facebook không? | bạn có dùng facebook không | bạn có dùng phây búc không |
@@ -40,9 +40,9 @@
 | heldout_v2-mixed-004 | Ứng dụng Zalo có 75 triệu người dùng. | ứng dụng zalo có bảy mươi lăm triệu người dùng | ứng dụng da lô có bảy mươi lăm triệu người dùng |
 | heldout_v2-mixed-005 | Real Madrid gặp Barcelona tại Champions League. | real madrid gặp barcelona tại champions league | rê an ma đrít gặp bác xê lô na tại chem pi ân lích |
 
-## vitts + translit (ours): 18 câu sai
+## vitts + translit (ours): 18 wrong
 
-| id | input | output | đáp án |
+| id | input | output | reference |
 |---|---|---|---|
 | heldout_v2-foreign-003 | Xem video trên YouTube. | xem vi đê ô trên yu túp | xem vi đê ô trên diu túp |
 | heldout_v2-foreign-007 | Cửa hàng bán online. | cửa hàng bán ôn lai | cửa hàng bán on lai |
@@ -63,9 +63,9 @@
 | heldout_v2-mixed-003 | Họp online qua Zoom lúc 9h sáng. | họp ôn lai qua zum lúc chín giờ sáng | họp on lai qua zum lúc chín giờ sáng |
 | heldout_v2-mixed-005 | Real Madrid gặp Barcelona tại Champions League. | ri ần ma đrít gặp ba xê lô na tại cham pi ần líc | rê an ma đrít gặp bác xê lô na tại chem pi ân lích |
 
-## vinorm: 48 câu sai
+## vinorm: 48 wrong
 
-| id | input | output | đáp án |
+| id | input | output | reference |
 |---|---|---|---|
 | heldout_v2-foreign-001 | Tôi vừa mua iPhone mới. | tôi vừa mua iphone mới | tôi vừa mua ai phôn mới |
 | heldout_v2-foreign-002 | Bạn có dùng Facebook không? | bạn có dùng facebook không | bạn có dùng phây búc không |
@@ -116,9 +116,9 @@
 | heldout_v2-mixed-004 | Ứng dụng Zalo có 75 triệu người dùng. | ứng dụng zalo có bảy mươi lăm triệu người dùng | ứng dụng da lô có bảy mươi lăm triệu người dùng |
 | heldout_v2-mixed-005 | Real Madrid gặp Barcelona tại Champions League. | real madrid gặp barcelona tại champions league | rê an ma đrít gặp bác xê lô na tại chem pi ân lích |
 
-## soe-vinorm: 43 câu sai
+## soe-vinorm: 43 wrong
 
-| id | input | output | đáp án |
+| id | input | output | reference |
 |---|---|---|---|
 | heldout_v2-foreign-001 | Tôi vừa mua iPhone mới. | tôi vừa mua iphone mới | tôi vừa mua ai phôn mới |
 | heldout_v2-foreign-002 | Bạn có dùng Facebook không? | bạn có dùng facebook không | bạn có dùng phây búc không |
@@ -164,9 +164,9 @@
 | heldout_v2-mixed-004 | Ứng dụng Zalo có 75 triệu người dùng. | ứng dụng zalo có bảy mươi lăm triệu người dùng | ứng dụng da lô có bảy mươi lăm triệu người dùng |
 | heldout_v2-mixed-005 | Real Madrid gặp Barcelona tại Champions League. | real madrid gặp barcelona tại champions league | rê an ma đrít gặp bác xê lô na tại chem pi ân lích |
 
-## vietnormalizer: 32 câu sai
+## vietnormalizer: 32 wrong
 
-| id | input | output | đáp án |
+| id | input | output | reference |
 |---|---|---|---|
 | heldout_v2-foreign-003 | Xem video trên YouTube. | xem vi đê ô trên yu túp | xem vi đê ô trên diu túp |
 | heldout_v2-foreign-008 | Anh ấy làm marketing. | anh ấy làm mác kê tinh | anh ấy làm ma két tinh |

@@ -17,7 +17,7 @@ REPO = "dinhthuan/index-tts-2-vietnamese"
 
 class Engine:
     name = "IndexTTS-2 Vietnamese"
-    license = "Apache-2.0 (dùng thương mại cần phép của IndexTTS)"
+    license = "Apache-2.0 (commercial use needs IndexTTS permission)"
     repo = REPO
 
     def __init__(self, device: str):

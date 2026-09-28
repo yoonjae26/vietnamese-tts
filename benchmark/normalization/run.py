@@ -52,15 +52,17 @@ def summarize(result: dict) -> dict:
     }
 
 
-def to_markdown(results: list[dict], summaries: dict[str, dict], categories: list[str], split: str) -> str:
+def to_markdown(
+    results: list[dict], summaries: dict[str, dict], categories: list[str], split: str, run_date: str | None = None
+) -> str:
     names = [r["name"] for r in results]
     lines = [
-        f"# Chuẩn hóa văn bản: bộ `{split}` ({date.today().isoformat()})",
+        f"# Text normalization: `{split}` set ({run_date or date.today().isoformat()})",
         "",
-        f"{len(results[0]['cases'])} câu, Python {platform.python_version()}.",
-        "Ô = **tỉ lệ câu đọc đúng hoàn toàn** (WER trong ngoặc). In đậm là tốt nhất.",
+        f"{len(results[0]['cases'])} sentences, Python {platform.python_version()}.",
+        "Cells: **sentences normalized exactly right** (WER in brackets). Best in bold.",
         "",
-        "| Nhóm | n | " + " | ".join(f"{r['name']} `{r['version']}`" for r in results) + " |",
+        "| Category | n | " + " | ".join(f"{r['name']} `{r['version']}`" for r in results) + " |",
         "|---|---:|" + "---:|" * len(results),
     ]
     for cat in [*categories, "ALL"]:
@@ -71,13 +73,25 @@ def to_markdown(results: list[dict], summaries: dict[str, dict], categories: lis
             s = summaries[n][cat]
             cell = f"{s['accuracy']:.0%} ({s['wer']:.1%})"
             cells.append(f"**{cell}**" if s["accuracy"] == best else cell)
-        label = "**Tổng**" if cat == "ALL" else cat
+        label = "**Total**" if cat == "ALL" else cat
         lines.append(f"| {label} | {summaries[names[0]][cat]['n']} | " + " | ".join(cells) + " |")
     lines += [
-        "| ms / câu | | " + " | ".join(f"{1000 * r['seconds'] / len(r['cases']):.1f}" for r in results) + " |",
+        "| ms / sentence | | " + " | ".join(f"{1000 * r['seconds'] / len(r['cases']):.1f}" for r in results) + " |",
         "",
     ]
     return "\n".join(lines)
+
+
+def write_errors(path: Path, results: list[dict]) -> None:
+    """Every wrong sentence per system, to help improve the normalizers."""
+    with path.open("w", encoding="utf-8") as f:
+        for r in results:
+            wrong = [c for c in r["cases"] if not c["exact"]]
+            f.write(f"## {r['name']}: {len(wrong)} wrong\n\n| id | input | output | reference |\n|---|---|---|---|\n")
+            for c in wrong:
+                cells = [c["id"], c["input"], canonicalize(c["output"]), canonicalize(c["references"][0])]
+                f.write("| " + " | ".join(x.replace("|", "\\|") for x in cells) + " |\n")
+            f.write("\n")
 
 
 def main():
@@ -109,15 +123,7 @@ def main():
         json.dumps({"summary": summaries, "results": results}, ensure_ascii=False, indent=1), encoding="utf-8"
     )
 
-    # File lỗi để xem từng câu sai, tiện cải thiện bộ chuẩn hóa
-    with (out / f"normalization_{args.split}_errors.md").open("w", encoding="utf-8") as f:
-        for r in results:
-            wrong = [c for c in r["cases"] if not c["exact"]]
-            f.write(f"## {r['name']}: {len(wrong)} câu sai\n\n| id | input | output | đáp án |\n|---|---|---|---|\n")
-            for c in wrong:
-                cells = [c["id"], c["input"], canonicalize(c["output"]), canonicalize(c["references"][0])]
-                f.write("| " + " | ".join(x.replace("|", "\\|") for x in cells) + " |\n")
-            f.write("\n")
+    write_errors(out / f"normalization_{args.split}_errors.md", results)
     print(md)
 
 

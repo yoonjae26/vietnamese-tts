@@ -122,23 +122,23 @@ def evaluate_engine(asr, scorers: Scorers, run_dir: Path) -> dict:
     }
 
 
-def to_markdown(results: list[dict], reference: dict) -> str:
+def to_markdown(results: list[dict], reference: dict, run_date: str | None = None) -> str:
     cats = list(results[0]["by_category"])
     lines = [
-        f"# Benchmark TTS tiếng Việt ({date.today().isoformat()})",
+        f"# Vietnamese TTS benchmark ({run_date or date.today().isoformat()})",
         "",
-        f"ASR chấm điểm: `{ASR_MODEL}`. {results[0]['overall']['n']} câu. WER/CER càng thấp càng rõ. "
-        "RTF = thời gian sinh / độ dài audio (càng thấp càng nhanh). "
-        f"**Không dừng** = số câu có giây/từ > {RUNAWAY_FACTOR}× trung vị của model (sinh thừa khoảng lặng "
-        "hoặc âm rác; WER không phát hiện được). "
-        "**UTMOS** = điểm tự nhiên dự đoán 1–5 (model huấn luyện trên tiếng Anh, chỉ so sánh tương đối). "
-        "**SIM** = độ giống giọng mẫu (cosine ECAPA-TDNN). MMS và Piper không clone giọng (giọng cố định của "
-        "người khác), SIM của chúng là mốc cho hai người nói khác nhau. "
-        f"Chính giọng mẫu: UTMOS {reference['utmos']:.2f}.",
+        f"Scored by ASR `{ASR_MODEL}` on {results[0]['overall']['n']} sentences; lower WER/CER is clearer. "
+        "RTF = synthesis time / audio length (lower is faster). "
+        f"**Runaway** = sentences with seconds-per-word > {RUNAWAY_FACTOR}× the model's median (extra silence "
+        "or noise that WER cannot see). "
+        "**UTMOS** = predicted naturalness 1–5 (trained on English; compare relatively). "
+        "**SIM** = similarity to the reference voice (ECAPA-TDNN cosine). MMS and Piper do not clone voices, "
+        "so their SIM is a different-speaker baseline. "
+        f"The reference itself scores UTMOS {reference['utmos']:.2f}.",
         "",
         "| Model | WER | CER | "
         + " | ".join(f"WER {c}" for c in cats)
-        + " | Không dừng | UTMOS | SIM | RTF | VRAM | Hz | Giấy phép |",
+        + " | Runaway | UTMOS | SIM | RTF | VRAM | Hz | License |",
         "|---|---:|---:|" + "---:|" * len(cats) + "---:|---:|---:|---:|---:|---:|---|",
     ]
     for r in sorted(results, key=lambda r: r["overall"]["wer"]):
@@ -154,7 +154,7 @@ def to_markdown(results: list[dict], reference: dict) -> str:
     lines += ["", f"GPU: {next(r['device'] for r in results if r['peak_vram_gb'] is not None)}.", ""]
     for r in results:
         if r["runaway"]:
-            lines.append(f"- {r['name']}: câu không dừng: {', '.join(r['runaway'])}")
+            lines.append(f"- {r['name']}: runaway sentences: {', '.join(r['runaway'])}")
     lines.append("")
     return "\n".join(lines)
 

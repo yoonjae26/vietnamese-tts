@@ -1,20 +1,20 @@
-# Phiên âm từ nước ngoài: bộ test (1676 từ chưa gặp khi huấn luyện)
+# Loanword transliteration: test set (1676 words unseen in training)
 
-| Hệ thống | Tham số | Đúng cả từ ↑ | Lỗi âm tiết (SER) ↓ | Lỗi ký tự (CER) ↓ | ms/từ | VRAM |
+| System | Params | Exact match ↑ | Syllable error (SER) ↓ | Character error (CER) ↓ | ms/word | VRAM |
 |---|---:|---:|---:|---:|---:|---:|
-| Giữ nguyên chữ tiếng Anh | – | 0.6% | 99.3% | 54.7% | 0.00 | – |
-| vietnormalizer (quy tắc, không tra từ điển) | – | 7.8% | 73.1% | 40.5% | 0.07 | – |
+| Keep English spelling | – | 0.6% | 99.3% | 54.7% | 0.00 | – |
+| vietnormalizer (rules, no dictionary lookup) | – | 7.8% | 73.1% | 40.5% | 0.07 | – |
 | soe-vinorm | – | 0.5% | 110.5% | 58.6% | 0.05 | – |
 | vitts translit (greedy) | 5.6M | 54.2% | 30.7% | 15.4% | 15.80 | 0.1 GB |
 | vitts translit (beam 5) | 5.6M | 55.1% | 30.0% | 14.9% | 21.56 | 0.1 GB |
 | Qwen2.5-7B-Instruct zero-shot | 7.6B | 3.2% | 95.3% | 59.3% | 6.61 | 16.6 GB |
-| Qwen2.5-7B-Instruct few-shot (20 ví dụ từ train) | 7.6B | 4.2% | 95.9% | 58.2% | 22.09 | 20.8 GB |
+| Qwen2.5-7B-Instruct few-shot (20 examples from train) | 7.6B | 4.2% | 95.9% | 58.2% | 22.09 | 20.8 GB |
 
-vitts giải mã từng từ một; LLM sinh theo lô 64 từ trên GPU (ms/từ là thời gian trung bình khi chạy cả bộ).
+vitts decodes one word at a time; LLMs generate in batches of 64 words on GPU (ms/word is the average over the whole set).
 
-## Ví dụ (30 từ đầu của bộ test)
+## Examples (first 30 test words)
 
-| Từ | Đáp án | Giữ nguyên chữ tiếng Anh | vietnormalizer (quy tắc, không tra từ điển) | soe-vinorm | vitts translit (greedy) | vitts translit (beam 5) | Qwen2.5-7B-Instruct zero-shot | Qwen2.5-7B-Instruct few-shot (20 ví dụ từ train) |
+| Word | Reference | Keep English spelling | vietnormalizer (rules, no dictionary lookup) | soe-vinorm | vitts translit (greedy) | vitts translit (beam 5) | Qwen2.5-7B-Instruct zero-shot | Qwen2.5-7B-Instruct few-shot (20 examples from train) |
 |---|---|---|---|---|---|---|---|---|
 | aaswath | a oát | aaswath | a xuát | aaswath | át oát | át oát | a s th | a s |
 | abuse | a biu | abuse | a bu xe | abuse | a bu xê | a bu xê | abu se | ab us |

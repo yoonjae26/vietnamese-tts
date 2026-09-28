@@ -1,6 +1,6 @@
-## vitts (ours): 9 câu sai
+## vitts (ours): 9 wrong
 
-| id | input | output | đáp án |
+| id | input | output | reference |
 |---|---|---|---|
 | heldout-currency-005 | Tỷ giá 25.400 VND/USD. | tỷ giá hai mươi lăm nghìn bốn trăm đồng u ét dê | tỷ giá hai mươi lăm nghìn bốn trăm đồng một đô la |
 | heldout-phone-001 | Gọi 113. | gọi một trăm mười ba | gọi một một ba |
@@ -12,9 +12,9 @@
 | heldout-foreign-003 | Chuẩn IELTS 6.5. | chuẩn i e e lờ tê ét sáu chấm năm | chuẩn ai eo sáu chấm năm |
 | heldout-mixed-001 | Sáng 5/10, giá USD tại ngân hàng tăng 20 đồng, lên 24.500 đồng/USD. | sáng năm tháng mười giá u ét dê tại ngân hàng tăng hai mươi đồng lên hai mươi tư nghìn năm trăm đồng u ét dê | sáng năm tháng mười giá đô la tại ngân hàng tăng hai mươi đồng lên hai mươi tư nghìn năm trăm đồng một đô la |
 
-## vitts + translit (ours): 8 câu sai
+## vitts + translit (ours): 8 wrong
 
-| id | input | output | đáp án |
+| id | input | output | reference |
 |---|---|---|---|
 | heldout-currency-005 | Tỷ giá 25.400 VND/USD. | tỷ giá hai mươi lăm nghìn bốn trăm đồng u ét dê | tỷ giá hai mươi lăm nghìn bốn trăm đồng một đô la |
 | heldout-phone-001 | Gọi 113. | gọi một trăm mười ba | gọi một một ba |
@@ -25,9 +25,9 @@
 | heldout-foreign-003 | Chuẩn IELTS 6.5. | chuẩn i e e lờ tê ét sáu chấm năm | chuẩn ai eo sáu chấm năm |
 | heldout-mixed-001 | Sáng 5/10, giá USD tại ngân hàng tăng 20 đồng, lên 24.500 đồng/USD. | sáng năm tháng mười giá u ét dê tại ngân hàng tăng hai mươi đồng lên hai mươi tư nghìn năm trăm đồng u ét dê | sáng năm tháng mười giá đô la tại ngân hàng tăng hai mươi đồng lên hai mươi tư nghìn năm trăm đồng một đô la |
 
-## vinorm: 24 câu sai
+## vinorm: 24 wrong
 
-| id | input | output | đáp án |
+| id | input | output | reference |
 |---|---|---|---|
 | heldout-number-007 | Điểm số 9/10. | điểm số chín mười | điểm số chín trên mười |
 | heldout-number-008 | Uống 1/2 cốc nước. | uống một hai cốc nước | uống một phần hai cốc nước |
@@ -54,9 +54,9 @@
 | heldout-mixed-004 | Bệnh viện tiếp nhận 30-40 ca/ngày. | bệnh viện tiếp nhận ba mươi tư mươi ca ngày | bệnh viện tiếp nhận ba mươi đến bốn mươi ca một ngày |
 | heldout-mixed-005 | Tại Q.7, giá nhà khoảng 50-60 triệu/m2. | tại quận bảy giá nhà khoảng năm mươi sáu mươi triệu xuyệt m hai | tại quận bảy giá nhà khoảng năm mươi đến sáu mươi triệu một mét vuông |
 
-## soe-vinorm: 14 câu sai
+## soe-vinorm: 14 wrong
 
-| id | input | output | đáp án |
+| id | input | output | reference |
 |---|---|---|---|
 | heldout-unit-001 | Cao 1m75. | cao một mờ bảy mươi lăm | cao một mét bảy mươi lăm |
 | heldout-unit-007 | Nhiệt độ -5°C. | nhiệt độ trừ năm độ xê | nhiệt độ âm năm độ xê |
@@ -73,9 +73,9 @@
 | heldout-foreign-003 | Chuẩn IELTS 6.5. | chuẩn ielts sáu chấm năm | chuẩn ai eo sáu chấm năm |
 | heldout-mixed-001 | Sáng 5/10, giá USD tại ngân hàng tăng 20 đồng, lên 24.500 đồng/USD. | sáng năm tháng mười giá u ét đê tại ngân hàng tăng hai mươi đồng lên hai mươi tư nghìn năm trăm đồng trên u ét đê | sáng năm tháng mười giá đô la tại ngân hàng tăng hai mươi đồng lên hai mươi tư nghìn năm trăm đồng một đô la |
 
-## vietnormalizer: 33 câu sai
+## vietnormalizer: 33 wrong
 
-| id | input | output | đáp án |
+| id | input | output | reference |
 |---|---|---|---|
 | heldout-number-008 | Uống 1/2 cốc nước. | uống một tháng hai cốc nước | uống một phần hai cốc nước |
 | heldout-number-009 | Nhà số 12A. | nhà số mười haia | nhà số mười hai a |

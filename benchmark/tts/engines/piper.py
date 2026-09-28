@@ -14,7 +14,7 @@ VOICE = "vi/vi_VN/vais1000/medium/vi_VN-vais1000-medium.onnx"
 
 class Engine:
     name = "Piper vi_VN-vais1000-medium"
-    license = "CC-BY-4.0 (dữ liệu VAIS-1000)"
+    license = "CC-BY-4.0 (VAIS-1000 data)"
     repo = REPO
 
     def __init__(self, device: str):

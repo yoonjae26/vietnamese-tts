@@ -1,16 +1,16 @@
-## vitts (ours): 0 câu sai
+## vitts (ours): 0 wrong
 
-| id | input | output | đáp án |
+| id | input | output | reference |
 |---|---|---|---|
 
-## vitts + translit (ours): 0 câu sai
+## vitts + translit (ours): 0 wrong
 
-| id | input | output | đáp án |
+| id | input | output | reference |
 |---|---|---|---|
 
-## vinorm: 17 câu sai
+## vinorm: 17 wrong
 
-| id | input | output | đáp án |
+| id | input | output | reference |
 |---|---|---|---|
 | dev-currency-001 | Giá 100k. | giá một trăm ca | giá một trăm nghìn |
 | dev-currency-005 | Chiếc máy có giá $999. | chiếc máy có giá chín trăm chín mươi chín | chiếc máy có giá chín trăm chín mươi chín đô la |
@@ -30,9 +30,9 @@
 | dev-mixed-001 | Ngày 15/3/2024, giá vàng SJC tăng 1,2 triệu đồng/lượng, lên 80,5 triệu đồng. | ngày mười lăm tháng ba năm hai nghìn không trăm hai mươi tư giá vàng sjc tăng một phẩy hai triệu đồng lượng lên tám mươi phẩy năm triệu đồng | ngày mười lăm tháng ba năm hai nghìn không trăm hai mươi tư giá vàng ét gi xê tăng một phẩy hai triệu đồng một lượng lên tám mươi phẩy năm triệu đồng |
 | dev-mixed-007 | Nhiệt độ Hà Nội hôm nay 28-35°C, độ ẩm 80%. | nhiệt độ hà nội hôm nay hai mươi tám ba mươi lăm độ xê độ ẩm tám mươi phần trăm | nhiệt độ hà nội hôm nay hai mươi tám đến ba mươi lăm độ xê độ ẩm tám mươi phần trăm |
 
-## soe-vinorm: 10 câu sai
+## soe-vinorm: 10 wrong
 
-| id | input | output | đáp án |
+| id | input | output | reference |
 |---|---|---|---|
 | dev-currency-001 | Giá 100k. | giá một trăm ca | giá một trăm nghìn |
 | dev-currency-002 | Vé giá 50.000đ. | vé giá năm mươi nghìn đ | vé giá năm mươi nghìn đồng |
@@ -45,9 +45,9 @@
 | dev-acronym-001 | Công nghệ AI phát triển. | công nghệ ai phát triển | công nghệ a i phát triển |
 | dev-acronym-004 | Công ty FPT. | công ty fpt | công ty ép pê tê |
 
-## vietnormalizer: 34 câu sai
+## vietnormalizer: 34 wrong
 
-| id | input | output | đáp án |
+| id | input | output | reference |
 |---|---|---|---|
 | dev-decimal-005 | Tăng trưởng đạt 6,05. | tăng trưởng đạt sáu phẩy năm | tăng trưởng đạt sáu phẩy không năm |
 | dev-currency-001 | Giá 100k. | giá 100k | giá một trăm nghìn |

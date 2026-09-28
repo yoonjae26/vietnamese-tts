@@ -14,7 +14,7 @@
   "n": 149
  },
  {
-  "system": "Đáp án gốc của từ điển vietnormalizer",
+  "system": "vietnormalizer dictionary reading",
   "key": "gold",
   "exact": 0.2751677852348993,
   "ser": 0.5728187919463089,
@@ -35,7 +35,7 @@
   "n": 149
  },
  {
-  "system": "vietnormalizer (quy tắc)",
+  "system": "vietnormalizer (rules)",
   "key": "vietnormalizer_rules",
   "exact": 0.040268456375838924,
   "ser": 0.7808724832214766,

@@ -41,11 +41,11 @@ def systems(llm: str | None):
 
     from vitts.translit import Transliterator
 
-    yield "Giữ nguyên chữ tiếng Anh", lambda w: w
+    yield "Keep English spelling", lambda w: w
 
     from vietnormalizer.transliterator import transliterate_word
 
-    yield "vietnormalizer (quy tắc, không tra từ điển)", transliterate_word
+    yield "vietnormalizer (rules, no dictionary lookup)", transliterate_word
 
     from soe_vinorm import SoeNormalizer
 
@@ -68,7 +68,7 @@ def systems(llm: str | None):
         short = llm.split("/")[-1]
         yield f"{short} zero-shot", model
         model.shots, model.cache = few_shot_examples(read("train"), k=20), {}
-        yield f"{short} few-shot (20 ví dụ từ train)", model
+        yield f"{short} few-shot (20 examples from train)", model
 
 
 def main():
@@ -110,9 +110,9 @@ def main():
 
     out = ROOT / "results"
     lines = [
-        f"# Phiên âm từ nước ngoài: bộ test ({len(test)} từ chưa gặp khi huấn luyện)",
+        f"# Loanword transliteration: test set ({len(test)} words unseen in training)",
         "",
-        "| Hệ thống | Tham số | Đúng cả từ ↑ | Lỗi âm tiết (SER) ↓ | Lỗi ký tự (CER) ↓ | ms/từ | VRAM |",
+        "| System | Params | Exact match ↑ | Syllable error (SER) ↓ | Character error (CER) ↓ | ms/word | VRAM |",
         "|---|---:|---:|---:|---:|---:|---:|",
     ]
 
@@ -129,9 +129,10 @@ def main():
     ]
     lines += [
         "",
-        "vitts giải mã từng từ một; LLM sinh theo lô 64 từ trên GPU (ms/từ là thời gian trung bình khi chạy cả bộ).",
+        "vitts decodes one word at a time; LLMs generate in batches of 64 words on GPU "
+        "(ms/word is the average over the whole set).",
     ]
-    lines += ["", "## Ví dụ (30 từ đầu của bộ test)", "", "| Từ | Đáp án | " + " | ".join(examples) + " |"]
+    lines += ["", "## Examples (first 30 test words)", "", "| Word | Reference | " + " | ".join(examples) + " |"]
     lines.append("|---|---|" + "---|" * len(examples))
     for i, (w, refs) in enumerate(test[:30]):
         lines.append(f"| {w} | {refs[0]} | " + " | ".join(clean_target(examples[n][i]) for n in examples) + " |")
