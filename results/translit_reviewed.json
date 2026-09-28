@@ -1,0 +1,44 @@
+[
+ {
+  "system": "gpt-4o-mini few-shot",
+  "key": "gpt-4o-mini_few-shot",
+  "exact": 0.3087248322147651,
+  "ser": 0.5293064876957496,
+  "n": 149
+ },
+ {
+  "system": "gpt-4o-mini zero-shot",
+  "key": "gpt-4o-mini_zero-shot",
+  "exact": 0.30201342281879195,
+  "ser": 0.5786353467561521,
+  "n": 149
+ },
+ {
+  "system": "Đáp án gốc của từ điển vietnormalizer",
+  "key": "gold",
+  "exact": 0.2751677852348993,
+  "ser": 0.5728187919463089,
+  "n": 149
+ },
+ {
+  "system": "vitts translit (5.6M, beam 5)",
+  "key": "vitts",
+  "exact": 0.2483221476510067,
+  "ser": 0.5782997762863535,
+  "n": 149
+ },
+ {
+  "system": "Qwen2.5-7B-Instruct few-shot",
+  "key": "qwen2.5-7b_few-shot",
+  "exact": 0.1476510067114094,
+  "ser": 0.9244966442953019,
+  "n": 149
+ },
+ {
+  "system": "vietnormalizer (quy tắc)",
+  "key": "vietnormalizer_rules",
+  "exact": 0.040268456375838924,
+  "ser": 0.7808724832214766,
+  "n": 149
+ }
+]

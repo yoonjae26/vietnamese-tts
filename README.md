@@ -83,11 +83,30 @@ python benchmark/normalization/run.py --split heldout_v2
 | gpt-4o-mini zero-shot (OpenAI API) | 15.9% | 75.5% |
 | gpt-4o-mini few-shot (20 ví dụ từ train) | 19.6% | 66.4% |
 
-**So với LLM.** Model 5.6M tham số của repo đúng cả từ gấp khoảng 13 lần Qwen2.5-7B-Instruct, dù nhỏ hơn 1.350 lần và chỉ dùng 0.1 GB VRAM (Qwen dùng 17–21 GB). Output thô của Qwen ([ví dụ](results/translit_llm_raw_examples.txt)) cho thấy lỗi thật chứ không phải do cách chấm: nó giữ nguyên tiếng Anh ("net flix"), chèn chữ Hán ("a s哇th"), hoặc bịa ký tự ("ma kinh töng"). Khi thay model phiên âm trong vitts bằng Qwen, held-out v2 chỉ đạt 40% (so với 70%) ([chi tiết](results/normalization_heldout_v2_with_llm.md)).
+**So với LLM (chấm theo từ điển; xem phần kiểm chứng bằng người duyệt bên dưới).** Model 5.6M tham số của repo đúng cả từ gấp khoảng 13 lần Qwen2.5-7B-Instruct, dù nhỏ hơn 1.350 lần và chỉ dùng 0.1 GB VRAM (Qwen dùng 17–21 GB). Output thô của Qwen ([ví dụ](results/translit_llm_raw_examples.txt)) cho thấy lỗi thật chứ không phải do cách chấm: nó giữ nguyên tiếng Anh ("net flix"), chèn chữ Hán ("a s哇th"), hoặc bịa ký tự ("ma kinh töng"). Khi thay model phiên âm trong vitts bằng Qwen, held-out v2 chỉ đạt 40% (so với 70%) ([chi tiết](results/normalization_heldout_v2_with_llm.md)).
 
 **gpt-4o-mini** (OpenAI API, gộp 50 từ mỗi request, [script](training/translit/api_baseline.py)) tốt hơn Qwen nhiều nhưng vẫn kém model của repo: 19.6% so với 55.1%. Cả lượt chạy chỉ tốn khoảng 67 nghìn token.
 
 **Một phần khoảng cách là do quy ước viết, không phải đọc sai.** Đáp án lấy từ từ điển của vietnormalizer viết "s" thành "x" và "f" thành "ph". gpt-4o-mini viết "sam sung", "nét flích", "a đam sơn": đọc gần đúng nhưng bị chấm sai. Có trường hợp đáp án còn kém tự nhiên hơn (samsung → "xa mung"). Model của repo học đúng quy ước này nên có lợi thế trong cách chấm khớp nguyên văn. Muốn so công bằng hơn cần người nghe chấm, hoặc bộ test có nhiều cách đọc đúng cho mỗi từ.
+
+### Kiểm chứng bằng người duyệt: kết luận thay đổi
+
+Các con số trên chấm theo **một** đáp án của từ điển vietnormalizer. Để kiểm tra, 150 từ ngẫu nhiên trong bộ test được **người Việt duyệt mù**: người duyệt thấy mọi cách đọc (từ điển, model của repo, gpt-4o-mini, Qwen, quy tắc, và 3 cách GPT gợi ý thêm) đã xáo trộn, không biết cách nào của hệ thống nào, rồi chọn cách chấp nhận được ([trang duyệt](training/translit/review_page.html), [dữ liệu](data/translit/review/)).
+
+| Hệ thống | Đúng theo người duyệt (149 từ) | KTC 95% |
+|---|---:|---:|
+| gpt-4o-mini few-shot | **30.9%** | 23.5–38.3% |
+| gpt-4o-mini zero-shot | 30.2% | |
+| Đáp án gốc của từ điển | 27.5% | 20.8–34.9% |
+| vitts translit (5.6M) | 24.8% | 18.1–32.2% |
+| Qwen2.5-7B few-shot | 14.8% | 9.4–20.8% |
+| vietnormalizer (quy tắc) | 4.0% | |
+
+- **Chính từ điển dùng để huấn luyện chỉ được chấp nhận 27.5%.** Model của repo học theo từ điển nên đạt mức tương đương (24.8%; chênh lệch với từ điển không có ý nghĩa thống kê). Kết quả "55% so với 20%" ở trên chủ yếu đo việc khớp quy ước của từ điển, không phải đọc hay hơn.
+- **So với gpt-4o-mini: gần như ngang nhau.** GPT hơn 6 điểm nhưng khoảng tin cậy của chênh lệch là −4% đến +16%, nên chưa kết luận được bên nào tốt hơn trên 149 từ. Ưu điểm còn lại của model nhỏ: chạy cục bộ, 0.1 GB VRAM, miễn phí.
+- **So với Qwen2.5-7B: model của repo tốt hơn có ý nghĩa** (+10 điểm, KTC 95% +0.7% đến +19.5%).
+- **Hạn chế:** chỉ một người duyệt; người duyệt thường chọn **một** cách ưa dùng nhất (138/150 từ), nên đây là tiêu chí chặt; mỗi từ có tới 5 ứng viên theo phong cách GPT so với 1 của mỗi hệ thống khác.
+- **Việc cần làm tiếp:** chất lượng model bị giới hạn bởi dữ liệu huấn luyện. Muốn vượt GPT cần dữ liệu tốt hơn từ điển, ví dụ gắn nhãn lại bằng cách đọc được người duyệt ưa dùng.
 
 Giới hạn khác của phép so này: chỉ thử **một** LLM cỡ 7B, với một lời nhắc và giải mã tham lam. LLM lớn hơn (70B, hoặc các model thương mại) và lời nhắc được tinh chỉnh kỹ có thể tốt hơn nhiều. Kết luận chính xác là: **với cùng mức tài nguyên chạy cục bộ, một model nhỏ chuyên cho việc này tốt hơn hẳn một LLM đa năng 7B.**
 
@@ -246,4 +265,4 @@ Khi chạy benchmark trên GPU, chỉ định GPU bằng `CUDA_VISIBLE_DEVICES` 
 
 ---
 
-*English:* ViTTS-Bench is an open, reproducible benchmark for Vietnamese TTS. Stage 1 compares Vietnamese text normalizers on hand-written held-out sets; vitts 0.2 with a trained 5.6M-parameter loanword transliteration model (55% exact / 30% syllable error on unseen words, vs 8% / 73% for the best rule-based transliterator and 4% / 96% for Qwen2.5-7B-Instruct few-shot) leads held-out v2 at 70% sentence accuracy. Stage 2 benchmarks 7 TTS models (ASR round-trip WER, a runaway-generation check that WER misses, ECAPA speaker similarity, UTMOS, RTF, VRAM) with a listening page, and an OpenAI-compatible gateway serves all of them behind one `/v1/audio/speech` endpoint.
+*English:* ViTTS-Bench is an open, reproducible benchmark for Vietnamese TTS. Stage 1 compares Vietnamese text normalizers on hand-written held-out sets; vitts 0.2 with a trained 5.6M-parameter loanword transliteration model leads held-out v2 at 70% sentence accuracy. Scored against its training dictionary the model reaches 55% exact on unseen words; a blind human review of 150 words shows the dictionary itself is accepted only 27.5% of the time, the model 24.8%, gpt-4o-mini 30.9% (difference not significant) and Qwen2.5-7B 14.8%. Stage 2 benchmarks 7 TTS models (ASR round-trip WER, a runaway-generation check that WER misses, ECAPA speaker similarity, UTMOS, RTF, VRAM) with a listening page, and an OpenAI-compatible gateway serves all of them behind one `/v1/audio/speech` endpoint.
